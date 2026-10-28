@@ -23,10 +23,10 @@ async def fetch(path="src.mp4"):
         d = await r.json()
         items = d if isinstance(d, list) else d.get("items") or d.get("assets") or d.get("data") or []
         v = [a for a in items if a.get("type") == "video"][0]
-        der = {x.get("name"): x for x in v.get("derivatives", [])}
+        der = {(x.get("name") or x.get("type") or x.get("format")): x for x in v.get("derivatives", [])}
         pick = der.get("proxy") or der.get("source")
         url = pick.get("url") or pick.get("path")
-        print("downloading derivative:", pick.get("name"), pick.get("width"), "x", pick.get("height"), flush=True)
+        print("downloading derivative:", list(der), pick.get("width"), "x", pick.get("height"), flush=True)
         resp = await c.request.get(url, timeout=900000)
         open(path, "wb").write(await resp.body())
         await b.close()
