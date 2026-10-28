@@ -22,7 +22,13 @@ jobs:
                   pg.on("response", on)
                   await pg.goto("https://app.mediasilo.com/review/6ae109cef2c6470f09434547", wait_until="networkidle", timeout=60000)
                   await pg.wait_for_timeout(12000)
-                  print("TEXT:", (await pg.inner_text("body"))[:300].replace("\n"," | "))
+                  q="https://api.mediasilo.com/v3/quicklinks/6ae109cef2c6470f09434547/folders/28abc944-ea6b-4c31-8412-2feabade068e/assets"
+                  r = await c.request.get(q); d = await r.json()
+                  items = d if isinstance(d, list) else d.get("items") or d.get("assets") or d.get("data") or []
+                  for a in items:
+                      print("ASSET keys:", sorted(a.keys())[:40]); print("ASSET:", a.get("name"), a.get("type"), a.get("size") or a.get("fileSize"), a.get("id"))
+                      for k,v in a.items():
+                          if isinstance(v,str) and v.startswith("http"): print("URLKEY", k, v.split("?")[0][:90])
                   await b.close()
           asyncio.run(go())
           P
