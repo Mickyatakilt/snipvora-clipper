@@ -3,9 +3,10 @@ on: workflow_dispatch
 jobs:
   clips:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: pip install -q playwright numpy && playwright install --with-deps chromium >/dev/null 2>&1 && echo ready
       - run: python mw4_clip.py
       - uses: actions/upload-artifact@v4

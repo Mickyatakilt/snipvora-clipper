@@ -27,9 +27,8 @@ async def fetch(path="src.mp4"):
         pick = der.get("proxy") or der.get("source")
         url = pick.get("url") or pick.get("path")
         print("downloading derivative:", list(der), pick.get("width"), "x", pick.get("height"), flush=True)
-        resp = await c.request.get(url, timeout=900000)
-        open(path, "wb").write(await resp.body())
         await b.close()
+    subprocess.run(["curl", "-sL", "--fail", "-m", "600", "-o", path, url], check=True)
     print("saved", os.path.getsize(path) // 1_000_000, "MB", flush=True)
 
 
