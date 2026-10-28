@@ -89,7 +89,7 @@ def main():
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", "src.mp4", "-filter_complex", vf,
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", out], check=True)
         cap = f"{CAPTIONS[(k - 1) % len(CAPTIONS)]}\n#ad @callofduty"
-        meta.append({"file": out, "start": st, "seconds": CLIP_SEC, "caption": cap})
+        meta.append({"campaign": "Call of Duty MW4 Multiplayer", "file": out, "start": st, "seconds": CLIP_SEC, "caption": cap})
         print("clip", k, "from", st, "s", flush=True)
     validate(meta)
     json.dump(meta, open("out/clips.json", "w"), indent=1)

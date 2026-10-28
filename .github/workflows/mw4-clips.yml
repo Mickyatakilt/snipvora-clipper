@@ -4,16 +4,20 @@ jobs:
   clips:
     runs-on: ubuntu-latest
     timeout-minutes: 12
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: pip install -q playwright numpy && playwright install --with-deps chromium >/dev/null 2>&1 && echo ready
       - run: python mw4_clip.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: mw4-clips
-          path: out/
-          retention-days: 3
+      - name: Publish clips (release, newest 3 kept)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="clips-$(date -u +%Y%m%d-%H%M)"
+          gh release create "$tag" out/*.mp4 --title "$tag" --notes "$(cat out/clips.json)"
+          gh release list --limit 50 --json tagName --jq '.[].tagName' | grep '^clips-' | sort -r | tail -n +4 | xargs -r -I{} gh release delete {} --cleanup-tag --yes
       - name: Alert on failure
         if: failure()
         run: |

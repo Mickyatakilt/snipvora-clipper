@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Snipvora clips</title>
+<style>
+:root{--bg:#0f1020;--card:#181a30;--line:#2a2c44;--fg:#eee;--mut:#99a;--acc:#6c5ce7;--ok:#00b894}
+@media (prefers-color-scheme: light){:root{--bg:#f4f5fb;--card:#fff;--line:#dcdfee;--fg:#14152a;--mut:#667}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px -apple-system,system-ui,sans-serif;padding:16px 16px 60px;max-width:820px;margin:auto}
+h1{margin:6px 0 2px}.mut{color:var(--mut);font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:14px 0}
+video{width:100%;max-height:70vh;border-radius:10px;background:#000}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+button,a.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 14px;font:inherit;text-decoration:none;cursor:pointer}
+button.ok{background:var(--ok)}pre{white-space:pre-wrap;background:rgba(127,127,160,.12);border-radius:8px;padding:8px;margin:8px 0 0;font:inherit}
+.done{opacity:.55}
+</style></head><body>
+<h1>Snipvora clips</h1>
+<div class="mut" id="meta">Loading...</div>
+<div id="list"></div>
+<p class="mut">Post each clip yourself: tap Download, then use Copy caption in TikTok. The caption already has the required tag and #ad.</p>
+<script>
+const REPO="Mickyatakilt/snipvora-clipper";
+const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
+const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+async function main(){
+  const meta=document.getElementById("meta"),list=document.getElementById("list");
+  try{
+    const r=await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=3`);
+    if(!r.ok) throw new Error("GitHub said "+r.status);
+    const rels=(await r.json()).filter(x=>x.name&&x.name.startsWith("clips-"));
+    if(!rels.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
+    meta.textContent="Latest run: "+new Date(rels[0].published_at).toLocaleString()+" (clips are kept 3 days)";
+    for(const rel of rels){
+      let info=[];try{info=JSON.parse(rel.body)}catch(e){}
+      for(const a of rel.assets.filter(a=>a.name.endsWith(".mp4"))){
+        const i=info.find(x=>x.file.endsWith(a.name))||{};
+        const id=rel.id+"/"+a.name;
+        const d=document.createElement("div");d.className="card"+(done[id]?" done":"");
+        d.innerHTML=`<b>${esc(i.campaign||"Campaign clip")}</b> <span class="mut">${esc(a.name)} · ${(a.size/1e6).toFixed(0)} MB</span>
+          <video controls playsinline preload="metadata" src="${a.browser_download_url}"></video>
+          <pre>${esc(i.caption||"")}</pre>
+          <div class="row"><a class="btn" href="${a.browser_download_url}">Download</a>
+          <button data-c>Copy caption</button><button class="ok" data-d>${done[id]?"Posted ✓":"Mark posted"}</button></div>`;
+        d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(i.caption||"");e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
+        d.querySelector("[data-d]").onclick=e=>{done[id]=!done[id];save();d.classList.toggle("done",!!done[id]);e.target.textContent=done[id]?"Posted ✓":"Mark posted"};
+        list.appendChild(d);
+      }
+    }
+  }catch(e){meta.textContent="Could not load clips: "+e.message}
+}
+main();
+</script></body></html>
