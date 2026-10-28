@@ -20,7 +20,7 @@ jobs:
                   print(label, "TITLE:", await pg.title()); print(label, "TEXT:", (await pg.inner_text("body"))[:300].replace("\n"," | "))
                   for s in sorted(seen)[:12]: print(label, "NET:", s)
                   await b.close()
-          asyncio.run(go("https://app.mediasilo.com/review/6ae109cef2c6470f09434547","MEDIASILO"))
+          asyncio.run(go("https://app.mediasilo.com/review/6ae109cef2c6470f09434547/f/28abc944-ea6b-4c31-8412-2feabade068e","MEDIASILO"))
           asyncio.run(go("https://diggzy.picflow.com/ZK1uf2VY1HP9BplH","PICFLOW"))
           P
           python f.py
