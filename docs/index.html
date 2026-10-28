@@ -12,6 +12,19 @@ video{width:100%;aspect-ratio:9/16;max-height:72vh;object-fit:contain;border-rad
 button,a.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 14px;font:inherit;text-decoration:none;cursor:pointer}
 button.ok{background:var(--ok)}pre{white-space:pre-wrap;background:rgba(127,127,160,.12);border-radius:8px;padding:8px;margin:8px 0 0;font:inherit}
 .done{opacity:.55}
+.phone{position:relative;width:min(100%,340px);aspect-ratio:9/16;margin:10px auto;border-radius:18px;overflow:hidden;background:#000}
+.phone video{width:100%;height:100%;max-height:none;object-fit:cover;border-radius:0;display:block}
+.ov{position:absolute;left:0;right:0;bottom:0;padding:48px 64px 16px 12px;color:#fff;font-size:13px;line-height:1.35;background:linear-gradient(transparent,rgba(0,0,0,.65));pointer-events:none;white-space:pre-wrap}
+.ov b{display:block;margin-bottom:3px;font-size:14px}
+.side{position:absolute;right:8px;bottom:70px;display:flex;flex-direction:column;gap:14px;color:#fff;font-size:11px;text-align:center;pointer-events:none}
+.side i{display:block;font-style:normal;font-size:24px}
+.play{position:absolute;inset:0;display:grid;place-items:center;font-size:54px;color:#fff;background:none;border:0;opacity:.9}
+.badge{display:inline-block;border-radius:8px;padding:3px 9px;font-weight:700;color:#012}
+.g-hi{background:#00b894}.g-mid{background:#fdcb6e}.g-lo{background:#ff7675}.g-na{background:#99a}
+button.del{background:#d63031}button.edit{background:#0984e3}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--fg);width:min(92vw,420px)}
+dialog::backdrop{background:rgba(0,0,0,.55)}textarea,input[type=datetime-local]{width:100%;background:rgba(127,127,160,.12);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;margin-top:6px}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#222;color:#fff;border-radius:10px;padding:10px 14px;display:none;max-width:90vw;font-size:13px}
 .tabs{display:flex;gap:8px;margin:10px 0}.tab{background:var(--card);color:var(--fg);border:1px solid var(--line)}.tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
 .pill{font-size:11px;border-radius:8px;padding:2px 7px;background:var(--ok);color:#012}.pill.w{background:#fdcb6e}
 ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{display:none}
@@ -26,6 +39,22 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 const REPO="Mickyatakilt/snipvora-clipper";
 const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
 const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
+const WORKER_URL=""; // set when the Cloudflare helper is deployed
+const gone=(()=>{try{return JSON.parse(localStorage.getItem("gone")||"{}")}catch(e){return{}}})();
+const save2=()=>{try{localStorage.setItem("gone",JSON.stringify(gone))}catch(e){}};
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";setTimeout(()=>e.style.display="none",4500)}
+async function send(type,payload){
+  const item={type,...payload,at:new Date().toISOString()};
+  if(WORKER_URL){try{const r=await fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(item)});if(!r.ok)throw 0;toast("Sent ✓");return}catch(e){toast("Could not reach the helper. Saved on this phone.")}}
+  else toast("Saved on this phone. Buttons go live once the cloud helper is connected.");
+  try{const q=JSON.parse(localStorage.getItem("pending")||"[]");q.push(item);localStorage.setItem("pending",JSON.stringify(q))}catch(e){}
+}
+function ask(title,text,withTime,cb){
+  const dlg=document.getElementById("dlg");dlg.querySelector("h3").textContent=title;
+  const ta=dlg.querySelector("textarea");ta.value=text||"";dlg.querySelector("[data-t]").style.display=withTime?"block":"none";
+  dlg.querySelector("[data-ok]").onclick=()=>{const w=dlg.querySelector("input").value;dlg.close();cb(ta.value,w)};
+  dlg.showModal();
+}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 async function main(){
   const meta=document.getElementById("meta"),list=document.getElementById("list");
@@ -36,15 +65,26 @@ async function main(){
     if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
     meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
     for(const c of clips){
-      const id=c.video;
+      const id=c.video; if(gone[id]) continue;
+      const g=c.grade, gc=g==null?"g-na":g>=8?"g-hi":g>=5?"g-mid":"g-lo";
       const d=document.createElement("div");d.className="card"+(done[id]?" done":"");
-      d.innerHTML=`<b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
-        <video controls playsinline webkit-playsinline preload="metadata" poster="${c.poster}" src="${c.video}"></video>
-        <pre>${esc(c.caption)}</pre>
-        <div class="row"><a class="btn" href="${c.video}" download>Download</a>
-        <button data-c>Copy caption</button><button class="ok" data-d>${done[id]?"Posted ✓":"Mark posted"}</button></div>`;
+      d.innerHTML=`<div><b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
+        <span class="badge ${gc}">${g==null?"Not graded":g+"/10"}</span></div>
+        <div class="mut">${esc(g==null?"Grading turns on once the OpenAI key is added.":c.reason)}</div>
+        <div class="phone"><video playsinline webkit-playsinline preload="metadata" poster="${c.poster}" src="${c.video}" loop></video>
+          <button class="play" aria-label="Play">▶</button>
+          <div class="side"><div><i>♥</i>Like</div><div><i>💬</i>Chat</div><div><i>↗</i>Share</div></div>
+          <div class="ov"><b>@snipvora</b>${esc(c.caption)}</div></div>
+        <div class="row"><button class="ok" data-p>Post</button><button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
+          <a class="btn" href="${c.video}" download>Download</a><button data-c>Copy caption</button></div>
+        <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
+      const v=d.querySelector("video"),pl=d.querySelector(".play");
+      const tog=()=>{if(v.paused){document.querySelectorAll("video").forEach(o=>o.pause());v.play();pl.style.display="none"}else{v.pause();pl.style.display=""}};
+      pl.onclick=tog;v.onclick=tog;
       d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(c.caption);e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
-      d.querySelector("[data-d]").onclick=e=>{done[id]=!done[id];save();d.classList.toggle("done",!!done[id]);e.target.textContent=done[id]?"Posted ✓":"Mark posted"};
+      d.querySelector("[data-x]").onclick=()=>{if(confirm("Delete this clip?")){gone[id]=1;save2();send("delete",{video:id});d.remove()}};
+      d.querySelector("[data-e]").onclick=()=>ask("Edit: what should change?","",null,t=>{send("edit",{video:id,note:t});d.querySelector("[data-s]").textContent="Edit requested: "+t});
+      d.querySelector("[data-p]").onclick=()=>ask("Post: description",c.caption,true,(t,when)=>{done[id]=true;save();send("post",{video:id,description:t,when});d.classList.add("done");d.querySelector("[data-s]").textContent="Queued to post"+(when?" at "+new Date(when).toLocaleString():" (no time set)")});
       list.appendChild(d);
     }
   }catch(e){meta.textContent="Could not load clips: "+e.message}
@@ -77,4 +117,7 @@ async function loadCamps(){
   camps.querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{joined[b.dataset.j]=true;try{localStorage.setItem("joined",JSON.stringify(joined))}catch(e){};b.textContent="Joined ✓"});
 }
 loadCamps();
-</script></body></html>
+</script>
+<dialog id="dlg"><h3></h3><textarea rows="5"></textarea><div data-t>Schedule for (optional)<input type="datetime-local"></div>
+<div class="row"><button data-ok class="ok">OK</button><button onclick="document.getElementById('dlg').close()" style="background:#666">Cancel</button></div></dialog>
+<div id="toast"></div></body></html>

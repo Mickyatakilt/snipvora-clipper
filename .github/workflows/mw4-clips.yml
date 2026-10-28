@@ -12,6 +12,10 @@ jobs:
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: pip install -q playwright numpy && playwright install --with-deps chromium >/dev/null 2>&1 && echo ready
       - run: python mw4_clip.py
+      - name: Grade clips (skipped until OPENAI_API_KEY secret exists)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python grade.py
       - name: Publish clips (release, newest 3 kept)
         env:
           GH_TOKEN: ${{ github.token }}

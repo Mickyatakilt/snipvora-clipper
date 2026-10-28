@@ -81,12 +81,11 @@ def main():
         if len(picks) >= N:
             break
     os.makedirs("out", exist_ok=True)
-    vf = ("[0:v]split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25[bg];"
-          "[b]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,format=yuv420p")
+    vf = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,format=yuv420p"  # full-screen 9:16, exactly as uploaded
     meta = []
     for k, st in enumerate(sorted(picks), 1):
         out = f"out/mw4_clip{k}.mp4"
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", "src.mp4", "-filter_complex", vf,
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", "src.mp4", "-vf", vf,
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", out], check=True)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "3", "-i", out, "-frames:v", "1", "-vf", "scale=540:-2", out.replace(".mp4", ".jpg")], check=True)
         cap = f"{CAPTIONS[(k - 1) % len(CAPTIONS)]}\n#ad @callofduty"

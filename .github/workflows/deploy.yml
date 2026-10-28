@@ -37,7 +37,7 @@ jobs:
               body = json.loads(subprocess.check_output(["gh","release","view",tag,"--json","body","--jq",".body"], text=True))
               for b in body:
                   f = os.path.basename(b["file"])
-                  out.append({"tag": tag, "published": t["publishedAt"], "campaign": b.get("campaign",""), "caption": b["caption"],
+                  out.append({"tag": tag, "published": t["publishedAt"], "campaign": b.get("campaign",""), "caption": b["caption"], "grade": b.get("grade"), "reason": b.get("reason",""),
                               "video": f"clips/{tag}/{f}", "poster": f"clips/{tag}/{f.replace('.mp4','.jpg')}", "mb": round(os.path.getsize(f"site/clips/{tag}/{f}")/1e6)})
           json.dump(out, open("site/clips.json","w"), indent=1)
           print(len(out), "clips in site")
