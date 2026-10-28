@@ -1,0 +1,17 @@
+name: test-download
+on: workflow_dispatch
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip install -q yt-dlp faster-whisper; ffmpeg -version | head -1
+      - name: YouTube download test
+        run: |
+          yt-dlp -f "worst[ext=mp4]/worst" -o t.mp4 --no-playlist "https://www.youtube.com/watch?v=jNQXAC9IVRw" 2>&1 | tail -8
+          ls -la t.mp4 || echo "YOUTUBE_BLOCKED"
+      - name: Whisper test
+        run: |
+          python -c "
+          from faster_whisper import WhisperModel
+          m=WhisperModel('tiny',compute_type='int8')
+          s,_=m.transcribe('t.mp4'); print('WHISPER_OK',[x.text for x in s][:2])" 2>&1 | tail -4
