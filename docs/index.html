@@ -12,10 +12,15 @@ video{width:100%;max-height:70vh;border-radius:10px;background:#000}
 button,a.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 14px;font:inherit;text-decoration:none;cursor:pointer}
 button.ok{background:var(--ok)}pre{white-space:pre-wrap;background:rgba(127,127,160,.12);border-radius:8px;padding:8px;margin:8px 0 0;font:inherit}
 .done{opacity:.55}
+.tabs{display:flex;gap:8px;margin:10px 0}.tab{background:var(--card);color:var(--fg);border:1px solid var(--line)}.tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.pill{font-size:11px;border-radius:8px;padding:2px 7px;background:var(--ok);color:#012}.pill.w{background:#fdcb6e}
+ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{display:none}
 </style></head><body>
-<h1>Snipvora clips</h1>
+<h1>Snipvora</h1>
+<div class="tabs"><button id="t1" class="tab on">Clips</button><button id="t2" class="tab">Campaigns</button></div>
 <div class="mut" id="meta">Loading...</div>
 <div id="list"></div>
+<div id="camps"></div>
 <p class="mut">Post each clip yourself: tap Download, then use Copy caption in TikTok. The caption already has the required tag and #ad.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
@@ -49,4 +54,31 @@ async function main(){
   }catch(e){meta.textContent="Could not load clips: "+e.message}
 }
 main();
+const camps=document.getElementById("camps"),list2=document.getElementById("list");
+const joined=(()=>{try{return JSON.parse(localStorage.getItem("joined")||"{}")}catch(e){return{}}})();
+document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.display="none";t1.classList.add("on");t2.classList.remove("on")};
+document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on")};
+async function loadCamps(){
+  let mine=[];try{mine=await (await fetch("campaigns.json")).json()}catch(e){}
+  let h="<h3>Your campaigns</h3>";
+  for(const c of mine){h+=`<div class="card"><b>${esc(c.title)}</b> <span class="pill ${c.status==="active"?"":"w"}">${esc(c.status)}</span>
+    <div class="mut">${esc(c.rate)} · footage: ${esc(c.footage)}</div><ul>${c.rules.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>
+    <div class="row"><a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a></div></div>`}
+  h+="<h3>Join these next</h3><div class='mut'>Only campaigns that fit a 0-follower account: open join, pays out fast, real budget, not crowded. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
+  try{
+    const d=await (await fetch("latest.json")).json();
+    const have=new Set(mine.map(m=>m.id));
+    const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b/i;
+    const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{};const v=tt.views_to_first_payout||9999;
+      return !have.has(t.id)&&!t.requires_application&&!(t.flags||[]).length&&v<=3000&&t.budget_left>=1500&&t.creators<=60&&!bad.test(t.title+" "+(t.description||"").slice(0,200))}).slice(0,3);
+    if(!picks.length)h+="<div class='card mut'>No new campaign fits right now. The scout checks twice a day.</div>";
+    for(const t of picks){const v=(t.tiktok||{}).views_to_first_payout;const id="j"+t.id;
+      h+=`<div class="card"><b>${esc(t.title)}</b><div class="mut">$${(t.tiktok||{}).rate_per_1k||t.rate_per_1k}/1k · pays after ~${v} views · $${Math.round(t.budget_left).toLocaleString()} left · ${t.creators} creators</div>
+      <div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">1. Join</a><button class="ok" data-j="${t.id}">${joined[t.id]?"Joined ✓":"2. I joined"}</button></div></div>`}
+    h+=`<div class="mut">Scout last ran: ${esc(d.scanned_at||"?")}</div>`;
+  }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
+  camps.innerHTML=h;
+  camps.querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{joined[b.dataset.j]=true;try{localStorage.setItem("joined",JSON.stringify(joined))}catch(e){};b.textContent="Joined ✓"});
+}
+loadCamps();
 </script></body></html>
