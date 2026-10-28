@@ -34,11 +34,13 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 <div class="mut" id="meta">Loading...</div>
 <div id="list"></div>
 <div id="camps"></div>
+<p class="mut"><a href="#old" onclick="setTimeout(()=>location.reload())">Show older runs</a></p>
 <p class="mut">Post each clip yourself: tap Download, then use Copy caption in TikTok. The caption already has the required tag and #ad.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
 const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
 const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
+let showOld=location.hash==="#old";
 const WORKER_URL=""; // set when the Cloudflare helper is deployed
 const gone=(()=>{try{return JSON.parse(localStorage.getItem("gone")||"{}")}catch(e){return{}}})();
 const save2=()=>{try{localStorage.setItem("gone",JSON.stringify(gone))}catch(e){}};
@@ -64,14 +66,16 @@ async function main(){
     const clips=await r.json();
     if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
     meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
+    const newest=clips[0].tag;
     for(const c of clips){
       const id=c.video; if(gone[id]) continue;
+      if(c.tag!==newest&&!showOld) continue;
       const g=c.grade, gc=g==null?"g-na":g>=8?"g-hi":g>=5?"g-mid":"g-lo";
       const d=document.createElement("div");d.className="card"+(done[id]?" done":"");
       d.innerHTML=`<div><b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
         <span class="badge ${gc}">${g==null?"Not graded":g+"/10"}</span></div>
         <div class="mut">${esc(g==null?"Grading turns on once the OpenAI key is added.":c.reason)}</div>
-        <div class="phone"><video playsinline webkit-playsinline preload="metadata" poster="${c.poster}" src="${c.video}" loop></video>
+        <div class="phone"><video playsinline webkit-playsinline preload="none" poster="${c.poster}" src="${c.video}" loop></video>
           <button class="play" aria-label="Play">▶</button>
           <div class="side"><div><i>♥</i>Like</div><div><i>💬</i>Chat</div><div><i>↗</i>Share</div></div>
           <div class="ov"><b>@snipvora</b>${esc(c.caption)}</div></div>
