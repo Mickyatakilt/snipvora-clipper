@@ -39,8 +39,37 @@ def energy(path):
     return np.sqrt((a[: s * 8000].reshape(s, 8000) ** 2).mean(axis=1))
 
 
+def fetch_with_retry(tries=3):
+    for i in range(1, tries + 1):
+        try:
+            asyncio.run(fetch())
+            if os.path.getsize("src.mp4") < 100_000_000:
+                raise RuntimeError("downloaded file too small")
+            return
+        except Exception as ex:  # real failures are retried, then the job fails loudly
+            print(f"attempt {i}/{tries} failed: {ex!r}", flush=True)
+            if i == tries:
+                raise
+            import time; time.sleep(20 * i)
+
+
+def validate(meta):
+    """A clip only counts if it is 1080x1920, 10s+, has audio, and has real size. Anything else fails the whole job."""
+    for m in meta:
+        out = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height", "-show_entries", "format=duration",
+                                       "-of", "json", m["file"]])
+        j = json.loads(out)
+        kinds = {x["codec_type"] for x in j["streams"]}
+        v = next(x for x in j["streams"] if x["codec_type"] == "video")
+        assert "audio" in kinds, f"{m['file']}: no audio"
+        assert (v["width"], v["height"]) == (1080, 1920), f"{m['file']}: bad size"
+        assert float(j["format"]["duration"]) >= 10, f"{m['file']}: shorter than 10s"
+        assert os.path.getsize(m["file"]) > 500_000, f"{m['file']}: too small"
+    assert len(meta) >= 3, f"only {len(meta)} valid clips"
+
+
 def main():
-    asyncio.run(fetch())
+    fetch_with_retry()
     dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", "src.mp4"]))
     e = energy("src.mp4")
     print(f"source {dur:.0f}s", flush=True)
@@ -62,7 +91,9 @@ def main():
         cap = f"{CAPTIONS[(k - 1) % len(CAPTIONS)]}\n#ad @callofduty"
         meta.append({"file": out, "start": st, "seconds": CLIP_SEC, "caption": cap})
         print("clip", k, "from", st, "s", flush=True)
+    validate(meta)
     json.dump(meta, open("out/clips.json", "w"), indent=1)
+    print("VALIDATED", len(meta), "clips", flush=True)
 
 
 main()
