@@ -17,7 +17,7 @@ async def fetch(path="src.mp4"):
         c = await b.new_context(user_agent=UA, viewport={"width": 1400, "height": 850}, locale="en-US", timezone_id="America/New_York")
         await c.add_init_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
         pg = await c.new_page()
-        await pg.goto(f"https://app.mediasilo.com/review/{QL}", wait_until="networkidle", timeout=60000)
+        await pg.goto(f"https://app.mediasilo.com/review/{QL}", wait_until="domcontentloaded", timeout=90000)
         await pg.wait_for_timeout(8000)
         r = await c.request.get(f"https://api.mediasilo.com/v3/quicklinks/{QL}/folders/{FOLDER}/assets")
         d = await r.json()
