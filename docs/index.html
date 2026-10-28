@@ -7,7 +7,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px -apple-system,system-ui,sans-serif;padding:16px 16px 60px;max-width:820px;margin:auto}
 h1{margin:6px 0 2px}.mut{color:var(--mut);font-size:13px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:14px 0}
-video{width:100%;max-height:70vh;border-radius:10px;background:#000}
+video{width:100%;aspect-ratio:9/16;max-height:72vh;object-fit:contain;border-radius:10px;background:#000}
 .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 button,a.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 14px;font:inherit;text-decoration:none;cursor:pointer}
 button.ok{background:var(--ok)}pre{white-space:pre-wrap;background:rgba(127,127,160,.12);border-radius:8px;padding:8px;margin:8px 0 0;font:inherit}
@@ -30,43 +30,39 @@ function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","
 async function main(){
   const meta=document.getElementById("meta"),list=document.getElementById("list");
   try{
-    const r=await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=3`);
-    if(!r.ok) throw new Error("GitHub said "+r.status);
-    const rels=(await r.json()).filter(x=>x.name&&x.name.startsWith("clips-"));
-    if(!rels.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
-    meta.textContent="Latest run: "+new Date(rels[0].published_at).toLocaleString()+" (clips are kept 3 days)";
-    for(const rel of rels){
-      let info=[];try{info=JSON.parse(rel.body)}catch(e){}
-      for(const a of rel.assets.filter(a=>a.name.endsWith(".mp4"))){
-        const i=info.find(x=>x.file.endsWith(a.name))||{};
-        const id=rel.id+"/"+a.name;
-        const d=document.createElement("div");d.className="card"+(done[id]?" done":"");
-        d.innerHTML=`<b>${esc(i.campaign||"Campaign clip")}</b> <span class="mut">${esc(a.name)} · ${(a.size/1e6).toFixed(0)} MB</span>
-          <video controls playsinline preload="metadata" src="${a.browser_download_url}"></video>
-          <pre>${esc(i.caption||"")}</pre>
-          <div class="row"><a class="btn" href="${a.browser_download_url}">Download</a>
-          <button data-c>Copy caption</button><button class="ok" data-d>${done[id]?"Posted ✓":"Mark posted"}</button></div>`;
-        d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(i.caption||"");e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
-        d.querySelector("[data-d]").onclick=e=>{done[id]=!done[id];save();d.classList.toggle("done",!!done[id]);e.target.textContent=done[id]?"Posted ✓":"Mark posted"};
-        list.appendChild(d);
-      }
+    const r=await fetch("clips.json",{cache:"no-store"});
+    if(!r.ok) throw new Error("clips.json "+r.status);
+    const clips=await r.json();
+    if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
+    meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
+    for(const c of clips){
+      const id=c.video;
+      const d=document.createElement("div");d.className="card"+(done[id]?" done":"");
+      d.innerHTML=`<b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
+        <video controls playsinline webkit-playsinline preload="metadata" poster="${c.poster}" src="${c.video}"></video>
+        <pre>${esc(c.caption)}</pre>
+        <div class="row"><a class="btn" href="${c.video}" download>Download</a>
+        <button data-c>Copy caption</button><button class="ok" data-d>${done[id]?"Posted ✓":"Mark posted"}</button></div>`;
+      d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(c.caption);e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
+      d.querySelector("[data-d]").onclick=e=>{done[id]=!done[id];save();d.classList.toggle("done",!!done[id]);e.target.textContent=done[id]?"Posted ✓":"Mark posted"};
+      list.appendChild(d);
     }
   }catch(e){meta.textContent="Could not load clips: "+e.message}
 }
 main();
 const camps=document.getElementById("camps"),list2=document.getElementById("list");
 const joined=(()=>{try{return JSON.parse(localStorage.getItem("joined")||"{}")}catch(e){return{}}})();
-document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.display="none";t1.classList.add("on");t2.classList.remove("on")};
-document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on")};
+document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.display="none";t1.classList.add("on");t2.classList.remove("on");document.getElementById("meta").style.display=""};
+document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on");document.getElementById("meta").style.display="none"};
 async function loadCamps(){
-  let mine=[];try{mine=await (await fetch("campaigns.json")).json()}catch(e){}
+  let mine=[];try{mine=await (await fetch("campaigns.json",{cache:"no-store"})).json()}catch(e){}
   let h="<h3>Your campaigns</h3>";
   for(const c of mine){h+=`<div class="card"><b>${esc(c.title)}</b> <span class="pill ${c.status==="active"?"":"w"}">${esc(c.status)}</span>
     <div class="mut">${esc(c.rate)} · footage: ${esc(c.footage)}</div><ul>${c.rules.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>
     <div class="row"><a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a></div></div>`}
   h+="<h3>Join these next</h3><div class='mut'>Only campaigns that fit a 0-follower account: open join, pays out fast, real budget, not crowded. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
   try{
-    const d=await (await fetch("latest.json")).json();
+    const d=await (await fetch("latest.json",{cache:"no-store"})).json();
     const have=new Set(mine.map(m=>m.id));
     const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b/i;
     const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{};const v=tt.views_to_first_payout||9999;

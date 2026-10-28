@@ -6,6 +6,7 @@ jobs:
     timeout-minutes: 12
     permissions:
       contents: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
@@ -16,8 +17,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           tag="clips-$(date -u +%Y%m%d-%H%M)"
-          gh release create "$tag" out/*.mp4 --title "$tag" --notes "$(cat out/clips.json)"
+          gh release create "$tag" out/*.mp4 out/*.jpg --title "$tag" --notes "$(cat out/clips.json)"
           gh release list --limit 50 --json tagName --jq '.[].tagName' | grep '^clips-' | sort -r | tail -n +4 | xargs -r -I{} gh release delete {} --cleanup-tag --yes
+      - name: Redeploy dashboard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml
       - name: Alert on failure
         if: failure()
         run: |

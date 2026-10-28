@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 jobs:
   scout:
     runs-on: ubuntu-latest
@@ -18,3 +19,6 @@ jobs:
       - run: |
           git config user.name "scout"; git config user.email "scout@users.noreply.github.com"
           git add -A; git diff --cached --quiet || git commit -m "scout $(date -u +%F)"; git push
+      - run: gh workflow run deploy.yml
+        env:
+          GH_TOKEN: ${{ github.token }}

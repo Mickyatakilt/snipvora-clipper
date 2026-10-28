@@ -1,0 +1,50 @@
+name: deploy
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["docs/**"]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site = dashboard + newest 3 clip runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p site/clips; cp -r docs/* site/
+          echo "[]" > site/clips.json
+          python3 - <<'P'
+          import json, subprocess, os
+          tags = subprocess.check_output(["gh","release","list","--limit","50","--json","tagName,publishedAt"], text=True)
+          tags = sorted([t for t in json.loads(tags) if t["tagName"].startswith("clips-")], key=lambda t: t["tagName"], reverse=True)[:3]
+          out = []
+          for t in tags:
+              tag = t["tagName"]; os.makedirs(f"site/clips/{tag}", exist_ok=True)
+              subprocess.run(["gh","release","download",tag,"--dir",f"site/clips/{tag}","--clobber"], check=True)
+              body = json.loads(subprocess.check_output(["gh","release","view",tag,"--json","body","--jq",".body"], text=True))
+              for b in body:
+                  f = os.path.basename(b["file"])
+                  out.append({"tag": tag, "published": t["publishedAt"], "campaign": b.get("campaign",""), "caption": b["caption"],
+                              "video": f"clips/{tag}/{f}", "poster": f"clips/{tag}/{f.replace('.mp4','.jpg')}", "mb": round(os.path.getsize(f"site/clips/{tag}/{f}")/1e6)})
+          json.dump(out, open("site/clips.json","w"), indent=1)
+          print(len(out), "clips in site")
+          P
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: d
+        uses: actions/deploy-pages@v4
