@@ -5,22 +5,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install -q playwright && playwright install --with-deps chromium >/dev/null 2>&1; echo installed
-      - name: Find MediaSilo + Picflow download URLs
+      - name: MediaSilo as a normal browser
         run: |
           cat > f.py <<'P'
           import asyncio, re
           from playwright.async_api import async_playwright
-          async def go(url, label):
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+          async def go():
               async with async_playwright() as p:
-                  b = await p.chromium.launch(); pg = await b.new_page()
-                  seen=set()
-                  pg.on("response", lambda r: seen.add((r.status, r.headers.get("content-type","")[:30], re.sub(r"\?.*","",r.url)[:110])) if re.search(r"\.(mp4|mov|m3u8)|video|download", r.url+r.headers.get("content-type",""), re.I) else None)
-                  await pg.goto(url, wait_until="networkidle", timeout=60000)
-                  await pg.wait_for_timeout(8000)
-                  print(label, "TITLE:", await pg.title()); print(label, "TEXT:", (await pg.inner_text("body"))[:300].replace("\n"," | "))
-                  for s in sorted(seen)[:12]: print(label, "NET:", s)
+                  b = await p.chromium.launch(args=["--disable-blink-features=AutomationControlled"])
+                  c = await b.new_context(user_agent=UA, viewport={"width":1400,"height":850}, locale="en-US", timezone_id="America/New_York")
+                  await c.add_init_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined})")
+                  pg = await c.new_page()
+                  def on(r):
+                      if "mediasilo" in r.url and r.request.resource_type in ("xhr","fetch"): print("API", r.status, re.sub(r"\?.*","",r.url)[:120])
+                  pg.on("response", on)
+                  await pg.goto("https://app.mediasilo.com/review/6ae109cef2c6470f09434547", wait_until="networkidle", timeout=60000)
+                  await pg.wait_for_timeout(12000)
+                  print("TEXT:", (await pg.inner_text("body"))[:300].replace("\n"," | "))
                   await b.close()
-          asyncio.run(go("https://app.mediasilo.com/review/6ae109cef2c6470f09434547/f/28abc944-ea6b-4c31-8412-2feabade068e","MEDIASILO"))
-          asyncio.run(go("https://diggzy.picflow.com/ZK1uf2VY1HP9BplH","PICFLOW"))
+          asyncio.run(go())
           P
           python f.py
