@@ -1,20 +1,20 @@
 {
- "scanned_at": "2026-10-28 07:21",
- "listed": 67,
- "kept": 41,
+ "scanned_at": "2026-10-28 14:11",
+ "listed": 77,
+ "kept": 33,
  "top": [
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
    "title": "SKULLPANDA at Doja Cat\u2019s 31st Birthday Party",
    "brand": "Pop Mart Americas Inc.",
    "category": "Entertainment",
-   "score": 117.9,
+   "score": 117.8,
    "why": [
     "new"
    ],
    "rate_per_1k": 10.0,
-   "budget_left": 2315.7200000000003,
-   "creators": 17,
+   "budget_left": 2163.14,
+   "creators": 19,
    "platforms": [
     "instagram",
     "tiktok",
@@ -32,6 +32,36 @@
     "max_payout": 1000.0,
     "views_to_first_payout": 1000
    },
+   "new": false
+  },
+  {
+   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "title": "Mini Brands \u2014 Ulta Beauty Clipping",
+   "brand": "Clip Influence",
+   "category": "Entertainment",
+   "score": 46.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 8680.82,
+   "creators": 30,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "description": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "flags": [],
+   "brief": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 1000
+   },
    "new": true
   },
   {
@@ -39,14 +69,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.6,
+   "score": 42.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 23038.01,
-   "creators": 1,
+   "budget_left": 22778.469999999998,
+   "creators": 4,
    "platforms": [
     "instagram",
     "tiktok"
@@ -62,21 +92,21 @@
     "max_payout": 1200.0,
     "views_to_first_payout": 3000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
    "title": "Modern Warfare 4 - Campaign Moments Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.0,
+   "score": 41.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 15000,
-   "creators": 0,
+   "budget_left": 14707.6,
+   "creators": 6,
    "platforms": [
     "instagram",
     "tiktok"
@@ -92,38 +122,7 @@
     "max_payout": 1000.0,
     "views_to_first_payout": 3000
    },
-   "new": true
-  },
-  {
-   "id": "bc1c5c8b-8d3a-404c-ae46-61f19c4d07da",
-   "title": "Social Commerce News (SoCom Events)",
-   "brand": "VantaClip",
-   "category": "Events",
-   "score": 41.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 932.91,
-   "creators": 14,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/bc1c5c8b-8d3a-404c-ae46-61f19c4d07da",
-   "description": "Promote Social Commerce News\u2019 upcoming SoCom Summit in NYC on November 10th. Create engaging short-form clips using past event footage, highlighting valuable insights, industry discussions, and standout moments. Make clips feel natural, not",
-   "flags": [],
-   "brief": "Promote Social Commerce News\u2019 upcoming SoCom Summit in NYC on November 10th. Create engaging short-form clips using past event footage, highlighting valuable insights, industry discussions, and standout moments. Make clips feel natural, not like ads, and encourage viewers to register at socommsummit",
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
+   "new": false
   },
   {
    "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
@@ -135,7 +134,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2162.71,
+   "budget_left": 2135.6,
    "creators": 57,
    "platforms": [
     "instagram",
@@ -153,21 +152,21 @@
     "max_payout": 200.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "78bd78e4-0ec3-44d7-9f56-122ff7c374bc",
    "title": "Modern Warfare 4 - DMZ Live Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.3,
+   "score": 38.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 5838.610000000001,
-   "creators": 47,
+   "budget_left": 2153.09,
+   "creators": 63,
    "platforms": [
     "instagram",
     "tiktok"
@@ -183,65 +182,66 @@
     "max_payout": 1500.0,
     "views_to_first_payout": 3000
    },
-   "new": true
+   "new": false
   },
   {
-   "id": "35056178-a7a3-441d-a070-2a1b5bb7378b",
-   "title": "GALAXY ",
-   "brand": "Clouted",
-   "category": "Gadgets",
-   "score": 40.2,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1397.83,
-   "creators": 20,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/35056178-a7a3-441d-a070-2a1b5bb7378b",
-   "description": "Reposting - Show audiences why they'd switch to Galaxy by highlighting features, experiences, and devices that make switching feel worth it.",
-   "flags": [],
-   "brief": "Reposting - Show audiences why they'd switch to Galaxy by highlighting features, experiences, and devices that make switching feel worth it.",
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
-   "id": "5d37d3dd-adf3-401f-9c62-24bb54d5087a",
-   "title": "DiegoLoveless Marvel Rivals Clipping",
-   "brand": "ClipLaunch",
-   "category": "Twitch",
-   "score": 39.3,
+   "id": "8553875d-dfb0-4a97-aea5-448008876e46",
+   "title": "Scape: clip Gravity for its Early Access launch",
+   "brand": "ScapeWorld Entertainment AB",
+   "category": "PC Gaming",
+   "score": 37.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1326.42,
-   "creators": 7,
+   "budget_left": 2363.93,
+   "creators": 58,
    "platforms": [
-    "instagram",
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/5d37d3dd-adf3-401f-9c62-24bb54d5087a",
-   "description": "Clip the best Marvel Rivals moments from DiegoLoveless's Twitch streams! All clips MUST be Marvel Rivals content and include a clear CTA directing viewers to his Twitch. Our goal is to turn viral clips into new Twitch viewers and followers.",
+   "url": "https://contentrewards.com/c/campaigns/8553875d-dfb0-4a97-aea5-448008876e46",
+   "description": "Clip Gravity, our multiplayer climbing game on Scape, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cos",
    "flags": [],
-   "brief": "Clip the best Marvel Rivals moments from DiegoLoveless's Twitch streams! All clips MUST be Marvel Rivals content and include a clear CTA directing viewers to his Twitch. Our goal is to turn viral clips into new Twitch viewers and followers.\\n\\nWatch: https://twitch.tv/diegoloveless ",
+   "brief": "Clip Gravity, our multiplayer climbing game on Scape, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics never come back.",
    "tiktok": {
     "rate_per_1k": 1.5,
     "min_payout": 1.5,
-    "max_payout": 500.0,
+    "max_payout": 150.0,
     "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "10b9e68d-6004-4730-a741-4b5b37ae0a20",
+   "title": "John Furrier + NYSE/theCUBE",
+   "brand": "ReelsBuilder",
+   "category": "Technology",
+   "score": 36.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 1371.2399999999998,
+   "creators": 56,
+   "platforms": [
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/10b9e68d-6004-4730-a741-4b5b37ae0a20",
+   "description": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, an",
+   "flags": [],
+   "brief": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, and business.",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 2000
    },
    "new": true
   },
@@ -255,7 +255,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 16713.42,
+   "budget_left": 16711.21,
    "creators": 387,
    "platforms": [
     "tiktok"
@@ -271,93 +271,30 @@
     "max_payout": 750.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
-   "id": "4611bd61-7855-4d55-9dfa-183b71834876",
-   "title": "Pup Ai [CLIPPING]",
-   "brand": "Reachify",
-   "category": "Pets",
-   "score": 35.8,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 2007.63,
-   "creators": 11,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/4611bd61-7855-4d55-9dfa-183b71834876",
-   "description": "Create content around pup ai app following all the guidelines attached and get paid for your views!",
-   "flags": [],
-   "brief": "Create content around pup ai app following all the guidelines attached and get paid for your views!",
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 400.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
-   "id": "187aab3d-899e-4fc6-a56f-65977109adc0",
-   "title": "Flightdeck App Clipping",
-   "brand": "Clip Farm",
-   "category": "Entertainment",
-   "score": 35.7,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 9965.14,
-   "creators": 29,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/187aab3d-899e-4fc6-a56f-65977109adc0",
-   "description": "FlightDeck is a live flight tracker app showing the same plane data pilots and airlines see, including messages between crews and airlines on the ground. Find wild messages, unusual flight paths, and emergencies, and clip them. \n\nYour job: ",
-   "flags": [
-    "dedicated page required"
-   ],
-   "brief": "FlightDeck is a live flight tracker app showing the same plane data pilots and airlines see, including messages between crews and airlines on the ground. Find wild messages, unusual flight paths, and emergencies, and clip them. \\n\\nYour job: Build a dedicated page, post daily, and grow it.",
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.0,
-    "max_payout": 300.0,
-    "views_to_first_payout": 667
-   },
-   "new": true
-  },
-  {
-   "id": "b21db5e5-3494-4efe-8783-4be34c17ec54",
-   "title": "A24 - SLAYGROUND ",
-   "brand": "ClipHaus",
-   "category": "Entertainment",
-   "score": 35.2,
+   "id": "1ac16fd4-1149-4f53-8960-3c4d693e3221",
+   "title": "SAMSUNG - SEA (PH/TH/VN/ID/SG/MY)",
+   "brand": "Artist Influence",
+   "category": "Technology",
+   "score": 34.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2634.2200000000003,
-   "creators": 11,
+   "budget_left": 1928.16,
+   "creators": 4,
    "platforms": [
-    "instagram",
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/b21db5e5-3494-4efe-8783-4be34c17ec54",
-   "description": "Promote the official trailer for A24\u2019s upcoming suspense thriller SLAYGROUND, releasing in theaters January 29, 2027, by creating engaging short-form clips that build excitement for the film.",
+   "url": "https://contentrewards.com/c/campaigns/1ac16fd4-1149-4f53-8960-3c4d693e3221",
+   "description": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. ",
    "flags": [],
-   "brief": "Promote the official trailer for A24\u2019s upcoming suspense thriller SLAYGROUND, releasing in theaters January 29, 2027, by creating engaging short-form clips that build excitement for the film.",
+   "brief": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. Multiple Posts allowed. Read Brief Below. Max Payout $200+",
    "tiktok": {
     "rate_per_1k": 1.0,
     "min_payout": 1.0,
@@ -367,93 +304,156 @@
    "new": true
   },
   {
-   "id": "bb11120c-865b-4d12-911f-aec4e701767c",
-   "title": "G2G Channel Clipping Campaign",
-   "brand": "G2G Clippers",
-   "category": "Sports",
-   "score": 34.4,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 826.95,
-   "creators": 35,
-   "platforms": [
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/bb11120c-865b-4d12-911f-aec4e701767c",
-   "description": "We are looking for experienced, creative video editors to join the G2G Channel team! Help us transform our best live stream moments, highlights, and reactions into engaging, high-performing short clips.\n\nWhat We're Looking For:\n\nProven expe",
-   "flags": [],
-   "brief": "We are looking for experienced, creative video editors to join the G2G Channel team! Help us transform our best live stream moments, highlights, and reactions into engaging, high-performing short clips.\\n\\nWhat We're Looking For:\\n\\nProven experience in video editing and clipping stream highlights.\\n\\nA strong eye for pacing, storytelling, and viral-ready content.\\n\\nFamiliarity with our content, community, and dynamic live stream style",
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 2.5,
-    "max_payout": 15.0,
-    "views_to_first_payout": 1667
-   },
-   "new": true
-  },
-  {
-   "id": "c46a63c9-a1ab-40e2-a489-540cf5bafaa9",
-   "title": "Freezer Tarps Stream Clipping",
-   "brand": "VitaClips",
-   "category": "Lifestyle",
-   "score": 33.4,
+   "id": "742404af-6500-478b-984f-2c7d61ac16bf",
+   "title": "Egzod & Allie McIntosh - Call Of Silence | Anime",
+   "brand": "Artist Influence",
+   "category": "Music",
+   "score": 34.2,
    "why": [
     "clippable source",
     "new"
    ],
-   "rate_per_1k": 1.25,
-   "budget_left": 4420.71,
-   "creators": 1,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/c46a63c9-a1ab-40e2-a489-540cf5bafaa9",
-   "description": "This campaign is for clipping Cheddy's 10/26 stream w/ content creators Johnny Manziel, DOD King, Big John Golfs, & more. They will be streaming starting at 8AM EST. Flying to the course on a private jet playing blackjack, golfing, flying b",
-   "flags": [],
-   "brief": "This campaign is for clipping Cheddy's 10/26 stream w/ content creators Johnny Manziel, DOD King, Big John Golfs, & more. They will be streaming starting at 8AM EST. Flying to the course on a private jet playing blackjack, golfing, flying back, and then going out. Hours of degen, hilarious content.",
-   "tiktok": {
-    "rate_per_1k": 1.25,
-    "min_payout": 3.75,
-    "max_payout": 200.0,
-    "views_to_first_payout": 3000
-   },
-   "new": true
-  },
-  {
-   "id": "8a28777e-6d77-4d77-8586-91b589aa44ca",
-   "title": "No Days Off: Fight Week | $1.25 per 1K views",
-   "brand": "Drink No Days Off",
-   "category": "Beverage Brand",
-   "score": 32.2,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.25,
-   "budget_left": 1650,
+   "rate_per_1k": 1.0,
+   "budget_left": 1150,
    "creators": 0,
    "platforms": [
     "instagram",
-    "tiktok",
-    "x"
+    "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/8a28777e-6d77-4d77-8586-91b589aa44ca",
-   "description": "Make content showing Drink No Days Off, the Official Water of UFC & Zuffa Boxing, everywhere at the Nov 7 fight with Shane Mosley. Product on screen in the first 3 seconds, #NoDaysOff, #ad. No broadcast fight footage. Be creative!",
+   "url": "https://contentrewards.com/c/campaigns/742404af-6500-478b-984f-2c7d61ac16bf",
+   "description": "Get paid per view to clip Egzod & Allie McIntosh's \"Call Of Silence\" on TikTok + IG. 80% Attack on Titan: Eren + Mikasa, sad/emotional edits. Other emotional anime couples OK (SAO, Demon Slayer, Frieren, Chainsaw Man, Edgerunners). Hook in ",
    "flags": [],
-   "brief": "Make content showing Drink No Days Off, the Official Water of UFC & Zuffa Boxing, everywhere at the Nov 7 fight with Shane Mosley. Product on screen in the first 3 seconds, #NoDaysOff, #ad. No broadcast fight footage. Be creative!",
+   "brief": "Get paid per view to clip Egzod & Allie McIntosh's \\\"Call Of Silence\\\" on TikTok + IG. 80% Attack on Titan: Eren + Mikasa, sad/emotional edits. Other emotional anime couples OK (SAO, Demon Slayer, Frieren, Chainsaw Man, Edgerunners). Hook in 2s. Multiple posts allowed. Read brief below. Max Pay $200+",
    "tiktok": {
-    "rate_per_1k": 1.25,
-    "min_payout": 5.0,
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "187d5d23-22c6-4dfb-9e32-cf296a3fb0b7",
+   "title": "LADbible Entertainment Clipping",
+   "brand": "ClipUp Official",
+   "category": "Entertainment",
+   "score": 33.2,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 1196.06,
+   "creators": 108,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/187d5d23-22c6-4dfb-9e32-cf296a3fb0b7",
+   "description": "Clip LADbible's episode with john Cena & Jessica Biel",
+   "flags": [],
+   "brief": "Clip LADbible's episode with john Cena & Jessica Biel",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 2.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
+   "id": "9263d251-d194-4309-9c16-2f1b0d80372e",
+   "title": "CG5 Concert x +1 Speed Keyboard Escape [ROBLOX]",
+   "brand": "BloxClips",
+   "category": "Roblox",
+   "score": 33.1,
+   "why": [
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 1468.95,
+   "creators": 139,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/9263d251-d194-4309-9c16-2f1b0d80372e",
+   "description": "CG5 is playing a virtual concert inside +1 Speed Keyboard Escape on Roblox, and it's only live for one week. Post short videos of the concert using CG5's song WAR.\n",
+   "flags": [],
+   "brief": "CG5 is playing a virtual concert inside +1 Speed Keyboard Escape on Roblox, and it's only live for one week. Post short videos of the concert using CG5's song WAR.\\n",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
     "max_payout": 250.0,
-    "views_to_first_payout": 4000
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "1248a69e-1e13-4ef7-90e3-f54e951b1fe1",
+   "title": "TJR $23,100 Weekly Clipping Campaign",
+   "brand": "Reach",
+   "category": "Content Creator",
+   "score": 30.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 0.75,
+   "budget_left": 17085.260000000002,
+   "creators": 134,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/1248a69e-1e13-4ef7-90e3-f54e951b1fe1",
+   "description": "Get paid to clip TJR's content. \u27a1\ufe0f\nYoutube: https://www.youtube.com/@TJRTrades & https://www.youtube.com/@TRichesTrades\nKick: https://kick.com/tjr\nInstagram: https://www.instagram.com/tjr/?hl=en\nTiktok: https://www.tiktok.com/@.tjr.him",
+   "flags": [],
+   "brief": "Get paid to clip TJR's content. \u27a1\ufe0f\\nYoutube: https://www.youtube.com/@TJRTrades & https://www.youtube.com/@TRichesTrades\\nKick: https://kick.com/tjr\\nInstagram: https://www.instagram.com/tjr/?hl=en\\nTiktok: https://www.tiktok.com/@.tjr.him",
+   "tiktok": {
+    "rate_per_1k": 0.75,
+    "min_payout": 3.75,
+    "max_payout": 750.0,
+    "views_to_first_payout": 5000
+   },
+   "new": true
+  },
+  {
+   "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
+   "title": "Michael Sartain's Clipping Army",
+   "brand": "Michael Sartain's Clipper Army",
+   "category": "Personal Brand",
+   "score": 25.3,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 3457.0699999999997,
+   "creators": 30,
+   "platforms": [
+    "facebook",
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/86842687-ba2b-4638-a024-995dcf3d25a3",
+   "description": "Please check the link for GUIDELINES to submit, all of the details are included there, including a link to our clipping chat. ",
+   "flags": [],
+   "brief": "Please check the link for GUIDELINES to submit, all of the details are included there, including a link to our clipping chat. ",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 10.0,
+    "max_payout": 100.0,
+    "views_to_first_payout": 10000
    },
    "new": true
   }
