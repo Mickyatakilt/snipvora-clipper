@@ -1,0 +1,44 @@
+name: post-clip
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: "Path on the Pages site, e.g. clips/clips-xxx/mw4_clip1.mp4"
+        required: true
+      caption:
+        description: "Caption (must contain #ad and @callofduty for MW4)"
+        required: true
+      when:
+        description: "ISO time to schedule, empty = publish now"
+        required: false
+        default: ""
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to TikTok @snipvora through GHL
+        env:
+          GHL_TOKEN: ${{ secrets.GHL_TOKEN }}
+          VIDEO: ${{ inputs.video }}
+          CAPTION: ${{ inputs.caption }}
+          WHEN: ${{ inputs.when }}
+        run: |
+          set -e
+          LOC=gF9BSz3b2ZNux9RPKYAG
+          H=(-H "Authorization: Bearer $GHL_TOKEN" -H "Version: 2021-07-28" -H "Content-Type: application/json")
+          URL="https://mickyatakilt.github.io/snipvora-clipper/$VIDEO"
+          curl -sfI "$URL" >/dev/null || { echo "video not reachable: $URL"; exit 1; }
+          ACC=$(curl -s "${H[@]}" "https://services.leadconnectorhq.com/social-media-posting/$LOC/accounts" | python3 -c "import json,sys;a=json.load(sys.stdin)['results']['accounts'];t=[x for x in a if x['platform']=='tiktok'];print(t[0]['id'])")
+          echo "tiktok account id: $ACC"
+          python3 - <<PY > body.json
+          import json,os
+          w=os.environ.get('WHEN') or None
+          b={"accountIds":["$ACC"],"summary":os.environ['CAPTION'],"media":[{"url":"$URL","type":"video/mp4"}],
+             "type":"post","status":"scheduled" if w else "published",
+             "tiktokPostDetails":{"privacyLevel":"PUBLIC_TO_EVERYONE","enableComment":True,"enableDuet":True,"enableStitch":True,"promoteOtherBrand":True,"videoDisclosure":True}}
+          if w: b["scheduleDate"]=w
+          print(json.dumps(b))
+          PY
+          code=$(curl -s -o resp.json -w '%{http_code}' -X POST "${H[@]}" -d @body.json "https://services.leadconnectorhq.com/social-media-posting/$LOC/posts")
+          echo "HTTP $code"; head -c 1500 resp.json; echo
+          [ "$code" -lt 300 ]
