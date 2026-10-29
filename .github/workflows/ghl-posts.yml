@@ -1,0 +1,22 @@
+name: ghl-posts
+on: workflow_dispatch
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show recent GHL posts (fields only, no secrets)
+        env:
+          GHL_TOKEN: ${{ secrets.GHL_TOKEN }}
+        run: |
+          LOC=gF9BSz3b2ZNux9RPKYAG
+          curl -s -X POST -H "Authorization: Bearer $GHL_TOKEN" -H "Version: 2021-07-28" -H "Content-Type: application/json" \
+            -d '{"type":"all","skip":"0","limit":"3","includeUsers":"false"}' \
+            "https://services.leadconnectorhq.com/social-media-posting/$LOC/posts/list" > r.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('r.json'))
+          ps=(d.get('results') or {}).get('posts',[])
+          for p in ps[:3]:
+              print({k:(str(v)[:90]) for k,v in p.items() if k not in ('media','userId','locationId','accountIds')})
+              print('---')
+          PY
