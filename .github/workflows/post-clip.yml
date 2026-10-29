@@ -6,8 +6,9 @@ on:
         description: "Path on the Pages site, e.g. clips/clips-xxx/mw4_clip1.mp4"
         required: true
       caption:
-        description: "Caption (must contain #ad and @callofduty for MW4)"
-        required: true
+        description: "Leave empty to use the caption stored for this clip in clips.json (recommended)"
+        required: false
+        default: ""
       when:
         description: "ISO time to schedule, empty = publish now"
         required: false
@@ -27,6 +28,11 @@ jobs:
           LOC=gF9BSz3b2ZNux9RPKYAG
           H=(-H "Authorization: Bearer $GHL_TOKEN" -H "Version: 2021-07-28" -H "Content-Type: application/json")
           URL="https://mickyatakilt.github.io/snipvora-clipper/$VIDEO"
+          if [ -z "$CAPTION" ]; then
+            CAPTION=$(curl -s https://mickyatakilt.github.io/snipvora-clipper/clips.json | VID="$VIDEO" python3 -c "import json,sys,os;print(next(c['caption'] for c in json.load(sys.stdin) if c['video']==os.environ['VID']))")
+            export CAPTION
+          fi
+          echo "caption: $CAPTION"
           curl -sfI "$URL" >/dev/null || { echo "video not reachable: $URL"; exit 1; }
           ACC=$(curl -s "${H[@]}" "https://services.leadconnectorhq.com/social-media-posting/$LOC/accounts" | python3 -c "import json,sys;a=json.load(sys.stdin)['results']['accounts'];t=[x for x in a if x['platform']=='tiktok'];print(t[0]['id'])")
           echo "tiktok account id: $ACC"
@@ -43,4 +49,12 @@ jobs:
           PY
           code=$(curl -s -o resp.json -w '%{http_code}' -X POST "${H[@]}" -d @body.json "https://services.leadconnectorhq.com/social-media-posting/$LOC/posts")
           echo "HTTP $code"; head -c 1500 resp.json; echo
+          sleep 30
+          echo "--- recent posts in GHL (status) ---"
+          curl -s -X POST "${H[@]}" -d '{"type":"all","accounts":"'$ACC'","skip":"0","limit":"5","includeUsers":"false"}' "https://services.leadconnectorhq.com/social-media-posting/$LOC/posts/list" | python3 -c "
+          import json,sys
+          d=json.load(sys.stdin)
+          for p in (d.get('results') or {}).get('posts',[])[:5]: print(p.get('status'),'|',p.get('createdAt'),'|',(p.get('summary') or '')[:50].replace(chr(10),' / '),'|',p.get('failureReason') or p.get('error') or '')
+          print(str(d)[:300] if not (d.get('results') or {}).get('posts') else '')
+          "
           [ "$code" -lt 300 ]
