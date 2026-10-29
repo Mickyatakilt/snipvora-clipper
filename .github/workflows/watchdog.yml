@@ -1,0 +1,24 @@
+name: watchdog
+on:
+  schedule:
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Alert if no new clips in 36h
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          last=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 20 --json tagName,publishedAt --jq '[.[]|select(.tagName|startswith("clips-"))]|sort_by(.publishedAt)|last|.publishedAt')
+          echo "last clips release: $last"
+          age=$(( $(date -u +%s) - $(date -u -d "${last:-1970-01-01T00:00:00Z}" +%s) ))
+          if [ "$age" -gt 129600 ]; then
+            echo "STALE: no new clips for $((age/3600))h"
+            [ -n "$NTFY_TOPIC" ] && curl -s -H "Title: Snipvora: no new clips" -d "No new clips in $((age/3600))h - check GitHub Actions" "https://ntfy.sh/$NTFY_TOPIC"
+            exit 1
+          fi

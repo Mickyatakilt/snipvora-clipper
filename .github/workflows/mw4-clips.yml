@@ -1,5 +1,11 @@
 name: mw4-clips
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *'   # 12:00 UTC daily = 15:00 EAT / 08:00 ET
+concurrency:
+  group: mw4-clips
+  cancel-in-progress: false
 jobs:
   clips:
     runs-on: ubuntu-latest
@@ -23,6 +29,10 @@ jobs:
           tag="clips-$(date -u +%Y%m%d-%H%M)"
           gh release create "$tag" out/*.mp4 out/*.jpg --title "$tag" --notes "$(cat out/clips.json)"
           gh release list --limit 50 --json tagName --jq '.[].tagName' | grep '^clips-' | sort -r | tail -n +4 | xargs -r -I{} gh release delete {} --cleanup-tag --yes
+      - name: Remember used windows (no repeats)
+        run: |
+          git config user.name "snipvora-bot"; git config user.email "bot@users.noreply.github.com"
+          git add used.json && git commit -m "used windows $(date -u +%F)" && git pull --rebase -q && git push
       - name: Redeploy dashboard
         env:
           GH_TOKEN: ${{ github.token }}

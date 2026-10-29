@@ -74,12 +74,15 @@ def main():
     e = energy("src.mp4")
     print(f"source {dur:.0f}s", flush=True)
     win = np.convolve(e, np.ones(CLIP_SEC) / CLIP_SEC, mode="valid")
+    used = json.load(open("used.json")) if os.path.exists("used.json") else []  # windows already cut on earlier days
     picks = []
     for i in np.argsort(-win):
-        if all(abs(i - j) >= CLIP_SEC + 5 for j in picks):
+        if all(abs(i - j) >= CLIP_SEC + 5 for j in picks + used):
             picks.append(int(i))
         if len(picks) >= N:
             break
+    if len(picks) < 3:
+        sys.exit(f"SOURCE EXHAUSTED: only {len(picks)} unused windows left ({len(used)} already used) - need new footage or reset used.json")
     os.makedirs("out", exist_ok=True)
     vf = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,format=yuv420p"  # full-screen 9:16, exactly as uploaded
     meta = []
@@ -88,11 +91,12 @@ def main():
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", "src.mp4", "-vf", vf,
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", out], check=True)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "3", "-i", out, "-frames:v", "1", "-vf", "scale=540:-2", out.replace(".mp4", ".jpg")], check=True)
-        cap = f"{CAPTIONS[(k - 1) % len(CAPTIONS)]}\n#ad @callofduty"
+        cap = f"{CAPTIONS[(len(used) + k) % len(CAPTIONS)]}\n#ad @callofduty"
         meta.append({"campaign": "Call of Duty MW4 Multiplayer", "file": out, "start": st, "seconds": CLIP_SEC, "caption": cap})
         print("clip", k, "from", st, "s", flush=True)
     validate(meta)
     json.dump(meta, open("out/clips.json", "w"), indent=1)
+    json.dump(used + picks, open("used.json", "w"))
     print("VALIDATED", len(meta), "clips", flush=True)
 
 
