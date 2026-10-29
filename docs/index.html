@@ -81,8 +81,8 @@ async function main(){
           <div class="side"><div><i>♥</i>Like</div><div><i>💬</i>Chat</div><div><i>↗</i>Share</div></div>
           <div class="ov"><b>@snipvora</b>${esc(c.caption)}</div></div>
         ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span></div>
-        <div class="row"><button class="ok" data-u>Upload link to campaign</button><a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
-        <div class="mut">Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`:""}
+        <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
+        ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
         <div class="row">${pp?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           <a class="btn" href="${c.video}" download>Download</a><button data-c>Copy caption</button></div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
