@@ -1,0 +1,21 @@
+name: ghl-check
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List connected social accounts (names/platforms only)
+        env:
+          GHL_TOKEN: ${{ secrets.GHL_TOKEN }}
+        run: |
+          code=$(curl -s -o r.json -w '%{http_code}' -H "Authorization: Bearer $GHL_TOKEN" -H "Version: 2021-07-28" \
+            "https://services.leadconnectorhq.com/social-media-posting/gF9BSz3b2ZNux9RPKYAG/accounts")
+          echo "HTTP $code"
+          python3 -c "
+          import json
+          d=json.load(open('r.json'))
+          a=(d.get('results') or d).get('accounts',[]) if isinstance(d.get('results') or d,dict) else []
+          print('accounts:',len(a))
+          for x in a: print(x.get('platform'),'|',x.get('name'),'|',x.get('isExpired'))
+          if not a: print(str(d)[:300])
+          "
