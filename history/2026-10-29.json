@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-10-29 14:31",
- "listed": 79,
- "kept": 36,
+ "scanned_at": "2026-10-29 19:46",
+ "listed": 80,
+ "kept": 37,
  "top": [
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -14,7 +14,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8554.92,
+   "budget_left": 8547.6,
    "creators": 33,
    "platforms": [
     "instagram",
@@ -63,21 +63,21 @@
     "max_payout": 500.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.0,
+   "score": 41.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 20648.96,
-   "creators": 49,
+   "budget_left": 20251.51,
+   "creators": 51,
    "platforms": [
     "instagram",
     "tiktok"
@@ -100,13 +100,13 @@
    "title": "Backyard Breaks [Clipping Campaign]",
    "brand": "ClipHouse",
    "category": "Sports",
-   "score": 41.9,
+   "score": 41.7,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 11185.899999999994,
-   "creators": 325,
+   "budget_left": 10297.62999999999,
+   "creators": 329,
    "platforms": [
     "instagram",
     "tiktok",
@@ -130,14 +130,14 @@
    "title": "Modern Warfare 4 - Campaign Moments Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.9,
+   "score": 40.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 10099.67,
-   "creators": 66,
+   "budget_left": 9238.77,
+   "creators": 67,
    "platforms": [
     "instagram",
     "tiktok"
@@ -160,12 +160,12 @@
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 40.3,
+   "score": 40.2,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1908.3600000000001,
+   "budget_left": 1888.85,
    "creators": 59,
    "platforms": [
     "instagram",
@@ -186,6 +186,35 @@
    "new": false
   },
   {
+   "id": "35056178-a7a3-441d-a070-2a1b5bb7378b",
+   "title": "GALAXY ",
+   "brand": "Clouted",
+   "category": "Gadgets",
+   "score": 39.7,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 1258.8,
+   "creators": 62,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/35056178-a7a3-441d-a070-2a1b5bb7378b",
+   "description": "Reposting - Show audiences why they'd switch to Galaxy by highlighting features, experiences, and devices that make switching feel worth it.",
+   "flags": [],
+   "brief": "Reposting - Show audiences why they'd switch to Galaxy by highlighting features, experiences, and devices that make switching feel worth it.",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 250.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "8553875d-dfb0-4a97-aea5-448008876e46",
    "title": "Scape: clip the game for its Early Access launch",
    "brand": "ScapeWorld Entertainment AB",
@@ -196,8 +225,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2313.49,
-   "creators": 61,
+   "budget_left": 2301.17,
+   "creators": 62,
    "platforms": [
     "tiktok",
     "youtube"
@@ -225,8 +254,8 @@
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 16551.19,
-   "creators": 391,
+   "budget_left": 16304.880000000001,
+   "creators": 396,
    "platforms": [
     "instagram",
     "tiktok"
@@ -245,37 +274,6 @@
    "new": false
   },
   {
-   "id": "10b9e68d-6004-4730-a741-4b5b37ae0a20",
-   "title": "John Furrier + NYSE/theCUBE",
-   "brand": "ReelsBuilder",
-   "category": "Technology",
-   "score": 35.7,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 574.8800000000001,
-   "creators": 58,
-   "platforms": [
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/10b9e68d-6004-4730-a741-4b5b37ae0a20",
-   "description": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, an",
-   "flags": [],
-   "brief": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, and business.",
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 3.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
    "id": "5991571d-8c83-41e8-941c-34d96476c06b",
    "title": "Jackelyne Campaign",
    "brand": "Jackelyne Clips",
@@ -285,7 +283,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2436.57,
+   "budget_left": 2436.23,
    "creators": 55,
    "platforms": [
     "instagram",
@@ -304,7 +302,7 @@
     "max_payout": 150.0,
     "views_to_first_payout": 1333
    },
-   "new": true
+   "new": false
   },
   {
    "id": "1ac16fd4-1149-4f53-8960-3c4d693e3221",
@@ -317,7 +315,7 @@
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 1916.34,
+   "budget_left": 1916.23,
    "creators": 5,
    "platforms": [
     "tiktok",
@@ -335,6 +333,35 @@
     "views_to_first_payout": 1000
    },
    "new": false
+  },
+  {
+   "id": "0fdbc44a-5c4e-485d-bd00-dc964f43b90c",
+   "title": "Levity, K.Flay - Slipping Away | Reposts + Memes",
+   "brand": "Artist Influence",
+   "category": "Music",
+   "score": 34.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 1744.19,
+   "creators": 1,
+   "platforms": [
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/0fdbc44a-5c4e-485d-bd00-dc964f43b90c",
+   "description": "Get paid per view to clip Levity & K.Flay's \"Slipping Away\" on TikTok. Two routes: edit + repost official Levity live clips (Red Rocks, Lost Lands, ACL) or make/repost high-engagement meme formats. Hook in 2s. Multiple posts allowed. Read b",
+   "flags": [],
+   "brief": "Get paid per view to clip Levity & K.Flay's \\\"Slipping Away\\\" on TikTok. Two routes: edit + repost official Levity live clips (Red Rocks, Lost Lands, ACL) or make/repost high-engagement meme formats. Hook in 2s. Multiple posts allowed. Read brief below. Max Payout $200+",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
   },
   {
    "id": "742404af-6500-478b-984f-2c7d61ac16bf",
@@ -367,66 +394,6 @@
    "new": false
   },
   {
-   "id": "da416664-ae72-4fc4-b0c0-78acc04affaf",
-   "title": "Dillon Danis Clipping",
-   "brand": "ClipUp Official",
-   "category": "Combat Sports",
-   "score": 32.9,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 650.5999999999999,
-   "creators": 51,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/da416664-ae72-4fc4-b0c0-78acc04affaf",
-   "description": "Clip Dillon's best moments before his RAF fight against arman!",
-   "flags": [],
-   "brief": "Clip Dillon's best moments before his RAF fight against arman!",
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 2.0,
-    "max_payout": 300.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
-   "id": "1db63081-715e-4e04-9b11-fbc1d4e8e700",
-   "title": "ForgeGUI [UNLIMITED]",
-   "brand": "BloxClips",
-   "category": "Technology",
-   "score": 27.2,
-   "why": [],
-   "rate_per_1k": 1.0,
-   "budget_left": 55551.07000000001,
-   "creators": 3786,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/1db63081-715e-4e04-9b11-fbc1d4e8e700",
-   "description": "ForgeGUI is an AI-powered Roblox development tool that lets you build games, scripts, and systems using simple prompts. Create engaging Roblox short-form content showcasing what\u2019s possible with ForgeGUI!",
-   "flags": [],
-   "brief": "Clip provided ForgeGUI footage into short-form content and get paid for the views you generate. ForgeGUI is an AI tool that helps Roblox developers create GUIs, models, thumbnails, scripts, and more.\\n",
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 1.0,
-    "max_payout": 1000.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
@@ -436,7 +403,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 3027.2700000000004,
+   "budget_left": 3004.2000000000007,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -457,6 +424,37 @@
     "views_to_first_payout": 10000
    },
    "new": false
+  },
+  {
+   "id": "854af6b2-1172-4bb5-8dae-81dd126297c8",
+   "title": "Brezscales $10,000 Dedicated Account Campaign",
+   "brand": "Reach",
+   "category": "Content Creator",
+   "score": 24.2,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 7029.15,
+   "creators": 30,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/854af6b2-1172-4bb5-8dae-81dd126297c8",
+   "description": "Get paid to clip Brez's content on a Dedicated Brezscales Account. \u27a1\ufe0f\nhttps://www.youtube.com/@brezscales\nhttps://www.youtube.com/@roasbrez\nhttps://www.instagram.com/brezscales/\nhttps://www.tiktok.com/@brezscales?lang=en",
+   "flags": [],
+   "brief": "Get paid to clip Brez's content on a Dedicated Brezscales Account. \u27a1\ufe0f\\nhttps://www.youtube.com/@brezscales\\nhttps://www.youtube.com/@roasbrez\\nhttps://www.instagram.com/brezscales/\\nhttps://www.tiktok.com/@brezscales?lang=en",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 15.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 15000
+   },
+   "new": true
   }
  ]
 }
