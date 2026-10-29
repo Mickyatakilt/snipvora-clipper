@@ -33,6 +33,13 @@ jobs:
             export CAPTION
           fi
           echo "caption: $CAPTION"
+          # TikTok only accepts media hosted on a verified domain: copy the clip into GHL media storage first
+          curl -s -o up.json -w 'upload HTTP %{http_code}\n' -X POST -H "Authorization: Bearer $GHL_TOKEN" -H "Version: 2021-07-28" \
+            -F "hosted=true" -F "fileUrl=$URL" -F "name=$(basename "$VIDEO" .mp4)-$(date +%s).mp4" \
+            "https://services.leadconnectorhq.com/medias/upload-file"
+          python3 -c "import json;d=json.load(open('up.json'));print({k:v for k,v in d.items() if k!='traceId'})"
+          URL=$(python3 -c "import json;print(json.load(open('up.json'))['url'])")
+          echo "hosted url host: $(echo $URL | cut -d/ -f3)"
           curl -sfI "$URL" >/dev/null || { echo "video not reachable: $URL"; exit 1; }
           ACC=$(curl -s "${H[@]}" "https://services.leadconnectorhq.com/social-media-posting/$LOC/accounts" | python3 -c "import json,sys;a=json.load(sys.stdin)['results']['accounts'];t=[x for x in a if x['platform']=='tiktok'];print(t[0]['id'])")
           echo "tiktok account id: $ACC"
