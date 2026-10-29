@@ -30,10 +30,12 @@ jobs:
           curl -sfI "$URL" >/dev/null || { echo "video not reachable: $URL"; exit 1; }
           ACC=$(curl -s "${H[@]}" "https://services.leadconnectorhq.com/social-media-posting/$LOC/accounts" | python3 -c "import json,sys;a=json.load(sys.stdin)['results']['accounts'];t=[x for x in a if x['platform']=='tiktok'];print(t[0]['id'])")
           echo "tiktok account id: $ACC"
+          USR=$(curl -s "${H[@]}" "https://services.leadconnectorhq.com/users/?locationId=$LOC" | python3 -c "import json,sys;u=json.load(sys.stdin)['users'];print(len(u),file=sys.stderr);print(u[0]['id'])")
+          echo "user id: $USR"
           python3 - <<PY > body.json
           import json,os
           w=os.environ.get('WHEN') or None
-          b={"accountIds":["$ACC"],"summary":os.environ['CAPTION'],"media":[{"url":"$URL","type":"video/mp4"}],
+          b={"accountIds":["$ACC"],"userId":"$USR","summary":os.environ['CAPTION'],"media":[{"url":"$URL","type":"video/mp4"}],
              "type":"post","status":"scheduled" if w else "published",
              "tiktokPostDetails":{"privacyLevel":"PUBLIC_TO_EVERYONE","enableComment":True,"enableDuet":True,"enableStitch":True,"promoteOtherBrand":True,"videoDisclosure":True}}
           if w: b["scheduleDate"]=w
