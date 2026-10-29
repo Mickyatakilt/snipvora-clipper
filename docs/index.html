@@ -75,7 +75,7 @@ async function main(){
       d.innerHTML=`<div><b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
         <span class="badge ${gc}">${g==null?"Not graded":g+"/10"}</span></div>
         <div class="mut">${esc(g==null?"Grading turns on once the OpenAI key is added.":c.reason)}</div>
-        <div class="phone"><video playsinline webkit-playsinline preload="none" poster="${c.poster}" src="${c.video}" loop></video>
+        <div class="phone"><video playsinline webkit-playsinline preload="metadata" muted poster="${c.poster}" src="${c.video}" loop></video>
           <button class="play" aria-label="Play">▶</button>
           <div class="side"><div><i>♥</i>Like</div><div><i>💬</i>Chat</div><div><i>↗</i>Share</div></div>
           <div class="ov"><b>@snipvora</b>${esc(c.caption)}</div></div>
@@ -83,8 +83,8 @@ async function main(){
           <a class="btn" href="${c.video}" download>Download</a><button data-c>Copy caption</button></div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
       const v=d.querySelector("video"),pl=d.querySelector(".play");
-      const tog=()=>{if(v.paused){document.querySelectorAll("video").forEach(o=>o.pause());v.play();pl.style.display="none"}else{v.pause();pl.style.display=""}};
-      pl.onclick=tog;v.onclick=tog;
+      const tog=()=>{if(v.paused){document.querySelectorAll("video").forEach(o=>o.pause());v.muted=false;pl.style.display="none";v.play().catch(e=>{pl.style.display="";d.querySelector("[data-s]").textContent="Cannot play: "+(e.name||e)+" - tap again or use Download"})}else{v.pause();pl.style.display=""}};
+      pl.onclick=tog;v.onclick=tog;v.onerror=()=>{pl.style.display="";d.querySelector("[data-s]").textContent="Video failed to load (code "+(v.error&&v.error.code)+") - use Download"};
       d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(c.caption);e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
       d.querySelector("[data-x]").onclick=()=>{if(confirm("Delete this clip?")){gone[id]=1;save2();send("delete",{video:id});d.remove()}};
       d.querySelector("[data-e]").onclick=()=>ask("Edit: what should change?","",null,t=>{send("edit",{video:id,note:t});d.querySelector("[data-s]").textContent="Edit requested: "+t});

@@ -89,7 +89,7 @@ def main():
     for k, st in enumerate(sorted(picks), 1):
         out = f"out/mw4_clip{k}.mp4"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", "src.mp4", "-vf", vf,
-                        "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", out], check=True)
+                        "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], check=True)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "3", "-i", out, "-frames:v", "1", "-vf", "scale=540:-2", out.replace(".mp4", ".jpg")], check=True)
         cap = f"{CAPTIONS[(len(used) + k) % len(CAPTIONS)]}\n#ad @callofduty"
         meta.append({"campaign": "Call of Duty MW4 Multiplayer", "file": out, "start": st, "seconds": CLIP_SEC, "caption": cap})
