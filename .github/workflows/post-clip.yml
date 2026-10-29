@@ -13,6 +13,9 @@ on:
         description: "ISO time to schedule, empty = publish now"
         required: false
         default: ""
+concurrency:
+  group: post-clip
+  cancel-in-progress: false
 jobs:
   post:
     runs-on: ubuntu-latest
