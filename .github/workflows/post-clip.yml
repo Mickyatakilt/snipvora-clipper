@@ -34,8 +34,9 @@ jobs:
           fi
           echo "caption: $CAPTION"
           # TikTok only accepts media hosted on a verified domain: copy the clip into GHL media storage first
+          curl -sfL -o clip.mp4 "$URL"
           curl -s -o up.json -w 'upload HTTP %{http_code}\n' -X POST -H "Authorization: Bearer $GHL_TOKEN" -H "Version: 2021-07-28" \
-            -F "hosted=true" -F "fileUrl=$URL" -F "name=$(basename "$VIDEO" .mp4)-$(date +%s).mp4" \
+            -F "file=@clip.mp4;type=video/mp4" -F "name=$(basename "$VIDEO" .mp4)-$(date +%s).mp4" \
             "https://services.leadconnectorhq.com/medias/upload-file"
           python3 -c "import json;d=json.load(open('up.json'));print({k:v for k,v in d.items() if k!='traceId'})"
           URL=$(python3 -c "import json;print(json.load(open('up.json'))['url'])")
