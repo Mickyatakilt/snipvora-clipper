@@ -1,39 +1,8 @@
 {
- "scanned_at": "2026-10-28 19:45",
- "listed": 73,
- "kept": 34,
+ "scanned_at": "2026-10-29 14:31",
+ "listed": 79,
+ "kept": 36,
  "top": [
-  {
-   "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
-   "title": "SKULLPANDA at Doja Cat\u2019s 31st Birthday Party",
-   "brand": "Pop Mart Americas Inc.",
-   "category": "Entertainment",
-   "score": 117.6,
-   "why": [
-    "new"
-   ],
-   "rate_per_1k": 10.0,
-   "budget_left": 1884.36,
-   "creators": 19,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/2478f835-202a-4df4-9c34-8fd9fa47088c",
-   "description": "International superstar Doja Cat will be hosting her plushie-themed 31st birthday party with a star-studded guest list. To bring the plushie theme to life, Doja Cat chose SKULLPANDA, one of her favorite IP characters, for the decor, cake de",
-   "flags": [],
-   "brief": "International superstar Doja Cat will be hosting her plushie-themed 31st birthday party with a star-studded guest list. To bring the plushie theme to life, Doja Cat chose SKULLPANDA, one of her favorite IP characters, for the decor, cake design, and guest gifts.\\n",
-   "tiktok": {
-    "rate_per_1k": 10.0,
-    "min_payout": 10.0,
-    "max_payout": 1000.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
    "title": "Mini Brands \u2014 Ulta Beauty Clipping",
@@ -45,8 +14,8 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8667.42,
-   "creators": 30,
+   "budget_left": 8554.92,
+   "creators": 33,
    "platforms": [
     "instagram",
     "tiktok"
@@ -65,18 +34,50 @@
    "new": false
   },
   {
+   "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
+   "title": "IPX Exchange x Ja Rule Clipping",
+   "brand": "ClipLaunch",
+   "category": "Podcasts",
+   "score": 44.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 2030,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/4c64eea7-0338-4003-aee2-ce53a9ae2765",
+   "description": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building comp",
+   "flags": [],
+   "brief": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building companies. Point viewers to ipx.exchange and mark posts #ad.",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.5,
+   "score": 42.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 22571.89,
-   "creators": 5,
+   "budget_left": 20648.96,
+   "creators": 49,
    "platforms": [
     "instagram",
     "tiktok"
@@ -95,18 +96,48 @@
    "new": false
   },
   {
+   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
+   "title": "Backyard Breaks [Clipping Campaign]",
+   "brand": "ClipHouse",
+   "category": "Sports",
+   "score": 41.9,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 11185.899999999994,
+   "creators": 325,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
+   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
+   "flags": [],
+   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 250.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
    "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
    "title": "Modern Warfare 4 - Campaign Moments Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 41.9,
+   "score": 40.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 14606.92,
-   "creators": 6,
+   "budget_left": 10099.67,
+   "creators": 66,
    "platforms": [
     "instagram",
     "tiktok"
@@ -125,47 +156,17 @@
    "new": false
   },
   {
-   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "title": "Backyard Breaks [Clipping Campaign]",
-   "brand": "ClipHouse",
-   "category": "Sports",
-   "score": 41.9,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 11419.509999999995,
-   "creators": 325,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
-   "flags": [],
-   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
    "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 40.4,
+   "score": 40.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2078.69,
-   "creators": 58,
+   "budget_left": 1908.3600000000001,
+   "creators": 59,
    "platforms": [
     "instagram",
     "tiktok",
@@ -195,8 +196,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2337.8,
-   "creators": 58,
+   "budget_left": 2313.49,
+   "creators": 61,
    "platforms": [
     "tiktok",
     "youtube"
@@ -219,13 +220,13 @@
    "title": "DIGGER x ClipFarm",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 36.8,
+   "score": 36.7,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 16656.88,
-   "creators": 388,
+   "budget_left": 16551.19,
+   "creators": 391,
    "platforms": [
     "instagram",
     "tiktok"
@@ -248,14 +249,14 @@
    "title": "John Furrier + NYSE/theCUBE",
    "brand": "ReelsBuilder",
    "category": "Technology",
-   "score": 36.7,
+   "score": 35.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1176.23,
-   "creators": 56,
+   "budget_left": 574.8800000000001,
+   "creators": 58,
    "platforms": [
     "tiktok",
     "x",
@@ -275,6 +276,37 @@
    "new": false
   },
   {
+   "id": "5991571d-8c83-41e8-941c-34d96476c06b",
+   "title": "Jackelyne Campaign",
+   "brand": "Jackelyne Clips",
+   "category": "Entertainment",
+   "score": 35.6,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 2436.57,
+   "creators": 55,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/5991571d-8c83-41e8-941c-34d96476c06b",
+   "description": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "flags": [],
+   "brief": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 2.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1333
+   },
+   "new": true
+  },
+  {
    "id": "1ac16fd4-1149-4f53-8960-3c4d693e3221",
    "title": "SAMSUNG - SEA (PH/TH/VN/ID/SG/MY)",
    "brand": "Artist Influence",
@@ -285,7 +317,7 @@
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 1922.59,
+   "budget_left": 1916.34,
    "creators": 5,
    "platforms": [
     "tiktok",
@@ -339,14 +371,14 @@
    "title": "Dillon Danis Clipping",
    "brand": "ClipUp Official",
    "category": "Combat Sports",
-   "score": 33.2,
+   "score": 32.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 764.94,
-   "creators": 44,
+   "budget_left": 650.5999999999999,
+   "creators": 51,
    "platforms": [
     "instagram",
     "tiktok",
@@ -364,78 +396,47 @@
     "max_payout": 300.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
-   "id": "722616d3-c98e-4821-810c-f2d88c0edee5",
-   "title": "S9 Trades Clips ",
-   "brand": "S9Trades",
-   "category": "Entertainment",
-   "score": 33.1,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1115.6100000000001,
-   "creators": 209,
-   "platforms": [
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/722616d3-c98e-4821-810c-f2d88c0edee5",
-   "description": "Clip S9 Trades and get paid 1.50$ for 1k views ",
-   "flags": [],
-   "brief": "Clip S9 Trades and get paid 1.50$ for 1k views ",
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
-   "id": "1248a69e-1e13-4ef7-90e3-f54e951b1fe1",
-   "title": "TJR $23,100 Weekly Clipping Campaign",
-   "brand": "Reach",
-   "category": "Content Creator",
-   "score": 29.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 0.75,
-   "budget_left": 14556.07,
-   "creators": 214,
+   "id": "1db63081-715e-4e04-9b11-fbc1d4e8e700",
+   "title": "ForgeGUI [UNLIMITED]",
+   "brand": "BloxClips",
+   "category": "Technology",
+   "score": 27.2,
+   "why": [],
+   "rate_per_1k": 1.0,
+   "budget_left": 55551.07000000001,
+   "creators": 3786,
    "platforms": [
     "instagram",
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/1248a69e-1e13-4ef7-90e3-f54e951b1fe1",
-   "description": "Get paid to clip TJR's content. \u27a1\ufe0f\nYoutube: https://www.youtube.com/@TJRTrades & https://www.youtube.com/@TRichesTrades\nKick: https://kick.com/tjr\nInstagram: https://www.instagram.com/tjr/?hl=en\nTiktok: https://www.tiktok.com/@.tjr.him",
+   "url": "https://contentrewards.com/c/campaigns/1db63081-715e-4e04-9b11-fbc1d4e8e700",
+   "description": "ForgeGUI is an AI-powered Roblox development tool that lets you build games, scripts, and systems using simple prompts. Create engaging Roblox short-form content showcasing what\u2019s possible with ForgeGUI!",
    "flags": [],
-   "brief": "Get paid to clip TJR's content. \u27a1\ufe0f\\nYoutube: https://www.youtube.com/@TJRTrades & https://www.youtube.com/@TRichesTrades\\nKick: https://kick.com/tjr\\nInstagram: https://www.instagram.com/tjr/?hl=en\\nTiktok: https://www.tiktok.com/@.tjr.him",
+   "brief": "Clip provided ForgeGUI footage into short-form content and get paid for the views you generate. ForgeGUI is an AI tool that helps Roblox developers create GUIs, models, thumbnails, scripts, and more.\\n",
    "tiktok": {
-    "rate_per_1k": 0.75,
-    "min_payout": 3.75,
-    "max_payout": 750.0,
-    "views_to_first_payout": 5000
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 1000.0,
+    "views_to_first_payout": 1000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
    "category": "Personal Brand",
-   "score": 25.2,
+   "score": 25.1,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 3090.2000000000007,
+   "budget_left": 3027.2700000000004,
    "creators": 30,
    "platforms": [
     "facebook",

@@ -1,0 +1,462 @@
+{
+ "scanned_at": "2026-10-29 14:31",
+ "listed": 79,
+ "kept": 36,
+ "top": [
+  {
+   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "title": "Mini Brands \u2014 Ulta Beauty Clipping",
+   "brand": "Clip Influence",
+   "category": "Entertainment",
+   "score": 46.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 8554.92,
+   "creators": 33,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "description": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "flags": [],
+   "brief": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
+   "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
+   "title": "IPX Exchange x Ja Rule Clipping",
+   "brand": "ClipLaunch",
+   "category": "Podcasts",
+   "score": 44.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 2030,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/4c64eea7-0338-4003-aee2-ce53a9ae2765",
+   "description": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building comp",
+   "flags": [],
+   "brief": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building companies. Point viewers to ipx.exchange and mark posts #ad.",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 42.0,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.75,
+   "budget_left": 20648.96,
+   "creators": 49,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
+   "tiktok": {
+    "rate_per_1k": 1.75,
+    "min_payout": 5.25,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 3000
+   },
+   "new": false
+  },
+  {
+   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
+   "title": "Backyard Breaks [Clipping Campaign]",
+   "brand": "ClipHouse",
+   "category": "Sports",
+   "score": 41.9,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 11185.899999999994,
+   "creators": 325,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
+   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
+   "flags": [],
+   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 250.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
+   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
+   "title": "Modern Warfare 4 - Campaign Moments Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 40.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.75,
+   "budget_left": 10099.67,
+   "creators": 66,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/341ea599-d017-4ba2-be61-a29a2e754aaf",
+   "description": "Clip moments from the MW4 Campaign using the official content folder.\nPost them to TikTok and/or Instagram Reels.",
+   "flags": [],
+   "brief": "Clip moments from the MW4 Campaign using the official content folder.\\nPost them to TikTok and/or Instagram Reels.",
+   "tiktok": {
+    "rate_per_1k": 1.75,
+    "min_payout": 5.25,
+    "max_payout": 1000.0,
+    "views_to_first_payout": 3000
+   },
+   "new": false
+  },
+  {
+   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
+   "title": "BILF Podcast | Clip the Show",
+   "brand": "Runback.TV",
+   "category": "Entertainment",
+   "score": 40.3,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 1908.3600000000001,
+   "creators": 59,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/088c2279-ab1d-4434-9ba0-6637ab9311fa",
+   "description": "Clip the BILF Podcast with Mara Dorne for TikTok, Reels and Shorts. Paid per 1K verified views, $200 max per clip. No fan page needed: podcast, business, and lifestyle pages all work. Full brief and approved episode list in resources. Run b",
+   "flags": [],
+   "brief": "Clip the BILF Podcast with Mara Dorne for TikTok, Reels and Shorts. Paid per 1K verified views, $200 max per clip. No fan page needed: podcast, business, and lifestyle pages all work. Full brief and approved episode list in resources. Run by Runback.TV.",
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 4.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 2000
+   },
+   "new": false
+  },
+  {
+   "id": "8553875d-dfb0-4a97-aea5-448008876e46",
+   "title": "Scape: clip the game for its Early Access launch",
+   "brand": "ScapeWorld Entertainment AB",
+   "category": "PC Gaming",
+   "score": 37.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 2313.49,
+   "creators": 61,
+   "platforms": [
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/8553875d-dfb0-4a97-aea5-448008876e46",
+   "description": "Clip Scape, our multiplayer climbing game, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics neve",
+   "flags": [],
+   "brief": "Clip Scape, our multiplayer climbing game, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics never come back.",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
+   "id": "db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
+   "title": "DIGGER x ClipFarm",
+   "brand": "Clip Farm",
+   "category": "Entertainment",
+   "score": 36.7,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 16551.19,
+   "creators": 391,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
+   "description": "Make clips for DIGGER, the new Tom Cruise dark comedy from Warner Bros., in theaters now. Use the approved footage to make the funniest, weirdest or most surprising edits you can, and get people curious enough to buy a ticket.",
+   "flags": [],
+   "brief": "Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helped cause the crisis. The chaos escalates into a dark satire about greed, power, politics, and humanity's careless treatment of the planet. Then the film pulls its biggest twist. Much of what we've been watching turns out to be Fossil Fools, a stage play dramatizing a real disaster from decades earlier, with Tom Cruise playing Curtis Markson, an actor portraying Digger in a revival. As opening night approaches, the people behind the production wrestle with their own personal struggles. When Digger's symbolic downfall plays out at the climax, the film snaps back to reality: the real world outside the theater has been devastated by environmental collapse. It's a darkly comic story about greed, climate destruction, and humanity's habit of creating the disasters it later tries to escape. Digger is in theaters now. @warnerbros #DiggerPartner #digger #tomcruise #movies2026 #movies Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helpe",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 750.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
+   "id": "10b9e68d-6004-4730-a741-4b5b37ae0a20",
+   "title": "John Furrier + NYSE/theCUBE",
+   "brand": "ReelsBuilder",
+   "category": "Technology",
+   "score": 35.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 574.8800000000001,
+   "creators": 58,
+   "platforms": [
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/10b9e68d-6004-4730-a741-4b5b37ae0a20",
+   "description": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, an",
+   "flags": [],
+   "brief": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, and business.",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 2000
+   },
+   "new": false
+  },
+  {
+   "id": "5991571d-8c83-41e8-941c-34d96476c06b",
+   "title": "Jackelyne Campaign",
+   "brand": "Jackelyne Clips",
+   "category": "Entertainment",
+   "score": 35.6,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 2436.57,
+   "creators": 55,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/5991571d-8c83-41e8-941c-34d96476c06b",
+   "description": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "flags": [],
+   "brief": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 2.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1333
+   },
+   "new": true
+  },
+  {
+   "id": "1ac16fd4-1149-4f53-8960-3c4d693e3221",
+   "title": "SAMSUNG - SEA (PH/TH/VN/ID/SG/MY)",
+   "brand": "Artist Influence",
+   "category": "Technology",
+   "score": 34.8,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 1916.34,
+   "creators": 5,
+   "platforms": [
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/1ac16fd4-1149-4f53-8960-3c4d693e3221",
+   "description": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. ",
+   "flags": [],
+   "brief": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. Multiple Posts allowed. Read Brief Below. Max Payout $200+",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
+   "id": "742404af-6500-478b-984f-2c7d61ac16bf",
+   "title": "Egzod & Allie McIntosh - Call Of Silence | Anime",
+   "brand": "Artist Influence",
+   "category": "Music",
+   "score": 34.2,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 1150,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/742404af-6500-478b-984f-2c7d61ac16bf",
+   "description": "Get paid per view to clip Egzod & Allie McIntosh's \"Call Of Silence\" on TikTok + IG. 80% Attack on Titan: Eren + Mikasa, sad/emotional edits. Other emotional anime couples OK (SAO, Demon Slayer, Frieren, Chainsaw Man, Edgerunners). Hook in ",
+   "flags": [],
+   "brief": "Get paid per view to clip Egzod & Allie McIntosh's \\\"Call Of Silence\\\" on TikTok + IG. 80% Attack on Titan: Eren + Mikasa, sad/emotional edits. Other emotional anime couples OK (SAO, Demon Slayer, Frieren, Chainsaw Man, Edgerunners). Hook in 2s. Multiple posts allowed. Read brief below. Max Pay $200+",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
+   "id": "da416664-ae72-4fc4-b0c0-78acc04affaf",
+   "title": "Dillon Danis Clipping",
+   "brand": "ClipUp Official",
+   "category": "Combat Sports",
+   "score": 32.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 650.5999999999999,
+   "creators": 51,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/da416664-ae72-4fc4-b0c0-78acc04affaf",
+   "description": "Clip Dillon's best moments before his RAF fight against arman!",
+   "flags": [],
+   "brief": "Clip Dillon's best moments before his RAF fight against arman!",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 2.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 2000
+   },
+   "new": false
+  },
+  {
+   "id": "1db63081-715e-4e04-9b11-fbc1d4e8e700",
+   "title": "ForgeGUI [UNLIMITED]",
+   "brand": "BloxClips",
+   "category": "Technology",
+   "score": 27.2,
+   "why": [],
+   "rate_per_1k": 1.0,
+   "budget_left": 55551.07000000001,
+   "creators": 3786,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/1db63081-715e-4e04-9b11-fbc1d4e8e700",
+   "description": "ForgeGUI is an AI-powered Roblox development tool that lets you build games, scripts, and systems using simple prompts. Create engaging Roblox short-form content showcasing what\u2019s possible with ForgeGUI!",
+   "flags": [],
+   "brief": "Clip provided ForgeGUI footage into short-form content and get paid for the views you generate. ForgeGUI is an AI tool that helps Roblox developers create GUIs, models, thumbnails, scripts, and more.\\n",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 1000.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
+   "title": "Michael Sartain's Clipping Army",
+   "brand": "Michael Sartain's Clipper Army",
+   "category": "Personal Brand",
+   "score": 25.1,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 3027.2700000000004,
+   "creators": 30,
+   "platforms": [
+    "facebook",
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/86842687-ba2b-4638-a024-995dcf3d25a3",
+   "description": "Please check the link for GUIDELINES to submit, all of the details are included there, including a link to our clipping chat. ",
+   "flags": [],
+   "brief": "Please check the link for GUIDELINES to submit, all of the details are included there, including a link to our clipping chat. ",
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 10.0,
+    "max_payout": 100.0,
+    "views_to_first_payout": 10000
+   },
+   "new": false
+  }
+ ]
+}
