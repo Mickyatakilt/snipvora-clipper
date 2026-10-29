@@ -67,11 +67,12 @@ async function main(){
     if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
     meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
     const newest=clips[0].tag;
+    let posted={};try{posted=await (await fetch("posted.json",{cache:"no-store"})).json()}catch(e){}
     for(const c of clips){
       const id=c.video; if(gone[id]) continue;
       if(c.tag!==newest&&!showOld) continue;
       const g=c.grade, gc=g==null?"g-na":g>=8?"g-hi":g>=5?"g-mid":"g-lo";
-      const d=document.createElement("div");d.className="card"+(done[id]?" done":"");
+      const d=document.createElement("div");const pp=posted[id];d.className="card"+((done[id]||pp)?" done":"");
       d.innerHTML=`<div><b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
         <span class="badge ${gc}">${g==null?"Not graded":g+"/10"}</span></div>
         <div class="mut">${esc(g==null?"Grading turns on once the OpenAI key is added.":c.reason)}</div>
@@ -79,7 +80,10 @@ async function main(){
           <button class="play" aria-label="Play">▶</button>
           <div class="side"><div><i>♥</i>Like</div><div><i>💬</i>Chat</div><div><i>↗</i>Share</div></div>
           <div class="ov"><b>@snipvora</b>${esc(c.caption)}</div></div>
-        <div class="row"><button class="ok" data-p>Post</button><button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
+        ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span></div>
+        <div class="row"><button class="ok" data-u>Upload link to campaign</button><a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
+        <div class="mut">Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`:""}
+        <div class="row">${pp?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           <a class="btn" href="${c.video}" download>Download</a><button data-c>Copy caption</button></div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
       const v=d.querySelector("video"),pl=d.querySelector(".play");
@@ -88,7 +92,8 @@ async function main(){
       d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(c.caption);e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
       d.querySelector("[data-x]").onclick=()=>{if(confirm("Delete this clip?")){gone[id]=1;save2();send("delete",{video:id});d.remove()}};
       d.querySelector("[data-e]").onclick=()=>ask("Edit: what should change?","",null,t=>{send("edit",{video:id,note:t});d.querySelector("[data-s]").textContent="Edit requested: "+t});
-      d.querySelector("[data-p]").onclick=()=>ask("Post: description",c.caption,true,(t,when)=>{done[id]=true;save();send("post",{video:id,description:t,when});d.classList.add("done");d.querySelector("[data-s]").textContent="Queued to post"+(when?" at "+new Date(when).toLocaleString():" (no time set)")});
+      const ub=d.querySelector("[data-u]");if(ub)ub.onclick=async()=>{try{await navigator.clipboard.writeText(pp.url);toast("Link copied ✓ paste it on the campaign page")}catch(e){toast("Copy failed: "+pp.url)}window.open(pp.campaignUrl,"_blank")};
+      const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>ask("Post: description",c.caption,true,(t,when)=>{done[id]=true;save();send("post",{video:id,description:t,when});d.classList.add("done");d.querySelector("[data-s]").textContent="Queued to post"+(when?" at "+new Date(when).toLocaleString():" (no time set)")});
       list.appendChild(d);
     }
   }catch(e){meta.textContent="Could not load clips: "+e.message}
