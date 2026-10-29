@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Snipvora clips</title>
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Snipvora"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#0f1020">
 <style>
 :root{--bg:#0f1020;--card:#181a30;--line:#2a2c44;--fg:#eee;--mut:#99a;--acc:#6c5ce7;--ok:#00b894}
 @media (prefers-color-scheme: light){:root{--bg:#f4f5fb;--card:#fff;--line:#dcdfee;--fg:#14152a;--mut:#667}}
@@ -40,7 +43,7 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 const REPO="Mickyatakilt/snipvora-clipper";
 const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
 const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
-let showOld=location.hash==="#old";
+let showOld=location.hash==="#old";let showDone=false;try{showDone=sessionStorage.getItem("showDone")==="1"}catch(e){}
 const WORKER_URL=""; // set when the Cloudflare helper is deployed
 const gone=(()=>{try{return JSON.parse(localStorage.getItem("gone")||"{}")}catch(e){return{}}})();
 const save2=()=>{try{localStorage.setItem("gone",JSON.stringify(gone))}catch(e){}};
@@ -68,9 +71,11 @@ async function main(){
     meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
     const newest=clips[0].tag;
     let posted={};try{posted=await (await fetch("posted.json",{cache:"no-store"})).json()}catch(e){}
+    let hiddenDone=0;
     for(const c of clips){
       const id=c.video; if(gone[id]) continue;
       if(c.tag!==newest&&!showOld) continue;
+      if(posted[id]&&posted[id].submitted&&!showDone){hiddenDone++;continue}
       const g=c.grade, gc=g==null?"g-na":g>=8?"g-hi":g>=5?"g-mid":"g-lo";
       const d=document.createElement("div");const pp=posted[id];d.className="card"+((done[id]||pp)?" done":"");
       d.innerHTML=`<div><b>${esc(c.campaign||"Campaign clip")}</b> <span class="mut">${c.mb} MB</span>
@@ -96,6 +101,10 @@ async function main(){
       const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>ask("Post: description",c.caption,true,(t,when)=>{done[id]=true;save();send("post",{video:id,description:t,when});d.classList.add("done");d.querySelector("[data-s]").textContent="Queued to post"+(when?" at "+new Date(when).toLocaleString():" (no time set)")});
       list.appendChild(d);
     }
+    const nDone=Object.values(posted).filter(x=>x.submitted).length;
+    if(nDone){const t=document.createElement("button");t.className="btn";t.style.margin="12px 0";
+      t.textContent=showDone?"Hide submitted clips":"Show submitted clips ("+nDone+")";
+      t.onclick=()=>{try{sessionStorage.setItem("showDone",showDone?"0":"1")}catch(e){}location.reload()};list.appendChild(t)}
   }catch(e){meta.textContent="Could not load clips: "+e.message}
 }
 main();
