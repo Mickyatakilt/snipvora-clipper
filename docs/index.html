@@ -37,6 +37,11 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 <div class="mut" id="meta">Loading...</div>
 <div id="list"></div>
 <div id="camps"></div>
+<div class="card" id="pushbox"><b>Phone alerts</b>
+<div class="mut" id="pushmsg">Pop-ups on this app: new clips, posted, failures.</div>
+<div class="row"><button class="ok" id="pushbtn">Enable notifications</button></div>
+<textarea id="pushsub" rows="4" style="display:none;width:100%" readonly></textarea>
+<div class="row"><button id="pushcopy" style="display:none">Copy code</button></div></div>
 <p class="mut">Post each clip yourself: tap Download, then use Copy caption in TikTok. The caption already has the required tag and #ad.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
@@ -118,6 +123,24 @@ async function main(){
         list.appendChild(d)}}
   }catch(e){meta.textContent="Could not load clips: "+e.message}
 }
+const VAPID_PUB="BJNmWV105vLUyZoulN5OFMbkSuOl3_9Srkv04CWXExZf16b9AIlOZblRAEFmcifOrEl7iL-9T5O6wU-vMXz2DZs";
+function b64u(k){const p="=".repeat((4-k.length%4)%4),b=(k+p).replace(/-/g,"+").replace(/_/g,"/"),r=atob(b);return Uint8Array.from([...r].map(c=>c.charCodeAt(0)))}
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+document.getElementById("pushbtn").onclick=async()=>{
+  const m=document.getElementById("pushmsg");
+  try{
+    if(!("serviceWorker" in navigator)||!("PushManager" in window)){m.textContent="Open this from the Home Screen app (iOS 16.4+) to enable notifications.";return}
+    const perm=await Notification.requestPermission();
+    if(perm!=="granted"){m.textContent="Notifications are blocked. Turn them on in iPhone Settings > Notifications > Snipvora.";return}
+    const reg=await navigator.serviceWorker.register("sw.js");await navigator.serviceWorker.ready;
+    let sub=await reg.pushManager.getSubscription();
+    if(!sub)sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(VAPID_PUB)});
+    const ta=document.getElementById("pushsub");ta.value=JSON.stringify(sub);ta.style.display="block";
+    const cb=document.getElementById("pushcopy");cb.style.display="";
+    cb.onclick=async()=>{try{await navigator.clipboard.writeText(ta.value);cb.textContent="Copied ✓"}catch(e){ta.select();cb.textContent="Select + copy by hand"}};
+    m.textContent="Enabled on this phone. Copy the code below and add it as GitHub secret PUSH_SUB (steps from Claude).";
+  }catch(e){m.textContent="Could not enable: "+(e.name||e)}
+};
 main();
 const camps=document.getElementById("camps"),list2=document.getElementById("list");
 const joined=(()=>{try{return JSON.parse(localStorage.getItem("joined")||"{}")}catch(e){return{}}})();

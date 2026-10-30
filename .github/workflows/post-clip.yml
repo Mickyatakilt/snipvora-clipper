@@ -106,3 +106,15 @@ jobs:
           url=$(python3 -c "import json,os;print(json.load(open('docs/posted.json'))[os.environ['VIDEO']]['url'])")
           camp=$(python3 -c "import json,os;print(json.load(open('docs/posted.json'))[os.environ['VIDEO']]['campaignUrl'])")
           curl -s -H "Title: Posted! Submit within 30 min" -H "Priority: high" -H "Click: $camp" -d "TikTok link: $url - tap to open the campaign and paste it." "https://ntfy.sh/$NTFY_TOPIC" >/dev/null
+      - name: Push - submit within 30 minutes
+        if: success()
+        env:
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
+          VIDEO="${{ inputs.video }}" python3 - <<'PY'
+          import json,os,subprocess
+          v=os.environ["VIDEO"]; m=json.load(open("docs/posted.json"))[v]
+          subprocess.run(["python","push.py","Posted! Submit within 30 min","TikTok link: "+m["url"],m["campaignUrl"]])
+          PY
