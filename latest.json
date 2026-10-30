@@ -1,51 +1,55 @@
 {
- "scanned_at": "2026-10-29 19:46",
+ "scanned_at": "2026-10-30 08:02",
  "listed": 80,
- "kept": 37,
+ "kept": 38,
  "top": [
   {
-   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
-   "title": "Mini Brands \u2014 Ulta Beauty Clipping",
+   "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
+   "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
    "category": "Entertainment",
-   "score": 46.5,
+   "score": 44.6,
    "why": [
-    "clippable source",
-    "new"
+    "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8547.6,
-   "creators": 33,
+   "budget_left": 8697.96,
+   "creators": 25,
    "platforms": [
     "instagram",
     "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
-   "description": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "url": "https://contentrewards.com/c/campaigns/2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
+   "description": "Get Paid $2/thousand views to clip for Daise \u2014 Dollfaces + Charm Bracelets! \nCreate viral clips showcasing the Dollfaces + Charm Bracelets and get paid.\n(THEME PAGES).",
    "flags": [],
-   "brief": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "brief": "Get Paid $2/thousand views to clip for Daise \u2014 Dollfaces + Charm Bracelets! \\nCreate viral clips showcasing the Dollfaces + Charm Bracelets and get paid.\\n(THEME PAGES).",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
    "tiktok": {
     "rate_per_1k": 2.0,
     "min_payout": 2.0,
     "max_payout": 300.0,
     "views_to_first_payout": 1000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
    "title": "IPX Exchange x Ja Rule Clipping",
    "brand": "ClipLaunch",
    "category": "Podcasts",
-   "score": 44.9,
+   "score": 44.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2030,
-   "creators": 0,
+   "budget_left": 1739.69,
+   "creators": 36,
    "platforms": [
     "instagram",
     "tiktok",
@@ -57,6 +61,11 @@
    "description": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building comp",
    "flags": [],
    "brief": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building companies. Point viewers to ipx.exchange and mark posts #ad.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 3
+   },
    "tiktok": {
     "rate_per_1k": 2.0,
     "min_payout": 2.0,
@@ -70,14 +79,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 41.9,
+   "score": 41.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 20251.51,
-   "creators": 51,
+   "budget_left": 19877.14,
+   "creators": 58,
    "platforms": [
     "instagram",
     "tiktok"
@@ -87,6 +96,11 @@
    "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
    "flags": [],
    "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
    "tiktok": {
     "rate_per_1k": 1.75,
     "min_payout": 5.25,
@@ -105,7 +119,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 10297.62999999999,
+   "budget_left": 10236.36,
    "creators": 329,
    "platforms": [
     "instagram",
@@ -117,41 +131,16 @@
    "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
    "flags": [],
    "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
+   "hidden_counts": {
+    "rules": 2,
+    "requirements": 0,
+    "references": 4
+   },
    "tiktok": {
     "rate_per_1k": 2.0,
     "min_payout": 2.0,
     "max_payout": 250.0,
     "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
-   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
-   "title": "Modern Warfare 4 - Campaign Moments Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 40.7,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.75,
-   "budget_left": 9238.77,
-   "creators": 67,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/341ea599-d017-4ba2-be61-a29a2e754aaf",
-   "description": "Clip moments from the MW4 Campaign using the official content folder.\nPost them to TikTok and/or Instagram Reels.",
-   "flags": [],
-   "brief": "Clip moments from the MW4 Campaign using the official content folder.\\nPost them to TikTok and/or Instagram Reels.",
-   "tiktok": {
-    "rate_per_1k": 1.75,
-    "min_payout": 5.25,
-    "max_payout": 1000.0,
-    "views_to_first_payout": 3000
    },
    "new": false
   },
@@ -165,7 +154,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1888.85,
+   "budget_left": 1828.3400000000001,
    "creators": 59,
    "platforms": [
     "instagram",
@@ -177,6 +166,11 @@
    "description": "Clip the BILF Podcast with Mara Dorne for TikTok, Reels and Shorts. Paid per 1K verified views, $200 max per clip. No fan page needed: podcast, business, and lifestyle pages all work. Full brief and approved episode list in resources. Run b",
    "flags": [],
    "brief": "Clip the BILF Podcast with Mara Dorne for TikTok, Reels and Shorts. Paid per 1K verified views, $200 max per clip. No fan page needed: podcast, business, and lifestyle pages all work. Full brief and approved episode list in resources. Run by Runback.TV.",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 1,
+    "references": 4
+   },
    "tiktok": {
     "rate_per_1k": 2.0,
     "min_payout": 4.0,
@@ -186,46 +180,120 @@
    "new": false
   },
   {
-   "id": "35056178-a7a3-441d-a070-2a1b5bb7378b",
-   "title": "GALAXY ",
-   "brand": "Clouted",
-   "category": "Gadgets",
-   "score": 39.7,
+   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
+   "title": "Modern Warfare 4 - Campaign Moments Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 39.6,
    "why": [
-    "clippable source"
+    "clippable source",
+    "new"
    ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1258.8,
-   "creators": 62,
+   "rate_per_1k": 1.75,
+   "budget_left": 3941.7700000000004,
+   "creators": 72,
    "platforms": [
     "instagram",
     "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/35056178-a7a3-441d-a070-2a1b5bb7378b",
-   "description": "Reposting - Show audiences why they'd switch to Galaxy by highlighting features, experiences, and devices that make switching feel worth it.",
+   "url": "https://contentrewards.com/c/campaigns/341ea599-d017-4ba2-be61-a29a2e754aaf",
+   "description": "Clip moments from the MW4 Campaign using the official content folder.\nPost them to TikTok and/or Instagram Reels.",
    "flags": [],
-   "brief": "Reposting - Show audiences why they'd switch to Galaxy by highlighting features, experiences, and devices that make switching feel worth it.",
+   "brief": "Clip moments from the MW4 Campaign using the official content folder.\\nPost them to TikTok and/or Instagram Reels.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
    "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1000
+    "rate_per_1k": 1.75,
+    "min_payout": 5.25,
+    "max_payout": 1000.0,
+    "views_to_first_payout": 3000
+   },
+   "new": false
+  },
+  {
+   "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 37.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.25,
+   "budget_left": 29852.61,
+   "creators": 2,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Clip moments from the official MW4 Season 01 trailer.\\nPost your clips to TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.25,
+    "min_payout": 4.5,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 3600
    },
    "new": true
+  },
+  {
+   "id": "db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
+   "title": "DIGGER x ClipFarm",
+   "brand": "Clip Farm",
+   "category": "Entertainment",
+   "score": 36.1,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 11319.41,
+   "creators": 402,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
+   "description": "Make clips for DIGGER, the new Tom Cruise dark comedy from Warner Bros., in theaters now. Use the approved footage to make the funniest, weirdest or most surprising edits you can, and get people curious enough to buy a ticket.",
+   "flags": [],
+   "brief": "Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helped cause the crisis. The chaos escalates into a dark satire about greed, power, politics, and humanity's careless treatment of the planet. Then the film pulls its biggest twist. Much of what we've been watching turns out to be Fossil Fools, a stage play dramatizing a real disaster from decades earlier, with Tom Cruise playing Curtis Markson, an actor portraying Digger in a revival. As opening night approaches, the people behind the production wrestle with their own personal struggles. When Digger's symbolic downfall plays out at the climax, the film snaps back to reality: the real world outside the theater has been devastated by environmental collapse. It's a darkly comic story about greed, climate destruction, and humanity's habit of creating the disasters it later tries to escape. Digger is in theaters now. @warnerbros #DiggerPartner #digger #tomcruise #movies2026 #movies Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helpe",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 750.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
   },
   {
    "id": "8553875d-dfb0-4a97-aea5-448008876e46",
    "title": "Scape: clip the game for its Early Access launch",
    "brand": "ScapeWorld Entertainment AB",
    "category": "PC Gaming",
-   "score": 37.5,
+   "score": 35.5,
    "why": [
-    "clippable source",
-    "new"
+    "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2301.17,
+   "budget_left": 2299.56,
    "creators": 62,
    "platforms": [
     "tiktok",
@@ -236,6 +304,11 @@
    "description": "Clip Scape, our multiplayer climbing game, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics neve",
    "flags": [],
    "brief": "Clip Scape, our multiplayer climbing game, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics never come back.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
    "tiktok": {
     "rate_per_1k": 1.5,
     "min_payout": 1.5,
@@ -245,46 +318,17 @@
    "new": false
   },
   {
-   "id": "db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
-   "title": "DIGGER x ClipFarm",
-   "brand": "Clip Farm",
-   "category": "Entertainment",
-   "score": 36.7,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 16304.880000000001,
-   "creators": 396,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
-   "description": "Make clips for DIGGER, the new Tom Cruise dark comedy from Warner Bros., in theaters now. Use the approved footage to make the funniest, weirdest or most surprising edits you can, and get people curious enough to buy a ticket.",
-   "flags": [],
-   "brief": "Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helped cause the crisis. The chaos escalates into a dark satire about greed, power, politics, and humanity's careless treatment of the planet. Then the film pulls its biggest twist. Much of what we've been watching turns out to be Fossil Fools, a stage play dramatizing a real disaster from decades earlier, with Tom Cruise playing Curtis Markson, an actor portraying Digger in a revival. As opening night approaches, the people behind the production wrestle with their own personal struggles. When Digger's symbolic downfall plays out at the climax, the film snaps back to reality: the real world outside the theater has been devastated by environmental collapse. It's a darkly comic story about greed, climate destruction, and humanity's habit of creating the disasters it later tries to escape. Digger is in theaters now. @warnerbros #DiggerPartner #digger #tomcruise #movies2026 #movies Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helpe",
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 750.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
    "id": "5991571d-8c83-41e8-941c-34d96476c06b",
    "title": "Jackelyne Campaign",
    "brand": "Jackelyne Clips",
    "category": "Entertainment",
-   "score": 35.6,
+   "score": 35.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2436.23,
-   "creators": 55,
+   "budget_left": 2259.81,
+   "creators": 58,
    "platforms": [
     "instagram",
     "tiktok",
@@ -296,6 +340,11 @@
    "description": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
    "flags": [],
    "brief": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 3,
+    "references": 2
+   },
    "tiktok": {
     "rate_per_1k": 1.5,
     "min_payout": 2.0,
@@ -315,7 +364,7 @@
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 1916.23,
+   "budget_left": 1915.92,
    "creators": 5,
    "platforms": [
     "tiktok",
@@ -326,6 +375,11 @@
    "description": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. ",
    "flags": [],
    "brief": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. Multiple Posts allowed. Read Brief Below. Max Payout $200+",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 2
+   },
    "tiktok": {
     "rate_per_1k": 1.0,
     "min_payout": 1.0,
@@ -345,7 +399,7 @@
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 1744.19,
+   "budget_left": 1744.03,
    "creators": 1,
    "platforms": [
     "tiktok"
@@ -355,36 +409,11 @@
    "description": "Get paid per view to clip Levity & K.Flay's \"Slipping Away\" on TikTok. Two routes: edit + repost official Levity live clips (Red Rocks, Lost Lands, ACL) or make/repost high-engagement meme formats. Hook in 2s. Multiple posts allowed. Read b",
    "flags": [],
    "brief": "Get paid per view to clip Levity & K.Flay's \\\"Slipping Away\\\" on TikTok. Two routes: edit + repost official Levity live clips (Red Rocks, Lost Lands, ACL) or make/repost high-engagement meme formats. Hook in 2s. Multiple posts allowed. Read brief below. Max Payout $200+",
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 1.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
    },
-   "new": true
-  },
-  {
-   "id": "742404af-6500-478b-984f-2c7d61ac16bf",
-   "title": "Egzod & Allie McIntosh - Call Of Silence | Anime",
-   "brand": "Artist Influence",
-   "category": "Music",
-   "score": 34.2,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 1150,
-   "creators": 0,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/742404af-6500-478b-984f-2c7d61ac16bf",
-   "description": "Get paid per view to clip Egzod & Allie McIntosh's \"Call Of Silence\" on TikTok + IG. 80% Attack on Titan: Eren + Mikasa, sad/emotional edits. Other emotional anime couples OK (SAO, Demon Slayer, Frieren, Chainsaw Man, Edgerunners). Hook in ",
-   "flags": [],
-   "brief": "Get paid per view to clip Egzod & Allie McIntosh's \\\"Call Of Silence\\\" on TikTok + IG. 80% Attack on Titan: Eren + Mikasa, sad/emotional edits. Other emotional anime couples OK (SAO, Demon Slayer, Frieren, Chainsaw Man, Edgerunners). Hook in 2s. Multiple posts allowed. Read brief below. Max Pay $200+",
    "tiktok": {
     "rate_per_1k": 1.0,
     "min_payout": 1.0,
@@ -392,6 +421,41 @@
     "views_to_first_payout": 1000
    },
    "new": false
+  },
+  {
+   "id": "e96b3b3c-0e97-45fe-a245-55fd6e004acd",
+   "title": "Michael Jackson - Thriller | Halloween/MV/Open ",
+   "brand": "Artist Influence",
+   "category": "Music",
+   "score": 34.3,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 1250,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e96b3b3c-0e97-45fe-a245-55fd6e004acd",
+   "description": "Get paid per view to clip Michael Jackson's \"Thriller\" on TikTok + IG. MJ zombie performance edits, Halloween TV/film scenes, custom Halloween montages & repo reposts. Hook in 2s, biggest visual on the beat. #thriller #halloween #mj. Multip",
+   "flags": [],
+   "brief": "Get paid per view to clip Michael Jackson's \\\"Thriller\\\" on TikTok + IG. MJ zombie performance edits, Halloween TV/film scenes, custom Halloween montages & repo reposts. Hook in 2s, biggest visual on the beat. #thriller #halloween #mj. Multiple posts allowed. Read brief below.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 1.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
   },
   {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
@@ -403,7 +467,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 3004.2000000000007,
+   "budget_left": 2980.2999999999993,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -417,6 +481,11 @@
    "description": "Please check the link for GUIDELINES to submit, all of the details are included there, including a link to our clipping chat. ",
    "flags": [],
    "brief": "Please check the link for GUIDELINES to submit, all of the details are included there, including a link to our clipping chat. ",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 3,
+    "references": 2
+   },
    "tiktok": {
     "rate_per_1k": 1.0,
     "min_payout": 10.0,
@@ -430,14 +499,14 @@
    "title": "Brezscales $10,000 Dedicated Account Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 24.2,
+   "score": 24.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 7029.15,
-   "creators": 30,
+   "budget_left": 6109.02,
+   "creators": 31,
    "platforms": [
     "instagram",
     "tiktok",
@@ -448,13 +517,68 @@
    "description": "Get paid to clip Brez's content on a Dedicated Brezscales Account. \u27a1\ufe0f\nhttps://www.youtube.com/@brezscales\nhttps://www.youtube.com/@roasbrez\nhttps://www.instagram.com/brezscales/\nhttps://www.tiktok.com/@brezscales?lang=en",
    "flags": [],
    "brief": "Get paid to clip Brez's content on a Dedicated Brezscales Account. \u27a1\ufe0f\\nhttps://www.youtube.com/@brezscales\\nhttps://www.youtube.com/@roasbrez\\nhttps://www.instagram.com/brezscales/\\nhttps://www.tiktok.com/@brezscales?lang=en",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 4
+   },
    "tiktok": {
     "rate_per_1k": 1.0,
     "min_payout": 15.0,
     "max_payout": 300.0,
     "views_to_first_payout": 15000
    },
-   "new": true
+   "new": false
+  }
+ ],
+ "watch": [
+  {
+   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   }
+  },
+  {
+   "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
+   "hidden_counts": {
+    "rules": 4,
+    "requirements": 0,
+    "references": 1
+   }
+  },
+  {
+   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   }
+  },
+  {
+   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 1,
+    "references": 4
+   }
+  },
+  {
+   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   }
+  },
+  {
+   "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 3
+   }
   }
  ]
 }
