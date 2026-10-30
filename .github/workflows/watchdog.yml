@@ -23,6 +23,6 @@ jobs:
           if [ "$age" -gt 129600 ]; then
             echo "STALE: no new clips for $((age/3600))h"
             [ -n "$NTFY_TOPIC" ] && curl -s -H "Title: Snipvora: no new clips" -d "No new clips in $((age/3600))h - check GitHub Actions" "https://ntfy.sh/$NTFY_TOPIC"
-            (pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush) && python3 push.py "Snipvora: no new clips" "No new clips in $((age/3600))h - the cloud job may be blocked" || true
+            (pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush) && python3 push.py "🔴 ALERT: no new clips" "No new clips in $((age/3600))h - the cloud job may be blocked" || true
             exit 1
           fi

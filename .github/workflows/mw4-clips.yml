@@ -62,4 +62,4 @@ jobs:
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
         run: |
           pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
-          python push.py "Snipvora clip job FAILED" "$(cat alert.txt 2>/dev/null || echo check GitHub Actions)"
+          python push.py "🔴 ALERT: Snipvora clip job FAILED" "$(cat alert.txt 2>/dev/null || echo check GitHub Actions)"
