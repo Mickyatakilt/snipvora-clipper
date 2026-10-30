@@ -149,8 +149,11 @@ document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.styl
 async function loadCamps(){
   let mine=[];try{mine=await (await fetch("campaigns.json",{cache:"no-store"})).json()}catch(e){}
   let h="<h3>Your campaigns</h3>";
-  for(const c of mine){h+=`<div class="card"><b>${esc(c.title)}</b> <span class="pill ${c.status==="active"?"":"w"}">${esc(c.status)}</span>
-    <div class="mut">${esc(c.rate)} · footage: ${esc(c.footage)}</div><ul>${c.rules.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>
+  let watch={};try{const lj=await (await fetch("latest.json",{cache:"no-store"})).json();(lj.watch||[]).forEach(w=>watch[w.id]=w.hidden_counts)}catch(e){}
+  for(const c of mine){const rl=c.rules||[];const hc=watch[c.id];
+    const flag=rl.length?"<div class='mut'>Rules saved ✓</div>":`<div class='card' style='border-color:#e0a800'><b>📸 Needs screenshot</b><div class='mut'>The system can't read this campaign's rules${hc?` (${hc.rules} rules, ${hc.requirements} requirements, ${hc.references} reference files hidden until login)`:""}. Open it, screenshot them, save in Campaign Requirements or send to Claude.</div></div>`;
+    h+=`<div class="card"><b>${esc(c.title)}</b> <span class="pill ${c.status==="active"?"":"w"}">${esc(c.status)}</span>
+    <div class="mut">${esc(c.rate)} · footage: ${esc(c.footage)}</div>${flag}<ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>
     <div class="row"><a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a></div></div>`}
   h+="<h3>Join these next</h3><div class='mut'>Only campaigns that fit a 0-follower account: open join, pays out fast, real budget, not crowded. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
   try{

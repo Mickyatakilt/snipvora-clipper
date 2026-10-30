@@ -1,8 +1,77 @@
 [
- {"id":"7a73a53b-2bba-4a5c-8187-05534dd6716d","title":"Call of Duty - MW4 Multiplayer Launch Clipping","status":"active","rate":"$1.75/1k","url":"https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
-  "footage":"Official MediaSilo link only (cloud pulls it automatically)",
-  "rules":["Any page OK, no dedicated page","Official footage only, 10s minimum, keep original audio","NO AI voices or AI voiceover","Caption must have @callofduty and #ad on its own line","Audience mostly Tier 1-2; 30%+ Tier 3 may be removed","0.5% engagement (1,000 views = 5 likes), likes visible","Post stays live 30 days","No explicit content"]},
- {"id":"2478f835-202a-4df4-9c34-8fd9fa47088c","title":"SKULLPANDA at Doja Cat's 31st Birthday Party","status":"joined - needs setup","rate":"$10/1k","url":"https://contentrewards.com/c/campaigns/2478f835-202a-4df4-9c34-8fd9fa47088c",
-  "footage":"Picflow gallery looks like photos, not video: unconfirmed",
-  "rules":["Caption must be exactly SKULLPANDA, with #skullpanda and @popmart_us","10s minimum, no reposted or recycled content","Drafts need brand pre-approval before posting","Caption text goes in the caption, not a comment"]}
+ {
+  "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+  "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
+  "status": "active",
+  "rate": "$1.75/1k",
+  "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
+  "footage": "Official MediaSilo link only (cloud pulls it automatically)",
+  "rules": [
+   "Any page OK, no dedicated page",
+   "Official footage only, 10s minimum, keep original audio",
+   "NO AI voices or AI voiceover",
+   "Caption must have @callofduty and #ad on its own line",
+   "Audience mostly Tier 1-2; 30%+ Tier 3 may be removed",
+   "0.5% engagement (1,000 views = 5 likes), likes visible",
+   "Post stays live 30 days",
+   "No explicit content"
+  ]
+ },
+ {
+  "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
+  "title": "SKULLPANDA at Doja Cat's 31st Birthday Party",
+  "status": "joined - needs setup",
+  "rate": "$10/1k",
+  "url": "https://contentrewards.com/c/campaigns/2478f835-202a-4df4-9c34-8fd9fa47088c",
+  "footage": "Picflow gallery looks like photos, not video: unconfirmed",
+  "rules": [
+   "Caption must be exactly SKULLPANDA, with #skullpanda and @popmart_us",
+   "10s minimum, no reposted or recycled content",
+   "Drafts need brand pre-approval before posting",
+   "Caption text goes in the caption, not a comment"
+  ]
+ },
+ {
+  "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
+  "title": "Call of Duty - MW4 Campaign Moments",
+  "status": "joined - footage blocked",
+  "rate": "$1.75/1k",
+  "url": "https://contentrewards.com/c/campaigns/341ea599-d017-4ba2-be61-a29a2e754aaf",
+  "footage": "Official MediaSilo folder returns 403 to the cloud: needs a one-time download",
+  "rules": [
+   "Official MediaSilo footage only, 10s minimum, English only, keep original audio audible",
+   "Caption must tag @callofduty and have #Ad on its own line as the FIRST hashtag, up to 3 more related hashtags",
+   "No AI voices or voiceover, no logos, no paid promotion (permanent ban)",
+   "Post stays live 30 days",
+   "0.5% engagement, likes visible; audience mostly Tier 1-2",
+   "Do not copy other clippers' captions; 'shocking moments' messaging"
+  ]
+ },
+ {
+  "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
+  "title": "BILF Podcast | Clip the Show",
+  "status": "joined - needs rules",
+  "rate": "$2/1k",
+  "url": "https://contentrewards.com/c/campaigns/088c2279-ab1d-4434-9ba0-6637ab9311fa",
+  "footage": "Unknown until the reference files are read",
+  "rules": []
+ },
+ {
+  "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+  "title": "Mini Brands - Ulta Beauty Clipping",
+  "status": "joined - needs rules",
+  "rate": "$2/1k",
+  "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
+  "footage": "Unknown until the reference files are read",
+  "rules": []
+ },
+ {
+  "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
+  "title": "IPX Exchange x Ja Rule Clipping",
+  "status": "joined - needs rules",
+  "rate": "$2/1k",
+  "url": "https://contentrewards.com/c/campaigns/4c64eea7-0338-4003-aee2-ce53a9ae2765",
+  "footage": "Unknown until the reference files are read",
+  "rules": []
+ }
 ]

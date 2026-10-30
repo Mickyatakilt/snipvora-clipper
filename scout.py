@@ -86,6 +86,9 @@ def detail(cid):
     raw = get(f"{BASE}/campaigns/{cid}")
     h = rsc_text(raw)
     d = {"flags": [], "brief": ""}
+    bc = re.search(r'"briefCounts":\{"contentRules":(\d+),"creatorRequirements":(\d+),"references":(\d+)\}', h)
+    if bc:  # how many rules/requirements/reference files exist (their text is hidden until you join)
+        d["hidden_counts"] = {"rules": int(bc.group(1)), "requirements": int(bc.group(2)), "references": int(bc.group(3))}
     for m in re.finditer(r'\{"maxPayout":(\d+),"minPayout":(\d+),"platform":"(\w+)","rate":(\d+)\}', h):
         mx, mn, plat, rate = int(m.group(1)), int(m.group(2)), m.group(3), int(m.group(4))
         if plat == "tiktok" and rate:
@@ -187,7 +190,17 @@ def main():
         prev_ids = {x["id"] for x in json.loads(p.read_text())["top"]}
     for t in top:
         t["new"] = t["id"] not in prev_ids
-    out = {"scanned_at": now.strftime("%Y-%m-%d %H:%M"), "listed": len(rows), "kept": len(scored), "top": top}
+    watch = []  # campaigns we joined (docs/campaigns.json): how much hidden rule text each one has, for the dashboard "Needs screenshot" flag
+    try:
+        for c in json.loads((ROOT / "docs" / "campaigns.json").read_text()):
+            try:
+                watch.append({"id": c["id"], "hidden_counts": detail(c["id"]).get("hidden_counts")})
+            except Exception as e:
+                watch.append({"id": c["id"], "hidden_counts": None, "error": repr(e)[:60]})
+            time.sleep(1.5)
+    except Exception:
+        pass
+    out = {"scanned_at": now.strftime("%Y-%m-%d %H:%M"), "listed": len(rows), "kept": len(scored), "top": top, "watch": watch}
     (ROOT / "latest.json").write_text(json.dumps(out, indent=1))
     (hist / f"{today}.json").write_text(json.dumps(out, indent=1))
 
