@@ -69,6 +69,8 @@ async function main(){
     const clips=await r.json();
     if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
     meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
+    const ageH=(Date.now()-new Date(clips[0].published))/36e5;
+    if(ageH>36)meta.innerHTML+='<br><b style="color:#d33">⚠ No new clips for '+Math.round(ageH)+'h. The cloud job may be blocked.</b>';
     const newest=clips[0].tag;
     let posted={};try{posted=await (await fetch("posted.json",{cache:"no-store"})).json()}catch(e){}
     let hiddenDone=0;

@@ -49,6 +49,8 @@ def fetch_with_retry(tries=3):
         except Exception as ex:  # real failures are retried, then the job fails loudly
             print(f"attempt {i}/{tries} failed: {ex!r}", flush=True)
             if i == tries:
+                blocked = "403" in repr(ex) or "Forbidden" in repr(ex)
+                open("alert.txt", "w").write(("BLOCKED (403): MediaSilo refused the footage download. " if blocked else "FOOTAGE FETCH FAILED: ") + repr(ex)[:200])
                 raise
             import time; time.sleep(20 * i)
 
@@ -82,6 +84,7 @@ def main():
         if len(picks) >= N:
             break
     if len(picks) < 3:
+        open("alert.txt", "w").write(f"SOURCE EXHAUSTED: only {len(picks)} unused windows left - add new footage or reset used.json")
         sys.exit(f"SOURCE EXHAUSTED: only {len(picks)} unused windows left ({len(used)} already used) - need new footage or reset used.json")
     os.makedirs("out", exist_ok=True)
     vf = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,format=yuv420p"  # full-screen 9:16, exactly as uploaded

@@ -40,6 +40,6 @@ jobs:
       - name: Alert on failure
         if: failure()
         run: |
-          [ -n "$NTFY_TOPIC" ] && curl -s -H "Title: Snipvora clip job FAILED" -d "MW4 cloud clipper failed - check GitHub Actions" "https://ntfy.sh/$NTFY_TOPIC" || echo "no NTFY_TOPIC secret set yet"
+          [ -n "$NTFY_TOPIC" ] && curl -s -H "Title: Snipvora clip job FAILED" -H "Priority: high" -d "$(cat alert.txt 2>/dev/null || echo 'MW4 cloud clipper failed - check GitHub Actions')" "https://ntfy.sh/$NTFY_TOPIC" || echo "no NTFY_TOPIC secret set yet"
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
