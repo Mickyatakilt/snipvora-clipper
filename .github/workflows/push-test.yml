@@ -1,0 +1,17 @@
+name: push-test
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send test push
+        env:
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
+          python push.py "Snipvora alerts are ON" "Test push. If you see this, phone alerts work." "https://mickyatakilt.github.io/snipvora-clipper/"
