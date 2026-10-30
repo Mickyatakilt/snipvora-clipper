@@ -47,7 +47,8 @@
    "Do not copy other clippers' captions; 'shocking moments' messaging",
    "Violations: spam posting (same video on multiple accounts), posting the same video more than 5 times",
    "Sound: background music allowed if copyright-free or the official sound only, must not drown out original audio. Official TikTok sound: https://www.tiktok.com/music/CREAM-Call-of-Duty-Modern-Warfare-4-Remix-7696737737132427270 ; Instagram: https://www.instagram.com/reels/audio/4503102616611934"
-  ]
+  ],
+  "needs_video": true
  },
  {
   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
