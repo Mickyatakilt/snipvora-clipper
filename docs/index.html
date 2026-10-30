@@ -37,7 +37,6 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 <div class="mut" id="meta">Loading...</div>
 <div id="list"></div>
 <div id="camps"></div>
-<p class="mut"><a href="#old" onclick="setTimeout(()=>location.reload())">Show older runs</a></p>
 <p class="mut">Post each clip yourself: tap Download, then use Copy caption in TikTok. The caption already has the required tag and #ad.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
@@ -69,7 +68,7 @@ async function main(){
     if(!r.ok) throw new Error("clips.json "+r.status);
     const clips=await r.json();
     if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
-    meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · clips kept for 3 runs";
+    meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · older clips are removed automatically";
     const ageH=(Date.now()-new Date(clips[0].published))/36e5;
     if(ageH>36)meta.innerHTML+='<br><b style="color:#d33">⚠ No new clips for '+Math.round(ageH)+'h. The cloud job may be blocked.</b>';
     const newest=clips[0].tag;
@@ -78,7 +77,7 @@ async function main(){
     for(const c of clips){if(!gone[c.video]&&c.tag===newest&&stageOf(posted[c.video])==="todo")cnt.todo++}
     for(const k in posted){const st=stageOf(posted[k]);if(st!=="todo")cnt[st]++}
     const tabs=document.createElement("div");tabs.className="row";
-    for(const [k,t] of [["todo","To post"],["posted","Posted"],["done","Done"]]){const b=document.createElement("button");b.className=k===stage?"ok":"btn";b.textContent=t+" ("+cnt[k]+")";
+    for(const [k,t] of [["todo","New clips"],["posted","Posted"],["done","Done"]]){const b=document.createElement("button");b.className=k===stage?"ok":"btn";b.textContent=t+" ("+cnt[k]+")";
       b.onclick=()=>{try{sessionStorage.setItem("stage",k)}catch(e){}location.reload()};tabs.appendChild(b)}
     list.appendChild(tabs);
     const hint={todo:"New clips ready to post.",posted:"On TikTok. Submit the link within 30 minutes of posting.",done:"Submitted, or the 30-minute window passed. Nothing is deleted."};
