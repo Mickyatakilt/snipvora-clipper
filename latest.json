@@ -1,8 +1,45 @@
 {
- "scanned_at": "2026-10-30 08:02",
- "listed": 80,
- "kept": 38,
+ "scanned_at": "2026-10-30 19:36",
+ "listed": 76,
+ "kept": 41,
  "top": [
+  {
+   "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
+   "title": "Fundingpips Clipping",
+   "brand": "FundingPips",
+   "category": "Technology",
+   "score": 75.9,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 6.0,
+   "budget_left": 2000.7,
+   "creators": 831,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/c0c37381-e244-4643-98bd-edbff4bc1465",
+   "description": "FundingPips was built by traders, for traders. Our core philosophy is simple: Your ideas, our risk. Now, we are giving you full access to our official content vault unlocking raw global trader interviews, platform mechanics, and deep psycho",
+   "flags": [
+    "application"
+   ],
+   "brief": "Funding Pips Prop Firm Important Rules You Must know \ud83d\udea8\ud83d\udd34 \ud83d\udccd The Profit Concentration Policy brings more clarity and clear expectations to how evaluation results are assessed. If a single trade idea accounts for more than 60% of the profit target in any evaluation phase, the Master Account created after passing will require 4 minimum profitable days before each reward can be requested. \ud83d\udccd 2% Risk Per Trade in Master account. This rule will not apply in evolution phase. After passing the challenge This rule should be followed by traders. It Means you cannot risk More than 600$ in 50k and 1200$ in 100K. Related Questions Q. What counts as a trade idea? A trade idea is a single trade, or multiple positions on the same instrument in the same direction, including any new position opened within 10 minutes of closing a losing trade. All of these positions are grouped and assessed together when measuring profit concentration. Q. Minimum profitable days on the Master Account? If the policy is triggered, your Master Account will require 4 minimum profitable days before you can request a reward. A profitable day is a trading day where net realized profit is at least 0.5% of the account's initial balance on the Master Account. The 4 days do not need to be consecutive. Q. Does triggering the 60% threshold mean I fail the evaluation? No. Triggering the 60% threshold does not fail the evaluation. You still pass normally. The only consequence is that your Master Account will require 4 minimum pr",
+   "hidden_counts": {
+    "rules": 4,
+    "requirements": 0,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 6.0,
+    "min_payout": 12.0,
+    "max_payout": 100.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
   {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
@@ -13,7 +50,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8697.96,
+   "budget_left": 8688.97,
    "creators": 25,
    "platforms": [
     "instagram",
@@ -35,20 +72,20 @@
     "max_payout": 300.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
    "title": "IPX Exchange x Ja Rule Clipping",
    "brand": "ClipLaunch",
    "category": "Podcasts",
-   "score": 44.4,
+   "score": 44.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1739.69,
+   "budget_left": 1593.38,
    "creators": 36,
    "platforms": [
     "instagram",
@@ -75,52 +112,51 @@
    "new": false
   },
   {
-   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
-   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 41.8,
+   "id": "a016fbcc-f357-441d-b2d1-919bba8777fa",
+   "title": "Rolling Stone & Malcolm Todd Interviews Clipping",
+   "brand": "creatorXchange",
+   "category": "Music",
+   "score": 42.0,
    "why": [
-    "clippable source",
-    "new"
+    "clippable source"
    ],
-   "rate_per_1k": 1.75,
-   "budget_left": 19877.14,
-   "creators": 58,
+   "rate_per_1k": 2.0,
+   "budget_left": 2387.34,
+   "creators": 112,
    "platforms": [
     "instagram",
     "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
-   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
+   "url": "https://contentrewards.com/c/campaigns/a016fbcc-f357-441d-b2d1-919bba8777fa",
+   "description": "Circulate Clips creating hype around Malcolm Todd's personality and his Interviews. Your mission is to pull key moments from his interview to create viral clips across TikTok & Instagram Reels.",
    "flags": [],
-   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
+   "brief": "Circulate Clips creating hype around Malcolm Todd's personality and his Interviews. Your mission is to pull key moments from his interview to create viral clips across TikTok & Instagram Reels.",
    "hidden_counts": {
     "rules": 0,
-    "requirements": 0,
-    "references": 1
+    "requirements": 1,
+    "references": 4
    },
    "tiktok": {
-    "rate_per_1k": 1.75,
-    "min_payout": 5.25,
-    "max_payout": 1200.0,
-    "views_to_first_payout": 3000
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 1000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
    "title": "Backyard Breaks [Clipping Campaign]",
    "brand": "ClipHouse",
    "category": "Sports",
-   "score": 41.7,
+   "score": 41.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 10236.36,
-   "creators": 329,
+   "budget_left": 8738.599999999991,
+   "creators": 333,
    "platforms": [
     "instagram",
     "tiktok",
@@ -145,17 +181,52 @@
    "new": false
   },
   {
+   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 41.4,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.75,
+   "budget_left": 18525.47,
+   "creators": 92,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.75,
+    "min_payout": 5.25,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 3000
+   },
+   "new": false
+  },
+  {
    "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 40.2,
+   "score": 39.9,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1828.3400000000001,
-   "creators": 59,
+   "budget_left": 1465.35,
+   "creators": 61,
    "platforms": [
     "instagram",
     "tiktok",
@@ -184,14 +255,14 @@
    "title": "Modern Warfare 4 - Campaign Moments Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 39.6,
+   "score": 38.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 3941.7700000000004,
-   "creators": 72,
+   "budget_left": 1635.0200000000004,
+   "creators": 80,
    "platforms": [
     "instagram",
     "tiktok"
@@ -219,14 +290,14 @@
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 37.9,
+   "score": 37.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.25,
-   "budget_left": 29852.61,
-   "creators": 2,
+   "budget_left": 28836.29,
+   "creators": 18,
    "platforms": [
     "instagram",
     "tiktok"
@@ -247,20 +318,20 @@
     "max_payout": 1200.0,
     "views_to_first_payout": 3600
    },
-   "new": true
+   "new": false
   },
   {
    "id": "db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
    "title": "DIGGER x ClipFarm",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 36.1,
+   "score": 35.9,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 11319.41,
-   "creators": 402,
+   "budget_left": 9872.02,
+   "creators": 407,
    "platforms": [
     "instagram",
     "tiktok"
@@ -288,13 +359,13 @@
    "title": "Scape: clip the game for its Early Access launch",
    "brand": "ScapeWorld Entertainment AB",
    "category": "PC Gaming",
-   "score": 35.5,
+   "score": 35.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2299.56,
-   "creators": 62,
+   "budget_left": 2242.6,
+   "creators": 73,
    "platforms": [
     "tiktok",
     "youtube"
@@ -322,13 +393,13 @@
    "title": "Jackelyne Campaign",
    "brand": "Jackelyne Clips",
    "category": "Entertainment",
-   "score": 35.5,
+   "score": 35.0,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2259.81,
-   "creators": 58,
+   "budget_left": 1598.7600000000002,
+   "creators": 63,
    "platforms": [
     "instagram",
     "tiktok",
@@ -364,7 +435,7 @@
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 1915.92,
+   "budget_left": 1915.81,
    "creators": 5,
    "platforms": [
     "tiktok",
@@ -389,75 +460,6 @@
    "new": false
   },
   {
-   "id": "0fdbc44a-5c4e-485d-bd00-dc964f43b90c",
-   "title": "Levity, K.Flay - Slipping Away | Reposts + Memes",
-   "brand": "Artist Influence",
-   "category": "Music",
-   "score": 34.7,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 1744.03,
-   "creators": 1,
-   "platforms": [
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/0fdbc44a-5c4e-485d-bd00-dc964f43b90c",
-   "description": "Get paid per view to clip Levity & K.Flay's \"Slipping Away\" on TikTok. Two routes: edit + repost official Levity live clips (Red Rocks, Lost Lands, ACL) or make/repost high-engagement meme formats. Hook in 2s. Multiple posts allowed. Read b",
-   "flags": [],
-   "brief": "Get paid per view to clip Levity & K.Flay's \\\"Slipping Away\\\" on TikTok. Two routes: edit + repost official Levity live clips (Red Rocks, Lost Lands, ACL) or make/repost high-engagement meme formats. Hook in 2s. Multiple posts allowed. Read brief below. Max Payout $200+",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 1.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
-   "id": "e96b3b3c-0e97-45fe-a245-55fd6e004acd",
-   "title": "Michael Jackson - Thriller | Halloween/MV/Open ",
-   "brand": "Artist Influence",
-   "category": "Music",
-   "score": 34.3,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 1250,
-   "creators": 0,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e96b3b3c-0e97-45fe-a245-55fd6e004acd",
-   "description": "Get paid per view to clip Michael Jackson's \"Thriller\" on TikTok + IG. MJ zombie performance edits, Halloween TV/film scenes, custom Halloween montages & repo reposts. Hook in 2s, biggest visual on the beat. #thriller #halloween #mj. Multip",
-   "flags": [],
-   "brief": "Get paid per view to clip Michael Jackson's \\\"Thriller\\\" on TikTok + IG. MJ zombie performance edits, Halloween TV/film scenes, custom Halloween montages & repo reposts. Hook in 2s, biggest visual on the beat. #thriller #halloween #mj. Multiple posts allowed. Read brief below.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 1.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
@@ -467,7 +469,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2980.2999999999993,
+   "budget_left": 2885.0599999999995,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -499,14 +501,14 @@
    "title": "Brezscales $10,000 Dedicated Account Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 24.0,
+   "score": 23.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 6109.02,
-   "creators": 31,
+   "budget_left": 3274.71,
+   "creators": 48,
    "platforms": [
     "instagram",
     "tiktok",
