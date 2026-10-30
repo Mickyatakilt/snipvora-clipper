@@ -96,3 +96,13 @@ jobs:
           git config user.name snipvora-bot; git config user.email bot@users.noreply.github.com
           git add docs/posted.json && git commit -m "posted: $VIDEO" && git pull --rebase -q && git push
           gh workflow run deploy.yml
+      - name: Phone alert - submit within 30 minutes
+        if: success()
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          VIDEO: ${{ inputs.video }}
+        run: |
+          [ -n "$NTFY_TOPIC" ] || { echo "no NTFY_TOPIC secret"; exit 0; }
+          url=$(python3 -c "import json,os;print(json.load(open('docs/posted.json'))[os.environ['VIDEO']]['url'])")
+          camp=$(python3 -c "import json,os;print(json.load(open('docs/posted.json'))[os.environ['VIDEO']]['campaignUrl'])")
+          curl -s -H "Title: Posted! Submit within 30 min" -H "Priority: high" -H "Click: $camp" -d "TikTok link: $url - tap to open the campaign and paste it." "https://ntfy.sh/$NTFY_TOPIC" >/dev/null

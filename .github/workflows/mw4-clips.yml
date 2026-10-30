@@ -29,6 +29,11 @@ jobs:
           tag="clips-$(date -u +%Y%m%d-%H%M)"
           gh release create "$tag" out/*.mp4 out/*.jpg --title "$tag" --notes "$(cat out/clips.json)"
           gh release list --limit 50 --json tagName --jq '.[].tagName' | grep '^clips-' | sort -r | tail -n +3 | xargs -r -I{} gh release delete {} --cleanup-tag --yes
+      - name: Phone alert - new clips ready
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          [ -n "$NTFY_TOPIC" ] && curl -s -H "Title: New clips ready" -H "Click: https://mickyatakilt.github.io/snipvora-clipper/" -d "$(python3 -c "import json;print(len(json.load(open('out/clips.json'))))") new clips are ready to post." "https://ntfy.sh/$NTFY_TOPIC" >/dev/null || true
       - name: Remember used windows (no repeats)
         run: |
           git config user.name "snipvora-bot"; git config user.email "bot@users.noreply.github.com"
