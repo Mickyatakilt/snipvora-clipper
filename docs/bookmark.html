@@ -2,10 +2,37 @@
 <style>body{font:16px -apple-system,system-ui,sans-serif;max-width:640px;margin:24px auto;padding:0 16px;color:#1a1a2e}a.bm{display:inline-block;background:#6c5ce7;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}li{margin:8px 0}</style></head><body>
 <h2>Rules grabber (bookmark)</h2>
 <p><b>One-time setup:</b> drag this button up to your browser's bookmarks bar.</p>
-<p><a class="bm" href="javascript:(function(){try{var t=document.title+&quot;\nURL: &quot;+location.href+&quot;\n\n&quot;+document.body.innerText;var L=[].slice.call(document.querySelectorAll(&quot;a[href]&quot;)).map(function(a){return(a.innerText||&quot;&quot;).trim().slice(0,60)+&quot; -> &quot;+a.href}).filter(function(x){return/^[^>]*->\s*https?:/.test(x)&&!/contentrewards\.com\/(c\/discover|c\/?$|$)/.test(x)});var R=[];try{(self.__next_f||[]).forEach(function(c){var s=c&&c[1];if(typeof s===&quot;string&quot;&&/creatorRequirements|contentRules|references/.test(s))R.push(s)})}catch(e){}var out=&quot;CAMPAIGN RULES GRAB\n&quot;+t.slice(0,30000)+&quot;\n\n=== LINKS ===\n&quot;+L.slice(0,80).join(&quot;\n&quot;)+&quot;\n\n=== PAGE DATA ===\n&quot;+R.join(&quot;\n&quot;).slice(0,20000);var d=document.createElement(&quot;div&quot;);d.style.cssText=&quot;position:fixed;z-index:2147483647;top:10px;left:10px;right:10px;bottom:10px;background:%23fff;border:3px solid %236c5ce7;padding:12px;font:14px sans-serif;color:%23000&quot;;var h=document.createElement(&quot;div&quot;);h.textContent=&quot;Rules grabbed (&quot;+out.length+&quot; chars). Copy it and paste to Claude.&quot;;h.style.fontWeight=&quot;bold&quot;;var ta=document.createElement(&quot;textarea&quot;);ta.value=out;ta.style.cssText=&quot;width:100%25;height:80%25;margin:8px 0&quot;;var b=document.createElement(&quot;button&quot;);b.textContent=&quot;Copy&quot;;b.style.cssText=&quot;padding:8px 16px;margin-right:8px&quot;;var x=document.createElement(&quot;button&quot;);x.textContent=&quot;Close&quot;;x.style.cssText=&quot;padding:8px 16px&quot;;b.onclick=function(){ta.select();try{navigator.clipboard.writeText(out).then(function(){b.textContent=&quot;Copied %E2%9C%93&quot;},function(){document.execCommand(&quot;copy&quot;);b.textContent=&quot;Copied %E2%9C%93&quot;})}catch(e){document.execCommand(&quot;copy&quot;);b.textContent=&quot;Copied %E2%9C%93&quot;}};x.onclick=function(){d.remove()};d.appendChild(h);d.appendChild(ta);d.appendChild(b);d.appendChild(x);document.body.appendChild(d);ta.select();}catch(e){alert(&quot;Rules grabber failed: &quot;+e)}})();">Grab rules</a></p>
+<p><a class="bm" id="bm" href="#">Grab rules</a></p>
 <h3>Every time</h3><ol>
 <li>Open the campaign page on Content Rewards, logged in, after you joined.</li>
 <li>Click <b>Grab rules</b> in your bookmarks bar.</li>
-<li>A box opens with all the text it found. Click <b>Copy</b>, then paste it to Claude.</li></ol>
-<p>It only reads the page you are looking at, in your own browser. Nothing is sent anywhere until you paste it.</p>
-</body></html>
+<li>Click <b>Send to app</b> in the box. The rules appear on that campaign's card in the dashboard.</li></ol>
+<p id="st"></p>
+<p>It only reads the page you are looking at, in your own browser. It sends only when you click Send. The first time it asks for your helper passcode.</p>
+<script>
+const WORKER="";  // set to the Cloudflare Worker address once deployed, e.g. https://snipvora-helper.xxx.workers.dev
+function grab(WORKER){try{
+var t=document.title+"\nURL: "+location.href+"\n\n"+document.body.innerText;
+var L=[].slice.call(document.querySelectorAll("a[href]")).map(function(a){return(a.innerText||"").trim().slice(0,60)+" -> "+a.href}).filter(function(x){return/^[^>]*->\s*https?:/.test(x)&&!/contentrewards\.com\/(c\/discover|c\/?$|$)/.test(x)});
+var R=[];try{(self.__next_f||[]).forEach(function(c){var s=c&&c[1];if(typeof s==="string"&&/creatorRequirements|contentRules|references/.test(s))R.push(s)})}catch(e){}
+var out="CAMPAIGN RULES GRAB\n"+t.slice(0,30000)+"\n\n=== LINKS ===\n"+L.slice(0,80).join("\n")+"\n\n=== PAGE DATA ===\n"+R.join("\n").slice(0,20000);
+var m=location.pathname.match(/campaigns\/([0-9a-f-]{36})/);
+var d=document.createElement("div");d.style.cssText="position:fixed;z-index:2147483647;top:10px;left:10px;right:10px;bottom:10px;background:#fff;border:3px solid #6c5ce7;padding:12px;font:14px sans-serif;color:#000";
+var h=document.createElement("div");h.textContent="Rules grabbed ("+out.length+" chars)"+(m?"":" - open a campaign page first!");h.style.fontWeight="bold";
+var ta=document.createElement("textarea");ta.value=out;ta.style.cssText="width:100%;height:75%;margin:8px 0";
+function btn(txt){var b=document.createElement("button");b.textContent=txt;b.style.cssText="padding:8px 16px;margin-right:8px";return b}
+var s=btn("Send to app"),c=btn("Copy"),x=btn("Close"),msg=document.createElement("span");
+s.onclick=function(){
+if(!WORKER){msg.textContent="App helper not connected yet - use Copy.";return}
+var pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
+if(!pc){pc=prompt("Helper passcode");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
+msg.textContent="Sending...";
+fetch(WORKER.replace(/\/$/,"")+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:m&&m[1],title:document.title,text:out})})
+.then(function(r){if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw"wrong passcode"}if(!r.ok)throw"error "+r.status;msg.textContent="Sent to app ✓ (card updates in about a minute)"}).catch(function(e){msg.textContent="Failed: "+e+" - use Copy."})};
+c.onclick=function(){ta.select();try{navigator.clipboard.writeText(out).then(function(){msg.textContent="Copied ✓"},function(){document.execCommand("copy");msg.textContent="Copied ✓"})}catch(e){document.execCommand("copy");msg.textContent="Copied ✓"}};
+x.onclick=function(){d.remove()};
+d.appendChild(h);d.appendChild(ta);d.appendChild(s);d.appendChild(c);d.appendChild(x);d.appendChild(msg);document.body.appendChild(d);
+}catch(e){alert("Rules grabber failed: "+e)}}
+document.getElementById("bm").href="javascript:("+encodeURIComponent(grab.toString())+")("+encodeURIComponent(JSON.stringify(WORKER))+")";
+document.getElementById("st").textContent=WORKER?"App helper: connected":"App helper: not connected yet (Send button will say so; Copy still works).";
+</script></body></html>
