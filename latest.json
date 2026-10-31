@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-10-30 19:36",
- "listed": 76,
- "kept": 41,
+ "scanned_at": "2026-10-31 10:06",
+ "listed": 79,
+ "kept": 40,
  "top": [
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
@@ -13,8 +13,8 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 2000.7,
-   "creators": 831,
+   "budget_left": 2000.05,
+   "creators": 836,
    "platforms": [
     "instagram",
     "tiktok",
@@ -38,7 +38,7 @@
     "max_payout": 100.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
@@ -50,7 +50,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8688.97,
+   "budget_left": 8672.78,
    "creators": 25,
    "platforms": [
     "instagram",
@@ -75,41 +75,38 @@
    "new": false
   },
   {
-   "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
-   "title": "IPX Exchange x Ja Rule Clipping",
-   "brand": "ClipLaunch",
-   "category": "Podcasts",
-   "score": 44.2,
+   "id": "5a1f7c72-f083-4f00-97db-fedd4c5dd8ad",
+   "title": "Tame Impala - Triple J: Like A Version [8442]",
+   "brand": "TikCut",
+   "category": "Music",
+   "score": 42.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1593.38,
-   "creators": 36,
+   "budget_left": 1000,
+   "creators": 0,
    "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
+    "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/4c64eea7-0338-4003-aee2-ce53a9ae2765",
-   "description": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building comp",
+   "url": "https://contentrewards.com/c/campaigns/5a1f7c72-f083-4f00-97db-fedd4c5dd8ad",
+   "description": "Clip moments from Tame Impala's Triple J: Like A version session.",
    "flags": [],
-   "brief": "Ja Rule, the Queens rapper with 30M records sold, is now President of the IPX Celebrity Advisory Board & Shareholder. IPX is building a creator first IP economy. Clip Ja talking IP, owning your masters, the music business, and building companies. Point viewers to ipx.exchange and mark posts #ad.",
+   "brief": "Clip moments from Tame Impala's Triple J: Like A version session.",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
-    "references": 3
+    "references": 4
    },
    "tiktok": {
     "rate_per_1k": 2.0,
     "min_payout": 2.0,
-    "max_payout": 500.0,
+    "max_payout": 100.0,
     "views_to_first_payout": 1000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "a016fbcc-f357-441d-b2d1-919bba8777fa",
@@ -121,7 +118,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2387.34,
+   "budget_left": 2283.79,
    "creators": 112,
    "platforms": [
     "instagram",
@@ -143,7 +140,7 @@
     "max_payout": 200.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
@@ -155,8 +152,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8738.599999999991,
-   "creators": 333,
+   "budget_left": 8604.62999999999,
+   "creators": 335,
    "platforms": [
     "instagram",
     "tiktok",
@@ -185,14 +182,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 41.4,
+   "score": 40.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 18525.47,
-   "creators": 92,
+   "budget_left": 17620.47,
+   "creators": 143,
    "platforms": [
     "instagram",
     "tiktok"
@@ -216,16 +213,51 @@
    "new": false
   },
   {
-   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
-   "title": "BILF Podcast | Clip the Show",
-   "brand": "Runback.TV",
-   "category": "Entertainment",
-   "score": 39.9,
+   "id": "e36819b7-6b11-4ff3-98f8-43db273d13a3",
+   "title": "Extra 300$ | Turkish IRL VLOG in America ",
+   "brand": "Outis Clips",
+   "category": "Kick",
+   "score": 40.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1465.35,
+   "budget_left": 1940.07,
+   "creators": 32,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e36819b7-6b11-4ff3-98f8-43db273d13a3",
+   "description": "Turkish streamer from Texas, filming a California trip. Poolside talk, resort walks, coffee runs, massage - reacting to everything in Turkish.\n\nClip the funny moments into vertical shorts. Turkish captions required. Post only from accounts ",
+   "flags": [],
+   "brief": "Turkish streamer from Texas, filming a California trip. Poolside talk, resort walks, coffee runs, massage - reacting to everything in Turkish.\\n\\nClip the funny moments into vertical shorts. Turkish captions required. Post only from accounts with a Turkish-speaking audience.",
+   "hidden_counts": {
+    "rules": 2,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
+   "title": "BILF Podcast | Clip the Show",
+   "brand": "Runback.TV",
+   "category": "Entertainment",
+   "score": 39.7,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 1299.1399999999999,
    "creators": 61,
    "platforms": [
     "instagram",
@@ -251,53 +283,18 @@
    "new": false
   },
   {
-   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
-   "title": "Modern Warfare 4 - Campaign Moments Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 38.3,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.75,
-   "budget_left": 1635.0200000000004,
-   "creators": 80,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/341ea599-d017-4ba2-be61-a29a2e754aaf",
-   "description": "Clip moments from the MW4 Campaign using the official content folder.\nPost them to TikTok and/or Instagram Reels.",
-   "flags": [],
-   "brief": "Clip moments from the MW4 Campaign using the official content folder.\\nPost them to TikTok and/or Instagram Reels.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.75,
-    "min_payout": 5.25,
-    "max_payout": 1000.0,
-    "views_to_first_payout": 3000
-   },
-   "new": false
-  },
-  {
    "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 37.7,
+   "score": 37.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.25,
-   "budget_left": 28836.29,
-   "creators": 18,
+   "budget_left": 26904.44,
+   "creators": 66,
    "platforms": [
     "instagram",
     "tiktok"
@@ -321,17 +318,53 @@
    "new": false
   },
   {
+   "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+   "title": "Huss Valley [Fortnite Map]",
+   "brand": "BloxClips",
+   "category": "Fortnite",
+   "score": 36.1,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 5000,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+   "description": "Create short-form FORTNITE content showcasing Huss Valley using provided footage or your own gameplay. Highlight the map\u2019s mechanics and direct viewers to play using the Island Code.",
+   "flags": [],
+   "brief": "Create short-form FORTNITE content showcasing Huss Valley using provided footage or your own gameplay. Highlight the map\u2019s mechanics and direct viewers to play using the Island Code.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 9,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 2.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
    "id": "db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
    "title": "DIGGER x ClipFarm",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 35.9,
+   "score": 35.8,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 9872.02,
-   "creators": 407,
+   "budget_left": 9113.05,
+   "creators": 408,
    "platforms": [
     "instagram",
     "tiktok"
@@ -355,6 +388,42 @@
    "new": false
   },
   {
+   "id": "10b9e68d-6004-4730-a741-4b5b37ae0a20",
+   "title": "John Furrier + NYSE/theCUBE",
+   "brand": "ReelsBuilder",
+   "category": "Technology",
+   "score": 35.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 462.3499999999999,
+   "creators": 54,
+   "platforms": [
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/10b9e68d-6004-4730-a741-4b5b37ae0a20",
+   "description": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, an",
+   "flags": [],
+   "brief": "Amplify John Furrier\u2019s voice through standout clips from theCUBE. Turn his sharpest insights, bold takes, and compelling conversations into engaging short-form videos that reach new audiences and strengthen his influence across tech, AI, and business.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 5
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
    "id": "8553875d-dfb0-4a97-aea5-448008876e46",
    "title": "Scape: clip the game for its Early Access launch",
    "brand": "ScapeWorld Entertainment AB",
@@ -364,7 +433,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2242.6,
+   "budget_left": 2231.13,
    "creators": 73,
    "platforms": [
     "tiktok",
@@ -389,17 +458,18 @@
    "new": false
   },
   {
-   "id": "5991571d-8c83-41e8-941c-34d96476c06b",
-   "title": "Jackelyne Campaign",
-   "brand": "Jackelyne Clips",
-   "category": "Entertainment",
-   "score": 35.0,
+   "id": "fc194db2-7097-4dcf-812e-e3d325d51e6a",
+   "title": "Double Coverage Weekly Campaign (Cody Rhodes)",
+   "brand": "Reach",
+   "category": "Podcasts",
+   "score": 31.0,
    "why": [
-    "clippable source"
+    "clippable source",
+    "new"
    ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1598.7600000000002,
-   "creators": 63,
+   "rate_per_1k": 1.0,
+   "budget_left": 10000,
+   "creators": 0,
    "platforms": [
     "instagram",
     "tiktok",
@@ -407,57 +477,22 @@
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/5991571d-8c83-41e8-941c-34d96476c06b",
-   "description": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "url": "https://contentrewards.com/c/campaigns/fc194db2-7097-4dcf-812e-e3d325d51e6a",
+   "description": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\n\nRead the rules and requirements here:\nhttps://reachclipping.com/CodyRhodes",
    "flags": [],
-   "brief": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
+   "brief": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\\n\\nRead the rules and requirements here:\\nhttps://reachclipping.com/CodyRhodes",
    "hidden_counts": {
     "rules": 0,
-    "requirements": 3,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 2.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1333
-   },
-   "new": false
-  },
-  {
-   "id": "1ac16fd4-1149-4f53-8960-3c4d693e3221",
-   "title": "SAMSUNG - SEA (PH/TH/VN/ID/SG/MY)",
-   "brand": "Artist Influence",
-   "category": "Technology",
-   "score": 34.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 1915.81,
-   "creators": 5,
-   "platforms": [
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/1ac16fd4-1149-4f53-8960-3c4d693e3221",
-   "description": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. ",
-   "flags": [],
-   "brief": "Get paid per view to make Samsung Galaxy clips on TikTok + YouTube Shorts across Southeast Asia (SG / MY / TH / ID / PH / VN). Each clip pushes one feature of the Galaxy Z Fold8 (the hero device), the Galaxy S26 Ultra or the Galaxy S26 FE. Multiple Posts allowed. Read Brief Below. Max Payout $200+",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 2
+    "requirements": 0,
+    "references": 3
    },
    "tiktok": {
     "rate_per_1k": 1.0,
-    "min_payout": 1.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
+    "min_payout": 10.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 10000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
@@ -469,7 +504,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2885.0599999999995,
+   "budget_left": 2828.709999999999,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -495,42 +530,6 @@
     "views_to_first_payout": 10000
    },
    "new": false
-  },
-  {
-   "id": "854af6b2-1172-4bb5-8dae-81dd126297c8",
-   "title": "Brezscales $10,000 Dedicated Account Campaign",
-   "brand": "Reach",
-   "category": "Content Creator",
-   "score": 23.1,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 3274.71,
-   "creators": 48,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/854af6b2-1172-4bb5-8dae-81dd126297c8",
-   "description": "Get paid to clip Brez's content on a Dedicated Brezscales Account. \u27a1\ufe0f\nhttps://www.youtube.com/@brezscales\nhttps://www.youtube.com/@roasbrez\nhttps://www.instagram.com/brezscales/\nhttps://www.tiktok.com/@brezscales?lang=en",
-   "flags": [],
-   "brief": "Get paid to clip Brez's content on a Dedicated Brezscales Account. \u27a1\ufe0f\\nhttps://www.youtube.com/@brezscales\\nhttps://www.youtube.com/@roasbrez\\nhttps://www.instagram.com/brezscales/\\nhttps://www.tiktok.com/@brezscales?lang=en",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 4
-   },
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 15.0,
-    "max_payout": 300.0,
-    "views_to_first_payout": 15000
-   },
-   "new": false
   }
  ],
  "watch": [
@@ -540,7 +539,9 @@
     "rules": 0,
     "requirements": 0,
     "references": 1
-   }
+   },
+   "listed": true,
+   "budget_left": 17620.47
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -548,15 +549,15 @@
     "rules": 4,
     "requirements": 0,
     "references": 1
-   }
+   },
+   "listed": false,
+   "budget_left": null
   },
   {
    "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   }
+   "hidden_counts": null,
+   "listed": false,
+   "budget_left": null
   },
   {
    "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
@@ -564,7 +565,9 @@
     "rules": 1,
     "requirements": 1,
     "references": 4
-   }
+   },
+   "listed": true,
+   "budget_left": 1299.1399999999999
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -572,7 +575,9 @@
     "rules": 0,
     "requirements": 1,
     "references": 3
-   }
+   },
+   "listed": false,
+   "budget_left": null
   },
   {
    "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
@@ -580,7 +585,9 @@
     "rules": 0,
     "requirements": 0,
     "references": 3
-   }
+   },
+   "listed": false,
+   "budget_left": null
   }
  ]
 }
