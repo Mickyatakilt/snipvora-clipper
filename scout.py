@@ -194,7 +194,9 @@ def main():
     try:
         for c in json.loads((ROOT / "docs" / "campaigns.json").read_text()):
             try:
-                watch.append({"id": c["id"], "hidden_counts": detail(c["id"]).get("hidden_counts")})
+                row = next((r for r in rows if r.get("id") == c["id"]), None)  # list page = live budget; missing from the list = likely ended/full
+                watch.append({"id": c["id"], "hidden_counts": detail(c["id"]).get("hidden_counts"), "listed": row is not None,
+                              "budget_left": (row or {}).get("availableBudgetRaw")})
             except Exception as e:
                 watch.append({"id": c["id"], "hidden_counts": None, "error": repr(e)[:60]})
             time.sleep(1.5)

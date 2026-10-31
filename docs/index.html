@@ -155,15 +155,29 @@ document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.di
 document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on");document.getElementById("meta").style.display="none"};
 async function loadCamps(){
   let mine=[];try{mine=await (await fetch("campaigns.json",{cache:"no-store"})).json()}catch(e){}
-  let h="<h3>Your campaigns</h3>";
-  let watch={};try{const lj=await (await fetch("latest.json",{cache:"no-store"})).json();(lj.watch||[]).forEach(w=>watch[w.id]=w.hidden_counts)}catch(e){}
+  let h="";
+  let watch={};try{const lj=await (await fetch("latest.json",{cache:"no-store"})).json();(lj.watch||[]).forEach(w=>watch[w.id]=w)}catch(e){}
   let caps={};for(const c of mine){try{const r=await fetch("captures/"+c.id+".json",{cache:"no-store"});if(r.ok)caps[c.id]=await r.json()}catch(e){}}
-  for(const c of mine){const rl=c.rules||[];const hc=watch[c.id];const cap=caps[c.id];
-    const need=[];if(!rl.length&&!cap)need.push("Rules");if(c.needs_video)need.push("Video");
-    const flag=c.ineligible?`<div class='card' style='border-color:#c0392b'><b>⛔ Not eligible: skipped</b><div class='mut'>${esc(c.ineligible)}</div></div>`:need.length?`<div class='card' style='border-color:#e0a800'><b>📸 ${need.join(" + ")} required</b><div class='mut'>${!rl.length?`The system can't read the rules${hc?` (${hc.rules} rules, ${hc.requirements} requirements, ${hc.references} reference files hidden until login)`:""}. `:""}${c.needs_video?"The official footage is blocked for the cloud: needs a one-time download. ":""}</div><div class="row"><label class="btn" style="cursor:pointer">⬆ Add ${need.includes("Video")?"video":"screenshot"} / file<input type="file" multiple accept="image/*,video/*" data-up="${c.id}" style="display:none"></label></div></div>`:(cap&&!rl.length?`<details><summary class='mut'>Rules captured ✓ ${esc((cap.capturedAt||"").slice(0,10))} (tap to read)</summary><pre style='white-space:pre-wrap;font-size:12px'>${esc((cap.text||"").slice(0,6000))}</pre></details>`:"<div class='mut'>Rules saved ✓</div>");
-    h+=`<div class="card"><b>${esc(c.title)}</b> <span class="pill ${c.status==="active"?"":"w"}">${esc(c.status)}</span>
-    <div class="mut">${esc(c.rate)} · footage: ${esc(c.footage)}</div>${flag}<ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>
-    <div class="row"><a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a></div></div>`}
+  let files={};try{const r=await fetch("https://api.github.com/repos/Mickyatakilt/snipvora-clipper/releases/tags/campaign-inputs");if(r.ok)for(const a of (await r.json()).assets||[]){const k=a.name.split("__")[0];(files[k]=files[k]||[]).push(a.name.split("__").slice(2).join("__"))}}catch(e){}
+  const ST=["Need Rule","Need Video","Ready","Not Eligible","Done"],groups={};ST.forEach(k=>groups[k]=[]);let hidden=[];
+  for(const c of mine){const rl=c.rules||[],w=watch[c.id]||{},cap=caps[c.id],fl=files[c.id]||[];
+    const vid=fl.some(n=>/\.(mp4|mov|webm|m4v)$/i.test(n)),img=fl.some(n=>/\.(png|jpe?g|webp|heic)$/i.test(n));
+    const hasRules=rl.length>0||!!cap||img,needV=!!c.needs_video;
+    const ending=w.listed===false||(w.budget_left!=null&&w.budget_left<200);
+    let st;if(c.ineligible)st="Not Eligible";else if(ending){hidden.push(c);continue}else if(!hasRules)st="Need Rule";else if(needV&&!vid)st="Need Video";else if(needV&&vid)st="Done";else st="Ready";
+    const tick=(ok,t)=>`<span class="pill ${ok===true?"":"w"}" style="${ok===true?"background:#d4f5dd;color:#0a6b2d":ok===false?"background:#fde2e2;color:#a11":""}">${ok===true?"✓":ok===false?"✗":"?"} ${t}</span> `;
+    const footOk=needV?vid:/^unknown/i.test(c.footage||"")?null:true;
+    const act=st==="Need Rule"?`<label class="btn" style="cursor:pointer">⬆ Add screenshot / file<input type="file" multiple accept="image/*,video/*" data-up="${c.id}" style="display:none"></label><a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a><a class="btn" href="bookmark.html">Grab rules</a>`:st==="Need Video"?`<label class="btn" style="cursor:pointer">⬆ Add video<input type="file" multiple accept="video/*" data-up="${c.id}" style="display:none"></label><a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a>`:`<a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a>`;
+    const rulesBox=rl.length?`<ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>`:cap?`<details><summary class='mut'>Rules captured ✓ ${esc((cap.capturedAt||"").slice(0,10))} (tap to read)</summary><pre style='white-space:pre-wrap;font-size:12px'>${esc((cap.text||"").slice(0,6000))}</pre></details>`:"";
+    groups[st].push(`<div class="card"><b>${esc(c.title)}</b>${st==="Done"?' <span class="pill" style="background:#d4f5dd;color:#0a6b2d">✓ Uploaded</span>':""}
+      <div class="mut">${esc(c.rate)}${w.budget_left!=null?" · $"+Math.round(w.budget_left).toLocaleString()+" left":""}</div>
+      <div style="margin:6px 0">${tick(hasRules,"Rules")}${tick(footOk,"Footage")}${tick(!c.ineligible,"Eligible")}</div>
+      ${c.ineligible?`<div class="mut">⛔ ${esc(c.ineligible)}</div>`:""}${st==="Need Rule"&&w.hidden_counts?`<div class="mut">Hidden on the page until login: ${w.hidden_counts.rules} rules, ${w.hidden_counts.requirements} requirements, ${w.hidden_counts.references} files.</div>`:""}${rulesBox}
+      <div class="row">${act}</div></div>`)}
+  let ct="Need Rule";try{ct=sessionStorage.getItem("ctab")||""}catch(e){}if(!groups[ct]||(!groups[ct].length&&ct!=="Done"))ct=ST.find(k=>groups[k].length)||"Need Rule";
+  h+=`<div class="row">${ST.map(k=>`<button class="${k===ct?"ok":"btn"}" data-ct="${k}">${k} (${groups[k].length})</button>`).join("")}</div>`;
+  h+=groups[ct].length?groups[ct].join(""):"<div class='card mut'>Nothing here.</div>";
+  if(hidden.length)h+=`<div class="mut">Hidden (ending soon or budget under $200): ${hidden.map(c=>esc(c.title)).join(", ")}</div>`;
   h+="<h3>Join these next</h3><div class='mut'>Only campaigns that fit a 0-follower account: open join, pays out fast, real budget, not crowded. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
   try{
     const d=await (await fetch("latest.json",{cache:"no-store"})).json();
@@ -178,13 +192,14 @@ async function loadCamps(){
     h+=`<div class="mut">Scout last ran: ${esc(d.scanned_at||"?")}</div>`;
   }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
   camps.innerHTML=h;
+  camps.querySelectorAll("[data-ct]").forEach(b=>b.onclick=()=>{try{sessionStorage.setItem("ctab",b.dataset.ct)}catch(e){}loadCamps()});
   camps.querySelectorAll("[data-up]").forEach(inp=>inp.onchange=async()=>{
     if(!WORKER_URL){toast("Helper not connected yet (Cloudflare Worker). Send it to Claude for now.");inp.value="";return}
-    let pc="";try{pc=localStorage.getItem("passcode")||""}catch(e){}
-    if(!pc){pc=prompt("Passcode");if(!pc)return;try{localStorage.setItem("passcode",pc)}catch(e){}}
+    let pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
+    if(!pc){pc=prompt("Passcode");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
     for(const f of inp.files){toast("Uploading "+f.name+"...");
       try{const r=await fetch(WORKER_URL.replace(/\/$/,"")+"/upload?campaign="+inp.dataset.up+"&name="+encodeURIComponent(f.name),{method:"POST",headers:{"X-Passcode":pc,"Content-Type":f.type||"application/octet-stream"},body:f});
-        if(r.status===401){try{localStorage.removeItem("passcode")}catch(e){}throw "wrong passcode"}if(!r.ok)throw r.status;toast("Uploaded ✓ "+f.name)}catch(e){toast("Upload failed: "+e);break}}
+        if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw "wrong passcode"}if(!r.ok)throw r.status;toast("Uploaded ✓ "+f.name)}catch(e){toast("Upload failed: "+e);break}}
     inp.value=""});
   camps.querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{joined[b.dataset.j]=true;try{localStorage.setItem("joined",JSON.stringify(joined))}catch(e){};b.textContent="Joined ✓"});
 }
