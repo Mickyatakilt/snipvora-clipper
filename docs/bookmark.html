@@ -10,7 +10,7 @@
 <p id="st"></p>
 <p>It only reads the page you are looking at, in your own browser. It sends only when you click Send. The first time it asks for your helper passcode.</p>
 <script>
-const WORKER="";  // set to the Cloudflare Worker address once deployed, e.g. https://snipvora-helper.xxx.workers.dev
+const WORKER="https://snipvora-helper.mickyatakilt.workers.dev";  // set to the Cloudflare Worker address once deployed, e.g. https://snipvora-helper.xxx.workers.dev
 function grab(WORKER){try{
 var t=document.title+"\nURL: "+location.href+"\n\n"+document.body.innerText;
 var L=[].slice.call(document.querySelectorAll("a[href]")).map(function(a){return(a.innerText||"").trim().slice(0,60)+" -> "+a.href}).filter(function(x){return/^[^>]*->\s*https?:/.test(x)&&!/contentrewards\.com\/(c\/discover|c\/?$|$)/.test(x)});

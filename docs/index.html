@@ -49,7 +49,7 @@ const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch
 const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
 let showOld=location.hash==="#old";let stage="todo";try{stage=sessionStorage.getItem("stage")||"todo"}catch(e){}
 function stageOf(pp){if(!pp)return"todo";if(pp.submitted)return"done";return(Date.now()-new Date(pp.postedAt)>18e5)?"done":"posted"}
-const WORKER_URL=""; // set when the Cloudflare helper is deployed
+const WORKER_URL="https://snipvora-helper.mickyatakilt.workers.dev"; // set when the Cloudflare helper is deployed
 const gone=(()=>{try{return JSON.parse(localStorage.getItem("gone")||"{}")}catch(e){return{}}})();
 const save2=()=>{try{localStorage.setItem("gone",JSON.stringify(gone))}catch(e){}};
 function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";setTimeout(()=>e.style.display="none",4500)}
