@@ -163,7 +163,7 @@ async function loadCamps(){
   for(const c of mine){const rl=c.rules||[],w=watch[c.id]||{},cap=caps[c.id],fl=files[c.id]||[];
     const vid=fl.some(n=>/\.(mp4|mov|webm|m4v)$/i.test(n)),img=fl.some(n=>/\.(png|jpe?g|webp|heic)$/i.test(n));
     const hasRules=rl.length>0||!!cap||img,needV=!!c.needs_video;
-    const ending=w.listed===false||(w.budget_left!=null&&w.budget_left<200);
+    const ending=w.budget_left!=null&&w.budget_left<200;
     let st;if(c.ineligible)st="Not Eligible";else if(ending){hidden.push(c);continue}else if(!hasRules)st="Need Rule";else if(needV&&!vid)st="Need Video";else if(needV&&vid)st="Done";else st="Ready";
     const tick=(ok,t)=>`<span class="pill ${ok===true?"":"w"}" style="${ok===true?"background:#d4f5dd;color:#0a6b2d":ok===false?"background:#fde2e2;color:#a11":""}">${ok===true?"✓":ok===false?"✗":"?"} ${t}</span> `;
     const footOk=needV?vid:/^unknown/i.test(c.footage||"")?null:true;
