@@ -1,0 +1,27 @@
+name: expand-docs
+on:
+  push:
+    paths: ["docs/captures/**"]
+  workflow_dispatch:
+concurrency:
+  group: expand-docs
+  cancel-in-progress: false
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 expand_docs.py
+      - name: Commit and redeploy when a doc was added
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! git diff --quiet; then
+            git config user.name "snipvora-bot"; git config user.email "bot@users.noreply.github.com"
+            git add docs/captures && git commit -m "captures: added linked Google Doc text"
+            git pull --rebase -q && git push
+            gh workflow run deploy.yml
+          fi
