@@ -13,6 +13,10 @@ for f in glob.glob("docs/captures/*.json"):
         except Exception as ex:
             print(f"{f}: doc {did} not readable ({type(ex).__name__}); needs 'anyone with the link'")
             continue
+        probe = " ".join(raw.split())[:120]
+        if probe and probe in " ".join(text.split()):
+            print(f"{f}: doc {did} text already present, skipped")
+            continue
         text += f"\n\n=== DOC {did} ===\n{raw.strip()[:60000]}"
         changed = True
         print(f"{f}: added doc {did} ({len(raw)} chars)")
