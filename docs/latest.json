@@ -1,8 +1,43 @@
 {
- "scanned_at": "2026-10-31 18:41",
+ "scanned_at": "2026-11-01 14:23",
  "listed": 79,
- "kept": 40,
+ "kept": 43,
  "top": [
+  {
+   "id": "133870d0-869f-4d0e-9395-641e6c7063dc",
+   "title": "Reza Arap x AAACLAN Clipping",
+   "brand": "Highlight Media Lab",
+   "category": "Entertainment",
+   "score": 90.0,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 7.0,
+   "budget_left": 1030.17,
+   "creators": 2,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/133870d0-869f-4d0e-9395-641e6c7063dc",
+   "description": "Reza Arap x AAACLAN Entertainment Clipping",
+   "flags": [],
+   "brief": "Reza Arap x AAACLAN Entertainment Clipping",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 7.0,
+    "min_payout": 2.5,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 357
+   },
+   "new": true
+  },
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
    "title": "Fundingpips Clipping",
@@ -13,7 +48,7 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1992.83,
+   "budget_left": 1984.88,
    "creators": 836,
    "platforms": [
     "instagram",
@@ -41,17 +76,87 @@
    "new": false
   },
   {
+   "id": "6a478a78-d3fe-4e07-80fc-4bde2fd215aa",
+   "title": "$$5,000 Marlon Clipping Campaign",
+   "brand": "Reach",
+   "category": "Content Creator",
+   "score": 49.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 3.0,
+   "budget_left": 3984.41,
+   "creators": 10,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/6a478a78-d3fe-4e07-80fc-4bde2fd215aa",
+   "description": "Get paid to clip Marlon's content.\n\nREAD THE RULES AND REQUIREMENTS:\nhttps://reachclipping.com/Marlon\n\nPassword: Marlon123",
+   "flags": [],
+   "brief": "Get paid to clip Marlon's content.\\n\\nREAD THE RULES AND REQUIREMENTS:\\nhttps://reachclipping.com/Marlon\\n\\nPassword: Marlon123",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 4
+   },
+   "tiktok": {
+    "rate_per_1k": 3.0,
+    "min_payout": 30.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 10000
+   },
+   "new": true
+  },
+  {
+   "id": "835da2bd-6a51-4024-8dfd-d603a8f5e761",
+   "title": "Lady A - Bigger Picture | Clipping",
+   "brand": "The Clip Ship",
+   "category": "Music",
+   "score": 45.8,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 4102.08,
+   "creators": 3,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/835da2bd-6a51-4024-8dfd-d603a8f5e761",
+   "description": "This is a quiet, faith led song and the campaign should feel the same way. You are not chasing shock value here. You are putting a song in front of people who need to hear it, and getting them to send it to someone else.",
+   "flags": [],
+   "brief": "Sometimes a song finds you at exactly the moment you need it most. \u2764\ufe0f Lady A\u2019s emotional new single \u201cBigger Picture\u201d is a beautiful reminder that even when life feels overwhelming, there\u2019s still hope in the things we cannot see or understand yet. The Grammy-winning country trio, made up of Hillary Scott, Charles Kelley, and Dave Haywood, discovered the song just one day before returning to the studio to finish their next album. Something about its message resonated so deeply that they recorded it the following day. Built around heartfelt vocals, warm acoustic melodies, and a message of faith, \u201cBigger Picture\u201d speaks to anyone navigating uncertainty, feeling lost, or simply trying to make sense of a difficult chapter in life. It\u2019s about accepting that we\u2019re only human, that doubt is natural, and that sometimes we have to trust there\u2019s a greater purpose beyond what we can see right now. If someone you love is going through a difficult time, send them this song. Sometimes a small reminder of hope can mean more than words ever could. Lady A \u2014 Bigger Picture \u2764\ufe0f #BiggerPicture #LadyA15:[\"$\",\"$L4f\",null,{\"state\" Sometimes a song finds you at exactly the moment you need it most. \u2764\ufe0f Lady A\u2019s emotional new single \u201cBigger Picture\u201d is a beautiful reminder that even when life feels overwhelming, there\u2019s still hope in the things we cannot see or understand yet. The Grammy-winning country trio, made up of Hillary Scott, Charles Kelley, and Dave Haywood, discovered the song just one day befo",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 400.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
    "category": "Entertainment",
-   "score": 44.6,
+   "score": 44.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8661,
-   "creators": 25,
+   "budget_left": 8573.44,
+   "creators": 27,
    "platforms": [
     "instagram",
     "tiktok"
@@ -79,14 +184,14 @@
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 43.5,
+   "score": 43.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 10491.6,
-   "creators": 60,
+   "budget_left": 9922.92,
+   "creators": 61,
    "platforms": [
     "instagram",
     "tiktok",
@@ -149,13 +254,13 @@
    "title": "Backyard Breaks [Clipping Campaign]",
    "brand": "ClipHouse",
    "category": "Sports",
-   "score": 41.3,
+   "score": 41.1,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7986.509999999995,
-   "creators": 340,
+   "budget_left": 7134.279999999999,
+   "creators": 344,
    "platforms": [
     "instagram",
     "tiktok",
@@ -184,14 +289,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.7,
+   "score": 40.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 16311.5,
-   "creators": 144,
+   "budget_left": 15008.3,
+   "creators": 177,
    "platforms": [
     "instagram",
     "tiktok"
@@ -219,13 +324,13 @@
    "title": "Extra 300$ | Turkish IRL VLOG in America ",
    "brand": "Outis Clips",
    "category": "Kick",
-   "score": 40.5,
+   "score": 40.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1891.55,
-   "creators": 35,
+   "budget_left": 1706.11,
+   "creators": 37,
    "platforms": [
     "instagram",
     "tiktok",
@@ -254,12 +359,12 @@
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 39.7,
+   "score": 39.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1229.65,
+   "budget_left": 1077.69,
    "creators": 60,
    "platforms": [
     "instagram",
@@ -285,18 +390,54 @@
    "new": false
   },
   {
+   "id": "50786486-a49d-4a17-b81b-0c416cb635da",
+   "title": "Alliance Podcast/News Clipping [VIRAL]",
+   "brand": "Bounty",
+   "category": "Podcasts",
+   "score": 38.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 8826.08,
+   "creators": 90,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/50786486-a49d-4a17-b81b-0c416cb635da",
+   "description": "Turn The Alliance for Secure AI\u2019s podcast and news footage into viral AI safety clips. No set formats, just find the strongest moments. $1.50 CPM, $1.50 min, $300 max per clip. TikTok, IG and YT Shorts. 10s min, 40%+ US audience.",
+   "flags": [],
+   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry73:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 300.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 37.1,
+   "score": 36.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.25,
-   "budget_left": 26460.67,
-   "creators": 66,
+   "budget_left": 23867.27,
+   "creators": 84,
    "platforms": [
     "instagram",
     "tiktok"
@@ -320,158 +461,18 @@
    "new": false
   },
   {
-   "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
-   "title": "Huss Valley [Fortnite Map]",
-   "brand": "BloxClips",
-   "category": "Fortnite",
-   "score": 36.1,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 5000,
-   "creators": 0,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
-   "description": "Create short-form FORTNITE content showcasing Huss Valley using provided footage or your own gameplay. Highlight the map\u2019s mechanics and direct viewers to play using the Island Code.",
-   "flags": [],
-   "brief": "Create short-form FORTNITE content showcasing Huss Valley using provided footage or your own gameplay. Highlight the map\u2019s mechanics and direct viewers to play using the Island Code.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 9,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 2.0,
-    "max_payout": 300.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
-   "id": "db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
-   "title": "DIGGER x ClipFarm",
-   "brand": "Clip Farm",
-   "category": "Entertainment",
-   "score": 35.7,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 8832.279999999999,
-   "creators": 416,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/db81a1f9-8a50-4053-ae90-90f1f8fb09c0",
-   "description": "Make clips for DIGGER, the new Tom Cruise dark comedy from Warner Bros., in theaters now. Use the approved footage to make the funniest, weirdest or most surprising edits you can, and get people curious enough to buy a ticket.",
-   "flags": [],
-   "brief": "Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helped cause the crisis. The chaos escalates into a dark satire about greed, power, politics, and humanity's careless treatment of the planet. Then the film pulls its biggest twist. Much of what we've been watching turns out to be Fossil Fools, a stage play dramatizing a real disaster from decades earlier, with Tom Cruise playing Curtis Markson, an actor portraying Digger in a revival. As opening night approaches, the people behind the production wrestle with their own personal struggles. When Digger's symbolic downfall plays out at the climax, the film snaps back to reality: the real world outside the theater has been devastated by environmental collapse. It's a darkly comic story about greed, climate destruction, and humanity's habit of creating the disasters it later tries to escape. Digger is in theaters now. @warnerbros #DiggerPartner #digger #tomcruise #movies2026 #movies Digger follows Digger Rockwell, an enormously wealthy and powerful oil tycoon whose drilling empire sets off a devastating environmental catastrophe. As the disaster threatens the world, Digger frantically tries to convince everyone that he's the one who can save humanity, even though his own actions helpe",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 750.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
-   "id": "8553875d-dfb0-4a97-aea5-448008876e46",
-   "title": "Scape: clip the game for its Early Access launch",
-   "brand": "ScapeWorld Entertainment AB",
-   "category": "PC Gaming",
-   "score": 35.3,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 2228.43,
-   "creators": 73,
-   "platforms": [
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/8553875d-dfb0-4a97-aea5-448008876e46",
-   "description": "Clip Scape, our multiplayer climbing game, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics neve",
-   "flags": [],
-   "brief": "Clip Scape, our multiplayer climbing game, from its free demo, its streams and its Early Access launch. We pay $1.50 per 1,000 approved views on TikTok and YouTube Shorts, up to $150 a clip. Fest-week Twitch Drops and creator cosmetics never come back.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
-   "id": "5991571d-8c83-41e8-941c-34d96476c06b",
-   "title": "Jackelyne Campaign",
-   "brand": "Jackelyne Clips",
-   "category": "Entertainment",
-   "score": 34.9,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1529.0600000000004,
-   "creators": 63,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/5991571d-8c83-41e8-941c-34d96476c06b",
-   "description": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
-   "flags": [],
-   "brief": "Earn $1.5 / 1,000 Views for Jackelyne Clips",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 3,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 2.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1333
-   },
-   "new": true
-  },
-  {
    "id": "fc194db2-7097-4dcf-812e-e3d325d51e6a",
    "title": "Double Coverage Podcast",
    "brand": "Reach",
    "category": "Podcasts",
-   "score": 26.0,
+   "score": 25.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 10052.4,
-   "creators": 1155,
+   "budget_left": 8876.48,
+   "creators": 1169,
    "platforms": [
     "instagram",
     "tiktok",
@@ -506,7 +507,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2668.99,
+   "budget_left": 2639.120000000001,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -543,7 +544,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 16311.5
+   "budget_left": 15008.3
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -569,7 +570,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 1229.65
+   "budget_left": 1077.69
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
