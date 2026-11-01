@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-01 14:23",
- "listed": 79,
- "kept": 43,
+ "scanned_at": "2026-11-01 19:04",
+ "listed": 78,
+ "kept": 42,
  "top": [
   {
    "id": "133870d0-869f-4d0e-9395-641e6c7063dc",
@@ -13,7 +13,7 @@
     "clippable source"
    ],
    "rate_per_1k": 7.0,
-   "budget_left": 1030.17,
+   "budget_left": 1017.3400000000001,
    "creators": 2,
    "platforms": [
     "instagram",
@@ -36,7 +36,7 @@
     "max_payout": 1200.0,
     "views_to_first_payout": 357
    },
-   "new": true
+   "new": false
   },
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
@@ -48,7 +48,7 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1984.88,
+   "budget_left": 1976.94,
    "creators": 836,
    "platforms": [
     "instagram",
@@ -86,7 +86,7 @@
     "new"
    ],
    "rate_per_1k": 3.0,
-   "budget_left": 3984.41,
+   "budget_left": 3912.1400000000003,
    "creators": 10,
    "platforms": [
     "instagram",
@@ -108,6 +108,42 @@
     "max_payout": 300.0,
     "views_to_first_payout": 10000
    },
+   "new": false
+  },
+  {
+   "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+   "title": "Huss Valley [Fortnite Map]",
+   "brand": "BloxClips",
+   "category": "Fortnite",
+   "score": 46.1,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 4987.96,
+   "creators": 2,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+   "description": "Create short-form FORTNITE content showcasing Huss Valley using provided footage or your own gameplay. Highlight the map\u2019s mechanics and direct viewers to play using the Island Code.",
+   "flags": [],
+   "brief": "Create short-form FORTNITE content showcasing Huss Valley using provided footage or your own gameplay. Highlight the map\u2019s mechanics and direct viewers to play using the Island Code.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 9,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 4.0,
+    "max_payout": 50.0,
+    "views_to_first_payout": 2000
+   },
    "new": true
   },
   {
@@ -121,7 +157,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4102.08,
+   "budget_left": 4100.26,
    "creators": 3,
    "platforms": [
     "instagram",
@@ -143,7 +179,7 @@
     "max_payout": 400.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
@@ -155,7 +191,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8573.44,
+   "budget_left": 8569.14,
    "creators": 27,
    "platforms": [
     "instagram",
@@ -184,14 +220,14 @@
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 43.4,
+   "score": 43.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 9922.92,
-   "creators": 61,
+   "budget_left": 9785.68,
+   "creators": 63,
    "platforms": [
     "instagram",
     "tiktok",
@@ -259,7 +295,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7134.279999999999,
+   "budget_left": 7059.279999999999,
    "creators": 344,
    "platforms": [
     "instagram",
@@ -289,14 +325,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.3,
+   "score": 40.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 15008.3,
-   "creators": 177,
+   "budget_left": 14555.71,
+   "creators": 178,
    "platforms": [
     "instagram",
     "tiktok"
@@ -324,13 +360,13 @@
    "title": "Extra 300$ | Turkish IRL VLOG in America ",
    "brand": "Outis Clips",
    "category": "Kick",
-   "score": 40.3,
+   "score": 40.0,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1706.11,
-   "creators": 37,
+   "budget_left": 1411.03,
+   "creators": 41,
    "platforms": [
     "instagram",
     "tiktok",
@@ -359,12 +395,12 @@
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 39.5,
+   "score": 39.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1077.69,
+   "budget_left": 903.6700000000001,
    "creators": 60,
    "platforms": [
     "instagram",
@@ -390,42 +426,6 @@
    "new": false
   },
   {
-   "id": "50786486-a49d-4a17-b81b-0c416cb635da",
-   "title": "Alliance Podcast/News Clipping [VIRAL]",
-   "brand": "Bounty",
-   "category": "Podcasts",
-   "score": 38.9,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 8826.08,
-   "creators": 90,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/50786486-a49d-4a17-b81b-0c416cb635da",
-   "description": "Turn The Alliance for Secure AI\u2019s podcast and news footage into viral AI safety clips. No set formats, just find the strongest moments. $1.50 CPM, $1.50 min, $300 max per clip. TikTok, IG and YT Shorts. 10s min, 40%+ US audience.",
-   "flags": [],
-   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry73:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 300.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
    "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
@@ -436,7 +436,7 @@
     "new"
    ],
    "rate_per_1k": 1.25,
-   "budget_left": 23867.27,
+   "budget_left": 23639.81,
    "creators": 84,
    "platforms": [
     "instagram",
@@ -465,14 +465,14 @@
    "title": "Double Coverage Podcast",
    "brand": "Reach",
    "category": "Podcasts",
-   "score": 25.8,
+   "score": 25.6,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 8876.48,
-   "creators": 1169,
+   "budget_left": 7471.21,
+   "creators": 1189,
    "platforms": [
     "instagram",
     "tiktok",
@@ -507,7 +507,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2639.120000000001,
+   "budget_left": 2619.58,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -544,7 +544,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 15008.3
+   "budget_left": 14555.71
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -570,7 +570,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 1077.69
+   "budget_left": 903.6700000000001
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -591,6 +591,16 @@
    },
    "listed": false,
    "budget_left": null
+  },
+  {
+   "id": "835da2bd-6a51-4024-8dfd-d603a8f5e761",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "listed": true,
+   "budget_left": 4100.26
   }
  ]
 }
