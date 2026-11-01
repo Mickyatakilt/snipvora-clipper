@@ -91,5 +91,24 @@
   "url": "https://contentrewards.com/c/campaigns/4c64eea7-0338-4003-aee2-ce53a9ae2765",
   "footage": "Unknown until the reference files are read",
   "rules": []
+ },
+ {
+  "id": "835da2bd-6a51-4024-8dfd-d603a8f5e761",
+  "title": "Lady A - Bigger Picture | Clipping (The Clip Ship)",
+  "status": "not joined yet - no country rule",
+  "rate": "$2/1k (about 2,000 views, then submit video analytics)",
+  "url": "https://contentrewards.com/c/campaigns/835da2bd-6a51-4024-8dfd-d603a8f5e761",
+  "footage": "Provided by the campaign: footage folder + lyric sheet linked inside the Google Doc (HERE links), plus own b-roll allowed. Not wired into the clipper yet.",
+  "rules": [
+   "Audience: all tiers accepted, English only (no country requirement)",
+   "Any page type OK; TikTok + Instagram Reels",
+   "Official sound required (links in the doc); no re-upload or own export",
+   "On-screen text required on every post (client lines are in the doc)",
+   "At least 8 seconds; likes and comments on; each clip posted once per platform",
+   "Caption names song + artist; #BiggerPicture and #LadyA on every post; no hashtag spam",
+   "Min engagement: 0.9% under 25K views, 0.8% 25-100K, 0.5% 100K+",
+   "After 2,000 views: screen-record that video's analytics (watch time, view graphs, locations) and send to the analytics submission channel (Discord); account-level analytics are rejected",
+   "Tone: warm, quiet, faith-led. Never mention illness, death or dying; no AI images of the band; no paid boosts, collabs or spam; do not re-cut clips the band already posted"
+  ]
  }
 ]
