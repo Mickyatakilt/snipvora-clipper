@@ -86,11 +86,22 @@
  {
   "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
   "title": "IPX Exchange x Ja Rule Clipping",
-  "status": "joined - needs rules",
-  "rate": "$2/1k",
+  "status": "not eligible - needs 40%+ USA audience; budget almost gone",
+  "rate": "$1/1k (min payout $2, max $500/clip)",
   "url": "https://contentrewards.com/c/campaigns/4c64eea7-0338-4003-aee2-ce53a9ae2765",
-  "footage": "Unknown until the reference files are read",
-  "rules": []
+  "footage": "Cleared Sources Drive folder only (Content Library link on the campaign page) + required IPX overlay on every clip",
+  "rules": [
+   "Audience: 40%+ USA (country requirement)",
+   "Any page, no bio requirement",
+   "Tag @ipx.exchange (TikTok) and #ad in every caption",
+   "Put an IPX overlay on the top layer at 100% for the whole clip, not scaled or moved",
+   "Clips stay live at least 30 days",
+   "Only clip the Cleared Sources folder; never download from YouTube/Spotify",
+   "Never cut Ja Rule's words to change meaning; no other celebrity names; off-limit topics: Fyre Festival, legal history, feuds, Murder Inc",
+   "No alcohol brands; bleep swearing in Music Business footage",
+   "No claims about IPX products, returns or investments"
+  ],
+  "ineligible": "Audience requirement: 40%+ USA. Budget $1,823 of $2,030 already used ($207 left)."
  },
  {
   "id": "835da2bd-6a51-4024-8dfd-d603a8f5e761",
