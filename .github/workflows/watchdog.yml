@@ -26,3 +26,39 @@ jobs:
             (pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush) && python3 push.py "🔴 ALERT: no new clips" "No new clips in $((age/3600))h - the cloud job may be blocked" || true
             exit 1
           fi
+  delete-due:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Push alert when a posted TikTok is 30 days old
+        env:
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
+          python3 - <<'PY'
+          import json, subprocess, datetime as dt
+          f = "docs/posted.json"
+          d = json.load(open(f))
+          now = dt.datetime.now(dt.timezone.utc)
+          changed = False
+          for k, v in d.items():
+              if v.get("deleteNoticeSent"):
+                  continue
+              due = dt.datetime.fromisoformat(v["postedAt"].replace("Z", "+00:00")) + dt.timedelta(days=30)
+              if now >= due:
+                  name = k.split("/")[-1]
+                  subprocess.run(["python3", "push.py", "30 days passed: you can delete a TikTok", name + " posted " + v["postedAt"][:10] + " is 30 days old. Check Content Rewards payout first, then delete it on TikTok.", v.get("url", "./")])
+                  v["deleteAfter"] = due.strftime("%Y-%m-%dT%H:%M:%SZ")
+                  v["deleteNoticeSent"] = True
+                  changed = True
+          if changed:
+              json.dump(d, open(f, "w"), indent=1)
+          PY
+          if ! git diff --quiet; then
+            git config user.name "github-actions"; git config user.email "actions@github.com"
+            git add docs/posted.json && git commit -m "posted.json: delete-after notice sent"
+            git pull --rebase && git push
+          fi

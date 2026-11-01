@@ -48,6 +48,7 @@ const REPO="Mickyatakilt/snipvora-clipper";
 const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
 const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
 let showOld=location.hash==="#old";let stage="todo";try{stage=sessionStorage.getItem("stage")||"todo"}catch(e){}
+function delBadge(pp){const d=new Date(new Date(pp.postedAt).getTime()+30*864e5),n=Math.ceil((d-Date.now())/864e5);return n>0?`<span class="badge g-lo">Keep live until ${d.toLocaleDateString()} (${n}d left)</span>`:`<span class="badge g-hi">30 days passed: OK to delete on TikTok</span>`}
 function stageOf(pp){if(!pp)return"todo";if(pp.submitted)return"done";return(Date.now()-new Date(pp.postedAt)>18e5)?"done":"posted"}
 const WORKER_URL="https://snipvora-helper.mickyatakilt.workers.dev"; // set when the Cloudflare helper is deployed
 const gone=(()=>{try{return JSON.parse(localStorage.getItem("gone")||"{}")}catch(e){return{}}})();
@@ -107,7 +108,7 @@ async function main(){
           <button class="play" aria-label="Play">▶</button>
           <div class="side"><div><i>♥</i>Like</div><div><i>💬</i>Chat</div><div><i>↗</i>Share</div></div>
           <div class="ov"><b>@snipvora</b>${esc(c.caption)}</div></div>
-        ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span></div>
+        ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span> ${delBadge(pp)}</div>
         <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:stage==="done"?`<span class="badge g-lo">Missed 30-min window</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
         ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:stage==="done"?`<div class="mut">Not submitted in time. Keep the TikTok post live for 30 days anyway.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
         <div class="row">${pp?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
@@ -129,7 +130,7 @@ async function main(){
     if(stage!=="todo"){const shown=new Set(clips.map(c=>c.video));
       for(const k in posted){const pp=posted[k];if(shown.has(k)||stageOf(pp)!==stage)continue;
         const d=document.createElement("div");d.className="card done";
-        d.innerHTML=`<div><b>${esc(k.split("/").pop())}</b> <span class="mut">video file removed from cloud</span></div><div class="mut">Posted ${new Date(pp.postedAt).toLocaleString()} · ${pp.submitted?"Submitted ✓":"Not submitted"}</div><div class="row"><a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>`;
+        d.innerHTML=`<div><b>${esc(k.split("/").pop())}</b> <span class="mut">video file removed from cloud</span></div><div class="mut">Posted ${new Date(pp.postedAt).toLocaleString()} · ${pp.submitted?"Submitted ✓":"Not submitted"}</div><div class="row">${delBadge(pp)}</div><div class="row"><a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>`;
         list.appendChild(d)}}
   }catch(e){meta.textContent="Could not load clips: "+e.message}
 }
