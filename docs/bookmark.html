@@ -34,13 +34,14 @@ var first=kind==="document"?fetch(base+"/mobilebasic",{credentials:"include"}).t
 first.catch(function(){return document.body.innerText})
 .then(function(txt){
 var out="GOOGLE DOC GRAB\n"+title+"\nURL: https://docs.google.com"+base+"/edit\n\n=== DOC "+id+" ===\n"+txt.replace(/^﻿/,"").trim();
-panel("Google Doc grabbed ("+out.length+" chars)",out,function(msg){
+panel((txt.length<500?"WARNING: only "+txt.length+" chars read, this doc may not have been read fully. ":"")+"Google Doc grabbed ("+out.length+" chars)",out,function(msg){
 var O=DASH;var w=window.open(O+"/snipvora-clipper/grab.html","snipgrab","width=520,height=360");
 if(!w){msg.textContent="Popup blocked: allow popups for docs.google.com, then click Send again";return}
 msg.textContent="Sending...";
+var tmo=setTimeout(function(){if(msg.textContent==="Sending...")msg.textContent="No answer from the helper window. Allow popups for docs.google.com and click Send again, or press Copy and paste it to me."},12000);
 function onm(e){if(e.origin!==O)return;var dd=e.data||{};
 if(dd.type==="snip-ready"){w.postMessage({type:"snip-grab",campaign:cid,title:title,text:out},O)}
-else if(dd.type==="snip-result"){msg.textContent=dd.ok?"Sent to app ✓":"Failed: "+dd.msg;removeEventListener("message",onm);try{w.close()}catch(e2){}}}
+else if(dd.type==="snip-result"){clearTimeout(tmo);msg.textContent=dd.ok?"Sent to app ✓":"Failed: "+dd.msg;removeEventListener("message",onm);try{w.close()}catch(e2){}}}
 addEventListener("message",onm)})})
 .catch(function(e){alert("Could not read this doc ("+e+"). Make sure you are logged in and can open it.")});
 return}

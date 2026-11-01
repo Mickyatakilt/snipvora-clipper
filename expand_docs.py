@@ -2,7 +2,11 @@
 import glob, json, os, re, urllib.request
 
 for f in glob.glob("docs/captures/*.json"):
+    if os.path.basename(f).startswith("_"):
+        continue  # index files, not captures
     cap = json.load(open(f))
+    if not isinstance(cap, dict):
+        continue
     text = cap.get("text", "")
     changed = False
     for did in dict.fromkeys(re.findall(r"docs\.google\.com/document/d/([\w-]{20,})", text)):

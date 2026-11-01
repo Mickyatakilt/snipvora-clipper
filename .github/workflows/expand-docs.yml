@@ -19,7 +19,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if ! git diff --quiet; then
+          if [ -n "$(git status --porcelain docs/captures)" ]; then
             git config user.name "snipvora-bot"; git config user.email "bot@users.noreply.github.com"
             git add docs/captures && git commit -m "captures: added linked Google Doc text"
             git pull --rebase -q && git push
