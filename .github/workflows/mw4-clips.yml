@@ -25,11 +25,7 @@ jobs:
           if [ "$EVENT" = "schedule" ]; then
             tag=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 20 --json tagName,publishedAt --jq '[.[]|select(.tagName|startswith("clips-"))]|sort_by(.publishedAt)|last|.tagName')
             if [ -n "$tag" ] && [ "$tag" != "null" ]; then
-              n=$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets --jq '[.assets[].name|select(endswith(".mp4"))]|.[]' | python3 -c "
-import sys,json
-posted=json.load(open('docs/posted.json'))
-names=[l.strip() for l in sys.stdin if l.strip()]
-print(sum(1 for x in names if 'clips/$tag/'+x not in posted))")
+              n=$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name|select(endswith(".mp4"))' | python3 gate.py "$tag")
               echo "unposted in $tag: $n"
               [ "$n" -ge 3 ] && skip=true
             fi
