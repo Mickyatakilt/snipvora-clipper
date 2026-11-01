@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sending to Snipvora</title>
+<style>body{font:16px -apple-system,system-ui,sans-serif;padding:24px;color:#1a1a2e}</style></head><body>
+<h3>Sending to Snipvora…</h3><p id="st">Waiting for the grab…</p>
+<script>
+// Receives a Google Doc grab from the bookmark (docs.google.com cannot call the helper directly) and forwards it to the helper.
+const WORKER="https://snipvora-helper.mickyatakilt.workers.dev",FROM="https://docs.google.com",st=document.getElementById("st");
+addEventListener("message",async e=>{
+  if(e.origin!==FROM)return;const m=e.data||{};if(m.type!=="snip-grab")return;
+  const reply=(ok,msg)=>{st.textContent=ok?"Sent ✓":"Failed: "+msg;try{e.source.postMessage({type:"snip-result",ok,msg},FROM)}catch(x){}};
+  let pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(x){}
+  if(!pc){pc=prompt("Helper passcode (asked once)");if(!pc)return reply(false,"no passcode");try{localStorage.setItem("snip_pc",pc)}catch(x){}}
+  try{
+    const r=await fetch(WORKER+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:m.campaign,title:m.title,text:m.text})});
+    if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(x){}return reply(false,"wrong passcode")}
+    reply(r.ok,r.ok?"":"error "+r.status);
+  }catch(x){reply(false,String(x))}
+});
+if(window.opener)window.opener.postMessage({type:"snip-ready"},FROM);
+</script></body></html>

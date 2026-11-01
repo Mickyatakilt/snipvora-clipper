@@ -4,35 +4,57 @@
 <p><b>One-time setup:</b> drag this button up to your browser's bookmarks bar.</p>
 <p><a class="bm" id="bm" href="#">Grab rules</a></p>
 <h3>Every time</h3><ol>
-<li>Open the campaign page on Content Rewards, logged in, after you joined.</li>
+<li>Open the campaign page on Content Rewards (logged in, after you joined) <b>or</b> a Google Doc / Sheet / Slides brief.</li>
 <li>Click <b>Grab rules</b> in your bookmarks bar.</li>
-<li>Click <b>Send to app</b> in the box. The rules appear on that campaign's card in the dashboard.</li></ol>
+<li>Click <b>Send to app</b> in the box. On a Google Doc a small window opens for a second and closes by itself. The rules appear in the dashboard.</li></ol>
 <p id="st"></p>
 <p>It only reads the page you are looking at, in your own browser. It sends only when you click Send. The first time it asks for your helper passcode.</p>
 <script>
-const WORKER="https://snipvora-helper.mickyatakilt.workers.dev";  // set to the Cloudflare Worker address once deployed, e.g. https://snipvora-helper.xxx.workers.dev
-function grab(WORKER){try{
+const WORKER="https://snipvora-helper.mickyatakilt.workers.dev";
+const DASH="https://mickyatakilt.github.io";
+function grab(WORKER,DASH){try{
+function btn(txt){var b=document.createElement("button");b.textContent=txt;b.style.cssText="padding:8px 16px;margin-right:8px";return b}
+function panel(head,out,sendFn){
+var d=document.createElement("div");d.style.cssText="position:fixed;z-index:2147483647;top:10px;left:10px;right:10px;bottom:10px;background:#fff;border:3px solid #6c5ce7;padding:12px;font:14px sans-serif;color:#000";
+var h=document.createElement("div");h.textContent=head;h.style.fontWeight="bold";
+var ta=document.createElement("textarea");ta.value=out;ta.style.cssText="width:100%;height:75%;margin:8px 0";
+var s=btn("Send to app"),c=btn("Copy"),x=btn("Close"),msg=document.createElement("span");
+s.onclick=function(){sendFn(msg)};
+c.onclick=function(){ta.select();try{navigator.clipboard.writeText(out).then(function(){msg.textContent="Copied ✓"},function(){document.execCommand("copy");msg.textContent="Copied ✓"})}catch(e){document.execCommand("copy");msg.textContent="Copied ✓"}};
+x.onclick=function(){d.remove()};
+d.appendChild(h);d.appendChild(ta);d.appendChild(s);d.appendChild(c);d.appendChild(x);d.appendChild(msg);document.body.appendChild(d)}
+if(location.hostname==="docs.google.com"){
+var mm=location.pathname.match(/\/(document|spreadsheets|presentation)\/d\/([\w-]+)/);
+if(!mm){alert("Open the Google Doc first, then click Grab rules");return}
+var kind=mm[1],id=mm[2],base="/"+kind+"/d/"+id;
+var exp=kind==="document"?base+"/export?format=txt":kind==="spreadsheets"?base+"/export?format=csv":base+"/export/txt";
+var cid=("doc-"+id).replace(/[^a-z0-9-]/gi,"").slice(0,40),title=document.title;
+fetch(exp,{credentials:"include"}).then(function(r){if(!r.ok)throw"export "+r.status;return r.text()})
+.catch(function(){return fetch(base+"/mobilebasic",{credentials:"include"}).then(function(r){if(!r.ok)throw"mobilebasic "+r.status;return r.text()}).then(function(h){return new DOMParser().parseFromString(h,"text/html").body.innerText})})
+.then(function(txt){
+var out="GOOGLE DOC GRAB\n"+title+"\nURL: https://docs.google.com"+base+"/edit\n\n=== DOC "+id+" ===\n"+txt.replace(/^﻿/,"").trim();
+panel("Google Doc grabbed ("+out.length+" chars)",out,function(msg){
+var O=DASH;var w=window.open(O+"/snipvora-clipper/grab.html","snipgrab","width=520,height=360");
+if(!w){msg.textContent="Popup blocked: allow popups for docs.google.com, then click Send again";return}
+msg.textContent="Sending...";
+function onm(e){if(e.origin!==O)return;var dd=e.data||{};
+if(dd.type==="snip-ready"){w.postMessage({type:"snip-grab",campaign:cid,title:title,text:out},O)}
+else if(dd.type==="snip-result"){msg.textContent=dd.ok?"Sent to app ✓":"Failed: "+dd.msg;removeEventListener("message",onm);try{w.close()}catch(e2){}}}
+addEventListener("message",onm)})})
+.catch(function(e){alert("Could not read this doc ("+e+"). Make sure you are logged in and can open it.")});
+return}
 var t=document.title+"\nURL: "+location.href+"\n\n"+document.body.innerText;
 var L=[].slice.call(document.querySelectorAll("a[href]")).map(function(a){return(a.innerText||"").trim().slice(0,60)+" -> "+a.href}).filter(function(x){return/^[^>]*->\s*https?:/.test(x)&&!/contentrewards\.com\/(c\/discover|c\/?$|$)/.test(x)});
 var R=[];try{(self.__next_f||[]).forEach(function(c){var s=c&&c[1];if(typeof s==="string"&&/creatorRequirements|contentRules|references/.test(s))R.push(s)})}catch(e){}
 var out="CAMPAIGN RULES GRAB\n"+t.slice(0,30000)+"\n\n=== LINKS ===\n"+L.slice(0,80).join("\n")+"\n\n=== PAGE DATA ===\n"+R.join("\n").slice(0,20000);
 var m=location.pathname.match(/campaigns\/([0-9a-f-]{36})/);
-var d=document.createElement("div");d.style.cssText="position:fixed;z-index:2147483647;top:10px;left:10px;right:10px;bottom:10px;background:#fff;border:3px solid #6c5ce7;padding:12px;font:14px sans-serif;color:#000";
-var h=document.createElement("div");h.textContent="Rules grabbed ("+out.length+" chars)"+(m?"":" - open a campaign page first!");h.style.fontWeight="bold";
-var ta=document.createElement("textarea");ta.value=out;ta.style.cssText="width:100%;height:75%;margin:8px 0";
-function btn(txt){var b=document.createElement("button");b.textContent=txt;b.style.cssText="padding:8px 16px;margin-right:8px";return b}
-var s=btn("Send to app"),c=btn("Copy"),x=btn("Close"),msg=document.createElement("span");
-s.onclick=function(){
-if(!WORKER){msg.textContent="App helper not connected yet - use Copy.";return}
+panel("Rules grabbed ("+out.length+" chars)"+(m?"":" - open a campaign page first!"),out,function(msg){
 var pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
 if(!pc){pc=prompt("Helper passcode");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
 msg.textContent="Sending...";
 fetch(WORKER.replace(/\/$/,"")+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:m&&m[1],title:document.title,text:out})})
-.then(function(r){if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw"wrong passcode"}if(!r.ok)throw"error "+r.status;msg.textContent="Sent to app ✓ (card updates in about a minute)"}).catch(function(e){msg.textContent="Failed: "+e+" - use Copy."})};
-c.onclick=function(){ta.select();try{navigator.clipboard.writeText(out).then(function(){msg.textContent="Copied ✓"},function(){document.execCommand("copy");msg.textContent="Copied ✓"})}catch(e){document.execCommand("copy");msg.textContent="Copied ✓"}};
-x.onclick=function(){d.remove()};
-d.appendChild(h);d.appendChild(ta);d.appendChild(s);d.appendChild(c);d.appendChild(x);d.appendChild(msg);document.body.appendChild(d);
+.then(function(r){if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw"wrong passcode"}if(!r.ok)throw"error "+r.status;msg.textContent="Sent to app ✓ (card updates in about a minute)"}).catch(function(e){msg.textContent="Failed: "+e+" - use Copy."})})
 }catch(e){alert("Rules grabber failed: "+e)}}
-document.getElementById("bm").href="javascript:("+encodeURIComponent(grab.toString())+")("+encodeURIComponent(JSON.stringify(WORKER))+")";
-document.getElementById("st").textContent=WORKER?"App helper: connected":"App helper: not connected yet (Send button will say so; Copy still works).";
+document.getElementById("bm").href="javascript:("+encodeURIComponent(grab.toString())+")("+encodeURIComponent(JSON.stringify(WORKER))+","+encodeURIComponent(JSON.stringify(DASH))+")";
+document.getElementById("st").textContent="App helper: connected";
 </script></body></html>

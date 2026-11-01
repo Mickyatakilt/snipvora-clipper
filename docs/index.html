@@ -198,6 +198,7 @@ async function loadCamps(){
       <div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">1. Join</a><button class="ok" data-j="${t.id}">${joined[t.id]?"Joined ✓":"2. I joined"}</button></div></div>`}
     h+=`<div class="mut">Scout last ran: ${esc(d.scanned_at||"?")}</div>`;
   }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
+  try{const dl=await (await fetch("captures/_docs.json",{cache:"no-store"})).json();if(dl.length)h+=`<h3>Google Docs grabbed (${dl.length})</h3><ul>`+dl.map(x=>`<li>${esc(x.title)} <span class="mut">· ${x.chars} chars</span></li>`).join("")+"</ul>"}catch(e){}
   camps.innerHTML=h;
   camps.querySelectorAll("[data-ct]").forEach(b=>b.onclick=()=>{try{sessionStorage.setItem("ctab",b.dataset.ct)}catch(e){}loadCamps()});
   camps.querySelectorAll("[data-up]").forEach(inp=>inp.onchange=async()=>{
