@@ -9,3 +9,5 @@ self.addEventListener('notificationclick',e=>{
   e.notification.close();
   e.waitUntil(clients.openWindow((e.notification.data&&e.notification.data.url)||'./'));
 });
+// v2: always load the dashboard page fresh (iOS Home Screen app kept showing an old copy)
+self.addEventListener('fetch',e=>{if(e.request.mode==='navigate')e.respondWith(fetch(new Request(e.request.url,{cache:'reload'})).catch(()=>fetch(e.request)))});
