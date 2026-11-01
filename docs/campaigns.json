@@ -53,20 +53,34 @@
  {
   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
   "title": "BILF Podcast | Clip the Show",
-  "status": "joined - needs rules",
-  "rate": "$2/1k",
+  "status": "joined - account may be too new",
+  "rate": "$2/1k (2,000 views to qualify, max $200/clip)",
   "url": "https://contentrewards.com/c/campaigns/088c2279-ab1d-4434-9ba0-6637ab9311fa",
-  "footage": "Unknown until the reference files are read",
-  "rules": []
+  "footage": "Approved BILF Podcast episodes only (YouTube @bilfpod, list in Campaign Details brief on Notion). Not wired.",
+  "rules": [
+   "Source: campaign-approved episodes only; name the guest or episode in the caption",
+   "9:16, 15 to 60 seconds, burned-in subtitles, 'BILF Podcast' on screen, tag the show and use #bilfpodpartner in the caption",
+   "Account must be 30+ days old with prior non-campaign posts (new/empty accounts NOT eligible)",
+   "Audience 40%+ US/UK/CA/AU; engagement 1.0%+ AND at least 1 real comment per 1,000 views",
+   "Join the Runback Discord before submitting (required); post first, then submit the link",
+   "No reposted or recycled content; purchased/automated views = rejected and removed from all Runback campaigns"
+  ]
  },
  {
   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
   "title": "Mini Brands - Ulta Beauty Clipping",
-  "status": "not eligible",
-  "rate": "$2/1k",
+  "status": "joined - fit unclear (needs dedicated page / US audience)",
+  "rate": "$2/1k (min payout $2, max $300/clip)",
   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
-  "footage": "Unknown until the reference files are read",
-  "rules": [],
+  "footage": "Campaign asset pack (Drive: drive.google.com/drive/folders/1fIXuLYXZPKje-90fpM5X45S_5rwDNXK_, admin shares access) or Series 2 UGC posted after Oct 3 with creator credited. Not wired.",
+  "rules": [
+   "TikTok and Instagram only; dedicated Mini Brands pages, theme pages with 25k+ followers, or UGC creators",
+   "Dedicated page: username has a variation of 'Mini Brands', bio tags @minibrands (TikTok) + CTA to Ulta, profile picture from official Mini Brands x Ulta image",
+   "Caption must include #minibrands, say 'Mini Brands Ulta Beauty Series 2', tag @minibrands (TikTok), and a CTA to Ulta (e.g. 'only at Ulta')",
+   "Series 2 only; UGC posted after Oct 3 only; sold ONLY at Ulta; no negative content; no phonk music",
+   "Audience 30%+ US; engagement 0.20%+; must edit/modify clips, no editing-software or AI watermarks (no Opus Clip); correct spelling and grammar",
+   "No botting; do not copy other clippers; credit creators of outside clips"
+  ],
   "ineligible": "Needs a dedicated 'Mini Brands' page on TikTok AND Instagram (theme pages need 25k+ followers). @snipvora is a 0-follower TikTok-only account."
  },
  {
