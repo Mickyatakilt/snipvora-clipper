@@ -1,0 +1,53 @@
+name: lady-clips
+on:
+  workflow_dispatch:
+concurrency:
+  group: lady-clips
+  cancel-in-progress: false
+jobs:
+  clips:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core unzip
+      - name: Download the campaign footage (public Dropbox folder) and keep only the no-lyrics files
+        run: |
+          mkdir -p lady_src && curl -sSL --retry 3 -o lady.zip "https://www.dropbox.com/scl/fo/z1wreburakmnkxrxdq5xm/AGZvsMK00WKlBcdmCBoSnkM?rlkey=tl2f50qjr88s5a00wc9qma3dx&st=p4mex19y&dl=1"
+          ls -l lady.zip; unzip -l lady.zip
+          unzip -o -q lady.zip -d lady_src '*[Nn]o [Ll]yrics*' || true
+          rm -f lady.zip; ls -l lady_src
+      - run: python3 lady_clip.py
+      - name: Publish clips (release, newest 2 kept)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="clips-$(date -u +%Y%m%d-%H%M)-lady"
+          gh release create "$tag" out/*.mp4 out/*.jpg --title "$tag" --notes "$(cat out/clips.json)"
+          gh release list --limit 50 --json tagName --jq '.[].tagName' | grep '^clips-' | sort -r | tail -n +4 | xargs -r -I{} gh release delete {} --cleanup-tag --yes
+      - name: Push - new Lady A clips
+        env:
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
+          python push.py "New Lady A clips ready" "$(python3 -c "import json;print(len(json.load(open('out/clips.json'))))") clips: post in TikTok with the official sound" "https://mickyatakilt.github.io/snipvora-clipper/"
+      - name: Remember used windows
+        run: |
+          git config user.name "snipvora-bot"; git config user.email "bot@users.noreply.github.com"
+          git add used_lady.json && git commit -m "used lady windows $(date -u +%F)" && git pull --rebase -q && git push
+      - name: Redeploy dashboard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml
+      - name: Push - failure
+        if: failure()
+        env:
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
+          python push.py "Lady A clip job FAILED" "$(cat alert.txt 2>/dev/null || echo 'check GitHub Actions')"
