@@ -174,7 +174,8 @@ def main():
         if v is not None:
             sc += 6 if v <= 2000 else 3 if v <= 5000 else 0 if v <= 10000 else -6
         sc -= 4 * sum(f in d["flags"] for f in ("dedicated page required", "follower minimum", "view target inside a deadline"))
-        sc -= 2 * ("tier-1 audience required" in d["flags"])
+        if "tier-1 audience required" in d["flags"]:
+            continue  # Mike 2026-11-01: only campaigns with no country requirement (account region is Ethiopia)
         top.append({"id": c["id"], "title": c.get("title"), "brand": c.get("brand"), "category": c.get("category"),
                     "score": round(sc, 1), "why": why, "rate_per_1k": c.get("payoutSortRaw"),
                     "budget_left": c.get("availableBudgetRaw"), "creators": c.get("creatorCountRaw"),
