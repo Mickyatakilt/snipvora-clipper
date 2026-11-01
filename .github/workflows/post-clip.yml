@@ -24,6 +24,16 @@ jobs:
       actions: write
     steps:
       - uses: actions/checkout@v4
+      - name: Refuse clips that need the official sound (Lady A): the API cannot attach it, so the post would not be paid
+        env:
+          VIDEO: ${{ inputs.video }}
+        run: |
+          curl -s https://mickyatakilt.github.io/snipvora-clipper/clips.json | VID="$VIDEO" python3 -c "
+          import json,os,sys
+          c=[x for x in json.load(sys.stdin) if x['video']==os.environ['VID']]
+          if c and (c[0].get('note') or c[0].get('campaign','').startswith('Lady A')):
+              sys.exit('BLOCKED: this clip needs the official TikTok sound attached in the app. Post it by hand in TikTok.')
+          "
       - name: Post to TikTok @snipvora through GHL
         env:
           GHL_TOKEN: ${{ secrets.GHL_TOKEN }}

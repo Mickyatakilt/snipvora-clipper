@@ -112,7 +112,7 @@ async function main(){
         <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:stage==="done"?`<span class="badge g-lo">Missed 30-min window</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
         ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:stage==="done"?`<div class="mut">Not submitted in time. Keep the TikTok post live for 30 days anyway.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
         ${c.note?`<div class="mut">⚠ ${esc(c.note)}</div>`:""}
-        <div class="row">${pp?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
+        <div class="row">${pp||c.note?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           <a class="btn" href="${c.video}" download>Download</a><button data-c>${pp?"Copy TikTok link":"Copy caption"}</button></div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
       const v=d.querySelector("video"),pl=d.querySelector(".play");
