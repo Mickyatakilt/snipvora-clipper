@@ -116,7 +116,10 @@ async function main(){
       const v=d.querySelector("video"),pl=d.querySelector(".play");
       const tog=()=>{if(v.paused){document.querySelectorAll("video").forEach(o=>o.pause());v.muted=false;pl.style.display="none";v.play().catch(e=>{pl.style.display="";d.querySelector("[data-s]").textContent="Cannot play: "+(e.name||e)+" - tap again or use Download"})}else{v.pause();pl.style.display=""}};
       pl.onclick=tog;v.onclick=tog;v.onerror=()=>{pl.style.display="";d.querySelector("[data-s]").textContent="Video failed to load (code "+(v.error&&v.error.code)+") - use Download"};
-      d.querySelector("[data-c]").onclick=async e=>{try{await navigator.clipboard.writeText(c.caption);e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Copy failed"}};
+      d.querySelector("[data-c]").onclick=async e=>{const b=e.target,cu=(pp&&pp.campaignUrl)||c.campaignUrl||"https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d";
+        let cp;try{cp=navigator.clipboard.writeText(c.caption)}catch(x){}
+        window.open(cu,"_blank");  // opens the campaign page (Submit clip) right away, from the same tap so the browser allows it
+        try{await cp;b.textContent="Copied ✓ campaign opened"}catch(x){b.textContent="Copy failed (campaign opened)"}};
       d.querySelector("[data-x]").onclick=()=>{if(confirm("Delete this clip?")){gone[id]=1;save2();send("delete",{video:id});d.remove()}};
       d.querySelector("[data-e]").onclick=()=>ask("Edit: what should change?","",null,t=>{send("edit",{video:id,note:t});d.querySelector("[data-s]").textContent="Edit requested: "+t});
       const ub=d.querySelector("[data-u]");if(ub)ub.onclick=async()=>{try{await navigator.clipboard.writeText(pp.url);toast("Link copied ✓ paste it on the campaign page")}catch(e){toast("Copy failed: "+pp.url)}window.open(pp.campaignUrl,"_blank")};
