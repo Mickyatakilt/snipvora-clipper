@@ -159,10 +159,11 @@ const joined=(()=>{try{return JSON.parse(localStorage.getItem("joined")||"{}")}c
 document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.display="none";t1.classList.add("on");t2.classList.remove("on");document.getElementById("meta").style.display=""};
 document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on");document.getElementById("meta").style.display="none"};
 async function loadCamps(){
+  if(!camps.innerHTML)camps.innerHTML='<p class="mut">Loading campaigns…</p>';
   let mine=[];try{mine=await (await fetch("campaigns.json",{cache:"no-store"})).json()}catch(e){}
   let h="";
   let watch={};try{const lj=await (await fetch("latest.json",{cache:"no-store"})).json();(lj.watch||[]).forEach(w=>watch[w.id]=w)}catch(e){}
-  let caps={};for(const c of mine){try{const r=await fetch("captures/"+c.id+".json",{cache:"no-store"});if(r.ok)caps[c.id]=await r.json()}catch(e){}}
+  let caps={};await Promise.all(mine.map(async c=>{try{const r=await fetch("captures/"+c.id+".json",{cache:"no-store"});if(r.ok)caps[c.id]=await r.json()}catch(e){}}));
   let files={};try{const r=await fetch("https://api.github.com/repos/Mickyatakilt/snipvora-clipper/releases/tags/campaign-inputs");if(r.ok)for(const a of (await r.json()).assets||[]){const k=a.name.split("__")[0];(files[k]=files[k]||[]).push(a.name.split("__").slice(2).join("__"))}}catch(e){}
   const ST=["Needs you","Ready","Not Eligible","Done"],groups={};ST.forEach(k=>groups[k]=[]);let hidden=[];
   for(const c of mine){const rl=c.rules||[],w=watch[c.id]||{},cap=caps[c.id],fl=files[c.id]||[];
