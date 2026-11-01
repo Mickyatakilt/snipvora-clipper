@@ -47,10 +47,13 @@ def main():
     meta = []
     for k, (name, f, st) in enumerate(picks, 1):
         line = LINES[(len(used) + k) % len(LINES)]
-        tf = f"out/text{k}.txt"
-        open(tf, "w", encoding="utf-8").write("\n".join(textwrap.wrap(line, 22)))
+        parts = []  # one drawtext per line: a newline inside one drawtext renders as a stray box glyph
+        for n, ln in enumerate(textwrap.wrap(line, 22)):
+            tf = f"out/text{k}_{n}.txt"
+            open(tf, "w", encoding="utf-8").write(ln)
+            parts.append(f"drawtext=fontfile={FONT}:textfile={tf}:fontcolor=white:fontsize=64:x=(w-text_w)/2:y=330+{n}*92:shadowcolor=black@0.7:shadowx=3:shadowy=3:box=1:boxcolor=black@0.25:boxborderw=18")
         out = f"out/lady_clip{k}.mp4"
-        vf = vf_base + ",format=yuv420p" if os.environ.get("NO_TEXT") else f"{vf_base},drawtext=fontfile={FONT}:textfile={tf}:fontcolor=white:fontsize=64:line_spacing=14:x=(w-text_w)/2:y=(h-text_h)/2-260:shadowcolor=black@0.7:shadowx=3:shadowy=3:box=1:boxcolor=black@0.25:boxborderw=24,format=yuv420p"
+        vf = vf_base + ",format=yuv420p" if os.environ.get("NO_TEXT") else ",".join([vf_base] + parts + ["format=yuv420p"])  # NO_TEXT only for local tests: this Mac ffmpeg has no drawtext
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", f, "-vf", vf,
                         "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], check=True)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "3", "-i", out, "-frames:v", "1", "-vf", "scale=540:-2", out.replace(".mp4", ".jpg")], check=True)
