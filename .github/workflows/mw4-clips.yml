@@ -7,7 +7,37 @@ concurrency:
   group: mw4-clips
   cancel-in-progress: false
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      skip: ${{ steps.g.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: g
+        name: Skip the scheduled run while 3+ unposted clips are waiting (manual runs always go)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          skip=false
+          if [ "$EVENT" = "schedule" ]; then
+            tag=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 20 --json tagName,publishedAt --jq '[.[]|select(.tagName|startswith("clips-"))]|sort_by(.publishedAt)|last|.tagName')
+            if [ -n "$tag" ] && [ "$tag" != "null" ]; then
+              n=$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets --jq '[.assets[].name|select(endswith(".mp4"))]|.[]' | python3 -c "
+import sys,json
+posted=json.load(open('docs/posted.json'))
+names=[l.strip() for l in sys.stdin if l.strip()]
+print(sum(1 for x in names if 'clips/$tag/'+x not in posted))")
+              echo "unposted in $tag: $n"
+              [ "$n" -ge 3 ] && skip=true
+            fi
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
   clips:
+    needs: gate
+    if: needs.gate.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     permissions:
