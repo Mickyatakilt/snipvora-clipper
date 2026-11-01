@@ -27,10 +27,11 @@ if(location.hostname==="docs.google.com"){
 var mm=location.pathname.match(/\/(document|spreadsheets|presentation)\/d\/([\w-]+)/);
 if(!mm){alert("Open the Google Doc first, then click Grab rules");return}
 var kind=mm[1],id=mm[2],base="/"+kind+"/d/"+id;
-var exp=kind==="document"?base+"/export?format=txt":kind==="spreadsheets"?base+"/export?format=csv":base+"/export/txt";
 var cid=("doc-"+id).replace(/[^a-z0-9-]/gi,"").slice(0,40),title=document.title;
-fetch(exp,{credentials:"include"}).then(function(r){if(!r.ok)throw"export "+r.status;return r.text()})
-.catch(function(){return fetch(base+"/mobilebasic",{credentials:"include"}).then(function(r){if(!r.ok)throw"mobilebasic "+r.status;return r.text()}).then(function(h){return new DOMParser().parseFromString(h,"text/html").body.innerText})})
+function h2t(h){return h.replace(/<(script|style)[\s\S]*?<\/\1>/gi,"").replace(/<\/(p|div|li|tr|h[1-6]|table)>|<br\s*\/?>/gi,"\n").replace(/<\/t[dh]>/gi,"\t").replace(/<[^>]+>/g,"").replace(/&nbsp;/g," ").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;|&#x27;/g,"'").replace(/&#(\d+);/g,function(m,n){return String.fromCharCode(+n)}).replace(/&amp;/g,"&").replace(/\n{3,}/g,"\n\n").trim()}
+var first=kind==="document"?fetch(base+"/mobilebasic",{credentials:"include"}).then(function(r){if(!r.ok)throw"mobilebasic "+r.status;return r.text()}).then(h2t)
+:fetch(base+(kind==="spreadsheets"?"/export?format=csv":"/export/txt"),{credentials:"include"}).then(function(r){if(!r.ok)throw"export "+r.status;return r.text()});
+first.catch(function(){return document.body.innerText})
 .then(function(txt){
 var out="GOOGLE DOC GRAB\n"+title+"\nURL: https://docs.google.com"+base+"/edit\n\n=== DOC "+id+" ===\n"+txt.replace(/^﻿/,"").trim();
 panel("Google Doc grabbed ("+out.length+" chars)",out,function(msg){
