@@ -10,7 +10,7 @@ LINES = ["Share this with someone that could really use a small lift right now."
          "A reminder that you just got to believe.",
          "Then I remember, I'm only human.",
          "Feeling doubt, but then I'm reminded it's all part of the Bigger Picture."]
-CAPTION = "Bigger Picture by Lady A\n#BiggerPicture #LadyA"
+CAPTION = "Bigger Picture by Lady A\n#BiggerPicture #LadyA @ladya"
 NOTE = "Post in the TikTok app: 1) Download  2) add the official sound  3) tag Lady A"
 
 
