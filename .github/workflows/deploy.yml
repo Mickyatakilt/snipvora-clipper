@@ -41,6 +41,12 @@ jobs:
                               "video": f"clips/{tag}/{f}", "poster": f"clips/{tag}/{f.replace('.mp4','.jpg')}", "mb": round(os.path.getsize(f"site/clips/{tag}/{f}")/1e6)})
           json.dump(out, open("site/clips.json","w"), indent=1)
           print(len(out), "clips in site")
+          posted = json.load(open("docs/posted.json")) if os.path.exists("docs/posted.json") else {}
+          lady = sorted([c for c in out if c["campaign"].startswith("Lady A") and c["video"] not in posted], key=lambda c: (c["tag"], c["video"]), reverse=True)
+          base = "https://mickyatakilt.github.io/snipvora-clipper/"
+          nxt = {"video": base + lady[0]["video"], "caption": lady[0]["caption"] + (" @ladya" if "@ladya" not in lady[0]["caption"] else ""), "left": len(lady)} if lady else {"video": "", "caption": "", "left": 0}
+          json.dump(nxt, open("site/lady_next.json","w"))
+          print("lady_next", nxt)
           P
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
