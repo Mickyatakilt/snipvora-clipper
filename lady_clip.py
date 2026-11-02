@@ -55,7 +55,7 @@ def main():
         out = f"out/lady_clip{k}.mp4"
         vf = vf_base + ",format=yuv420p" if os.environ.get("NO_TEXT") else ",".join([vf_base] + parts + ["format=yuv420p"])  # NO_TEXT only for local tests: this Mac ffmpeg has no drawtext
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(st), "-t", str(CLIP_SEC), "-i", f, "-vf", vf,
-                        "-c:v", "libx264", "-preset", "veryfast", "-crf", "21", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out], check=True)
+                        "-c:v", "libx264", "-preset", "veryfast", "-crf", "27", "-maxrate", "2200k", "-bufsize", "4400k", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", out], check=True)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "3", "-i", out, "-frames:v", "1", "-vf", "scale=540:-2", out.replace(".mp4", ".jpg")], check=True)
         meta.append({"campaign": "Lady A - Bigger Picture", "campaignUrl": "https://contentrewards.com/c/campaigns/835da2bd-6a51-4024-8dfd-d603a8f5e761",
                      "file": out, "start": st, "seconds": CLIP_SEC, "source": name, "text_on_screen": line, "caption": CAPTION, "note": NOTE})
