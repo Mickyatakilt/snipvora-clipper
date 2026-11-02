@@ -42,7 +42,7 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 <div class="row"><button id="pushcopy" style="display:none">Copy code</button></div></div>
 <div id="list"></div>
 <div id="camps"></div>
-<p class="mut">Post each clip yourself: tap Download, then use Copy caption in TikTok. The caption already has the required tag and #ad.</p>
+<p class="mut">Lady A clips: tap SHARE TO TIKTOK on the clip. Other clips: tap Download, then Copy caption in TikTok.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
 const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
@@ -111,7 +111,7 @@ async function main(){
         ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span> ${delBadge(pp)}</div>
         <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:stage==="done"?`<span class="badge g-lo">Missed 30-min window</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
         ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:stage==="done"?`<div class="mut">Not submitted in time. Keep the TikTok post live for 30 days anyway.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
-        ${c.note?`<div class="mut">${isLady(c)?"Tap SHARE TO TIKTOK, then tap the TikTok icon: the clip goes to the post screen and the caption is copied, so paste it. Page v12 (caption includes #BiggerPicture #LadyA @ladya). Buttons 2 and 2b copy the caption for you. If 2 opens a web page, tap 2b.":"⚠ "+esc(c.note)}</div>`:""}
+        ${c.note?`<div class="mut">${isLady(c)?"Tap SHARE TO TIKTOK (if it says Loading, wait for READY, then tap again). Tap the TikTok icon in the share sheet. The caption is copied: paste it on the post screen, check the sound, Post. Page v13":"⚠ "+esc(c.note)}</div>`:""}
         <div class="row">${pp?"":isLady(c)?`<button class="ok" data-l>SHARE TO TIKTOK (clip + caption)</button>`:c.note?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           ${isLady(c)&&!pp?"":`<a class="btn" href="${c.video}" download>Download</a><button data-c>${pp?"Copy TikTok link":"Copy caption"}</button>`}</div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
@@ -131,14 +131,14 @@ async function main(){
       if(lb){const st=d.querySelector("[data-s]");let file=null,busy=false;const lbl=lb.textContent;
         const load=()=>{if(busy||file)return;busy=true;lb.textContent="Loading clip... wait";lb.disabled=true;
           fetch(c.video).then(r=>r.blob()).then(b=>{file=new File([b],c.video.split("/").pop(),{type:"video/mp4"});lb.disabled=false;lb.textContent="READY: tap to share to TikTok"}).catch(e=>{busy=false;lb.disabled=false;lb.textContent=lbl;st.textContent="Clip failed to load ("+(e&&e.name)+"). Tap again."})};
-        window.__ln=(window.__ln||0)+1;if(window.__ln===1)load();
+        if(!list.querySelector("[data-l]"))load();
         lb.onclick=()=>{
           let ok=false;const t=document.createElement("textarea");t.value=capOf(c);t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,t.value.length);try{ok=document.execCommand("copy")}catch(y){}t.remove();
           if(ok)st.textContent="Caption copied ✓";
           if(!file){load();st.textContent=(ok?"Caption copied ✓. ":"")+"Loading the clip: when the button says READY, tap it again.";return}
           if(navigator.canShare&&navigator.canShare({files:[file]})){
             navigator.share({files:[file],text:capOf(c)}).then(()=>{st.textContent=(ok?"Caption copied ✓. ":"")+"Clip sent. In TikTok: check the sound, paste the caption if empty, Post."}).catch(e=>{st.textContent=e&&e.name==="AbortError"?"Share cancelled.":"Share failed ("+(e&&e.name)+")"})
-          }else{st.textContent="This browser cannot share files. Open the dashboard in Safari."}
+          }else{st.innerHTML='This browser cannot share files. <a class="btn" href="'+c.video+'" download>Download clip</a> then post it in TikTok (caption is copied).'}
         }}
       const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>ask("Post: description",c.caption,true,async(t,when)=>{pb.disabled=true;const ok=await send("post",{video:id,description:t,when});if(!ok){pb.disabled=false;return}done[id]=true;save();d.classList.add("done");pb.remove();d.querySelector("[data-s]").textContent="Posting"+(when?" at "+new Date(when).toLocaleString():" now")+". It moves to the Posted tab when TikTok confirms."});
       list.appendChild(d);
