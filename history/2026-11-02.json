@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-02 17:17",
- "listed": 77,
- "kept": 40,
+ "scanned_at": "2026-11-02 22:50",
+ "listed": 80,
+ "kept": 43,
  "top": [
   {
    "id": "133870d0-869f-4d0e-9395-641e6c7063dc",
@@ -13,7 +13,7 @@
     "clippable source"
    ],
    "rate_per_1k": 7.0,
-   "budget_left": 1009.1500000000015,
+   "budget_left": 1007.960000000001,
    "creators": 2,
    "platforms": [
     "instagram",
@@ -48,7 +48,7 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 2103.83,
+   "budget_left": 2074.01,
    "creators": 925,
    "platforms": [
     "instagram",
@@ -86,7 +86,7 @@
     "new"
    ],
    "rate_per_1k": 3.0,
-   "budget_left": 3196.13,
+   "budget_left": 3147.8199999999997,
    "creators": 12,
    "platforms": [
     "instagram",
@@ -121,7 +121,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4975.53,
+   "budget_left": 4973.03,
    "creators": 5,
    "platforms": [
     "instagram",
@@ -147,6 +147,41 @@
    "new": false
   },
   {
+   "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 45.0,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.85,
+   "budget_left": 18117.32,
+   "creators": 130,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Clip moments from the official MW4 Season 01 trailer.\\nPost your clips to TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.85,
+    "min_payout": 1.85,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 1000
+   },
+   "new": false
+  },
+  {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
@@ -156,7 +191,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8527.48,
+   "budget_left": 8522.03,
    "creators": 27,
    "platforms": [
     "instagram",
@@ -181,52 +216,53 @@
    "new": false
   },
   {
-   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
-   "title": "Mini Brands \u2014 Ulta Beauty Clipping",
-   "brand": "Clip Influence",
+   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
+   "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 44.3,
+   "score": 43.6,
    "why": [
-    "clippable source"
+    "clippable source",
+    "new"
    ],
-   "rate_per_1k": 2.0,
-   "budget_left": 8089.4,
-   "creators": 42,
+   "rate_per_1k": 1.85,
+   "budget_left": 12134.22,
+   "creators": 218,
    "platforms": [
     "instagram",
     "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
-   "description": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
    "flags": [],
-   "brief": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
    "hidden_counts": {
     "rules": 0,
-    "requirements": 1,
-    "references": 3
+    "requirements": 0,
+    "references": 1
    },
    "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 300.0,
+    "rate_per_1k": 1.85,
+    "min_payout": 1.85,
+    "max_payout": 1200.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "8b79c473-d295-4901-8aee-e43c7ad03663",
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.9,
+   "score": 42.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6854.57,
-   "creators": 64,
+   "budget_left": 6547.05,
+   "creators": 74,
    "platforms": [
     "instagram",
     "tiktok",
@@ -260,7 +296,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6571.959999999992,
+   "budget_left": 6557.949999999997,
    "creators": 346,
    "platforms": [
     "instagram",
@@ -282,41 +318,6 @@
     "min_payout": 2.0,
     "max_payout": 250.0,
     "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
-   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
-   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 39.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.75,
-   "budget_left": 12531.699999999999,
-   "creators": 203,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
-   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
-   "flags": [],
-   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.75,
-    "min_payout": 5.25,
-    "max_payout": 1200.0,
-    "views_to_first_payout": 3000
    },
    "new": false
   },
@@ -353,7 +354,7 @@
     "max_payout": 150.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "2859d359-b412-4997-84c2-d51f29951620",
@@ -366,7 +367,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1236.95,
+   "budget_left": 1223.77,
    "creators": 11,
    "platforms": [
     "instagram",
@@ -376,7 +377,7 @@
    "url": "https://contentrewards.com/c/campaigns/2859d359-b412-4997-84c2-d51f29951620",
    "description": "The goal of this campaign is simple: get people to watch the music video. Most of the internet does not know Ryan Gosling has a band, and the ones who do have not heard new music from it in 17 years. That gap is the whole opportunity.",
    "flags": [],
-   "brief": "Just in time for the spooky season, Dead Man's Bones\u2014the gothic indie-rock project consisting of Hollywood A-lister Ryan Gosling and filmmaker Zach Shields\u2014has unexpectedly resurrected with \"Lost in the Night\", their first new single in 17 years. Released via ANTI- Records, the track brilliantly strips away the lush children's choir arrangements of their 2009 cult-classic debut in favor of a raw, low-fi aesthetic recorded in just one day at a rural farm outside Los Angeles. Produced alongside longtime collaborator Tim Anderson, the song meshes unvarnished post-punk guitars and moody synths with a driving 1970s synth-punk beat reminiscent of the band Suicide, perfectly capturing a bittersweet balance between shadowy gothic rock and arena-sized emotional hope. The accompanying black-and-white music video, starring Noah Jupe and Rain Spencer as a young couple escaping a cemetery to dance through lamplit city streets, serves as the ultimate atmospheric companion piece to a long-awaited comeback that proves this haunting duo is far from permanently buried. Credits: \u201cLost in the Night\u201d, performed by Dead Man\u2019s Bones #deadmansbones #ryangosling73:T454,Af Just in time for the spooky season, Dead Man's Bones\u2014the gothic indie-rock project consisting of Hollywood A-lister Ryan Gosling and filmmaker Zach Shields\u2014has unexpectedly resurrected with \"Lost in the Night\", their first new single in 17 years. Released via ANTI- Records, the track brilliantly strips away the lush children's choir",
+   "brief": "Just in time for the spooky season, Dead Man's Bones\u2014the gothic indie-rock project consisting of Hollywood A-lister Ryan Gosling and filmmaker Zach Shields\u2014has unexpectedly resurrected with \"Lost in the Night\", their first new single in 17 years. Released via ANTI- Records, the track brilliantly strips away the lush children's choir arrangements of their 2009 cult-classic debut in favor of a raw, low-fi aesthetic recorded in just one day at a rural farm outside Los Angeles. Produced alongside longtime collaborator Tim Anderson, the song meshes unvarnished post-punk guitars and moody synths with a driving 1970s synth-punk beat reminiscent of the band Suicide, perfectly capturing a bittersweet balance between shadowy gothic rock and arena-sized emotional hope. The accompanying black-and-white music video, starring Noah Jupe and Rain Spencer as a young couple escaping a cemetery to dance through lamplit city streets, serves as the ultimate atmospheric companion piece to a long-awaited comeback that proves this haunting duo is far from permanently buried. Credits: \u201cLost in the Night\u201d, performed by Dead Man\u2019s Bones #deadmansbones #ryangosling74:T454,Af Just in time for the spooky season, Dead Man's Bones\u2014the gothic indie-rock project consisting of Hollywood A-lister Ryan Gosling and filmmaker Zach Shields\u2014has unexpectedly resurrected with \"Lost in the Night\", their first new single in 17 years. Released via ANTI- Records, the track brilliantly strips away the lush children's choir",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -388,20 +389,20 @@
     "max_payout": 200.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 38.8,
+   "score": 38.6,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 657.1899999999996,
-   "creators": 61,
+   "budget_left": 554.6800000000003,
+   "creators": 64,
    "platforms": [
     "instagram",
     "tiktok",
@@ -426,88 +427,52 @@
    "new": false
   },
   {
-   "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
-   "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 36.3,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.25,
-   "budget_left": 19418.79,
-   "creators": 107,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
-   "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
-   "flags": [],
-   "brief": "Clip moments from the official MW4 Season 01 trailer.\\nPost your clips to TikTok and Instagram Reels.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.25,
-    "min_payout": 4.5,
-    "max_payout": 1200.0,
-    "views_to_first_payout": 3600
-   },
-   "new": false
-  },
-  {
-   "id": "fc194db2-7097-4dcf-812e-e3d325d51e6a",
-   "title": "Double Coverage Podcast",
-   "brand": "Reach",
+   "id": "50786486-a49d-4a17-b81b-0c416cb635da",
+   "title": "Alliance Podcast/News Clipping [VIRAL]",
+   "brand": "Bounty",
    "category": "Podcasts",
-   "score": 25.0,
+   "score": 37.8,
    "why": [
     "clippable source",
     "new"
    ],
-   "rate_per_1k": 1.0,
-   "budget_left": 4642.25,
-   "creators": 1222,
+   "rate_per_1k": 1.5,
+   "budget_left": 7855.75,
+   "creators": 190,
    "platforms": [
     "instagram",
     "tiktok",
-    "x",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/fc194db2-7097-4dcf-812e-e3d325d51e6a",
-   "description": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\n\nRead the rules and requirements here:\nhttps://reachclipping.com/CodyRhodes",
+   "url": "https://contentrewards.com/c/campaigns/50786486-a49d-4a17-b81b-0c416cb635da",
+   "description": "Turn The Alliance for Secure AI\u2019s podcast and news footage into viral AI safety clips. No set formats, just find the strongest moments. $1.50 CPM, $1.50 min, $300 max per clip. TikTok, IG and YT Shorts. 10s min, 40%+ US audience.",
    "flags": [],
-   "brief": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\\n\\nRead the rules and requirements here:\\nhttps://reachclipping.com/CodyRhodes",
+   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry74:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
    "hidden_counts": {
     "rules": 0,
-    "requirements": 0,
-    "references": 3
+    "requirements": 1,
+    "references": 1
    },
    "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 10.0,
-    "max_payout": 500.0,
-    "views_to_first_payout": 10000
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 2000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
    "category": "Personal Brand",
-   "score": 24.8,
+   "score": 26.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2394.879999999999,
+   "budget_left": 7362.8099999999995,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -533,6 +498,43 @@
     "views_to_first_payout": 10000
    },
    "new": false
+  },
+  {
+   "id": "fc194db2-7097-4dcf-812e-e3d325d51e6a",
+   "title": "Double Coverage Podcast",
+   "brand": "Reach",
+   "category": "Podcasts",
+   "score": 24.8,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 3985.16,
+   "creators": 1224,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/fc194db2-7097-4dcf-812e-e3d325d51e6a",
+   "description": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\n\nRead the rules and requirements here:\nhttps://reachclipping.com/CodyRhodes",
+   "flags": [],
+   "brief": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\\n\\nRead the rules and requirements here:\\nhttps://reachclipping.com/CodyRhodes",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 10.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 10000
+   },
+   "new": false
   }
  ],
  "watch": [
@@ -544,7 +546,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 12531.699999999999
+   "budget_left": 12134.22
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -570,7 +572,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 657.1899999999996
+   "budget_left": 554.6800000000003
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -579,8 +581,8 @@
     "requirements": 1,
     "references": 3
    },
-   "listed": true,
-   "budget_left": 8089.4
+   "listed": false,
+   "budget_left": null
   },
   {
    "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
