@@ -47,6 +47,10 @@ jobs:
           nxt = {"video": base + lady[0]["video"], "caption": lady[0]["caption"] + (" @ladya" if "@ladya" not in lady[0]["caption"] else ""), "left": len(lady)} if lady else {"video": "", "caption": "", "left": 0}
           json.dump(nxt, open("site/lady_next.json","w"))
           print("lady_next", nxt)
+          if lady:
+              import shutil
+              shutil.copyfile("site/" + lady[0]["video"], "site/next.mp4")
+              open("site/caption.txt", "w").write(nxt["caption"])
           P
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
