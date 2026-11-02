@@ -111,7 +111,7 @@ async function main(){
         ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span> ${delBadge(pp)}</div>
         <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:stage==="done"?`<span class="badge g-lo">Missed 30-min window</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
         ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:stage==="done"?`<div class="mut">Not submitted in time. Keep the TikTok post live for 30 days anyway.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
-        ${c.note?`<div class="mut">${isLady(c)?"Tap SHARE TO TIKTOK (if it says Loading, wait for READY, then tap again). Tap the TikTok icon in the share sheet. The caption is copied: paste it on the post screen, check the sound, Post. Page v14":"⚠ "+esc(c.note)}</div>`:""}
+        ${c.note?`<div class="mut">${isLady(c)?"Tap SHARE TO TIKTOK (if it says Loading, wait for READY, then tap again). Tap the TikTok icon in the share sheet. The caption is copied: paste it on the post screen, check the sound, Post. Page v15":"⚠ "+esc(c.note)}</div>`:""}
         <div class="row">${pp?"":isLady(c)?`<button class="ok" data-l>SHARE TO TIKTOK (clip + caption)</button>`:c.note?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           ${isLady(c)&&!pp?"":`<a class="btn" href="${c.video}" download>Download</a><button data-c>${pp?"Copy TikTok link":"Copy caption"}</button>`}</div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
@@ -129,13 +129,17 @@ async function main(){
       d.querySelectorAll("[data-k]").forEach(a=>a.addEventListener("click",()=>{try{navigator.clipboard.writeText(capOf(c))}catch(x){}const t=document.createElement("textarea");t.value=capOf(c);document.body.appendChild(t);t.select();try{document.execCommand("copy")}catch(y){}t.remove();d.querySelector("[data-s]").textContent="Caption copied ✓ - paste it in TikTok"}));
       const lb=d.querySelector("[data-l]");
       if(lb){const st=d.querySelector("[data-s]");let file=null,busy=false;const lbl=lb.textContent;
+        const ready=b=>{file=new File([b],c.video.split("/").pop(),{type:"video/mp4"});busy=false;lb.disabled=false;lb.textContent="READY: tap to share to TikTok";st.textContent=""};
+        const fromCache=()=>(window.caches?caches.match(c.video).then(r=>r?r.blob():null):Promise.resolve(null)).then(b=>{if(b&&b.size>100000){ready(b);return true}return false}).catch(()=>false);
         const load=(n=0)=>{if(file||(busy&&n===0))return;busy=true;lb.disabled=true;lb.textContent="Loading clip 0%";
           const x=new XMLHttpRequest();x.open("GET",c.video+(n?"?r="+n:""));x.responseType="blob";x.timeout=90000;
           x.onprogress=e=>{if(e.lengthComputable)lb.textContent="Loading clip "+Math.round(e.loaded/e.total*100)+"%";else lb.textContent="Loading clip "+(e.loaded/1e6).toFixed(1)+" MB"};
-          x.onload=()=>{if(x.status!==200||!x.response||x.response.size<100000){return x.onerror()}file=new File([x.response],c.video.split("/").pop(),{type:"video/mp4"});busy=false;lb.disabled=false;lb.textContent="READY: tap to share to TikTok";st.textContent=""};
+          x.onload=()=>{if(x.status!==200||!x.response||x.response.size<100000){return x.onerror()}ready(x.response)};
           x.onerror=x.ontimeout=()=>{if(n<3){st.textContent="Slow connection, retrying ("+(n+1)+"/3)...";load(n+1)}else{busy=false;lb.disabled=false;lb.textContent=lbl;st.textContent="Could not load the clip. Check signal/Wi-Fi and tap again."}};
           x.send()};
-        if(!list.querySelector("[data-l]"))load();
+        const first=!list.querySelector("[data-l]");lb.disabled=true;lb.textContent="Checking saved clip...";
+        fromCache().then(hit=>{if(!hit){lb.disabled=false;lb.textContent=lbl;if(first)load()}});
+        
         lb.onclick=()=>{
           let ok=false;const t=document.createElement("textarea");t.value=capOf(c);t.setAttribute("readonly","");t.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(t);t.select();t.setSelectionRange(0,t.value.length);try{ok=document.execCommand("copy")}catch(y){}t.remove();
           if(ok)st.textContent="Caption copied ✓";
@@ -157,7 +161,7 @@ async function main(){
 const LADY_SOUND="https://www.tiktok.com/t/ZT9yBoXN5WkC4-cWL6r/";const isLady=c=>/^Lady A/.test(c.campaign||"");const capOf=c=>isLady(c)&&!/@ladya/i.test(c.caption)?c.caption+" @ladya":c.caption;
 const VAPID_PUB="BJNmWV105vLUyZoulN5OFMbkSuOl3_9Srkv04CWXExZf16b9AIlOZblRAEFmcifOrEl7iL-9T5O6wU-vMXz2DZs";
 function b64u(k){const p="=".repeat((4-k.length%4)%4),b=(k+p).replace(/-/g,"+").replace(/_/g,"/"),r=atob(b);return Uint8Array.from([...r].map(c=>c.charCodeAt(0)))}
-if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").then(()=>navigator.serviceWorker.ready).then(r=>r.active&&r.active.postMessage("precache")).catch(()=>{});
 document.getElementById("pushbtn").onclick=async()=>{
   const m=document.getElementById("pushmsg");
   try{
