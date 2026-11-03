@@ -206,7 +206,7 @@ async function mergeCloud(mine){
   window._mine=all.filter(c=>!rm.has(c.id));
 }
 function analyze(cap,rules){ // quick read of the rules text: hard stops and warnings (a hint, not a judge)
-  const t=(cap+"\n"+rules),stop=[],warn=[];
+  const t=(cap+"\n"+rules).replace(/\bno official (tiktok |ig |instagram )?(sound|audio)( needed| required)?/gi,""),stop=[],warn=[];
   if(/majority tier 1|tier 1 \(?majority|\d+\s*%\+?\s*(usa|us|u\.s\.|united states)\b|\b(usa|us|u\.s\.)\s*(audience|only)|must be (based )?in the (us|usa|uk)/i.test(t))stop.push("Needs a mostly US/UK (Tier 1) audience. Account region is Ethiopia.");
   if(/official (tiktok |ig |instagram )?(sound|audio)|use the (provided )?audio|must use the audio/i.test(t))warn.push("Needs the official sound attached in the TikTok app (hard to automate; this broke Lady A).");
   if(/discord/i.test(t))warn.push("Needs joining a Discord to get paid.");
@@ -262,7 +262,7 @@ async function loadCamps(){
     groups[st].push(`<div class="card"><b>${esc(c.title)}</b>
       <div class="mut">${esc(c.rate||"")}${w.budget_left!=null?" · $"+Math.round(w.budget_left).toLocaleString()+" left":""}</div>
       <div style="margin:6px 0">${pills}</div>${an.warn.length&&!stop?`<div class="mut" style="color:#a15c00">${an.warn.map(x=>"⚠ "+esc(x)).join("<br>")}</div>`:""}${next}${rulesBox}
-      <div class="row"><button class="del" data-rm="${c.id}">Remove from list</button></div></div>`)}
+      <div class="row"><a class="btn ok" href="${c.url}" target="_blank" rel="noopener">Open campaign page</a><a class="btn" href="bookmark.html">Grab rules (bookmark)</a><button class="del" data-rm="${c.id}">Remove from list</button></div></div>`)}
 
   let ct="Needs you";try{ct=sessionStorage.getItem("ctab")||""}catch(e){}if(!groups[ct]||(!groups[ct].length&&ct!=="Done"))ct=ST.find(k=>groups[k].length)||"Needs you";
   h+=`<div class="row">${ST.map(k=>`<button class="${k===ct?"ok":"btn"}" data-ct="${k}">${k} (${groups[k].length})</button>`).join("")}</div>`;
