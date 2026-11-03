@@ -121,6 +121,18 @@ def detail(cid):
     return d
 
 
+HARD = ("tier-1 audience required", "dedicated page required", "follower minimum", "view target inside a deadline")
+
+
+def worth_it(t):
+    """Money rule (Mike 2026-11-03): only campaigns that can realistically pay a 0-follower account (our clips get ~130-700 views)."""
+    v = (t.get("tiktok") or {}).get("views_to_first_payout")
+    return (v is not None and v <= 5000 and (t.get("budget_left") or 0) >= 800 and (t.get("creators") or 0) <= 150
+            and not t.get("requires_application") and not any(f in HARD for f in t.get("flags", []))
+            and not re.search(r"call of duty|mw4|sega|lady a", t.get("title", ""), re.I)
+            and float((t.get("tiktok") or {}).get("rate_per_1k") or 0) >= 1.0)
+
+
 def push_phone(top):
     """Phone alert via the free ntfy app (topic in scout/ntfy_topic.txt). Tap a button -> campaign page opens -> you tap Join.
     Only campaigns not pushed before; no AI, no Claude."""
@@ -131,7 +143,7 @@ def push_phone(top):
     topic = env_topic or tf.read_text().strip()
     sf = ROOT / "pushed.json"
     pushed = json.loads(sf.read_text()) if sf.exists() else {}
-    picks = [t for t in top[:6] if t["id"] not in pushed and not t.get("requires_application")][:3]
+    picks = [t for t in top[:10] if t["id"] not in pushed and worth_it(t)][:3]
     if not picks:
         return
     lines = []

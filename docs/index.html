@@ -264,17 +264,18 @@ async function loadCamps(){
   h+=`<div class="row">${ST.map(k=>`<button class="${k===ct?"ok":"btn"}" data-ct="${k}">${k} (${groups[k].length})</button>`).join("")}</div>`;
   h+=groups[ct].length?groups[ct].join(""):"<div class='card mut'>Nothing here.</div>";
   if(hidden.length)h+=`<div class="mut">Hidden (ending soon or budget under $200): ${hidden.map(c=>esc(c.title)).join(", ")}</div>`;
-  h+="<h3>Join these next</h3><div class='mut'>Only campaigns that fit a 0-follower account: open join, pays out fast, real budget, not crowded. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
+  h+="<h3>Join these next</h3><div class='mut'>Only campaigns that can realistically pay us: open join, first payout within 5,000 views, $800+ left, no dedicated-page / follower / US-UK rule visible. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
   try{
     const d=await (await fetch("latest.json",{cache:"no-store"})).json();
     const have=new Set([...mine.map(m=>m.id),...Object.keys(joined)]);
-    const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b/i;
-    const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{};const v=tt.views_to_first_payout||9999;
-      return !have.has(t.id)&&!t.requires_application&&!(t.flags||[]).length&&v<=3000&&t.budget_left>=1500&&t.creators<=60&&!bad.test(t.title+" "+(t.description||"").slice(0,200))}).slice(0,3);
+    const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b|call of duty|mw4|sega|lady a/i;
+    const HARD=["tier-1 audience required","dedicated page required","follower minimum","view target inside a deadline"];
+    const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{},v=tt.views_to_first_payout;
+      return !have.has(t.id)&&!t.requires_application&&v!=null&&v<=5000&&t.budget_left>=800&&t.creators<=150&&(tt.rate_per_1k||0)>=1&&!(t.flags||[]).some(f=>HARD.includes(f))&&!bad.test(t.title+" "+(t.description||"").slice(0,200))}).slice(0,5);
     if(!picks.length)h+="<div class='card mut'>No new campaign fits right now. The scout checks twice a day.</div>";
     window._picks={};picks.forEach(t=>window._picks[t.id]={id:t.id,title:t.title,url:t.url,rate:"$"+((t.tiktok||{}).rate_per_1k||t.rate_per_1k)+"/1k"});
     for(const t of picks){const v=(t.tiktok||{}).views_to_first_payout;const id="j"+t.id;
-      h+=`<div class="card"><b>${esc(t.title)}</b><div class="mut">$${(t.tiktok||{}).rate_per_1k||t.rate_per_1k}/1k · pays after ~${v} views · $${Math.round(t.budget_left).toLocaleString()} left · ${t.creators} creators</div>
+      h+=`<div class="card"><b>${esc(t.title)}</b><div class="mut">$${(t.tiktok||{}).rate_per_1k||t.rate_per_1k}/1k · pays after ~${v} views (${v<=1500?"realistic: a few clips":"stretch: about "+Math.ceil(v/300)+" clips at 300 views"}) · $${Math.round(t.budget_left).toLocaleString()} left · ${t.creators} creators</div>
       <div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">1. Join</a><button class="ok" data-j="${t.id}">2. I joined</button></div></div>`}
     h+=`<div class="mut">Scout last ran: ${esc(d.scanned_at||"?")}</div>`;
   }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
