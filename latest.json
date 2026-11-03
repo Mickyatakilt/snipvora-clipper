@@ -1,43 +1,8 @@
 {
- "scanned_at": "2026-11-02 22:50",
- "listed": 80,
+ "scanned_at": "2026-11-03 08:24",
+ "listed": 79,
  "kept": 43,
  "top": [
-  {
-   "id": "133870d0-869f-4d0e-9395-641e6c7063dc",
-   "title": "Reza Arap x AAACLAN Clipping",
-   "brand": "Highlight Media Lab",
-   "category": "Entertainment",
-   "score": 90.0,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 7.0,
-   "budget_left": 1007.960000000001,
-   "creators": 2,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/133870d0-869f-4d0e-9395-641e6c7063dc",
-   "description": "Reza Arap x AAACLAN Entertainment Clipping",
-   "flags": [],
-   "brief": "Reza Arap x AAACLAN Entertainment Clipping",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 7.0,
-    "min_payout": 2.5,
-    "max_payout": 1200.0,
-    "views_to_first_payout": 357
-   },
-   "new": false
-  },
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
    "title": "Fundingpips Clipping",
@@ -48,8 +13,8 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 2074.01,
-   "creators": 925,
+   "budget_left": 2100.2799999999997,
+   "creators": 946,
    "platforms": [
     "instagram",
     "tiktok",
@@ -80,13 +45,13 @@
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 49.4,
+   "score": 49.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 3.0,
-   "budget_left": 3147.8199999999997,
+   "budget_left": 2960.21,
    "creators": 12,
    "platforms": [
     "instagram",
@@ -121,8 +86,8 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4973.03,
-   "creators": 5,
+   "budget_left": 4957.99,
+   "creators": 8,
    "platforms": [
     "instagram",
     "tiktok",
@@ -151,13 +116,13 @@
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 45.0,
+   "score": 44.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 18117.32,
+   "budget_left": 17145.8,
    "creators": 130,
    "platforms": [
     "instagram",
@@ -191,8 +156,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8522.03,
-   "creators": 27,
+   "budget_left": 8561.51,
+   "creators": 26,
    "platforms": [
     "instagram",
     "tiktok"
@@ -220,14 +185,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 43.6,
+   "score": 43.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 12134.22,
-   "creators": 218,
+   "budget_left": 11121.15,
+   "creators": 253,
    "platforms": [
     "instagram",
     "tiktok"
@@ -255,14 +220,14 @@
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.7,
+   "score": 42.6,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6547.05,
-   "creators": 74,
+   "budget_left": 6025.25,
+   "creators": 76,
    "platforms": [
     "instagram",
     "tiktok",
@@ -296,7 +261,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6557.949999999997,
+   "budget_left": 6529.069999999992,
    "creators": 346,
    "platforms": [
     "instagram",
@@ -361,14 +326,14 @@
    "title": "Ryan Gosling's Band | Music Video Clipping",
    "brand": "The Clip Ship",
    "category": "Music",
-   "score": 39.2,
+   "score": 39.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1223.77,
-   "creators": 11,
+   "budget_left": 1192.06,
+   "creators": 12,
    "platforms": [
     "instagram",
     "tiktok"
@@ -396,12 +361,12 @@
    "title": "BILF Podcast | Clip the Show",
    "brand": "Runback.TV",
    "category": "Entertainment",
-   "score": 38.6,
+   "score": 38.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 554.6800000000003,
+   "budget_left": 450.2399999999998,
    "creators": 64,
    "platforms": [
     "instagram",
@@ -431,14 +396,14 @@
    "title": "Alliance Podcast/News Clipping [VIRAL]",
    "brand": "Bounty",
    "category": "Podcasts",
-   "score": 37.8,
+   "score": 37.6,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 7855.75,
-   "creators": 190,
+   "budget_left": 7638.29,
+   "creators": 203,
    "platforms": [
     "instagram",
     "tiktok",
@@ -448,7 +413,7 @@
    "url": "https://contentrewards.com/c/campaigns/50786486-a49d-4a17-b81b-0c416cb635da",
    "description": "Turn The Alliance for Secure AI\u2019s podcast and news footage into viral AI safety clips. No set formats, just find the strongest moments. $1.50 CPM, $1.50 min, $300 max per clip. TikTok, IG and YT Shorts. 10s min, 40%+ US audience.",
    "flags": [],
-   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry74:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
+   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry75:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
    "hidden_counts": {
     "rules": 0,
     "requirements": 1,
@@ -459,6 +424,43 @@
     "min_payout": 3.0,
     "max_payout": 300.0,
     "views_to_first_payout": 2000
+   },
+   "new": false
+  },
+  {
+   "id": "432f45b8-ed16-4cc6-95d7-1655e6c7806a",
+   "title": "$$20,000 CORE Boys At Shibuya Crossing Campaign",
+   "brand": "Reach",
+   "category": "Streamer",
+   "score": 31.1,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 16453.64,
+   "creators": 55,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/432f45b8-ed16-4cc6-95d7-1655e6c7806a",
+   "description": "Videos must feature the Core Boys in Shibuya Crossing reacting to the big Fortnite announcement, or discussions from Core Boys revolving around it as the primary focus of the video.",
+   "flags": [],
+   "brief": "Videos must feature the Core Boys in Shibuya Crossing reacting to the big Fortnite announcement, or discussions from Core Boys revolving around it as the primary focus of the video.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 10.0,
+    "max_payout": 750.0,
+    "views_to_first_payout": 10000
    },
    "new": true
   },
@@ -472,7 +474,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 7362.8099999999995,
+   "budget_left": 7354.35,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -504,14 +506,14 @@
    "title": "Double Coverage Podcast",
    "brand": "Reach",
    "category": "Podcasts",
-   "score": 24.8,
+   "score": 24.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 3985.16,
-   "creators": 1224,
+   "budget_left": 2445.84,
+   "creators": 1237,
    "platforms": [
     "instagram",
     "tiktok",
@@ -546,7 +548,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 12134.22
+   "budget_left": 11121.15
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -572,7 +574,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 554.6800000000003
+   "budget_left": 450.2399999999998
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -603,6 +605,26 @@
    },
    "listed": false,
    "budget_left": null
+  },
+  {
+   "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 9,
+    "references": 1
+   },
+   "listed": true,
+   "budget_left": 4957.99
+  },
+  {
+   "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 2
+   },
+   "listed": true,
+   "budget_left": 1500
   }
  ]
 }
