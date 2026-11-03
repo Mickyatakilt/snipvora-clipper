@@ -1,0 +1,20 @@
+name: tiktok-alive
+on:
+  schedule:
+    - cron: "15 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  alive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 check_alive.py
+      - run: |
+          git config user.name "alive"; git config user.email "alive@users.noreply.github.com"
+          git add docs/posted.json
+          if ! git diff --cached --quiet; then git commit -m "tiktok-alive: mark deleted posts"; git pull --rebase; git push; gh workflow run deploy.yml; fi
+        env:
+          GH_TOKEN: ${{ github.token }}

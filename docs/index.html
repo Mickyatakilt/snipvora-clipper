@@ -49,7 +49,7 @@ const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch
 const save=()=>{try{localStorage.setItem("done",JSON.stringify(done))}catch(e){}};
 let showOld=location.hash==="#old";let stage="todo";try{stage=sessionStorage.getItem("stage")||"todo"}catch(e){}
 function delBadge(pp){const d=new Date(new Date(pp.postedAt).getTime()+30*864e5),n=Math.ceil((d-Date.now())/864e5);return n>0?`<span class="badge g-lo">Keep live until ${d.toLocaleDateString()} (${n}d left)</span>`:`<span class="badge g-hi">30 days passed: OK to delete on TikTok</span>`}
-function stageOf(pp){if(!pp)return"todo";if(pp.submitted)return"done";return(Date.now()-new Date(pp.postedAt)>18e5)?"done":"posted"}
+function stageOf(pp){if(!pp)return"todo";if(pp.deleted)return"gone";if(pp.submitted)return"done";return(Date.now()-new Date(pp.postedAt)>18e5)?"done":"posted"}
 const WORKER_URL="https://snipvora-helper.mickyatakilt.workers.dev"; // set when the Cloudflare helper is deployed
 const gone=(()=>{try{return JSON.parse(localStorage.getItem("gone")||"{}")}catch(e){return{}}})();
 const save2=()=>{try{localStorage.setItem("gone",JSON.stringify(gone))}catch(e){}};
@@ -88,7 +88,7 @@ async function main(){
     let posted={};try{posted=await (await fetch("posted.json",{cache:"no-store"})).json()}catch(e){}
     const cnt={todo:0,posted:0,done:0};
     for(const c of clips){if(!gone[c.video]&&c.tag===newest&&stageOf(posted[c.video])==="todo")cnt.todo++}
-    for(const k in posted){const st=stageOf(posted[k]);if(st!=="todo")cnt[st]++}
+    for(const k in posted){const st=stageOf(posted[k]);if(st!=="todo"&&st!=="gone")cnt[st]++}
     const tabs=document.createElement("div");tabs.className="row";
     for(const [k,t] of [["todo","New clips"],["posted","Posted"],["done","Done"]]){const b=document.createElement("button");b.className=k===stage?"ok":"btn";b.textContent=t+" ("+cnt[k]+")";
       b.onclick=()=>{try{sessionStorage.setItem("stage",k)}catch(e){}location.reload()};tabs.appendChild(b)}
@@ -111,7 +111,7 @@ async function main(){
         ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span> ${delBadge(pp)}</div>
         <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:stage==="done"?`<span class="badge g-lo">Missed 30-min window</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
         ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:stage==="done"?`<div class="mut">Not submitted in time. Keep the TikTok post live for 30 days anyway.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
-        ${c.note?`<div class="mut">${isLady(c)?"Tap POST TO TIKTOK. It runs your Lady A Shortcut: caption copied, pick TikTok, Video, add the official sound, paste, Post. Page v21":"⚠ "+esc(c.note)}</div>`:""}
+        ${c.note?`<div class="mut">${isLady(c)?"Tap POST TO TIKTOK. It runs your Lady A Shortcut: caption copied, pick TikTok, Video, add the official sound, paste, Post. Page v22":"⚠ "+esc(c.note)}</div>`:""}
         <div class="row">${pp?"":isLady(c)?`<a class="btn ok" href="shortcuts://run-shortcut?name=Lady%20A">POST TO TIKTOK</a>`:c.note?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           ${isLady(c)&&!pp?"":`<a class="btn" href="${c.video}" download>Download</a><button data-c>${pp?"Copy TikTok link":"Copy caption"}</button>`}</div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
@@ -183,34 +183,83 @@ const camps=document.getElementById("camps"),list2=document.getElementById("list
 const joined=(()=>{try{return JSON.parse(localStorage.getItem("joined")||"{}")}catch(e){return{}}})();
 document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.display="none";t1.classList.add("on");t2.classList.remove("on");document.getElementById("meta").style.display=""};
 document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on");document.getElementById("meta").style.display="none"};
+
+const removedLocal=(()=>{try{return JSON.parse(localStorage.getItem("removedc")||"{}")}catch(e){return{}}})();
+async function cloud(key,payload){ // saves a small marker in the repo through the helper's existing /rules endpoint
+  let pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
+  if(!pc){pc=prompt("Helper passcode (asked once on this device)");if(!pc)return false;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
+  try{const r=await fetch(WORKER_URL.replace(/\/$/,"")+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:key,title:key,text:JSON.stringify(payload)})});
+    if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}toast("Wrong passcode. Try again.");return false}return r.ok}catch(e){return false}}
+async function mergeCloud(mine){
+  const have=new Set(mine.map(c=>c.id)),rm=new Set(Object.keys(removedLocal)),stubs={};
+  try{const r=await fetch("https://api.github.com/repos/"+REPO+"/contents/docs/captures",{signal:AbortSignal.timeout(8000)});
+    if(r.ok){const files=(await r.json()).map(f=>f.name);
+      files.filter(n=>/^x-/.test(n)).forEach(n=>rm.add(n.slice(2,-5)));
+      await Promise.all(files.filter(n=>/^j-/.test(n)).map(async n=>{try{const j=await (await fetch("captures/"+n,{cache:"no-store"})).json();const m=JSON.parse(j.text);stubs[m.id]=m}catch(e){}}))}}catch(e){}
+  Object.entries(joined).forEach(([id,m])=>{if(m&&m.id&&!stubs[id])stubs[id]=m});
+  const all=[...mine];
+  Object.values(stubs).forEach(m=>{if(!have.has(m.id))all.push({id:m.id,title:m.title,url:m.url,rate:m.rate,status:"joined",needs_video:true})});
+  window._mine=all.filter(c=>!rm.has(c.id));
+}
+function analyze(cap,rules){ // quick read of the rules text: hard stops and warnings (a hint, not a judge)
+  const t=(cap+"\n"+rules),stop=[],warn=[];
+  if(/majority tier 1|tier 1 \(?majority|\d+\s*%\+?\s*(usa|us|u\.s\.|united states)\b|\b(usa|us|u\.s\.)\s*(audience|only)|must be (based )?in the (us|usa|uk)/i.test(t))stop.push("Needs a mostly US/UK (Tier 1) audience. Account region is Ethiopia.");
+  if(/official (tiktok |ig |instagram )?(sound|audio)|use the (provided )?audio|must use the audio/i.test(t))warn.push("Needs the official sound attached in the TikTok app (hard to automate; this broke Lady A).");
+  if(/discord/i.test(t))warn.push("Needs joining a Discord to get paid.");
+  if(/\b\d[\d,]*\s*\+?\s*followers/i.test(t))warn.push("Mentions a follower minimum.");
+  if(/(fortnite|gaming|[a-z]+)[- ]focused account|dedicated (page|account) (is )?required|must have a dedicated/i.test(t))warn.push("Wants a niche-focused account (@snipvora is a general clipping account).");
+  if(/\bapplication\b|\bapply\b/i.test(t)&&/required|must/i.test(t))warn.push("May need an application.");
+  const links=[...new Set((t.match(/https?:\/\/[^\s"'<>)\]]+/g)||[]).filter(u=>/docs\.google|drive\.google|dropbox|picflow|mediasilo|youtu|notion|whop\.com|frame\.io|wetransfer/i.test(u)&&!/rlkey=.*dl=0&e=1&st=/.test("")).map(u=>u.replace(/[.,;]+$/,"")))];
+  return{stop,warn,links};
+}
 async function loadCamps(){
   if(!camps.innerHTML)camps.innerHTML='<p class="mut">Loading campaigns…</p>';
   let h="",mine=[],watch={},caps={},files={};
   if(window._cd){({mine,watch,caps,files}=window._cd)}else{  // fetch once; tab clicks only re-draw
     try{mine=await (await fetch("campaigns.json",{cache:"no-store"})).json()}catch(e){}
+    await mergeCloud(mine);
+    mine=window._mine;
     await Promise.all([
       (async()=>{try{const lj=await (await fetch("latest.json",{cache:"no-store"})).json();(lj.watch||[]).forEach(w=>watch[w.id]=w)}catch(e){}})(),
-      (async()=>{try{const r=await fetch("https://api.github.com/repos/Mickyatakilt/snipvora-clipper/releases/tags/campaign-inputs");if(r.ok)for(const a of (await r.json()).assets||[]){const k=a.name.split("__")[0];(files[k]=files[k]||[]).push(a.name.split("__").slice(2).join("__"))}}catch(e){}})(),
+      (async()=>{try{const r=await fetch("https://api.github.com/repos/Mickyatakilt/snipvora-clipper/releases/tags/campaign-inputs",{signal:AbortSignal.timeout(8000)});if(r.ok)for(const a of (await r.json()).assets||[]){const k=a.name.split("__")[0];(files[k]=files[k]||[]).push(a.name.split("__").slice(2).join("__"))}}catch(e){}})(),
       ...mine.map(async c=>{try{const r=await fetch("captures/"+c.id+".json",{cache:"no-store"});if(r.ok)caps[c.id]=await r.json()}catch(e){}})
     ]);
     window._cd={mine,watch,caps,files};
   }
   const ST=["Needs you","Ready","Not Eligible","Done"],groups={};ST.forEach(k=>groups[k]=[]);let hidden=[];
+  const cp=(t,b)=>{try{navigator.clipboard.writeText(t);toast("Copied ✓")}catch(x){toast("Copy failed")}};
   for(const c of mine){const rl=c.rules||[],w=watch[c.id]||{},cap=caps[c.id],fl=files[c.id]||[];
     const vid=fl.some(n=>/\.(mp4|mov|webm|m4v)$/i.test(n)),img=fl.some(n=>/\.(png|jpe?g|webp|heic)$/i.test(n));
-    const hasRules=rl.length>0||!!cap||img,needV=!!c.needs_video;
+    const hasRules=rl.length>0||!!cap||img,needV=c.needs_video!==false;
+    const an=analyze((cap&&cap.text)||"",rl.join("\n"));
     const ending=w.budget_left!=null&&w.budget_left<200;
-    let st;if(c.ineligible)st="Not Eligible";else if(ending){hidden.push(c);continue}else if(!hasRules||(needV&&!vid))st="Needs you";else if(needV&&vid)st="Done";else st="Ready";
-    const tick=(ok,t)=>`<span class="pill ${ok===true?"":"w"}" style="${ok===true?"background:#d4f5dd;color:#0a6b2d":ok===false?"background:#fde2e2;color:#a11":""}">${ok===true?"✓":ok===false?"✗":"?"} ${t}</span> `;
-    const footOk=needV?vid:/^unknown/i.test(c.footage||"")?null:true;
-    const needR=!hasRules,needVid=needV&&!vid;const act=(needR?`<label class="btn" style="cursor:pointer">⬆ Add rules (screenshot)<input type="file" multiple accept="image/*" data-up="${c.id}" style="display:none"></label><a class="btn" href="bookmark.html">Grab rules</a>`:"")+(needVid?`<label class="btn" style="cursor:pointer">⬆ Add video<input type="file" multiple accept="video/*" data-up="${c.id}" style="display:none"></label>`:"")+`<a class="btn" href="${c.url}" target="_blank" rel="noopener">Open campaign</a>`;
-    const chips=st==="Needs you"?`<div style="margin:6px 0">${needR?'<span class="pill" style="background:#fde2e2;color:#a11">⚠ Needs rules</span> ':""}${needVid?'<span class="pill" style="background:#fde2e2;color:#a11">⚠ Needs video</span>':""}</div>`:"";
-    const rulesBox=rl.length?`<ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul>`:cap?`<details><summary class='mut'>Rules captured ✓ ${esc((cap.capturedAt||"").slice(0,10))} (tap to read)</summary><pre style='white-space:pre-wrap;font-size:12px'>${esc((cap.text||"").slice(0,6000))}</pre></details>`:"";
-    groups[st].push(`<div class="card"><b>${esc(c.title)}</b>${st==="Done"?' <span class="pill" style="background:#d4f5dd;color:#0a6b2d">✓ Uploaded</span>':""}
-      <div class="mut">${esc(c.rate)}${w.budget_left!=null?" · $"+Math.round(w.budget_left).toLocaleString()+" left":""}</div>
-      ${chips}<div style="margin:6px 0">${tick(hasRules,"Rules")}${tick(footOk,"Footage")}${tick(!c.ineligible,"Eligible")}</div>
-      ${c.ineligible?`<div class="mut">⛔ ${esc(c.ineligible)}</div>`:""}${st==="Needs you"&&needR&&w.hidden_counts?`<div class="mut">Hidden on the page until login: ${w.hidden_counts.rules} rules, ${w.hidden_counts.requirements} requirements, ${w.hidden_counts.references} files.</div>`:""}${rulesBox}
-      <div class="row">${act}</div></div>`)}
+    const stop=c.ineligible||(an.stop[0]||"");
+    const wired=c.status==="active";
+    let st;if(stop)st="Not Eligible";else if(ending){hidden.push(c);continue}else if(wired)st="Ready";else st="Needs you";
+    const links=[...new Set([...(c.links||[]),...an.links])].slice(0,8);
+    const steps=[
+      {k:"Grab the rules",ok:hasRules,
+        why:"The real rules are hidden until you are logged in. One tap each:",
+        btns:`<a class="btn ok" href="${c.url}" target="_blank" rel="noopener">1. Open campaign page</a><a class="btn" href="bookmark.html">Where is Grab rules?</a><label class="btn" style="cursor:pointer">or upload a screenshot<input type="file" multiple accept="image/*" data-up="${c.id}" style="display:none"></label>`,
+        how:"On the campaign page click the <b>Grab rules</b> bookmark, then <b>Send to app</b>. This card updates in about a minute."},
+      {k:"Check it fits us",ok:hasRules&&!an.stop.length,
+        why:an.warn.length?"Possible problems found in the rules:":"Nothing blocking found in the rules.",btns:"",how:an.warn.map(x=>"⚠ "+esc(x)).join("<br>")},
+      {k:"Get the footage",ok:vid||!!c.footage_ready,
+        why:"The campaign gives its own footage. Open it, download, then upload it here:",
+        btns:links.map(u=>`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">Open ${esc(u.replace(/^https?:\/\/(www\.)?/,"").split("/")[0])}</a>`).join("")+`<label class="btn ok" style="cursor:pointer">⬆ Add video<input type="file" multiple accept="video/*" data-up="${c.id}" style="display:none"></label>`,
+        how:links.length?"":"No footage link found yet. Grab the rules first, links come with them."},
+      {k:"Claude wires the cutter",ok:wired,
+        why:"Rules and footage are in. The last step is Claude connecting this campaign to the clip cutter.",
+        btns:`<button class="ok" data-cp="Wire campaign '${esc(c.title)}' (${c.id}) into the clipper: rules and footage are on the dashboard.">Copy request for Claude</button>`,how:"Paste the copied line into Claude. This is the only step that needs Claude."}];
+    const cur=steps.findIndex(x=>!x.ok);
+    const pills=steps.map((x,i)=>`<span class="pill" style="${x.ok?"background:#d4f5dd;color:#0a6b2d":i===cur?"background:#ffe9a8;color:#6a4a00":"background:#eee;color:#666"}">${x.ok?"✓":i+1} ${x.k}</span> `).join("");
+    const next=stop?`<div class="mut">⛔ ${esc(stop)}</div>`:cur>=0?`<div style="border:2px solid #6c5ce7;border-radius:10px;padding:10px;margin:8px 0"><b>NEXT (step ${cur+1}): ${steps[cur].k}</b><div class="mut">${steps[cur].why}</div>${steps[cur].how?`<div style="margin:6px 0;font-size:14px">${steps[cur].how}</div>`:""}<div class="row">${steps[cur].btns}</div></div>`:"";
+    const rulesBox=rl.length?`<details><summary class='mut'>Rules (${rl.length})</summary><ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul></details>`:cap?`<details><summary class='mut'>Rules captured ✓ ${esc((cap.capturedAt||"").slice(0,10))} (tap to read)</summary><pre style='white-space:pre-wrap;font-size:12px'>${esc((cap.text||"").slice(0,6000))}</pre></details>`:"";
+    groups[st].push(`<div class="card"><b>${esc(c.title)}</b>
+      <div class="mut">${esc(c.rate||"")}${w.budget_left!=null?" · $"+Math.round(w.budget_left).toLocaleString()+" left":""}</div>
+      <div style="margin:6px 0">${pills}</div>${an.warn.length&&!stop?`<div class="mut" style="color:#a15c00">${an.warn.map(x=>"⚠ "+esc(x)).join("<br>")}</div>`:""}${next}${rulesBox}
+      <div class="row"><button class="del" data-rm="${c.id}">Remove from list</button></div></div>`)}
+
   let ct="Needs you";try{ct=sessionStorage.getItem("ctab")||""}catch(e){}if(!groups[ct]||(!groups[ct].length&&ct!=="Done"))ct=ST.find(k=>groups[k].length)||"Needs you";
   h+=`<div class="row">${ST.map(k=>`<button class="${k===ct?"ok":"btn"}" data-ct="${k}">${k} (${groups[k].length})</button>`).join("")}</div>`;
   h+=groups[ct].length?groups[ct].join(""):"<div class='card mut'>Nothing here.</div>";
@@ -218,14 +267,15 @@ async function loadCamps(){
   h+="<h3>Join these next</h3><div class='mut'>Only campaigns that fit a 0-follower account: open join, pays out fast, real budget, not crowded. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
   try{
     const d=await (await fetch("latest.json",{cache:"no-store"})).json();
-    const have=new Set(mine.map(m=>m.id));
+    const have=new Set([...mine.map(m=>m.id),...Object.keys(joined)]);
     const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b/i;
     const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{};const v=tt.views_to_first_payout||9999;
       return !have.has(t.id)&&!t.requires_application&&!(t.flags||[]).length&&v<=3000&&t.budget_left>=1500&&t.creators<=60&&!bad.test(t.title+" "+(t.description||"").slice(0,200))}).slice(0,3);
     if(!picks.length)h+="<div class='card mut'>No new campaign fits right now. The scout checks twice a day.</div>";
+    window._picks={};picks.forEach(t=>window._picks[t.id]={id:t.id,title:t.title,url:t.url,rate:"$"+((t.tiktok||{}).rate_per_1k||t.rate_per_1k)+"/1k"});
     for(const t of picks){const v=(t.tiktok||{}).views_to_first_payout;const id="j"+t.id;
       h+=`<div class="card"><b>${esc(t.title)}</b><div class="mut">$${(t.tiktok||{}).rate_per_1k||t.rate_per_1k}/1k · pays after ~${v} views · $${Math.round(t.budget_left).toLocaleString()} left · ${t.creators} creators</div>
-      <div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">1. Join</a><button class="ok" data-j="${t.id}">${joined[t.id]?"Joined ✓":"2. I joined"}</button></div></div>`}
+      <div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">1. Join</a><button class="ok" data-j="${t.id}">2. I joined</button></div></div>`}
     h+=`<div class="mut">Scout last ran: ${esc(d.scanned_at||"?")}</div>`;
   }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
   try{const dl=await (await fetch("captures/_docs.json",{cache:"no-store"})).json();if(dl.length)h+=`<h3>Google Docs grabbed (${dl.length})</h3><ul>`+dl.map(x=>`<li>${esc(x.title)} <span class="mut">· ${x.chars} chars</span></li>`).join("")+"</ul>"}catch(e){}
@@ -239,7 +289,16 @@ async function loadCamps(){
       try{const r=await fetch(WORKER_URL.replace(/\/$/,"")+"/upload?campaign="+inp.dataset.up+"&name="+encodeURIComponent(f.name),{method:"POST",headers:{"X-Passcode":pc,"Content-Type":f.type||"application/octet-stream"},body:f});
         if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw "wrong passcode"}if(!r.ok)throw r.status;toast("Uploaded ✓ "+f.name)}catch(e){toast("Upload failed: "+e);break}}
     inp.value=""});
-  camps.querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{joined[b.dataset.j]=true;try{localStorage.setItem("joined",JSON.stringify(joined))}catch(e){};b.textContent="Joined ✓"});
+  camps.querySelectorAll("[data-j]").forEach(b=>b.onclick=async()=>{const id=b.dataset.j,m=(window._picks||{})[id];
+    if(!m)return;b.disabled=true;b.textContent="Saving...";
+    joined[id]=m;try{localStorage.setItem("joined",JSON.stringify(joined))}catch(e){}
+    const ok=await cloud("j-"+id,m);
+    window._cd=null;toast(ok?"Saved ✓ Your checklist is under Needs you":"Saved on this device only (helper unreachable)");
+    try{sessionStorage.setItem("ctab","Needs you")}catch(e){}loadCamps()});
+  camps.querySelectorAll("[data-rm]").forEach(b=>b.onclick=async()=>{if(!confirm("Remove this campaign from the list?"))return;const id=b.dataset.rm;
+    removedLocal[id]=1;try{localStorage.setItem("removedc",JSON.stringify(removedLocal))}catch(e){}
+    await cloud("x-"+id,{id});window._cd=null;loadCamps()});
+  camps.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>cp(b.dataset.cp));
 }
 loadCamps();
 </script>
