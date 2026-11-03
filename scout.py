@@ -127,7 +127,7 @@ HARD = ("tier-1 audience required", "dedicated page required", "follower minimum
 def worth_it(t):
     """Money rule (Mike 2026-11-03): only campaigns that can realistically pay a 0-follower account (our clips get ~130-700 views)."""
     v = (t.get("tiktok") or {}).get("views_to_first_payout")
-    return (v is not None and v <= 5000 and (t.get("budget_left") or 0) >= 800 and (t.get("creators") or 0) <= 150
+    return (v is not None and v <= 1000 and (t.get("budget_left") or 0) >= 800 and (t.get("creators") or 0) <= 150
             and not t.get("requires_application") and not any(f in HARD for f in t.get("flags", []))
             and not re.search(r"call of duty|mw4|sega|lady a", t.get("title", ""), re.I)
             and float((t.get("tiktok") or {}).get("rate_per_1k") or 0) >= 1.0)
