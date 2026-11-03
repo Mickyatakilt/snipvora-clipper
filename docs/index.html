@@ -271,7 +271,7 @@ async function loadCamps(){
     const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b|call of duty|mw4|sega|lady a/i;
     const HARD=["tier-1 audience required","dedicated page required","follower minimum","view target inside a deadline"];
     const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{},v=tt.views_to_first_payout;
-      return !have.has(t.id)&&!t.requires_application&&v!=null&&v<=1000&&t.budget_left>=800&&t.creators<=150&&(tt.rate_per_1k||0)>=1&&!(t.flags||[]).some(f=>HARD.includes(f))&&!bad.test(t.title+" "+(t.description||"").slice(0,200))}).slice(0,5);
+      return !have.has(t.id)&&!t.requires_application&&v!=null&&v<=1000&&t.budget_left>=800&&t.creators<=150&&(tt.rate_per_1k||0)>=1&&!(t.flags||[]).some(f=>HARD.includes(f))&&!bad.test(t.title+" "+(t.description||"").slice(0,200))&&!/official (tiktok |ig |instagram )?(sound|audio)/i.test(t.title+" "+(t.description||"")+" "+(t.brief||""))}).slice(0,5);
     if(!picks.length)h+="<div class='card mut'>No new campaign fits right now. The scout checks twice a day.</div>";
     window._picks={};picks.forEach(t=>window._picks[t.id]={id:t.id,title:t.title,url:t.url,rate:"$"+((t.tiktok||{}).rate_per_1k||t.rate_per_1k)+"/1k"});
     for(const t of picks){const v=(t.tiktok||{}).views_to_first_payout;const id="j"+t.id;

@@ -130,6 +130,8 @@ def worth_it(t):
     return (v is not None and v <= 1000 and (t.get("budget_left") or 0) >= 800 and (t.get("creators") or 0) <= 150
             and not t.get("requires_application") and not any(f in HARD for f in t.get("flags", []))
             and not re.search(r"call of duty|mw4|sega|lady a", t.get("title", ""), re.I)
+            and not re.search(r"ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b", t.get("title", "") + " " + (t.get("description") or "")[:200], re.I)
+            and not re.search(r"official (tiktok |ig |instagram )?(sound|audio)", t.get("title", "") + " " + (t.get("description") or "") + " " + (t.get("brief") or ""), re.I)
             and float((t.get("tiktok") or {}).get("rate_per_1k") or 0) >= 1.0)
 
 
