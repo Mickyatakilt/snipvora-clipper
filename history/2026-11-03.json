@@ -1,19 +1,19 @@
 {
- "scanned_at": "2026-11-03 15:22",
- "listed": 78,
- "kept": 41,
+ "scanned_at": "2026-11-03 20:34",
+ "listed": 79,
+ "kept": 44,
  "top": [
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
    "title": "Fundingpips Clipping",
    "brand": "FundingPips",
    "category": "Technology",
-   "score": 76.0,
+   "score": 75.9,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 2095.87,
+   "budget_left": 1951.6799999999998,
    "creators": 955,
    "platforms": [
     "instagram",
@@ -45,13 +45,13 @@
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 49.2,
+   "score": 49.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 3.0,
-   "budget_left": 2738.39,
+   "budget_left": 2642.76,
    "creators": 12,
    "platforms": [
     "instagram",
@@ -86,7 +86,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4956.54,
+   "budget_left": 4954.73,
    "creators": 8,
    "platforms": [
     "instagram",
@@ -112,41 +112,6 @@
    "new": false
   },
   {
-   "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
-   "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 44.5,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.85,
-   "budget_left": 15946.61,
-   "creators": 164,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
-   "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
-   "flags": [],
-   "brief": "Clip moments from the official MW4 Season 01 trailer.\\nPost your clips to TikTok and Instagram Reels.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.85,
-    "min_payout": 1.85,
-    "max_payout": 1200.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
@@ -156,7 +121,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8553.6,
+   "budget_left": 8551.94,
    "creators": 26,
    "platforms": [
     "instagram",
@@ -181,53 +146,54 @@
    "new": false
   },
   {
-   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
-   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 42.8,
+   "id": "c7a8e7c2-6989-4361-914f-f9571578a9b9",
+   "title": "F1 ASTON MARTIN x COINBASE ",
+   "brand": "ClipHaus",
+   "category": "Sports",
+   "score": 42.5,
    "why": [
     "clippable source",
     "new"
    ],
-   "rate_per_1k": 1.85,
-   "budget_left": 10154.699999999999,
-   "creators": 268,
+   "rate_per_1k": 1.5,
+   "budget_left": 15000,
+   "creators": 0,
    "platforms": [
     "instagram",
-    "tiktok"
+    "tiktok",
+    "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
-   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
+   "url": "https://contentrewards.com/c/campaigns/c7a8e7c2-6989-4361-914f-f9571578a9b9",
+   "description": "Clip the funniest reactions, fan challenges, and behind-the-scenes moments from an F1 superfan's COTA adventure with Dale Brisby. Make entertaining, fast-paced edits that feel like F1 fan content, not ads.",
    "flags": [],
-   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
+   "brief": "Clip the funniest reactions, fan challenges, and behind-the-scenes moments from an F1 superfan's COTA adventure with Dale Brisby. Make entertaining, fast-paced edits that feel like F1 fan content, not ads.",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
     "references": 1
    },
    "tiktok": {
-    "rate_per_1k": 1.85,
-    "min_payout": 1.85,
-    "max_payout": 1200.0,
-    "views_to_first_payout": 1000
+    "rate_per_1k": 1.5,
+    "min_payout": 2.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 1333
    },
-   "new": false
+   "new": true
   },
   {
    "id": "8b79c473-d295-4901-8aee-e43c7ad03663",
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.5,
+   "score": 42.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 5821.39,
-   "creators": 76,
+   "budget_left": 5062.59,
+   "creators": 94,
    "platforms": [
     "instagram",
     "tiktok",
@@ -252,6 +218,75 @@
    "new": false
   },
   {
+   "id": "a016fbcc-f357-441d-b2d1-919bba8777fa",
+   "title": "Rolling Stone & Malcolm Todd Interviews Clipping",
+   "brand": "creatorXchange",
+   "category": "Music",
+   "score": 41.4,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 2005.74,
+   "creators": 150,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/a016fbcc-f357-441d-b2d1-919bba8777fa",
+   "description": "Circulate Clips creating hype around Malcolm Todd's personality and his Interviews. Your mission is to pull key moments from his interview to create viral clips across TikTok & Instagram Reels.",
+   "flags": [],
+   "brief": "Circulate Clips creating hype around Malcolm Todd's personality and his Interviews. Your mission is to pull key moments from his interview to create viral clips across TikTok & Instagram Reels.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 4
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 41.3,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.85,
+   "budget_left": 15223.32,
+   "creators": 171,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Clip moments from the official MW4 Season 01 trailer.\\nPost your clips to TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.85,
+    "min_payout": 5.0,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 2703
+   },
+   "new": false
+  },
+  {
    "id": "fba5eb2b-624a-41d6-a6c7-4519e2877e2c",
    "title": "WorldsFirstPodcast Clipping",
    "brand": "Clip Farm",
@@ -262,8 +297,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 3671.29,
-   "creators": 18,
+   "budget_left": 3635.52,
+   "creators": 21,
    "platforms": [
     "instagram",
     "tiktok",
@@ -284,6 +319,41 @@
     "min_payout": 3.0,
     "max_payout": 250.0,
     "views_to_first_payout": 2000
+   },
+   "new": false
+  },
+  {
+   "id": "e36819b7-6b11-4ff3-98f8-43db273d13a3",
+   "title": "Extra 300$ | Turkish IRL VLOG in America ",
+   "brand": "Outis Clips",
+   "category": "Kick",
+   "score": 40.2,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 1592.92,
+   "creators": 40,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e36819b7-6b11-4ff3-98f8-43db273d13a3",
+   "description": "Turkish streamer from Texas, filming a California trip. Poolside talk, resort walks, coffee runs, massage - reacting to everything in Turkish.\n\nClip the funny moments into vertical shorts. Turkish captions required. Post only from accounts ",
+   "flags": [],
+   "brief": "Turkish streamer from Texas, filming a California trip. Poolside talk, resort walks, coffee runs, massage - reacting to everything in Turkish.\\n\\nClip the funny moments into vertical shorts. Turkish captions required. Post only from accounts with a Turkish-speaking audience.",
+   "hidden_counts": {
+    "rules": 2,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 1000
    },
    "new": true
   },
@@ -323,6 +393,41 @@
    "new": false
   },
   {
+   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 39.2,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.85,
+   "budget_left": 8166.369999999999,
+   "creators": 308,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "description": "Download clips from the official MW4 Multiplayer gameplay footage.\nPost them to your clip pages on TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Download clips from the official MW4 Multiplayer gameplay footage.\\nPost them to your clip pages on TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.85,
+    "min_payout": 5.0,
+    "max_payout": 1200.0,
+    "views_to_first_payout": 2703
+   },
+   "new": false
+  },
+  {
    "id": "50786486-a49d-4a17-b81b-0c416cb635da",
    "title": "Alliance Podcast/News Clipping [VIRAL]",
    "brand": "Bounty",
@@ -333,7 +438,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 7593.04,
+   "budget_left": 7531.18,
    "creators": 201,
    "platforms": [
     "instagram",
@@ -344,7 +449,7 @@
    "url": "https://contentrewards.com/c/campaigns/50786486-a49d-4a17-b81b-0c416cb635da",
    "description": "Turn The Alliance for Secure AI\u2019s podcast and news footage into viral AI safety clips. No set formats, just find the strongest moments. $1.50 CPM, $1.50 min, $300 max per clip. TikTok, IG and YT Shorts. 10s min, 40%+ US audience.",
    "flags": [],
-   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry75:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
+   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry74:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
    "hidden_counts": {
     "rules": 0,
     "requirements": 1,
@@ -359,90 +464,18 @@
    "new": false
   },
   {
-   "id": "4d8d10e9-5c4d-40f4-81b2-10acda995cb7",
-   "title": "Duke Dennis Spends $100k On Danesh Diamond Grillz",
-   "brand": "Danesh Diamonds",
-   "category": "Celebrity",
-   "score": 36.0,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1777.5,
-   "creators": 174,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/4d8d10e9-5c4d-40f4-81b2-10acda995cb7",
-   "description": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # ev",
-   "flags": [],
-   "brief": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # everyone in it. No @. Keep it positive and natural, not promo.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 3.0,
-    "max_payout": 200.0,
-    "views_to_first_payout": 2000
-   },
-   "new": true
-  },
-  {
-   "id": "b8042190-fb65-4e84-be25-d2a65478a35f",
-   "title": "Duke Dennis Spends 100k on Grillz (ft. Kai Cenat)",
-   "brand": "Danesh Diamonds",
-   "category": "Celebrity",
-   "score": 35.1,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 697.9,
-   "creators": 142,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/b8042190-fb65-4e84-be25-d2a65478a35f",
-   "description": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # ev",
-   "flags": [],
-   "brief": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # everyone in it. No @. Keep it positive and natural, not promo.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 3.0,
-    "max_payout": 200.0,
-    "views_to_first_payout": 2000
-   },
-   "new": true
-  },
-  {
    "id": "432f45b8-ed16-4cc6-95d7-1655e6c7806a",
    "title": "$$20,000 CORE Boys At Shibuya Crossing Campaign",
    "brand": "Reach",
    "category": "Streamer",
-   "score": 31.0,
+   "score": 30.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 16072.55,
-   "creators": 61,
+   "budget_left": 15151.42,
+   "creators": 88,
    "platforms": [
     "instagram",
     "tiktok",
@@ -477,7 +510,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 7351.200000000001,
+   "budget_left": 7186.4400000000005,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -503,43 +536,6 @@
     "views_to_first_payout": 10000
    },
    "new": false
-  },
-  {
-   "id": "fc194db2-7097-4dcf-812e-e3d325d51e6a",
-   "title": "Double Coverage Podcast",
-   "brand": "Reach",
-   "category": "Podcasts",
-   "score": 24.0,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 2172.709999999999,
-   "creators": 1237,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/fc194db2-7097-4dcf-812e-e3d325d51e6a",
-   "description": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\n\nRead the rules and requirements here:\nhttps://reachclipping.com/CodyRhodes",
-   "flags": [],
-   "brief": "Content from the Double Coverage x Cody Rhodes Podcast is strongly suggested, any other double coverage content is also acceptable.\\n\\nRead the rules and requirements here:\\nhttps://reachclipping.com/CodyRhodes",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 10.0,
-    "max_payout": 500.0,
-    "views_to_first_payout": 10000
-   },
-   "new": false
   }
  ],
  "watch": [
@@ -551,7 +547,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 10154.699999999999
+   "budget_left": 8166.369999999999
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -577,7 +573,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 385.8000000000002
+   "budget_left": 295.1999999999998
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -617,7 +613,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 4956.54
+   "budget_left": 4954.73
   },
   {
    "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
