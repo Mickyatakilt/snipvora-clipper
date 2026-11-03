@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-03 08:24",
- "listed": 79,
- "kept": 43,
+ "scanned_at": "2026-11-03 15:22",
+ "listed": 78,
+ "kept": 41,
  "top": [
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
@@ -13,8 +13,8 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 2100.2799999999997,
-   "creators": 946,
+   "budget_left": 2095.87,
+   "creators": 955,
    "platforms": [
     "instagram",
     "tiktok",
@@ -45,13 +45,13 @@
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 49.3,
+   "score": 49.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 3.0,
-   "budget_left": 2960.21,
+   "budget_left": 2738.39,
    "creators": 12,
    "platforms": [
     "instagram",
@@ -86,7 +86,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4957.99,
+   "budget_left": 4956.54,
    "creators": 8,
    "platforms": [
     "instagram",
@@ -116,14 +116,14 @@
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 44.9,
+   "score": 44.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 17145.8,
-   "creators": 130,
+   "budget_left": 15946.61,
+   "creators": 164,
    "platforms": [
     "instagram",
     "tiktok"
@@ -156,7 +156,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8561.51,
+   "budget_left": 8553.6,
    "creators": 26,
    "platforms": [
     "instagram",
@@ -185,14 +185,14 @@
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 43.1,
+   "score": 42.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 11121.15,
-   "creators": 253,
+   "budget_left": 10154.699999999999,
+   "creators": 268,
    "platforms": [
     "instagram",
     "tiktok"
@@ -220,13 +220,13 @@
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 42.6,
+   "score": 42.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6025.25,
+   "budget_left": 5821.39,
    "creators": 76,
    "platforms": [
     "instagram",
@@ -252,39 +252,40 @@
    "new": false
   },
   {
-   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "title": "Backyard Breaks [Clipping Campaign]",
-   "brand": "ClipHouse",
-   "category": "Sports",
-   "score": 41.0,
+   "id": "fba5eb2b-624a-41d6-a6c7-4519e2877e2c",
+   "title": "WorldsFirstPodcast Clipping",
+   "brand": "Clip Farm",
+   "category": "Podcasts",
+   "score": 40.5,
    "why": [
-    "clippable source"
+    "clippable source",
+    "new"
    ],
-   "rate_per_1k": 2.0,
-   "budget_left": 6529.069999999992,
-   "creators": 346,
+   "rate_per_1k": 1.5,
+   "budget_left": 3671.29,
+   "creators": 18,
    "platforms": [
     "instagram",
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
+   "url": "https://contentrewards.com/c/campaigns/fba5eb2b-624a-41d6-a6c7-4519e2877e2c",
+   "description": "The World's First Podcast is Erin and Sara Foster. Two sisters, talking about real life. Clip the best moments. You earn money for every view.",
    "flags": [],
-   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
+   "brief": "The World's First Podcast is Erin and Sara Foster. Two sisters, talking about real life. Clip the best moments. You earn money for every view.",
    "hidden_counts": {
-    "rules": 2,
+    "rules": 3,
     "requirements": 0,
-    "references": 4
+    "references": 1
    },
    "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
     "max_payout": 250.0,
-    "views_to_first_payout": 1000
+    "views_to_first_payout": 2000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
@@ -322,76 +323,6 @@
    "new": false
   },
   {
-   "id": "2859d359-b412-4997-84c2-d51f29951620",
-   "title": "Ryan Gosling's Band | Music Video Clipping",
-   "brand": "The Clip Ship",
-   "category": "Music",
-   "score": 39.1,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1192.06,
-   "creators": 12,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/2859d359-b412-4997-84c2-d51f29951620",
-   "description": "The goal of this campaign is simple: get people to watch the music video. Most of the internet does not know Ryan Gosling has a band, and the ones who do have not heard new music from it in 17 years. That gap is the whole opportunity.",
-   "flags": [],
-   "brief": "Just in time for the spooky season, Dead Man's Bones\u2014the gothic indie-rock project consisting of Hollywood A-lister Ryan Gosling and filmmaker Zach Shields\u2014has unexpectedly resurrected with \"Lost in the Night\", their first new single in 17 years. Released via ANTI- Records, the track brilliantly strips away the lush children's choir arrangements of their 2009 cult-classic debut in favor of a raw, low-fi aesthetic recorded in just one day at a rural farm outside Los Angeles. Produced alongside longtime collaborator Tim Anderson, the song meshes unvarnished post-punk guitars and moody synths with a driving 1970s synth-punk beat reminiscent of the band Suicide, perfectly capturing a bittersweet balance between shadowy gothic rock and arena-sized emotional hope. The accompanying black-and-white music video, starring Noah Jupe and Rain Spencer as a young couple escaping a cemetery to dance through lamplit city streets, serves as the ultimate atmospheric companion piece to a long-awaited comeback that proves this haunting duo is far from permanently buried. Credits: \u201cLost in the Night\u201d, performed by Dead Man\u2019s Bones #deadmansbones #ryangosling74:T454,Af Just in time for the spooky season, Dead Man's Bones\u2014the gothic indie-rock project consisting of Hollywood A-lister Ryan Gosling and filmmaker Zach Shields\u2014has unexpectedly resurrected with \"Lost in the Night\", their first new single in 17 years. Released via ANTI- Records, the track brilliantly strips away the lush children's choir",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 3.0,
-    "max_payout": 200.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
-   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
-   "title": "BILF Podcast | Clip the Show",
-   "brand": "Runback.TV",
-   "category": "Entertainment",
-   "score": 38.3,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 450.2399999999998,
-   "creators": 64,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/088c2279-ab1d-4434-9ba0-6637ab9311fa",
-   "description": "Clip the BILF Podcast with Mara Dorne for TikTok, Reels and Shorts. Paid per 1K verified views, $200 max per clip. No fan page needed: podcast, business, and lifestyle pages all work. Full brief and approved episode list in resources. Run b",
-   "flags": [],
-   "brief": "Clip the BILF Podcast with Mara Dorne for TikTok, Reels and Shorts. Paid per 1K verified views, $200 max per clip. No fan page needed: podcast, business, and lifestyle pages all work. Full brief and approved episode list in resources. Run by Runback.TV.",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 1,
-    "references": 4
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 4.0,
-    "max_payout": 200.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
    "id": "50786486-a49d-4a17-b81b-0c416cb635da",
    "title": "Alliance Podcast/News Clipping [VIRAL]",
    "brand": "Bounty",
@@ -402,8 +333,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 7638.29,
-   "creators": 203,
+   "budget_left": 7593.04,
+   "creators": 201,
    "platforms": [
     "instagram",
     "tiktok",
@@ -428,18 +359,90 @@
    "new": false
   },
   {
+   "id": "4d8d10e9-5c4d-40f4-81b2-10acda995cb7",
+   "title": "Duke Dennis Spends $100k On Danesh Diamond Grillz",
+   "brand": "Danesh Diamonds",
+   "category": "Celebrity",
+   "score": 36.0,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 1777.5,
+   "creators": 174,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/4d8d10e9-5c4d-40f4-81b2-10acda995cb7",
+   "description": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # ev",
+   "flags": [],
+   "brief": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # everyone in it. No @. Keep it positive and natural, not promo.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
+   "id": "b8042190-fb65-4e84-be25-d2a65478a35f",
+   "title": "Duke Dennis Spends 100k on Grillz (ft. Kai Cenat)",
+   "brand": "Danesh Diamonds",
+   "category": "Celebrity",
+   "score": 35.1,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 697.9,
+   "creators": 142,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/b8042190-fb65-4e84-be25-d2a65478a35f",
+   "description": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # ev",
+   "flags": [],
+   "brief": "NEW FOOTAGE ONLY. Prioritize TikTok. Clip the Danesh footage or Duke's Halloween party video, like 16:03-19:00, 23:50 or other moments. Danesh or the grillz on screen. On-screen title says what's happening. Caption: #daneshdiamonds and # everyone in it. No @. Keep it positive and natural, not promo.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
    "id": "432f45b8-ed16-4cc6-95d7-1655e6c7806a",
    "title": "$$20,000 CORE Boys At Shibuya Crossing Campaign",
    "brand": "Reach",
    "category": "Streamer",
-   "score": 31.1,
+   "score": 31.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 16453.64,
-   "creators": 55,
+   "budget_left": 16072.55,
+   "creators": 61,
    "platforms": [
     "instagram",
     "tiktok",
@@ -462,7 +465,7 @@
     "max_payout": 750.0,
     "views_to_first_payout": 10000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
@@ -474,7 +477,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 7354.35,
+   "budget_left": 7351.200000000001,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -506,13 +509,13 @@
    "title": "Double Coverage Podcast",
    "brand": "Reach",
    "category": "Podcasts",
-   "score": 24.2,
+   "score": 24.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 2445.84,
+   "budget_left": 2172.709999999999,
    "creators": 1237,
    "platforms": [
     "instagram",
@@ -548,7 +551,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 11121.15
+   "budget_left": 10154.699999999999
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -574,7 +577,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 450.2399999999998
+   "budget_left": 385.8000000000002
   },
   {
    "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
@@ -614,7 +617,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 4957.99
+   "budget_left": 4956.54
   },
   {
    "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
