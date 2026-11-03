@@ -2,7 +2,7 @@
  {
   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
   "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
-  "status": "active",
+  "status": "dropped",
   "rate": "$1.75/1k",
   "url": "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d",
   "footage": "Official MediaSilo link only (cloud pulls it automatically)",
@@ -15,7 +15,8 @@
    "0.5% engagement (1,000 views = 5 likes), likes visible",
    "Post stays live 30 days",
    "No explicit content"
-  ]
+  ],
+  "ineligible": "Dropped Nov 3: MW4 not paying, not worth continuing"
  },
  {
   "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -34,7 +35,7 @@
  {
   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
   "title": "Call of Duty - MW4 Campaign Moments",
-  "status": "joined - footage blocked",
+  "status": "dropped",
   "rate": "$1.75/1k",
   "url": "https://contentrewards.com/c/campaigns/341ea599-d017-4ba2-be61-a29a2e754aaf",
   "footage": "Official MediaSilo folder returns 403 to the cloud: needs a one-time download",
@@ -48,7 +49,8 @@
    "Violations: spam posting (same video on multiple accounts), posting the same video more than 5 times",
    "Sound: background music allowed if copyright-free or the official sound only, must not drown out original audio. Official TikTok sound: https://www.tiktok.com/music/CREAM-Call-of-Duty-Modern-Warfare-4-Remix-7696737737132427270 ; Instagram: https://www.instagram.com/reels/audio/4503102616611934"
   ],
-  "needs_video": true
+  "needs_video": true,
+  "ineligible": "Dropped Nov 3: MW4 not paying, not worth continuing"
  },
  {
   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
@@ -106,7 +108,7 @@
  {
   "id": "835da2bd-6a51-4024-8dfd-d603a8f5e761",
   "title": "Lady A - Bigger Picture | Clipping (The Clip Ship)",
-  "status": "joined - no country rule",
+  "status": "dropped",
   "rate": "$2/1k (min payout $2, max $400/clip; about 1,000 views to first payout; analytics proof after 2,000 views)",
   "url": "https://contentrewards.com/c/campaigns/835da2bd-6a51-4024-8dfd-d603a8f5e761",
   "footage": "Provided by the campaign: footage folder + lyric sheet linked inside the Google Doc (HERE links), plus own b-roll allowed. Not wired into the clipper yet.",
@@ -120,6 +122,41 @@
    "Min engagement: 0.9% under 25K views, 0.8% 25-100K, 0.5% 100K+",
    "After 2,000 views: screen-record that video's analytics (watch time, view graphs, locations) and send to the analytics submission channel (Discord); account-level analytics are rejected",
    "Tone: warm, quiet, faith-led. Never mention illness, death or dying; no AI images of the band; no paid boosts, collabs or spam; do not re-cut clips the band already posted"
+  ],
+  "ineligible": "Dropped Nov 3: official sound could not be attached (too much work)"
+ },
+ {
+  "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+  "title": "Huss Valley [Fortnite Map] (BloxClips)",
+  "status": "joined - needs footage",
+  "rate": "$2/1k (min payout $4, max $50/video; 5,000 budget)",
+  "url": "https://contentrewards.com/c/campaigns/1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+  "footage": "Footage folder is linked inside the brief Google Doc (docs.google.com/document/d/1DSUxCp6Qvh5QTKOkJjCyQH7fxX2_KitvsLmncWXJ9sQ). Not opened yet.",
+  "needs_video": true,
+  "rules": [
+   "English OK, no country rule; no official sound needed",
+   "Only Fortnite-focused accounts (NOT Roblox/ForgeGUI): @snipvora is a clipping account, may fail",
+   "Video 10s+; say 'Huss Valley' out loud",
+   "CTA: show island code 4650-1603-2769 + island image (from footage folder) on screen, say it is out now in Fortnite",
+   "Join BloxClips Discord (required to get paid)",
+   "1%+ engagement; no AI thumbnail, no made-up features",
+   "Hashtags (mix): #fortnitemaps #uefn #hussvalley #fortnite #fortnitecreative #gaming",
+   "Hooks: 'Get caught in this Fortnite map and you become the hunter', 'Huss Valley is now on Fortnite'"
+  ]
+ },
+ {
+  "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
+  "title": "The Weeknd - Hong Kong Performance Clipping",
+  "status": "not eligible",
+  "rate": "$1.50/1k (max $150)",
+  "url": "https://contentrewards.com/c/campaigns/4c7d1ede-2fca-406a-971d-f651880168aa",
+  "footage": "Dropbox official performance video",
+  "ineligible": "Needs majority Tier 1 audience (US/UK etc.) and the official sound muted on every post; account is Ethiopia",
+  "rules": [
+   "Official TikTok sound required, muted; hashtags #TheWeeknd #fayewong at caption end",
+   "12-60s vertical, hook in 2s, English captions",
+   "Audience majority Tier 1, 1%+ engagement, likes/comments on",
+   "Send analytics screen recording at 1,000 views"
   ]
  }
 ]
