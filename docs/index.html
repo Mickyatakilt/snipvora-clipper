@@ -251,7 +251,7 @@ async function loadCamps(){
       {k:"Get the footage",ok:vid||!!c.footage_ready,
         why:"The campaign gives its own footage. Open it, download, then upload it here:",
         btns:links.map(u=>`<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">Open ${esc(u.replace(/^https?:\/\/(www\.)?/,"").split("/")[0])}</a>`).join("")+`<label class="btn ok" style="cursor:pointer">⬆ Add video<input type="file" multiple accept="video/*" data-up="${c.id}" style="display:none"></label>`,
-        how:links.length?"":"No footage link found yet. Grab the rules first, links come with them."},
+        how:links.length?"":hasRules?("Rules are in, but no footage link was found in them."+(c.footage?" Note: "+esc(c.footage)+".":"")+" Open the campaign page, find the footage or Drive/Dropbox link, download it, then upload it here."):"Grab the rules first (step 1). Footage links come with them."},
       {k:"Claude wires the cutter",ok:wired,
         why:"Rules and footage are in. The last step is Claude connecting this campaign to the clip cutter.",
         btns:`<button class="ok" data-cp="Wire campaign '${esc(c.title)}' (${c.id}) into the clipper: rules and footage are on the dashboard.">Copy request for Claude</button>`,how:"Paste the copied line into Claude. This is the only step that needs Claude."}];
