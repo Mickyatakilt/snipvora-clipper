@@ -86,8 +86,11 @@ async function main(){
     if(ageH>36)meta.innerHTML+='<br><b style="color:#d33">⚠ No new clips for '+Math.round(ageH)+'h. The cloud job may be blocked.</b>';
     const newest=clips[0].tag;
     let posted={};try{posted=await (await fetch("posted.json",{cache:"no-store"})).json()}catch(e){}
+    const nz=s=>String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");let dropped=[];
+    try{dropped=(await (await fetch("campaigns.json",{cache:"no-store"})).json()).filter(c=>c.ineligible).map(c=>nz(c.title))}catch(e){}
+    const isDropped=c=>!!c.campaign&&dropped.some(d=>d.includes(nz(c.campaign)));
     const cnt={todo:0,posted:0,done:0};
-    for(const c of clips){if(!gone[c.video]&&c.tag===newest&&stageOf(posted[c.video])==="todo")cnt.todo++}
+    for(const c of clips){if(!gone[c.video]&&c.tag===newest&&!isDropped(c)&&stageOf(posted[c.video])==="todo")cnt.todo++}
     for(const k in posted){const st=stageOf(posted[k]);if(st!=="todo"&&st!=="gone")cnt[st]++}
     const tabs=document.createElement("div");tabs.className="row";
     for(const [k,t] of [["todo","New clips"],["posted","Posted"],["done","Done"]]){const b=document.createElement("button");b.className=k===stage?"ok":"btn";b.textContent=t+" ("+cnt[k]+")";
@@ -98,6 +101,7 @@ async function main(){
     for(const c of clips){
       const id=c.video; if(gone[id]) continue;
       if(stageOf(posted[id])!==stage) continue;
+      if(stage==="todo"&&isDropped(c)) continue;
       if(stage==="todo"&&c.tag!==newest&&!showOld) continue;
       const g=c.grade, gc=g==null?"g-na":g>=8?"g-hi":g>=5?"g-mid":"g-lo";
       const d=document.createElement("div");const pp=posted[id];d.className="card"+((done[id]||pp)?" done":"");
