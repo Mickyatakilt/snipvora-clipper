@@ -1,19 +1,19 @@
 {
- "scanned_at": "2026-11-04 15:35",
- "listed": 81,
- "kept": 49,
+ "scanned_at": "2026-11-04 20:53",
+ "listed": 80,
+ "kept": 47,
  "top": [
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
    "title": "Fundingpips Clipping",
    "brand": "FundingPips",
    "category": "Technology",
-   "score": 75.9,
+   "score": 75.8,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1938.35,
+   "budget_left": 1858.4899999999998,
    "creators": 1005,
    "platforms": [
     "instagram",
@@ -45,14 +45,14 @@
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 48.6,
+   "score": 48.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 3.0,
-   "budget_left": 1834.88,
-   "creators": 15,
+   "budget_left": 1487.67,
+   "creators": 18,
    "platforms": [
     "instagram",
     "tiktok"
@@ -86,7 +86,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4833.01,
+   "budget_left": 4830.26,
    "creators": 11,
    "platforms": [
     "instagram",
@@ -112,6 +112,35 @@
    "new": false
   },
   {
+   "id": "3f22768b-de32-4123-98f6-b3a6e548ea77",
+   "title": "[UK] Blizzard - World of Warcraft Forever",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 45.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.5,
+   "budget_left": 8000,
+   "creators": 0,
+   "platforms": [
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/3f22768b-de32-4123-98f6-b3a6e548ea77",
+   "description": "Post clips of World of Warcraft: Forever.\nUse the trailers, gameplay, panels, and video assets in the content folder.\nShow the visuals, the footage highlights, the gameplay, or the world.\nSome files have no spoken language. You can use thos",
+   "flags": [],
+   "brief": "Post clips of World of Warcraft: Forever.\\nUse the trailers, gameplay, panels, and video assets in the content folder.\\nShow the visuals, the footage highlights, the gameplay, or the world.\\nSome files have no spoken language. You can use those too.\\nPost on TikTok and YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": false
+  },
+  {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
@@ -121,7 +150,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8393.01,
+   "budget_left": 8391.380000000001,
    "creators": 26,
    "platforms": [
     "instagram",
@@ -156,7 +185,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 14971.21,
+   "budget_left": 14970.98,
    "creators": 2,
    "platforms": [
     "instagram",
@@ -192,7 +221,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 5340.52,
+   "budget_left": 5280.33,
    "creators": 94,
    "platforms": [
     "instagram",
@@ -218,52 +247,18 @@
    "new": false
   },
   {
-   "id": "a016fbcc-f357-441d-b2d1-919bba8777fa",
-   "title": "Rolling Stone & Malcolm Todd Interviews Clipping",
-   "brand": "creatorXchange",
-   "category": "Music",
-   "score": 41.3,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1863.67,
-   "creators": 154,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/a016fbcc-f357-441d-b2d1-919bba8777fa",
-   "description": "Circulate Clips creating hype around Malcolm Todd's personality and his Interviews. Your mission is to pull key moments from his interview to create viral clips across TikTok & Instagram Reels.",
-   "flags": [],
-   "brief": "Circulate Clips creating hype around Malcolm Todd's personality and his Interviews. Your mission is to pull key moments from his interview to create viral clips across TikTok & Instagram Reels.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 4
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 200.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
    "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.9,
+   "score": 40.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 12876.169999999998,
-   "creators": 197,
+   "budget_left": 11850.48,
+   "creators": 198,
    "platforms": [
     "instagram",
     "tiktok"
@@ -287,46 +282,18 @@
    "new": false
   },
   {
-   "id": "3f22768b-de32-4123-98f6-b3a6e548ea77",
-   "title": "[UK] Blizzard - World of Warcraft Forever",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 40.7,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 8000,
-   "creators": 0,
-   "platforms": [
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/3f22768b-de32-4123-98f6-b3a6e548ea77",
-   "description": "Post clips of World of Warcraft: Forever.\nUse the trailers, gameplay, panels, and video assets in the content folder.\nShow the visuals, the footage highlights, the gameplay, or the world.\nSome files have no spoken language. You can use thos",
-   "flags": [],
-   "brief": "Post clips of World of Warcraft: Forever.\\nUse the trailers, gameplay, panels, and video assets in the content folder.\\nShow the visuals, the footage highlights, the gameplay, or the world.\\nSome files have no spoken language. You can use those too.\\nPost on TikTok and YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "new": true
-  },
-  {
    "id": "fba5eb2b-624a-41d6-a6c7-4519e2877e2c",
    "title": "WorldsFirstPodcast Clipping",
    "brand": "Clip Farm",
    "category": "Podcasts",
-   "score": 40.3,
+   "score": 40.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 3371.7799999999997,
-   "creators": 32,
+   "budget_left": 3306.23,
+   "creators": 35,
    "platforms": [
     "instagram",
     "tiktok",
@@ -360,8 +327,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1564.16,
-   "creators": 40,
+   "budget_left": 1538.07,
+   "creators": 41,
    "platforms": [
     "instagram",
     "tiktok",
@@ -431,7 +398,7 @@
     "new"
    ],
    "rate_per_1k": 1.25,
-   "budget_left": 10362.43,
+   "budget_left": 10354.99,
    "creators": 5,
    "platforms": [
     "instagram",
@@ -454,21 +421,21 @@
     "max_payout": 300.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
    "title": "Call of Duty - MW4 Multiplayer Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 38.8,
+   "score": 38.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 5804.610000000001,
-   "creators": 302,
+   "budget_left": 3896.540000000001,
+   "creators": 303,
    "platforms": [
     "instagram",
     "tiktok"
@@ -492,6 +459,42 @@
    "new": false
   },
   {
+   "id": "50786486-a49d-4a17-b81b-0c416cb635da",
+   "title": "Alliance Podcast/News Clipping [VIRAL]",
+   "brand": "Bounty",
+   "category": "Podcasts",
+   "score": 37.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 7331.13,
+   "creators": 210,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/50786486-a49d-4a17-b81b-0c416cb635da",
+   "description": "Turn The Alliance for Secure AI\u2019s podcast and news footage into viral AI safety clips. No set formats, just find the strongest moments. $1.50 CPM, $1.50 min, $300 max per clip. TikTok, IG and YT Shorts. 10s min, 40%+ US audience.",
+   "flags": [],
+   "brief": "\ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI directly conflicts with his own views on the technology. Cage said he refused to authorize AI use on the project and believes that decision could mean the end of his working relationship with the studio. Variety Australia +1 What makes this situation even crazier is that Spider-Noir was canceled after just one season despite earning 11 Emmy nominations and reportedly generating 2.6 billion minutes of viewing in its first six weeks. \ud83c\udfa5\ud83d\udc40 While there\u2019s no confirmation that Cage\u2019s refusal influenced the cancellation, his comments highlight the growing tension between Hollywood actors and studios over artificial intelligence. With AI becoming increasingly involved in entertainment production, questions about ownership, consent, and creative control are becoming impossible to ignore. Would you support Nicolas Cage\u2019s decision? #NicolasCage #SpiderNoir #ArtificialIntelligence #HollywoodNews #MovieIndustry75:T4c3,\ud83c\udfac Interesting f \ud83c\udfac Interesting fact: Nicolas Cage just revealed that he may never work with Amazon again after refusing to sign an artificial intelligence waiver for his superhero series Spider-Noir. \ud83d\ude33\ud83e\udd16 Speaking at New York Comic Con, the Oscar-winning actor explained that Amazon\u2019s enthusiasm for AI",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
@@ -501,7 +504,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 6677.16,
+   "budget_left": 6635.360000000001,
    "creators": 30,
    "platforms": [
     "facebook",
@@ -538,7 +541,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 5804.610000000001
+   "budget_left": 3896.540000000001
   },
   {
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
@@ -554,11 +557,7 @@
   },
   {
    "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 1,
-    "references": 4
-   },
+   "hidden_counts": null,
    "listed": false,
    "budget_left": null
   },
@@ -600,7 +599,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 4833.01
+   "budget_left": 4830.26
   },
   {
    "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
