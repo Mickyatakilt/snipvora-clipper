@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phone rules grab</title>
+<style>body{font:17px -apple-system,system-ui,sans-serif;max-width:560px;margin:20px auto;padding:0 16px;color:#1a1a2e}button{background:#6c5ce7;color:#fff;border:0;border-radius:10px;padding:14px 20px;font-size:17px;width:100%}textarea{width:100%;height:90px;font:12px monospace}li{margin:8px 0}small{color:#666}</style></head><body>
+<h2>Phone rules grab</h2>
+<p>One-time setup in Safari on your iPhone (about 1 minute). After that, grabbing rules is one tap.</p>
+<ol>
+<li>Tap <b>Copy grabber</b> below.</li>
+<li>Open any web page in Safari, tap the Share button, then <b>Add Bookmark</b>. Name it <b>Grab rules</b>, save.</li>
+<li>Open Bookmarks (book icon), tap <b>Edit</b>, tap <b>Grab rules</b>, delete its address, <b>paste</b> the copied text, then <b>Done</b>.</li>
+</ol>
+<button id="cp">Copy grabber</button>
+<p id="st"></p>
+<h3>Every campaign</h3>
+<ol><li>Join the campaign on Content Rewards in Safari (logged in).</li>
+<li>Open Bookmarks, tap <b>Grab rules</b>. A purple message says "rules sent". The first time it asks for the helper passcode.</li>
+<li>Your phone buzzes when the cloud finishes checking and building.</li></ol>
+<p><small>It only runs when you tap it, on the page you are looking at. It refuses on a campaign you have not joined.</small></p>
+<textarea id="ta" readonly></textarea>
+<script>
+function grab(W){try{
+var m=location.pathname.match(/campaigns\/([0-9a-f-]{36})/);
+if(location.hostname.indexOf("contentrewards.com")<0||!m){alert("Open a campaign page on Content Rewards first");return}
+var tx=document.body.innerText;
+if(/(^|\n)Join Campaign(\n|$)/.test(tx)||[].some.call(document.querySelectorAll("button,a"),function(b){return(b.innerText||"").trim()==="Join Campaign"})){alert("Join the campaign first, then tap Grab rules");return}
+if(tx.indexOf("\nBrief\n")<0){alert("Page still loading. Wait a few seconds and tap again");return}
+function toast(s,bad){var t=document.getElementById("snip-toast");if(!t){t=document.createElement("div");t.id="snip-toast";document.body.appendChild(t)}
+t.style.cssText="position:fixed;z-index:2147483647;left:12px;right:12px;top:12px;padding:12px 14px;border-radius:10px;font:16px sans-serif;color:#fff;background:"+(bad?"#c0392b":"#6c5ce7");t.textContent="Snipvora: "+s}
+var L=[].slice.call(document.querySelectorAll("a[href]")).map(function(a){return(a.innerText||"").trim().slice(0,60)+" -> "+a.href}).filter(function(x){return/^[^>]*->\s*https?:/.test(x)&&!/contentrewards\.com\/(c\/discover|c\/?$|$)/.test(x)});
+var R=[];try{(self.__next_f||[]).forEach(function(c){var s=c&&c[1];if(typeof s==="string"&&/creatorRequirements|contentRules|references/.test(s))R.push(s)})}catch(e){}
+var out="CAMPAIGN RULES GRAB\n"+(document.title+"\nURL: "+location.href+"\n\n"+tx).slice(0,30000)+"\n\n=== LINKS ===\n"+L.slice(0,80).join("\n")+"\n\n=== PAGE DATA ===\n"+R.join("\n").slice(0,20000);
+var pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
+if(!pc){pc=prompt("Helper passcode (asked once)");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
+toast("sending rules...");
+fetch(W+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:m[1],title:document.title,text:out})})
+.then(function(r){if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw"wrong passcode, tap again"}if(!r.ok)throw"error "+r.status;toast("rules sent ✓ the cloud takes it from here")})
+.catch(function(e){toast("FAILED: "+e,true)})
+}catch(e){alert("Grabber failed: "+e)}}
+var code="javascript:("+grab.toString()+")("+JSON.stringify("https://snipvora-helper.mickyatakilt.workers.dev")+")";
+document.getElementById("ta").value=code;
+document.getElementById("cp").onclick=function(){var ta=document.getElementById("ta"),st=document.getElementById("st");
+function ok(){st.textContent="Copied ✓ now do step 2"}
+try{navigator.clipboard.writeText(code).then(ok,function(){ta.select();document.execCommand("copy");ok()})}catch(e){ta.select();document.execCommand("copy");ok()}};
+</script></body></html>
