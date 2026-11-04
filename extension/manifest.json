@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Snipvora rules grabber",
+  "version": "1.0.0",
+  "description": "Sends the rules of a Content Rewards campaign you joined to your Snipvora helper, automatically.",
+  "content_scripts": [
+    {
+      "matches": ["https://contentrewards.com/c/campaigns/*", "https://www.contentrewards.com/c/campaigns/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"],
+  "host_permissions": ["https://snipvora-helper.mickyatakilt.workers.dev/*"]
+}
