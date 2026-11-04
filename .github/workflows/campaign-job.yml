@@ -1,0 +1,78 @@
+name: campaign-job
+# Runs by itself when the rules of a joined campaign arrive (docs/captures/<uuid>.json): fit check, footage, clip, phone alert. No AI, no Claude.
+on:
+  push:
+    paths: ["docs/captures/**"]
+  workflow_dispatch:
+    inputs:
+      campaign:
+        description: "campaign id (uuid) to (re)process"
+        required: true
+      force:
+        description: "reprocess even if the rules did not change (true/false)"
+        default: "false"
+concurrency:
+  group: campaign-job
+  cancel-in-progress: false
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core && pip install -q --break-system-packages pillow pywebpush 2>/dev/null || pip install -q pillow pywebpush
+      - name: Process each new or changed campaign capture
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+          EVENT: ${{ github.event_name }}
+          IN_ID: ${{ github.event.inputs.campaign }}
+          IN_FORCE: ${{ github.event.inputs.force }}
+        run: |
+          if [ "$EVENT" = "workflow_dispatch" ]; then ids="$IN_ID"; else
+            ids=$(git diff --name-only HEAD^ HEAD -- docs/captures | sed -n 's#^docs/captures/\([0-9a-f-]\{36\}\)\.json$#\1#p'); fi
+          [ -z "$ids" ] && { echo "no campaign captures changed"; exit 0; }
+          for id in $ids; do
+            echo "=== $id"
+            f=""; [ "$IN_FORCE" = "true" ] && f="--force"
+            python3 process_campaign.py "$id" $f || { python3 push.py "Campaign job crashed" "$id: check GitHub Actions"; continue; }
+            body=$(cat alert_body.txt 2>/dev/null || true); [ -z "$body" ] && continue
+            state="${body%%|*}"; rest="${body#*|}"; title="${rest%%|*}"; msg="${rest#*|}"
+            case "$state" in
+              ready)
+                id8="${id:0:8}"
+                ffmpeg -loglevel error -y -ss 3 -i "out/$id8/clip.mp4" -frames:v 1 -vf scale=540:-2 "out/$id8/${id8}_clip.jpg"
+                cp "out/$id8/clip.mp4" "out/$id8/${id8}_clip.mp4"
+                python3 - "$id" "$id8" "$title" <<'P'
+          import json, sys
+          cid, id8, title = sys.argv[1:4]
+          rep = json.load(open(f"out/{id8}/report.json"))
+          note = "Post in TikTok (@snipvora) with this caption, silent." + (" Drafts need brand approval first." if rep["rules_read"].get("needs_approval") else "")
+          json.dump([{"campaign": title, "campaignUrl": f"https://contentrewards.com/c/campaigns/{cid}", "file": f"out/{id8}/{id8}_clip.mp4", "seconds": rep["seconds"],
+                      "caption": rep["caption"], "note": note}], open(f"out/{id8}/clips.json", "w"))
+          P
+                tag="clips-$(date -u +%Y%m%d-%H%M)-$id8"
+                gh release create "$tag" "out/$id8/${id8}_clip.mp4" "out/$id8/${id8}_clip.jpg" --title "$tag" --notes "$(cat out/$id8/clips.json)"
+                python3 push.py "Clip ready: $title" "$msg" "https://mickyatakilt.github.io/snipvora-clipper/"
+                ;;
+              stopped)         python3 push.py "Skip: $title" "$msg" "https://mickyatakilt.github.io/snipvora-clipper/" ;;
+              missing_footage) python3 push.py "Rules in, footage missing: $title" "$msg" "https://mickyatakilt.github.io/snipvora-clipper/" ;;
+              error)           python3 push.py "Clip job failed: $title" "$msg" ;;
+            esac
+          done
+      - name: Save status files and redeploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$(git status --porcelain docs/status)" ]; then
+            git config user.name "snipvora-bot"; git config user.email "bot@users.noreply.github.com"
+            git add docs/status && git commit -m "campaign status $(date -u +%F-%H%M)"
+            git pull --rebase -q && git push
+          fi
+          gh workflow run deploy.yml

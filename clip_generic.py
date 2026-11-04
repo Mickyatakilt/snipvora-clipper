@@ -12,7 +12,7 @@ FONTS = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "/System/Librar
 
 
 def rules_text(cid):
-    p = os.path.join(ROOT, "docs", "captures", f"{cid}.json")
+    p = os.path.join(os.environ.get("CAPTURE_DIR", os.path.join(ROOT, "docs", "captures")), f"{cid}.json")
     if not os.path.exists(p):
         sys.exit(f"NO RULES: grab the rules for {cid} first (bookmark on the campaign page)")
     return json.load(open(p))["text"]

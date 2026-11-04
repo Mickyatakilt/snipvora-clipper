@@ -2,3 +2,5 @@ __pycache__/
 .env
 *.key
 ntfy_topic.txt
+alert_body.txt
+out/
