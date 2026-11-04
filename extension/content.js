@@ -30,7 +30,8 @@ async function run(id) {
     await new Promise(r => setTimeout(r, 500));
   }
   const txt = document.body.innerText;
-  if (!/(^|\n)Joined(\n|$)/.test(txt)) return;  // not joined: send nothing
+  // not joined = the page shows a "Join Campaign" button (verified on an unjoined campaign). Joined pages show "Joined", "Draft in review", etc., so test for the button, not the badge.
+  if (/(^|\n)Join Campaign(\n|$)/.test(txt) || [].some.call(document.querySelectorAll("button,a"), b => (b.innerText || "").trim() === "Join Campaign")) return;
   const brief = (txt.split("\nBrief\n")[1] || txt).split("\nTop clippers")[0];
   const h = hash(brief);
   if ((await store.get("sent:" + id)) === h) { toast("rules already sent ✓"); return; }
