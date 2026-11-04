@@ -36,7 +36,19 @@ jobs:
           IN_FORCE: ${{ github.event.inputs.force }}
         run: |
           if [ "$EVENT" = "workflow_dispatch" ]; then ids="$IN_ID"; else
-            ids=$(git diff --name-only HEAD^ HEAD -- docs/captures | sed -n 's#^docs/captures/\([0-9a-f-]\{36\}\)\.json$#\1#p'); fi
+            # every campaign capture grabbed in the last 2 days that is not marked ineligible; process_campaign.py skips ones already done with the same rules
+            ids=$(python3 - <<'P'
+          import glob, json, datetime, re
+          inel = {c["id"] for c in json.load(open("docs/campaigns.json")) if c.get("ineligible")}
+          now = datetime.datetime.now(datetime.timezone.utc)
+          for f in glob.glob("docs/captures/*.json"):
+              m = re.search(r"/([0-9a-f-]{36})\.json$", f)
+              if not m or m.group(1) in inel: continue
+              try: t = datetime.datetime.fromisoformat(json.load(open(f))["capturedAt"].replace("Z", "+00:00"))
+              except Exception: continue
+              if (now - t).total_seconds() < 2 * 86400: print(m.group(1))
+          P
+            ); fi
           [ -z "$ids" ] && { echo "no campaign captures changed"; exit 0; }
           for id in $ids; do
             echo "=== $id"
