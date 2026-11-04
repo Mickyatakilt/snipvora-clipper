@@ -220,6 +220,9 @@ def main():
     out = {"scanned_at": now.strftime("%Y-%m-%d %H:%M"), "listed": len(rows), "kept": len(scored), "top": top, "watch": watch}
     (ROOT / "latest.json").write_text(json.dumps(out, indent=1))
     (hist / f"{today}.json").write_text(json.dumps(out, indent=1))
+    # every scan, all listed ids with a UTC time (history/<date>.json keeps only the last scan of the day): shows when new campaigns first appear
+    with open(hist / "scanlog.jsonl", "a") as lf:
+        lf.write(json.dumps({"utc": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M"), "ids": [r.get("id") for r in rows]}) + "\n")
 
     L = [f"# Campaign scout - {out['scanned_at']}", f"{len(rows)} campaigns listed, {len(scored)} fit (TikTok, English, open budget, no gambling/crypto/etc).",
          "Score favors: low views-to-first-payout, no dedicated-page/Tier-1/deadline traps, a clippable source, healthy budget.", ""]
