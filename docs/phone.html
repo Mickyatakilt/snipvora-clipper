@@ -11,7 +11,7 @@
 <p id="st"></p>
 <h3>Every campaign</h3>
 <ol><li>Join the campaign on Content Rewards in Safari (logged in).</li>
-<li>Open Bookmarks, tap <b>Grab rules</b>. A purple message says "rules sent". The first time it asks for the helper passcode.</li>
+<li>Open Bookmarks, tap <b>Grab rules</b>. A purple message says "rules sent".</li>
 <li>Your phone buzzes when the cloud finishes checking and building.</li></ol>
 <p><small>It only runs when you tap it, on the page you are looking at. It refuses on a campaign you have not joined.</small></p>
 <textarea id="ta" readonly></textarea>
@@ -27,11 +27,9 @@ t.style.cssText="position:fixed;z-index:2147483647;left:12px;right:12px;top:12px
 var L=[].slice.call(document.querySelectorAll("a[href]")).map(function(a){return(a.innerText||"").trim().slice(0,60)+" -> "+a.href}).filter(function(x){return/^[^>]*->\s*https?:/.test(x)&&!/contentrewards\.com\/(c\/discover|c\/?$|$)/.test(x)});
 var R=[];try{(self.__next_f||[]).forEach(function(c){var s=c&&c[1];if(typeof s==="string"&&/creatorRequirements|contentRules|references/.test(s))R.push(s)})}catch(e){}
 var out="CAMPAIGN RULES GRAB\n"+(document.title+"\nURL: "+location.href+"\n\n"+tx).slice(0,30000)+"\n\n=== LINKS ===\n"+L.slice(0,80).join("\n")+"\n\n=== PAGE DATA ===\n"+R.join("\n").slice(0,20000);
-var pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
-if(!pc){pc=prompt("Helper passcode (asked once)");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
 toast("sending rules...");
-fetch(W+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:m[1],title:document.title,text:out})})
-.then(function(r){if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw"wrong passcode, tap again"}if(!r.ok)throw"error "+r.status;toast("rules sent ✓ the cloud takes it from here")})
+fetch(W+"/rules",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({campaign:m[1],title:document.title,text:out})})
+.then(function(r){if(!r.ok)throw"error "+r.status;toast("rules sent ✓ the cloud takes it from here")})
 .catch(function(e){toast("FAILED: "+e,true)})
 }catch(e){alert("Grabber failed: "+e)}}
 var code="javascript:("+grab.toString()+")("+JSON.stringify("https://snipvora-helper.mickyatakilt.workers.dev")+")";

@@ -35,12 +35,9 @@ async function run(id) {
   const brief = (txt.split("\nBrief\n")[1] || txt).split("\nTop clippers")[0];
   const h = hash(brief);
   if ((await store.get("sent:" + id)) === h) { toast("rules already sent ✓"); return; }
-  let pc = await store.get("passcode");
-  if (!pc) { pc = prompt("Snipvora helper passcode (asked once, stays in this browser)"); if (!pc) return; await store.set("passcode", pc); }
   toast("sending rules...");
   try {
-    const r = await fetch(WORKER + "/rules", { method: "POST", headers: { "Content-Type": "application/json", "X-Passcode": pc }, body: JSON.stringify({ campaign: id, title: document.title, text: build() }) });
-    if (r.status === 401) { await store.set("passcode", ""); throw "wrong passcode, reload the page to retry"; }
+    const r = await fetch(WORKER + "/rules", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ campaign: id, title: document.title, text: build() }) });
     if (!r.ok) throw "error " + r.status;
     await store.set("sent:" + id, h);
     toast("rules sent ✓ the cloud takes it from here");

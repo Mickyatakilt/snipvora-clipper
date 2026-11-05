@@ -8,7 +8,7 @@
 <li>Click <b>Grab rules</b> in your bookmarks bar.</li>
 <li>Click <b>Send to app</b> in the box. On a Google Doc a small window opens for a second and closes by itself. The rules appear in the dashboard.</li></ol>
 <p id="st"></p>
-<p>It only reads the page you are looking at, in your own browser. It sends only when you click Send. The first time it asks for your helper passcode.</p>
+<p>It only reads the page you are looking at, in your own browser. It sends only when you click Send.</p>
 <script>
 const WORKER="https://snipvora-helper.mickyatakilt.workers.dev";
 const DASH="https://mickyatakilt.github.io";
@@ -51,11 +51,9 @@ var R=[];try{(self.__next_f||[]).forEach(function(c){var s=c&&c[1];if(typeof s==
 var out="CAMPAIGN RULES GRAB\n"+t.slice(0,30000)+"\n\n=== LINKS ===\n"+L.slice(0,80).join("\n")+"\n\n=== PAGE DATA ===\n"+R.join("\n").slice(0,20000);
 var m=location.pathname.match(/campaigns\/([0-9a-f-]{36})/);
 panel("Rules grabbed ("+out.length+" chars)"+(m?"":" - open a campaign page first!"),out,function(msg){
-var pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
-if(!pc){pc=prompt("Helper passcode");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
 msg.textContent="Sending...";
-fetch(WORKER.replace(/\/$/,"")+"/rules",{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({campaign:m&&m[1],title:document.title,text:out})})
-.then(function(r){if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw"wrong passcode"}if(!r.ok)throw"error "+r.status;msg.textContent="Sent to app ✓ (card updates in about a minute)"}).catch(function(e){msg.textContent="Failed: "+e+" - use Copy."})})
+fetch(WORKER.replace(/\/$/,"")+"/rules",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({campaign:m&&m[1],title:document.title,text:out})})
+.then(function(r){if(!r.ok)throw"error "+r.status;msg.textContent="Sent to app ✓ (card updates in about a minute)"}).catch(function(e){msg.textContent="Failed: "+e+" - use Copy."})})
 }catch(e){alert("Rules grabber failed: "+e)}}
 document.getElementById("bm").href="javascript:("+encodeURIComponent(grab.toString())+")("+encodeURIComponent(JSON.stringify(WORKER))+","+encodeURIComponent(JSON.stringify(DASH))+")";
 document.getElementById("st").textContent="App helper: connected";

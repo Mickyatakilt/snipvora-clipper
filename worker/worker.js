@@ -1,6 +1,6 @@
 // Snipvora helper (Cloudflare Worker). Secrets (set in Cloudflare, never in this repo): GH_TOKEN, PASSCODE.
 // POST /upload?campaign=<id>&name=<file>  raw file body  -> stored as an asset on GitHub release "campaign-inputs"
-// POST /rules {campaign,title,text} -> saves captured campaign rules into the repo for the dashboard
+// POST /rules {campaign,title,text} (no passcode, locked down) -> saves captured campaign rules into the repo for the dashboard
 // POST /post  {video, caption?, when?}     -> starts the post-clip workflow
 const REPO = "Mickyatakilt/snipvora-clipper";
 const ORIGINS = ["https://mickyatakilt.github.io", "https://contentrewards.com", "https://www.contentrewards.com"];
@@ -24,8 +24,9 @@ export default {
     setCors(req);
     if (req.method === "OPTIONS") return new Response(null, {headers: CORS});
     if (req.method !== "POST") return out({error: "POST only"}, 405);
-    if (!env.PASSCODE || req.headers.get("X-Passcode") !== env.PASSCODE) return out({error: "wrong passcode"}, 401);
     const url = new URL(req.url);
+    // /rules needs no passcode but is locked down: only our own pages, a real campaign id, and a rules-grab payload. /upload and /post still need PASSCODE.
+    if (url.pathname !== "/rules" && (!env.PASSCODE || req.headers.get("X-Passcode") !== env.PASSCODE)) return out({error: "wrong passcode"}, 401);
     try {
       if (url.pathname === "/upload") {
         const camp = (url.searchParams.get("campaign") || "misc").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
@@ -37,9 +38,16 @@ export default {
         return out({ok: true, asset: (await up.json()).name});
       }
       if (url.pathname === "/rules") {  // rules grabber bookmark: saves the captured page text as docs/captures/<campaign>.json
+        if (!ORIGINS.includes(req.headers.get("Origin"))) return out({error: "origin not allowed"}, 403);
+        if (Number(req.headers.get("Content-Length") || 0) > 200000) return out({error: "too big"}, 413);
         const b = await req.json();
         const camp = String(b.campaign || "").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
-        if (!camp) return out({error: "no campaign id"}, 400);
+        if (!/^([jx]-)?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$|^doc-[a-z0-9-]{10,40}$/i.test(camp)) return out({error: "bad campaign id"}, 400);
+        const txt = String(b.text || "");
+        const marker = /^[jx]-/i.test(camp);  // dashboard "I joined" / "Remove" markers carry JSON
+        let okText = /^(CAMPAIGN RULES GRAB|GOOGLE DOC GRAB)\n/.test(txt);
+        if (marker) { try { okText = typeof JSON.parse(txt) === "object"; } catch (e) { okText = false; } }
+        if (!okText) return out({error: "not a rules grab"}, 400);
         const content = JSON.stringify({capturedAt: new Date().toISOString(), title: String(b.title || "").slice(0, 200), text: String(b.text || "").slice(0, 120000)}, null, 1);
         const api = `https://api.github.com/repos/${REPO}/contents/docs/captures/${camp}.json`;
         const cur = await fetch(api, {headers: gh(env)});
