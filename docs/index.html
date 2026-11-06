@@ -291,7 +291,8 @@ async function loadCamps(){
     if(live&&rnNew)runBox=`<div class="jrun"><b>⏳ Cloud job ${rn.status==="in_progress"?"running":"waiting to start"}</b> <span class="mut">· started ${mins(new Date(rn.created_at).getTime())} min ago</span><div class="jbar"><i></i></div><div class="mut" style="font-size:12px">It is reading the rules, finding the footage and downloading it. This card updates by itself when it finishes (usually 1 to 10 minutes). <a href="${rn.html_url}" target="_blank" rel="noopener">See the run</a></div></div>`;
     else if(rn&&rnNew&&rn.conclusion&&rn.conclusion!=="success")runBox=`<div class="jfail"><b>✗ Cloud job ${esc(rn.conclusion)}</b> <span class="mut">· ${mins(new Date(rn.updated_at).getTime())} min ago</span><div class="mut" style="font-size:12px">No result was saved. Tell Claude to re-run it. <a href="${rn.html_url}" target="_blank" rel="noopener">See the run</a></div></div>`;
     else if(!js&&cap&&Date.now()-new Date(cap.capturedAt||0).getTime()<1728e5)runBox=`<div class="jrun"><b>… Waiting for the cloud job</b><div class="mut" style="font-size:12px">${rn?"The job finished but its result is still being published. Reload in a minute.":"Rules are in, but no cloud job has started for this campaign yet."}</div></div>`;
-    const jobBox=runBox+(js?stp+`<div class="mut" style="margin:6px 0"><span class="pill${js.state==="ready"?"":" w"}">${esc(JL[js.state]||js.state)}</span> ${esc(js.msg||"")} <span class="mut">· ${esc(js.at||"")}</span></div>`:"");
+    const ctl=cap?`<div class="row" style="margin:6px 0"><button class="btn" data-job="refresh">↻ Refresh</button>${live&&rnNew?`<button class="del" data-job="stop" data-id="${c.id}">■ Stop job</button>`:`<button class="ok" data-job="start" data-id="${c.id}">▶ Run job again</button>`}</div>`:"";
+    const jobBox=runBox+ctl+(js?stp+`<div class="mut" style="margin:6px 0"><span class="pill${js.state==="ready"?"":" w"}">${esc(JL[js.state]||js.state)}</span> ${esc(js.msg||"")} <span class="mut">· ${esc(js.at||"")}</span></div>`:"");
     const pills=steps.map((x,i)=>`<span class="pill" style="${x.ok?"background:#d4f5dd;color:#0a6b2d":i===cur?"background:#ffe9a8;color:#6a4a00":"background:#eee;color:#666"}">${x.ok?"✓":i+1} ${x.k}</span> `).join("");
     const next=stop?`<div class="mut">⛔ ${esc(stop)}</div>`:cur>=0?`<div style="border:2px solid #6c5ce7;border-radius:10px;padding:10px;margin:8px 0"><b>NEXT (step ${cur+1}): ${steps[cur].k}</b><div class="mut">${steps[cur].why}</div>${steps[cur].how?`<div style="margin:6px 0;font-size:14px">${steps[cur].how}</div>`:""}<div class="row">${steps[cur].btns}</div></div>`:"";
     const rulesBox=rl.length?`<details><summary class='mut'>Rules (${rl.length})</summary><ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul></details>`:cap?`<details><summary class='mut'>Rules captured ✓ ${esc((cap.capturedAt||"").slice(0,10))} (tap to read)</summary><pre style='white-space:pre-wrap;font-size:12px'>${esc((cap.text||"").slice(0,6000))}</pre></details>`:"";
@@ -342,6 +343,15 @@ async function loadCamps(){
   camps.querySelectorAll("[data-rm]").forEach(b=>b.onclick=async()=>{if(!confirm("Remove this campaign from the list?"))return;const id=b.dataset.rm;
     removedLocal[id]=1;try{localStorage.setItem("removedc",JSON.stringify(removedLocal))}catch(e){}
     await cloud("x-"+id,{id});window._cd=null;loadCamps()});
+  camps.querySelectorAll("[data-job]").forEach(b=>b.onclick=async()=>{
+    const a=b.dataset.job;if(a==="refresh"){window._cd=null;loadCamps();return}
+    if(a==="stop"&&!confirm("Stop the cloud job for this campaign?"))return;
+    b.disabled=true;
+    try{const r=await fetch(WORKER_URL.replace(/\/$/,"")+"/job",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({campaign:b.dataset.id,action:a})});
+      const j=await r.json().catch(()=>({}));
+      toast(r.ok?(a==="stop"?"Stopped ✓":"Started ✓ it shows as running in a few seconds"):"Not done: "+(j.error||r.status));
+    }catch(e){toast("Could not reach the helper")}
+    setTimeout(()=>{window._cd=null;loadCamps()},3500)});
   camps.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>cp(b.dataset.cp));
 }
 loadCamps();

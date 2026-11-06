@@ -11,6 +11,7 @@ on:
       force:
         description: "reprocess even if the rules did not change (true/false)"
         default: "false"
+run-name: ${{ github.event_name == 'workflow_dispatch' && format('rules captured {0}', github.event.inputs.campaign) || github.event.head_commit.message }}
 concurrency:
   group: campaign-job
   cancel-in-progress: false

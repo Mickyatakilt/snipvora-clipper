@@ -30,7 +30,7 @@ export default {
     }
     if (req.method !== "POST") return out({error: "POST only"}, 405);
     // /rules needs no passcode but is locked down: only our own pages, a real campaign id, and a rules-grab payload. /upload and /post still need PASSCODE.
-    if (url.pathname !== "/rules" && (!env.PASSCODE || req.headers.get("X-Passcode") !== env.PASSCODE)) return out({error: "wrong passcode"}, 401);
+    if (url.pathname !== "/rules" && url.pathname !== "/job" && (!env.PASSCODE || req.headers.get("X-Passcode") !== env.PASSCODE)) return out({error: "wrong passcode"}, 401);
     try {
       if (url.pathname === "/upload") {
         const camp = (url.searchParams.get("campaign") || "misc").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
@@ -40,6 +40,27 @@ export default {
           {method: "POST", headers: gh(env, {"Content-Type": req.headers.get("Content-Type") || "application/octet-stream", "Content-Length": req.headers.get("Content-Length") || ""}), body: req.body});
         if (!up.ok) return out({error: "github " + up.status}, 502);
         return out({ok: true, asset: (await up.json()).name});
+      }
+      if (url.pathname === "/job") {  // dashboard Run again / Stop for the campaign cloud job. Own pages only, real campaign id, no double start, 2 min cool-down.
+        if (!ORIGINS.includes(req.headers.get("Origin"))) return out({error: "origin not allowed"}, 403);
+        let b; try { b = JSON.parse(await req.text()); } catch (e) { return out({error: "bad json"}, 400); }
+        const camp = String(b.campaign || "");
+        if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(camp)) return out({error: "bad campaign id"}, 400);
+        if (b.action !== "start" && b.action !== "stop") return out({error: "bad action"}, 400);
+        const lr = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/campaign-job.yml/runs?per_page=30`, {headers: gh(env)});
+        if (!lr.ok) return out({error: "github " + lr.status}, 502);
+        const mine = ((await lr.json()).workflow_runs || []).filter((r) => (r.display_title || "").includes(camp));
+        const active = mine.filter((r) => ["queued", "in_progress", "waiting", "pending", "requested"].includes(r.status));
+        if (b.action === "stop") {
+          if (!active.length) return out({error: "no running job for this campaign"}, 409);
+          let n = 0;
+          for (const r of active) { const c = await fetch(`https://api.github.com/repos/${REPO}/actions/runs/${r.id}/cancel`, {method: "POST", headers: gh(env)}); if (c.status === 202) n++; }
+          return n ? out({ok: true, stopped: n}) : out({error: "github could not cancel"}, 502);
+        }
+        if (active.length) return out({error: "already running"}, 409);
+        if (mine[0] && Date.now() - new Date(mine[0].created_at).getTime() < 120000) return out({error: "started less than 2 minutes ago, wait"}, 429);
+        const d = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/campaign-job.yml/dispatches`, {method: "POST", headers: gh(env), body: JSON.stringify({ref: "main", inputs: {campaign: camp, force: "true"}})});
+        return d.status === 204 ? out({ok: true}) : out({error: "github " + d.status}, 502);
       }
       if (url.pathname === "/rules") {  // rules grabber bookmark: saves the captured page text as docs/captures/<campaign>.json
         if (!ORIGINS.includes(req.headers.get("Origin"))) return out({error: "origin not allowed"}, 403);
