@@ -47,9 +47,12 @@ export default {
         const camp = String(b.campaign || "");
         if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(camp)) return out({error: "bad campaign id"}, 400);
         if (b.action !== "start" && b.action !== "stop") return out({error: "bad action"}, 400);
+        const real = await fetch(`https://api.github.com/repos/${REPO}/contents/docs/captures/${camp}.json`, {headers: gh(env)});  // only campaigns whose rules were really captured
+        if (!real.ok) return out({error: "unknown campaign"}, 404);
         const lr = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/campaign-job.yml/runs?per_page=30`, {headers: gh(env)});
         if (!lr.ok) return out({error: "github " + lr.status}, 502);
-        const mine = ((await lr.json()).workflow_runs || []).filter((r) => (r.display_title || "").includes(camp));
+        const all = (await lr.json()).workflow_runs || [];
+        const mine = all.filter((r) => (r.display_title || "").includes(camp));
         const active = mine.filter((r) => ["queued", "in_progress", "waiting", "pending", "requested"].includes(r.status));
         if (b.action === "stop") {
           if (!active.length) return out({error: "no running job for this campaign"}, 409);
@@ -58,7 +61,7 @@ export default {
           return n ? out({ok: true, stopped: n}) : out({error: "github could not cancel"}, 502);
         }
         if (active.length) return out({error: "already running"}, 409);
-        if (mine[0] && Date.now() - new Date(mine[0].created_at).getTime() < 120000) return out({error: "started less than 2 minutes ago, wait"}, 429);
+        if (all[0] && Date.now() - new Date(all[0].created_at).getTime() < 120000) return out({error: "a job started less than 2 minutes ago, wait"}, 429);  // one shared cool-down for every campaign
         const d = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/campaign-job.yml/dispatches`, {method: "POST", headers: gh(env), body: JSON.stringify({ref: "main", inputs: {campaign: camp, force: "true"}})});
         return d.status === 204 ? out({ok: true}) : out({error: "github " + d.status}, 502);
       }
