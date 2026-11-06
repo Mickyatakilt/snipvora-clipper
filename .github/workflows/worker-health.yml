@@ -1,0 +1,33 @@
+name: worker-health
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the Snipvora helper Worker (grab route open, GitHub token valid)
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PUSH_SUB: ${{ secrets.PUSH_SUB }}
+          VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
+        run: |
+          W=https://snipvora-helper.mickyatakilt.workers.dev
+          h=$(curl -s -m 20 -o /tmp/h.txt -w '%{http_code}' "$W/health" || true)
+          # harmless bad request: the current Worker answers 400 "bad campaign id" (the old passcode Worker answers 401)
+          g=$(curl -s -m 20 -o /tmp/g.txt -w '%{http_code}' -X POST "$W/rules" -H "Origin: https://contentrewards.com" -H "Content-Type: application/json" -d '{"campaign":"bad","text":"x"}' || true)
+          # /post must stay locked
+          p=$(curl -s -m 20 -o /dev/null -w '%{http_code}' -X POST "$W/" -H "Origin: https://contentrewards.com" || true)
+          echo "health=$h rules_probe=$g post_probe=$p"
+          msg=""
+          [ "$h" = "200" ] || msg="$msg GitHub token missing or rejected (health $h)."
+          [ "$g" = "400" ] || msg="$msg Grab route not the current version (probe $g)."
+          [ "$p" = "401" ] || msg="$msg Post route is not locked (probe $p)."
+          if [ -n "$msg" ]; then
+            echo "BROKEN:$msg"
+            [ -n "$NTFY_TOPIC" ] && curl -s -H "Title: Snipvora helper BROKEN" -d "$msg Fix in Cloudflare (snipvora-helper)." "https://ntfy.sh/$NTFY_TOPIC"
+            (pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush) && python3 push.py "🔴 Snipvora helper broken" "$msg Rules grabbing will fail until fixed." || true
+            exit 1
+          fi

@@ -23,8 +23,12 @@ export default {
   async fetch(req, env) {
     setCors(req);
     if (req.method === "OPTIONS") return new Response(null, {headers: CORS});
-    if (req.method !== "POST") return out({error: "POST only"}, 405);
     const url = new URL(req.url);
+    if (req.method === "GET" && url.pathname === "/health") {  // used by the worker-health workflow: proves GH_TOKEN is present and accepted by GitHub
+      const r = await fetch(`https://api.github.com/repos/${REPO}`, {headers: gh(env)});
+      return out({ok: r.ok, github: r.status, hasToken: !!env.GH_TOKEN}, r.ok ? 200 : 503);
+    }
+    if (req.method !== "POST") return out({error: "POST only"}, 405);
     // /rules needs no passcode but is locked down: only our own pages, a real campaign id, and a rules-grab payload. /upload and /post still need PASSCODE.
     if (url.pathname !== "/rules" && (!env.PASSCODE || req.headers.get("X-Passcode") !== env.PASSCODE)) return out({error: "wrong passcode"}, 401);
     try {

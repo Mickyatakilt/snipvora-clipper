@@ -1,0 +1,6 @@
+# Safety net only. The Worker is edited in the Cloudflare dashboard (Edit code), NOT deployed from here.
+# keep_vars stops an accidental "wrangler deploy" from wiping the dashboard-set secret GH_TOKEN (and PASSCODE if set).
+name = "snipvora-helper"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+keep_vars = true
