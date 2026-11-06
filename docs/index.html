@@ -35,7 +35,7 @@ dialog::backdrop{background:rgba(0,0,0,.55)}textarea,input[type=datetime-local]{
 ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{display:none}
 </style></head><body>
 <h1>Snipvora</h1>
-<div class="tabs"><button id="t1" class="tab on">Clips</button><button id="t2" class="tab">Campaigns</button></div>
+<div class="tabs"><button id="t1" class="tab on">Clips</button><button id="t2" class="tab">Campaigns</button><button id="t3" class="tab">Approvals</button></div>
 <div class="mut" id="meta">Loading...</div>
 <div class="card" id="pushbox"><b>Phone alerts</b>
 <div class="mut" id="pushmsg">Pop-ups on this app: new clips, posted, failures.</div>
@@ -44,6 +44,7 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 <div class="row"><button id="pushcopy" style="display:none">Copy code</button></div></div>
 <div id="list"></div>
 <div id="camps"></div>
+<div id="appr" style="display:none"></div>
 <p class="mut">Page v22 · deleted TikToks hide automatically (checked every 6 hours). Lady A clips: tap SHARE TO TIKTOK on the clip. Other clips: tap Download, then Copy caption in TikTok.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
@@ -81,7 +82,7 @@ async function main(){
   try{
     const r=await fetch("clips.json",{cache:"no-store"});
     if(!r.ok) throw new Error("clips.json "+r.status);
-    const clips=await r.json();
+    const clips=await r.json();window._clipCamps=[...new Set(clips.map(c=>c.campaign).filter(Boolean))];
     if(!clips.length){meta.textContent="No clips yet. The next cloud run will add them.";return}
     meta.textContent="Latest run: "+new Date(clips[0].published).toLocaleString()+" · older clips are removed automatically";
     const ageH=(Date.now()-new Date(clips[0].published))/36e5;
@@ -155,7 +156,7 @@ async function main(){
             navigator.share({files:[file],text:capOf(c)}).then(()=>after("Done. If TikTok was not in the list you must tap Save Video. Then:")).catch(e=>{if(e&&e.name==="AbortError")after("Share closed. Did you tap Save Video? Then:");else st.textContent="Share failed ("+(e&&e.name)+")"})
           }else{st.innerHTML='This browser cannot share files. <a class="btn" href="'+c.video+'" download>Download clip</a> then post it in TikTok (caption is copied).'}
         }}
-      const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>{if(!confirm("Before posting: is this clip APPROVED on Content Rewards (or does this campaign not need approval)?\n\nOK = yes, continue to post.\nCancel = not yet, do not post."))return;ask("Post: description",c.caption,true,async(t,when)=>{pb.disabled=true;const ok=await send("post",{video:id,description:t,when});if(!ok){pb.disabled=false;return}done[id]=true;save();d.classList.add("done");pb.remove();d.querySelector("[data-s]").textContent="Posting"+(when?" at "+new Date(when).toLocaleString():" now")+". It moves to the Posted tab when TikTok confirms."});};
+      const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>{const av=appr[c.campaign];if(av==="pending"||av==="changes"){toast("Not approved yet: "+(av==="pending"?"still Pending":"Needs changes")+" on Content Rewards. Not posting.");return}if(av!=="approved"&&!confirm("Before posting: is this clip APPROVED on Content Rewards (or does this campaign not need approval)?\n\nOK = yes, continue to post.\nCancel = not yet, do not post."))return;ask("Post: description",c.caption,true,async(t,when)=>{pb.disabled=true;const ok=await send("post",{video:id,description:t,when});if(!ok){pb.disabled=false;return}done[id]=true;save();d.classList.add("done");pb.remove();d.querySelector("[data-s]").textContent="Posting"+(when?" at "+new Date(when).toLocaleString():" now")+". It moves to the Posted tab when TikTok confirms."});};
       list.appendChild(d);
     }
     if(stage!=="todo"){const shown=new Set(clips.map(c=>c.video));
@@ -187,8 +188,24 @@ document.getElementById("pushbtn").onclick=async()=>{
 main();
 const camps=document.getElementById("camps"),list2=document.getElementById("list");
 const joined=(()=>{try{return JSON.parse(localStorage.getItem("joined")||"{}")}catch(e){return{}}})();
-document.getElementById("t1").onclick=()=>{list2.style.display="";camps.style.display="none";t1.classList.add("on");t2.classList.remove("on");document.getElementById("meta").style.display=""};
-document.getElementById("t2").onclick=()=>{list2.style.display="none";camps.style.display="block";t2.classList.add("on");t1.classList.remove("on");document.getElementById("meta").style.display="none"};
+const apprBox=document.getElementById("appr");
+function showTab(n){list2.style.display=n===1?"":"none";camps.style.display=n===2?"block":"none";apprBox.style.display=n===3?"block":"none";
+  [t1,t2,t3].forEach((b,i)=>b.classList.toggle("on",i+1===n));document.getElementById("meta").style.display=n===1?"":"none";if(n===3)drawAppr()}
+document.getElementById("t1").onclick=()=>showTab(1);
+document.getElementById("t2").onclick=()=>showTab(2);
+document.getElementById("t3").onclick=()=>showTab(3);
+const appr=(()=>{try{return JSON.parse(localStorage.getItem("appr")||"{}")}catch(e){return{}}})();
+const apprSet=(n,v)=>{if(v)appr[n]=v;else delete appr[n];try{localStorage.setItem("appr",JSON.stringify(appr))}catch(e){}};
+const AL={pending:["Pending","background:#ffe9a8;color:#6a4a00"],approved:["Approved","background:#d4f5dd;color:#0a6b2d"],changes:["Needs changes","background:#ffd5d5;color:#a00"]};
+async function drawAppr(){
+  let names=new Set(window._clipCamps||[]);
+  try{(await (await fetch("campaigns.json",{cache:"no-store"})).json()).filter(c=>!c.ineligible).forEach(c=>names.add(c.title))}catch(e){}
+  Object.keys(appr).forEach(n=>names.add(n));
+  const rows=[...names].sort().map(n=>{const v=appr[n]||"";return `<div class="card"><b>${esc(n)}</b>
+    <div style="margin:6px 0">${v?`<span class="badge" style="${AL[v][1]}">${AL[v][0]}</span>`:'<span class="mut">Not set (Post will ask you)</span>'}</div>
+    <div class="row">${Object.keys(AL).map(k=>`<button class="${v===k?"ok":"btn"}" data-av="${k}" data-an="${esc(n)}">${AL[k][0]}</button>`).join("")}<button data-av="" data-an="${esc(n)}" style="background:#666">Clear</button></div></div>`}).join("");
+  apprBox.innerHTML=`<div class="card"><b>Check approval</b><div class="mut" style="margin:6px 0">Brand approval happens on Content Rewards. Open your drafts, look at the status, and set it here. Post is blocked until a campaign is Approved.</div><div class="row"><a class="btn ok" href="https://contentrewards.com/c/drafts" target="_blank" rel="noopener">Open my drafts on Content Rewards</a></div></div>`+(rows||"<div class='card mut'>No campaigns yet.</div>");
+  apprBox.querySelectorAll("[data-av]").forEach(b=>b.onclick=()=>{apprSet(b.dataset.an,b.dataset.av);drawAppr()})}
 
 const removedLocal=(()=>{try{return JSON.parse(localStorage.getItem("removedc")||"{}")}catch(e){return{}}})();
 async function cloud(key,payload){ // saves a small marker in the repo through the helper's existing /rules endpoint
