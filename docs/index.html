@@ -155,7 +155,7 @@ async function main(){
             navigator.share({files:[file],text:capOf(c)}).then(()=>after("Done. If TikTok was not in the list you must tap Save Video. Then:")).catch(e=>{if(e&&e.name==="AbortError")after("Share closed. Did you tap Save Video? Then:");else st.textContent="Share failed ("+(e&&e.name)+")"})
           }else{st.innerHTML='This browser cannot share files. <a class="btn" href="'+c.video+'" download>Download clip</a> then post it in TikTok (caption is copied).'}
         }}
-      const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>ask("Post: description",c.caption,true,async(t,when)=>{pb.disabled=true;const ok=await send("post",{video:id,description:t,when});if(!ok){pb.disabled=false;return}done[id]=true;save();d.classList.add("done");pb.remove();d.querySelector("[data-s]").textContent="Posting"+(when?" at "+new Date(when).toLocaleString():" now")+". It moves to the Posted tab when TikTok confirms."});
+      const pb=d.querySelector("[data-p]");if(pb)pb.onclick=()=>{if(!confirm("Before posting: is this clip APPROVED on Content Rewards (or does this campaign not need approval)?\n\nOK = yes, continue to post.\nCancel = not yet, do not post."))return;ask("Post: description",c.caption,true,async(t,when)=>{pb.disabled=true;const ok=await send("post",{video:id,description:t,when});if(!ok){pb.disabled=false;return}done[id]=true;save();d.classList.add("done");pb.remove();d.querySelector("[data-s]").textContent="Posting"+(when?" at "+new Date(when).toLocaleString():" now")+". It moves to the Posted tab when TikTok confirms."});};
       list.appendChild(d);
     }
     if(stage!=="todo"){const shown=new Set(clips.map(c=>c.video));
