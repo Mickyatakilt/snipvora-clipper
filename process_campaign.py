@@ -106,6 +106,16 @@ def get_footage(links, src):
     return False, notes
 
 
+STEP_NAMES = ["Rules received", "Fit check", "Footage link found", "Footage downloaded", "Clip built"]
+
+
+def with_steps(st, done):
+    """done = [(name, "ok"|"fail"|"warn", note)] in order; steps not reached show as "wait". The dashboard draws these as a tracker."""
+    seen = {d[0] for d in done}
+    st["steps"] = [{"k": k, "s": s_, "n": (n or "")[:200]} for k, s_, n in done] + [{"k": k, "s": "wait", "n": ""} for k in STEP_NAMES if k not in seen]
+    return st
+
+
 def write_status(cid, st):
     os.makedirs(ST_DIR, exist_ok=True)
     st["at"] = time.strftime("%Y-%m-%d %H:%M:%S UTC", time.gmtime())
@@ -130,26 +140,31 @@ def main():
         if old.get("rules_hash") == rh and old.get("state") != "error":
             print("already processed, same rules; nothing to do"); open("alert_body.txt", "w").write(""); return
     base = {"id": cid, "title": title, "rules_hash": rh}
+    done = [("Rules received", "ok", cap.get("capturedAt", ""))]
     stop, warn = analyze(text)
     fp = first_payout_views(text)
     if fp and fp > 1000:
         stop.append(f"first payout only after about {fp} views (your rule is 1,000)")
     if stop:
-        return write_status(cid, {**base, "state": "stopped", "msg": "; ".join(stop), "warnings": warn})
+        return write_status(cid, with_steps({**base, "state": "stopped", "msg": "; ".join(stop), "warnings": warn}, done + [("Fit check", "fail", "; ".join(stop))]))
+    done.append(("Fit check", "warn" if warn else "ok", "; ".join(warn) or "no blockers found"))
     links = footage_links(text)
     src = os.path.join(OUT_ROOT, "_src", cid[:8]); shutil.rmtree(src, ignore_errors=True)
     ok, notes = get_footage(links, src) if links else (False, ["no footage link found in the rules"])
+    done.append(("Footage link found", "ok" if links else "fail", f"{len(links)} link(s)" if links else "none in the rules"))
     if not ok:
-        return write_status(cid, {**base, "state": "missing_footage", "msg": "rules are in, but the footage can't be fetched by the cloud: " + " | ".join(notes)[:400], "links": links, "warnings": warn})
+        done.append(("Footage downloaded", "fail", " | ".join(notes)))
+        return write_status(cid, with_steps({**base, "state": "missing_footage", "msg": "rules are in, but the footage can't be fetched by the cloud: " + " | ".join(notes)[:400], "links": links, "warnings": warn}, done))
+    done.append(("Footage downloaded", "ok", " | ".join(notes)))
     out_dir = os.path.join(OUT_ROOT, cid[:8])
     r = subprocess.run([sys.executable, os.path.join(ROOT, "clip_generic.py"), cid, src, out_dir], capture_output=True, text=True, env={**os.environ, "CAPTURE_DIR": CAP_DIR})
     if r.returncode != 0:
-        return write_status(cid, {**base, "state": "error", "msg": "clip builder failed: " + (r.stdout + r.stderr)[-300:], "warnings": warn})
+        return write_status(cid, with_steps({**base, "state": "error", "msg": "clip builder failed: " + (r.stdout + r.stderr)[-300:], "warnings": warn}, done + [("Clip built", "fail", (r.stdout + r.stderr)[-150:])]))
     rep = json.load(open(os.path.join(out_dir, "report.json")))
     msg = f"clip ready ({rep['seconds']} s). Caption: {rep['caption']}"
     if rep["rules_read"].get("needs_approval"):
         msg += ". NOTE: drafts need brand approval before posting"
-    write_status(cid, {**base, "state": "ready", "msg": msg, "warnings": warn, "caption": rep["caption"], "seconds": rep["seconds"]})
+    write_status(cid, with_steps({**base, "state": "ready", "msg": msg, "warnings": warn, "caption": rep["caption"], "seconds": rep["seconds"]}, done + [("Clip built", "ok", f"{rep['seconds']} s")]))
 
 
 main()
