@@ -30,6 +30,8 @@ dialog::backdrop{background:rgba(0,0,0,.55)}textarea,input[type=datetime-local]{
 #toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#222;color:#fff;border-radius:10px;padding:10px 14px;display:none;max-width:90vw;font-size:13px}
 .tabs{display:flex;gap:8px;margin:10px 0}.tab{background:var(--card);color:var(--fg);border:1px solid var(--line)}.tab.on{background:var(--acc);color:#fff;border-color:var(--acc)}
 .pill{font-size:11px;border-radius:8px;padding:2px 7px;background:var(--ok);color:#012}.pill.w{background:#fdcb6e}
+.jbar{height:8px;border-radius:6px;background:rgba(127,127,160,.25);overflow:hidden;margin:6px 0}.jbar i{display:block;height:100%;width:35%;background:var(--acc,#6c5ce7);border-radius:6px;animation:jb 1.3s ease-in-out infinite}@keyframes jb{0%{margin-left:-35%}100%{margin-left:100%}}
+.jrun{border:2px solid #6c5ce7;border-radius:10px;padding:10px;margin:8px 0}.jfail{border:2px solid #d63031;border-radius:10px;padding:10px;margin:8px 0}
 ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{display:none}
 </style></head><body>
 <h1>Snipvora</h1>
@@ -214,10 +216,18 @@ function analyze(cap,rules){ // quick read of the rules text: hard stops and war
   const links=[...new Set((t.match(/https?:\/\/[^\s"'<>)\]]+/g)||[]).filter(u=>/docs\.google|drive\.google|dropbox|picflow|mediasilo|youtu|notion|whop\.com|frame\.io|wetransfer/i.test(u)&&!/rlkey=.*dl=0&e=1&st=/.test("")).map(u=>u.replace(/[.,;]+$/,"")))];
   return{stop,warn,links};
 }
+async function fetchRuns(){ // newest cloud-job runs, keyed by the campaign id in the run title ("rules captured <id>")
+  const out={};
+  try{const r=await fetch("https://api.github.com/repos/"+REPO+"/actions/workflows/campaign-job.yml/runs?per_page=20",{signal:AbortSignal.timeout(8000)});
+    if(r.ok)for(const x of (await r.json()).workflow_runs||[]){const m=(x.display_title||"").match(/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/);if(m&&!out[m[0]])out[m[0]]=x}}catch(e){}
+  return out}
+const atMs=t=>t?new Date(String(t).replace(" UTC","Z").replace(" ","T")).getTime():0;
+const mins=ms=>Math.max(0,Math.round((Date.now()-ms)/60000));
+let runTimer=null;
 async function loadCamps(){
   if(!camps.innerHTML)camps.innerHTML='<p class="mut">Loading campaigns…</p>';
-  let h="",mine=[],watch={},caps={},files={},sts={};
-  if(window._cd){({mine,watch,caps,files,sts}=window._cd)}else{  // fetch once; tab clicks only re-draw
+  let h="",mine=[],watch={},caps={},files={},sts={},runs={};
+  if(window._cd){({mine,watch,caps,files,sts,runs}=window._cd)}else{  // fetch once; tab clicks only re-draw
     try{mine=await (await fetch("campaigns.json",{cache:"no-store"})).json()}catch(e){}
     await mergeCloud(mine);
     mine=window._mine;
@@ -228,7 +238,8 @@ async function loadCamps(){
     ]);
     try{const r=await fetch("https://api.github.com/repos/"+REPO+"/contents/docs/status",{signal:AbortSignal.timeout(8000)});
       if(r.ok)await Promise.all((await r.json()).filter(f=>/\.json$/.test(f.name)).map(async f=>{try{sts[f.name.slice(0,-5)]=await (await fetch("status/"+f.name,{cache:"no-store"})).json()}catch(e){}}))}catch(e){}
-    window._cd={mine,watch,caps,files,sts};
+    runs=await fetchRuns();
+    window._cd={mine,watch,caps,files,sts,runs};
   }
   const ST=["Needs you","Ready","Not Eligible","Done"],groups={};ST.forEach(k=>groups[k]=[]);let hidden=[];
   const cp=(t,b)=>{try{navigator.clipboard.writeText(t);toast("Copied ✓")}catch(x){toast("Copy failed")}};
@@ -258,7 +269,12 @@ async function loadCamps(){
     const cur=steps.findIndex(x=>!x.ok);
     const js=sts[c.id],JL={stopped:"Cloud job: stopped",missing_footage:"Cloud job: footage missing",ready:"Cloud job: clip ready",error:"Cloud job: error"};
     const stp=js&&js.steps?`<div style="margin:6px 0">${js.steps.map(x=>`<span class="pill" title="${esc(x.n||"")}" style="${x.s==="ok"?"background:#d4f5dd;color:#0a6b2d":x.s==="warn"?"background:#ffe9a8;color:#6a4a00":x.s==="fail"?"background:#ffd5d5;color:#a00":"background:#eee;color:#666"}">${x.s==="ok"?"✓":x.s==="warn"?"⚠":x.s==="fail"?"✗":"…"} ${esc(x.k)}</span> `).join("")}</div>${js.steps.filter(x=>x.s==="fail"||x.s==="warn").map(x=>`<div class="mut" style="font-size:12px">${esc(x.k)}: ${esc(x.n||"")}</div>`).join("")}`:"";
-    const jobBox=js?stp+`<div class="mut" style="margin:6px 0"><span class="pill${js.state==="ready"?"":" w"}">${esc(JL[js.state]||js.state)}</span> ${esc(js.msg||"")} <span class="mut">· ${esc(js.at||"")}</span></div>`:"";
+    const rn=runs[c.id],live=rn&&["queued","in_progress","waiting","pending","requested"].includes(rn.status),rnNew=rn&&(!js||new Date(rn.created_at).getTime()>atMs(js.at)-60000);
+    let runBox="";
+    if(live&&rnNew)runBox=`<div class="jrun"><b>⏳ Cloud job ${rn.status==="in_progress"?"running":"waiting to start"}</b> <span class="mut">· started ${mins(new Date(rn.created_at).getTime())} min ago</span><div class="jbar"><i></i></div><div class="mut" style="font-size:12px">It is reading the rules, finding the footage and downloading it. This card updates by itself when it finishes (usually 1 to 10 minutes). <a href="${rn.html_url}" target="_blank" rel="noopener">See the run</a></div></div>`;
+    else if(rn&&rnNew&&rn.conclusion&&rn.conclusion!=="success")runBox=`<div class="jfail"><b>✗ Cloud job ${esc(rn.conclusion)}</b> <span class="mut">· ${mins(new Date(rn.updated_at).getTime())} min ago</span><div class="mut" style="font-size:12px">No result was saved. Tell Claude to re-run it. <a href="${rn.html_url}" target="_blank" rel="noopener">See the run</a></div></div>`;
+    else if(!js&&cap&&Date.now()-new Date(cap.capturedAt||0).getTime()<1728e5)runBox=`<div class="jrun"><b>… Waiting for the cloud job</b><div class="mut" style="font-size:12px">${rn?"The job finished but its result is still being published. Reload in a minute.":"Rules are in, but no cloud job has started for this campaign yet."}</div></div>`;
+    const jobBox=runBox+(js?stp+`<div class="mut" style="margin:6px 0"><span class="pill${js.state==="ready"?"":" w"}">${esc(JL[js.state]||js.state)}</span> ${esc(js.msg||"")} <span class="mut">· ${esc(js.at||"")}</span></div>`:"");
     const pills=steps.map((x,i)=>`<span class="pill" style="${x.ok?"background:#d4f5dd;color:#0a6b2d":i===cur?"background:#ffe9a8;color:#6a4a00":"background:#eee;color:#666"}">${x.ok?"✓":i+1} ${x.k}</span> `).join("");
     const next=stop?`<div class="mut">⛔ ${esc(stop)}</div>`:cur>=0?`<div style="border:2px solid #6c5ce7;border-radius:10px;padding:10px;margin:8px 0"><b>NEXT (step ${cur+1}): ${steps[cur].k}</b><div class="mut">${steps[cur].why}</div>${steps[cur].how?`<div style="margin:6px 0;font-size:14px">${steps[cur].how}</div>`:""}<div class="row">${steps[cur].btns}</div></div>`:"";
     const rulesBox=rl.length?`<details><summary class='mut'>Rules (${rl.length})</summary><ul>${rl.map(r=>"<li>"+esc(r)+"</li>").join("")}</ul></details>`:cap?`<details><summary class='mut'>Rules captured ✓ ${esc((cap.capturedAt||"").slice(0,10))} (tap to read)</summary><pre style='white-space:pre-wrap;font-size:12px'>${esc((cap.text||"").slice(0,6000))}</pre></details>`:"";
@@ -288,6 +304,9 @@ async function loadCamps(){
   }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
   try{const dl=await (await fetch("captures/_docs.json",{cache:"no-store"})).json();if(dl.length)h+=`<h3>Google Docs grabbed (${dl.length})</h3><ul>`+dl.map(x=>`<li>${esc(x.title)} <span class="mut">· ${x.chars} chars</span></li>`).join("")+"</ul>"}catch(e){}
   camps.innerHTML=h;
+  clearTimeout(runTimer);
+  if(Object.values(runs).some(x=>["queued","in_progress","waiting","pending","requested"].includes(x.status)))runTimer=setTimeout(async()=>{ // job is running: re-check every 90 s, full reload when it ends
+    const nr=await fetchRuns();window._cd=null;loadCamps()},90000);
   camps.querySelectorAll("[data-ct]").forEach(b=>b.onclick=()=>{try{sessionStorage.setItem("ctab",b.dataset.ct)}catch(e){}loadCamps()});
   camps.querySelectorAll("[data-up]").forEach(inp=>inp.onchange=async()=>{
     if(!WORKER_URL){toast("Helper not connected yet (Cloudflare Worker). Send it to Claude for now.");inp.value="";return}
