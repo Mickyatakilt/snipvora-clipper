@@ -94,15 +94,22 @@ export default {
         return put.ok ? out({ok: true}) : out({error: "github " + put.status}, 502);
       }
       // default: the dashboard Post button sends the clip item as JSON
-      // default route = the dashboard Post button. Strict: a real clip path, sane caption/time, and one post per 2 minutes.
+      // default route = the dashboard Post button. Strict: a clip that is on the dashboard list and not yet posted, sane caption/time, one post per 2 minutes.
       let item; try { item = JSON.parse(await req.text()); } catch (e) { return out({error: "bad json"}, 400); }
       const vid = String(item.video || item.file || "");
       if (!/^[A-Za-z0-9_\-./:]{1,300}\.mp4$/i.test(vid) || vid.includes("..")) return out({error: "bad video"}, 400);
+      // only clips that are on the dashboard list and not already posted (stops a stranger posting arbitrary or old videos)
+      const SITE = "https://mickyatakilt.github.io/snipvora-clipper/";
+      let listed, postedMap;
+      try { listed = await (await fetch(SITE + "clips.json", {headers: {"Cache-Control": "no-cache"}})).json(); postedMap = await (await fetch(SITE + "posted.json", {headers: {"Cache-Control": "no-cache"}})).json(); } catch (e) { return out({error: "could not read the clip list, try again"}, 503); }
+      if (!Array.isArray(listed) || !listed.some((c) => c.video === vid)) return out({error: "not a listed clip"}, 403);
+      if (postedMap && postedMap[vid]) return out({error: "already posted"}, 409);
       const cap = String(item.caption || "").slice(0, 2200);
       const when = String(item.when || "");
       if (when && (isNaN(Date.parse(when)) || Date.parse(when) > Date.now() + 60 * 864e5)) return out({error: "bad time"}, 400);
       const pr = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/post-clip.yml/runs?per_page=1`, {headers: gh(env)});
-      if (pr.ok) { const last = ((await pr.json()).workflow_runs || [])[0]; if (last && Date.now() - new Date(last.created_at).getTime() < 120000) return out({error: "a post started less than 2 minutes ago, wait"}, 429); }
+      if (!pr.ok) return out({error: "could not check recent posts, try again"}, 503);
+      { const last = ((await pr.json()).workflow_runs || [])[0]; if (last && Date.now() - new Date(last.created_at).getTime() < 120000) return out({error: "a post started less than 2 minutes ago, wait"}, 429); }
       const d = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/post-clip.yml/dispatches`, {method: "POST", headers: gh(env),
         body: JSON.stringify({ref: "main", inputs: {video: vid, caption: cap, when}})});
       return d.status === 204 ? out({ok: true}) : out({error: "github " + d.status}, 502);
