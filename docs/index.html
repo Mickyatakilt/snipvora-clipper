@@ -45,7 +45,7 @@ ul{margin:8px 0 0;padding-left:18px;font-size:13px;color:var(--mut)}#camps{displ
 <div id="list"></div>
 <div id="camps"></div>
 <div id="appr" style="display:none"></div>
-<p class="mut">Page v22 · deleted TikToks hide automatically (checked every 6 hours). Lady A clips: tap SHARE TO TIKTOK on the clip. Other clips: tap Download, then Copy caption in TikTok.</p>
+<p class="mut">Page v24 · deleted TikToks hide automatically (checked every 6 hours). Lady A clips: tap SHARE TO TIKTOK on the clip. Other clips: tap Download, then Copy caption in TikTok.</p>
 <script>
 const REPO="Mickyatakilt/snipvora-clipper";
 const done=(()=>{try{return JSON.parse(localStorage.getItem("done")||"{}")}catch(e){return{}}})();
@@ -60,13 +60,10 @@ function toast(t){const e=document.getElementById("toast");e.textContent=t;e.sty
 async function send(type,payload){
   // only "post" talks to the helper; delete is hidden on this device, edit is a note (neither is sent anywhere)
   if(type!=="post")return true;
-  let pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
-  if(!pc){pc=prompt("Helper passcode (asked once on this device)");if(!pc)return false;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
   try{
     const when=payload.when?new Date(payload.when).toISOString():"";
-    const r=await fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json","X-Passcode":pc},body:JSON.stringify({video:payload.video,caption:payload.description,when})});
-    if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}toast("Wrong passcode. Tap Post again.");return false}
-    if(!r.ok){toast("Post failed ("+r.status+"). Not sent.");return false}
+    const r=await fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({video:payload.video,caption:payload.description,when})});
+    if(!r.ok){const j=await r.json().catch(()=>({}));toast("Post not sent: "+(j.error||r.status));return false}
     toast("Sent ✓ posting started (takes about 2 minutes)");return true;
   }catch(e){toast("Could not reach the helper. Not sent.");return false}
 }
@@ -118,7 +115,7 @@ async function main(){
         ${pp?`<div class="row"><span class="badge g-hi">Posted ✓ ${new Date(pp.postedAt).toLocaleString()}</span> ${delBadge(pp)}</div>
         <div class="row">${pp.submitted?`<span class="badge g-hi">Submitted ✓</span>`:stage==="done"?`<span class="badge g-lo">Missed 30-min window</span>`:`<button class="ok" data-u>Upload link to campaign</button>`}<a class="btn" href="${pp.url}" target="_blank" rel="noopener">View on TikTok</a></div>
         ${pp.submitted?`<div class="mut">Submitted to the campaign. Keep the TikTok post live for 30 days.</div>`:stage==="done"?`<div class="mut">Not submitted in time. Keep the TikTok post live for 30 days anyway.</div>`:`<div class="mut">Submit within 30 minutes of posting. Tap "Upload link": it copies your TikTok link and opens the campaign. Then tap Submit clip and paste.</div>`}`:""}
-        ${c.note?`<div class="mut">${isLady(c)?"Tap POST TO TIKTOK. It runs your Lady A Shortcut: caption copied, pick TikTok, Video, add the official sound, paste, Post. Page v22":"⚠ "+esc(c.note)}</div>`:""}
+        ${c.note?`<div class="mut">${isLady(c)?"Tap POST TO TIKTOK. It runs your Lady A Shortcut: caption copied, pick TikTok, Video, add the official sound, paste, Post. Page v24":"⚠ "+esc(c.note)}</div>`:""}
         <div class="row">${pp?"":isLady(c)?`<a class="btn ok" href="shortcuts://run-shortcut?name=Lady%20A">POST TO TIKTOK</a>`:c.note?"":`<button class="ok" data-p>Post</button>`}<button class="edit" data-e>Edit</button><button class="del" data-x>Delete</button>
           ${isLady(c)&&!pp?"":`<a class="btn" href="${c.video}" download>Download</a><button data-c>${pp?"Copy TikTok link":"Copy caption"}</button>`}</div>
         <div class="mut" data-s>${done[id]?"Posted ✓":""}</div>`;
@@ -291,7 +288,8 @@ async function loadCamps(){
     if(live&&rnNew)runBox=`<div class="jrun"><b>⏳ Cloud job ${rn.status==="in_progress"?"running":"waiting to start"}</b> <span class="mut">· started ${mins(new Date(rn.created_at).getTime())} min ago</span><div class="jbar"><i></i></div><div class="mut" style="font-size:12px">It is reading the rules, finding the footage and downloading it. This card updates by itself when it finishes (usually 1 to 10 minutes). <a href="${rn.html_url}" target="_blank" rel="noopener">See the run</a></div></div>`;
     else if(rn&&rnNew&&rn.conclusion&&rn.conclusion!=="success")runBox=`<div class="jfail"><b>✗ Cloud job ${esc(rn.conclusion)}</b> <span class="mut">· ${mins(new Date(rn.updated_at).getTime())} min ago</span><div class="mut" style="font-size:12px">No result was saved. Tell Claude to re-run it. <a href="${rn.html_url}" target="_blank" rel="noopener">See the run</a></div></div>`;
     else if(!js&&cap&&Date.now()-new Date(cap.capturedAt||0).getTime()<1728e5)runBox=`<div class="jrun"><b>… Waiting for the cloud job</b><div class="mut" style="font-size:12px">${rn?"The job finished but its result is still being published. Reload in a minute.":"Rules are in, but no cloud job has started for this campaign yet."}</div></div>`;
-    const ctl=cap?`<div class="row" style="margin:6px 0"><button class="btn" data-job="refresh">↻ Refresh</button>${live&&rnNew?`<button class="del" data-job="stop" data-id="${c.id}">■ Stop job</button>`:`<button class="ok" data-job="start" data-id="${c.id}">▶ Run job again</button>`}</div>`:"";
+    const att=fl.filter(n=>/\.(mp4|mov|m4v|webm)$/i.test(n)),attBox=cap?`<div class="card" style="margin:6px 0;border-style:dashed"><b>📎 Attached videos</b> <span class="mut">(${att.length})</span>${att.length?`<div class="mut" style="font-size:12px">${att.map(esc).join("<br>")}</div>`:`<div class="mut" style="font-size:12px">None yet. Download the footage from the campaign's link, then attach it here. Max 100 MB per file.</div>`}<div class="row"><label class="btn ok" style="cursor:pointer">📎 Attach videos<input type="file" multiple accept="video/*" data-up="${c.id}" style="display:none"></label></div></div>`:"";
+    const ctl=attBox+(cap?`<div class="row" style="margin:6px 0"><button class="btn" data-job="refresh">↻ Refresh</button>${live&&rnNew?`<button class="del" data-job="stop" data-id="${c.id}">■ Stop job</button>`:`<button class="ok" data-job="start" data-id="${c.id}">▶ Run job again</button>`}</div>`:"");
     const jobBox=runBox+ctl+(js?stp+`<div class="mut" style="margin:6px 0"><span class="pill${js.state==="ready"?"":" w"}">${esc(JL[js.state]||js.state)}</span> ${esc(js.msg||"")} <span class="mut">· ${esc(js.at||"")}</span></div>`:"");
     const pills=steps.map((x,i)=>`<span class="pill" style="${x.ok?"background:#d4f5dd;color:#0a6b2d":i===cur?"background:#ffe9a8;color:#6a4a00":"background:#eee;color:#666"}">${x.ok?"✓":i+1} ${x.k}</span> `).join("");
     const next=stop?`<div class="mut">⛔ ${esc(stop)}</div>`:cur>=0?`<div style="border:2px solid #6c5ce7;border-radius:10px;padding:10px;margin:8px 0"><b>NEXT (step ${cur+1}): ${steps[cur].k}</b><div class="mut">${steps[cur].why}</div>${steps[cur].how?`<div style="margin:6px 0;font-size:14px">${steps[cur].how}</div>`:""}<div class="row">${steps[cur].btns}</div></div>`:"";
@@ -328,12 +326,13 @@ async function loadCamps(){
   camps.querySelectorAll("[data-ct]").forEach(b=>b.onclick=()=>{try{sessionStorage.setItem("ctab",b.dataset.ct)}catch(e){}loadCamps()});
   camps.querySelectorAll("[data-up]").forEach(inp=>inp.onchange=async()=>{
     if(!WORKER_URL){toast("Helper not connected yet (Cloudflare Worker). Send it to Claude for now.");inp.value="";return}
-    let pc="";try{pc=localStorage.getItem("snip_pc")||""}catch(e){}
-    if(!pc){pc=prompt("Passcode");if(!pc)return;try{localStorage.setItem("snip_pc",pc)}catch(e){}}
-    for(const f of inp.files){toast("Uploading "+f.name+"...");
-      try{const r=await fetch(WORKER_URL.replace(/\/$/,"")+"/upload?campaign="+inp.dataset.up+"&name="+encodeURIComponent(f.name),{method:"POST",headers:{"X-Passcode":pc,"Content-Type":f.type||"application/octet-stream"},body:f});
-        if(r.status===401){try{localStorage.removeItem("snip_pc")}catch(e){}throw "wrong passcode"}if(!r.ok)throw r.status;toast("Uploaded ✓ "+f.name)}catch(e){toast("Upload failed: "+e);break}}
-    inp.value=""});
+    let okN=0;
+    for(const f of inp.files){toast("Uploading "+f.name+" ("+Math.round(f.size/1048576)+" MB)... keep this page open");
+      try{const r=await fetch(WORKER_URL.replace(/\/$/,"")+"/upload?campaign="+inp.dataset.up+"&name="+encodeURIComponent(f.name),{method:"POST",headers:{"Content-Type":f.type||"application/octet-stream"},body:f});
+        const j=await r.json().catch(()=>({}));if(!r.ok)throw (j.error||r.status);okN++;toast("Attached ✓ "+f.name)}catch(e){toast("Upload failed: "+e);break}}
+    inp.value="";
+    if(okN){try{await fetch(WORKER_URL.replace(/\/$/,"")+"/job",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({campaign:inp.dataset.up,action:"start"})});toast("Attached "+okN+" file(s) ✓ cloud job started")}catch(e){}}
+    window._cd=null;loadCamps()});
   camps.querySelectorAll("[data-j]").forEach(b=>b.onclick=async()=>{const id=b.dataset.j,m=(window._picks||{})[id];
     if(!m)return;b.disabled=true;b.textContent="Saving...";
     joined[id]=m;try{localStorage.setItem("joined",JSON.stringify(joined))}catch(e){}

@@ -1,4 +1,4 @@
-// Snipvora helper (Cloudflare Worker). Secrets (set in Cloudflare, never in this repo): GH_TOKEN, PASSCODE.
+// Snipvora helper (Cloudflare Worker). Secret (set in Cloudflare, never in this repo): GH_TOKEN. No passcode: every route is limited by origin, real ids, size/format and cool-downs.
 // POST /upload?campaign=<id>&name=<file>  raw file body  -> stored as an asset on GitHub release "campaign-inputs"
 // POST /rules {campaign,title,text} (no passcode, locked down) -> saves captured campaign rules into the repo for the dashboard
 // POST /post  {video, caption?, when?}     -> starts the post-clip workflow
@@ -29,13 +29,22 @@ export default {
       return out({ok: r.ok, github: r.status, hasToken: !!env.GH_TOKEN}, r.ok ? 200 : 503);
     }
     if (req.method !== "POST") return out({error: "POST only"}, 405);
-    // /rules needs no passcode but is locked down: only our own pages, a real campaign id, and a rules-grab payload. /upload and /post still need PASSCODE.
-    if (url.pathname !== "/rules" && url.pathname !== "/job" && (!env.PASSCODE || req.headers.get("X-Passcode") !== env.PASSCODE)) return out({error: "wrong passcode"}, 401);
+    // No passcode anywhere (Mike's decision). Every route is locked down instead: own pages only, real ids, size/format limits, cool-downs.
+    if (!ORIGINS.includes(req.headers.get("Origin"))) return out({error: "origin not allowed"}, 403);
     try {
       if (url.pathname === "/upload") {
-        const camp = (url.searchParams.get("campaign") || "misc").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
+        // strict: real campaign (rules captured), video/photo files, 100 MB max, 10 files per campaign
+        const camp = (url.searchParams.get("campaign") || "").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
         const name = (url.searchParams.get("name") || "file").replace(/[^a-z0-9._-]/gi, "_").slice(0, 80);
+        if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(camp)) return out({error: "bad campaign id"}, 400);
+        if (!/\.(mp4|mov|m4v|webm|jpe?g|png|webp)$/i.test(name)) return out({error: "only video or photo files"}, 400);
+        const len = Number(req.headers.get("Content-Length") || 0);
+        if (!len) return out({error: "no file size"}, 411);
+        if (len > 100 * 1024 * 1024) return out({error: "file bigger than 100 MB"}, 413);
+        const realC = await fetch(`https://api.github.com/repos/${REPO}/contents/docs/captures/${camp}.json`, {headers: gh(env)});
+        if (!realC.ok) return out({error: "unknown campaign"}, 404);
         const rel = await release(env);
+        if (((rel.assets || []).filter((a) => a.name.startsWith(camp + "__")).length) >= 10) return out({error: "10 files already attached for this campaign"}, 429);
         const up = await fetch(`https://uploads.github.com/repos/${REPO}/releases/${rel.id}/assets?name=${camp}__${Date.now()}__${name}`,
           {method: "POST", headers: gh(env, {"Content-Type": req.headers.get("Content-Type") || "application/octet-stream", "Content-Length": req.headers.get("Content-Length") || ""}), body: req.body});
         if (!up.ok) return out({error: "github " + up.status}, 502);
@@ -85,9 +94,17 @@ export default {
         return put.ok ? out({ok: true}) : out({error: "github " + put.status}, 502);
       }
       // default: the dashboard Post button sends the clip item as JSON
-      const item = await req.json();
+      // default route = the dashboard Post button. Strict: a real clip path, sane caption/time, and one post per 2 minutes.
+      let item; try { item = JSON.parse(await req.text()); } catch (e) { return out({error: "bad json"}, 400); }
+      const vid = String(item.video || item.file || "");
+      if (!/^[A-Za-z0-9_\-./:]{1,300}\.mp4$/i.test(vid) || vid.includes("..")) return out({error: "bad video"}, 400);
+      const cap = String(item.caption || "").slice(0, 2200);
+      const when = String(item.when || "");
+      if (when && (isNaN(Date.parse(when)) || Date.parse(when) > Date.now() + 60 * 864e5)) return out({error: "bad time"}, 400);
+      const pr = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/post-clip.yml/runs?per_page=1`, {headers: gh(env)});
+      if (pr.ok) { const last = ((await pr.json()).workflow_runs || [])[0]; if (last && Date.now() - new Date(last.created_at).getTime() < 120000) return out({error: "a post started less than 2 minutes ago, wait"}, 429); }
       const d = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/post-clip.yml/dispatches`, {method: "POST", headers: gh(env),
-        body: JSON.stringify({ref: "main", inputs: {video: item.video || item.file || "", caption: item.caption || "", when: item.when || ""}})});
+        body: JSON.stringify({ref: "main", inputs: {video: vid, caption: cap, when}})});
       return d.status === 204 ? out({ok: true}) : out({error: "github " + d.status}, 502);
     } catch (e) {
       return out({error: String(e).slice(0, 120)}, 500);
