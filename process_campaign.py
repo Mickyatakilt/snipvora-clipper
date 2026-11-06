@@ -46,7 +46,7 @@ def footage_links(t):
         u = u.rstrip(".,;")
         if re.search(r"docs\.google\.com/(document|spreadsheets|presentation)", u):
             continue  # a brief, not footage
-        if re.search(r"\.(mp4|mov|m4v|webm)(\?|$)|dropbox\.com|drive\.google\.com|picflow|mediasilo|frame\.io|wetransfer|footage\.", u, re.I) and u not in out:
+        if re.search(r"\.(mp4|mov|m4v|webm)(\?|$)|dropbox\.com|drive\.google\.com|picflow|mediasilo|frame\.io|(^|//)f\.io/|wetransfer|footage\.", u, re.I) and u not in out:
             out.append(u)
     return out
 
@@ -66,12 +66,27 @@ def fetch(u, dest, limit=MAX_MB * 1024 * 1024):
     return ctype, n
 
 
+def uploaded_footage(cid, src):
+    """Videos you attached on the dashboard live on the release 'campaign-inputs' as <campaign>__<time>__<name>. Download them into src."""
+    os.makedirs(src, exist_ok=True)
+    try:
+        subprocess.run(["gh", "release", "download", "campaign-inputs", "--pattern", f"{cid}__*", "--dir", src, "--clobber"], capture_output=True, text=True, timeout=600)
+    except Exception as e:
+        return False, [f"attached videos: {type(e).__name__}"]
+    vids = [f for f in glob.glob(os.path.join(src, "*")) if f.lower().endswith(VID)]
+    if vids:
+        return True, [f"attached videos: {len(vids)} file(s) from the dashboard"]
+    return False, ["attached videos: none"]
+
+
 def get_footage(links, src):
     """Try each link; returns (ok, notes). Only direct video, Dropbox and Google Drive FILE links can be fetched without a login."""
     os.makedirs(src, exist_ok=True); notes = []
     for u in links:
         host = urllib.parse.urlparse(u).netloc.lower(); dest = os.path.join(src, "dl.bin")
         try:
+            if host in ("f.io", "frame.io", "app.frame.io", "next.frame.io"):
+                notes.append(f"{u}: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos)"); continue
             if "picflow" in host:
                 notes.append(f"{u}: photo gallery, the cloud cannot read it"); continue
             if "dropbox.com" in host:
@@ -150,7 +165,10 @@ def main():
     done.append(("Fit check", "warn" if warn else "ok", "; ".join(warn) or "no blockers found"))
     links = footage_links(text)
     src = os.path.join(OUT_ROOT, "_src", cid[:8]); shutil.rmtree(src, ignore_errors=True)
-    ok, notes = get_footage(links, src) if links else (False, ["no footage link found in the rules"])
+    ok, notes = uploaded_footage(cid, src)  # videos you attached win over links
+    if not ok:
+        ok, notes = (get_footage(links, src) if links else (False, ["no footage link found in the rules"]))
+        notes = ["attached videos: none"] + notes
     done.append(("Footage link found", "ok" if links else "fail", f"{len(links)} link(s)" if links else "none in the rules"))
     if not ok:
         done.append(("Footage downloaded", "fail", " | ".join(notes)))
