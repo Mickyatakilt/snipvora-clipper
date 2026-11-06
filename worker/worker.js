@@ -39,8 +39,9 @@ export default {
       }
       if (url.pathname === "/rules") {  // rules grabber bookmark: saves the captured page text as docs/captures/<campaign>.json
         if (!ORIGINS.includes(req.headers.get("Origin"))) return out({error: "origin not allowed"}, 403);
-        if (Number(req.headers.get("Content-Length") || 0) > 200000) return out({error: "too big"}, 413);
-        const b = await req.json();
+        const raw = await req.text();
+        if (raw.length > 200000) return out({error: "too big"}, 413);
+        let b; try { b = JSON.parse(raw); } catch (e) { return out({error: "bad json"}, 400); }
         const camp = String(b.campaign || "").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
         if (!/^([jx]-)?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$|^doc-[a-z0-9-]{10,40}$/i.test(camp)) return out({error: "bad campaign id"}, 400);
         const txt = String(b.text || "");
