@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-07 14:13",
- "listed": 79,
- "kept": 43,
+ "scanned_at": "2026-11-07 18:59",
+ "listed": 77,
+ "kept": 42,
  "top": [
   {
    "id": "c0c37381-e244-4643-98bd-edbff4bc1465",
@@ -13,7 +13,7 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1287.1799999999998,
+   "budget_left": 1282.58,
    "creators": 1092,
    "platforms": [
     "instagram",
@@ -41,37 +41,37 @@
    "new": false
   },
   {
-   "id": "4bb64122-7cce-46a3-960a-e2847754bf1a",
-   "title": "LTK - Creator Earnings Clipping",
+   "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
+   "title": "Call of Duty - Warzone Season 1 Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 46.4,
+   "score": 45.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7895.58,
-   "creators": 27,
+   "budget_left": 39940.17,
+   "creators": 1,
    "platforms": [
     "instagram",
     "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/4bb64122-7cce-46a3-960a-e2847754bf1a",
-   "description": "Post clips from the official LTK content folder.\nGoal: show creators that people build real businesses on LTK.\nPost on TikTok and Instagram Reels.",
+   "url": "https://contentrewards.com/c/campaigns/db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
+   "description": "Clip the Warzone Season 1 Trailer and the Developer Briefing.\nDownload both from the official content link below.\nPost to TikTok and/or Instagram Reels.\n",
    "flags": [],
-   "brief": "Post clips from the official LTK content folder.\\nGoal: show creators that people build real businesses on LTK.\\nPost on TikTok and Instagram Reels.",
+   "brief": "Clip the Warzone Season 1 Trailer and the Developer Briefing.\\nDownload both from the official content link below.\\nPost to TikTok and/or Instagram Reels.\\n",
    "hidden_counts": {
-    "rules": 2,
+    "rules": 0,
     "requirements": 0,
-    "references": 2
+    "references": 1
    },
    "tiktok": {
     "rate_per_1k": 2.0,
-    "min_payout": 3.0,
-    "max_payout": 600.0,
-    "views_to_first_payout": 1500
+    "min_payout": 5.0,
+    "max_payout": 1000.0,
+    "views_to_first_payout": 2500
    },
    "new": false
   },
@@ -80,14 +80,14 @@
    "title": "Huss Valley [Fortnite Map]",
    "brand": "BloxClips",
    "category": "Fortnite",
-   "score": 45.9,
+   "score": 45.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4614.53,
-   "creators": 14,
+   "budget_left": 4462.16,
+   "creators": 15,
    "platforms": [
     "instagram",
     "tiktok",
@@ -112,53 +112,53 @@
    "new": false
   },
   {
-   "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
-   "title": "Call of Duty - Warzone Season 1 Clipping",
+   "id": "4bb64122-7cce-46a3-960a-e2847754bf1a",
+   "title": "LTK - Creator Earnings Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 45.8,
+   "score": 45.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 40000,
-   "creators": 0,
+   "budget_left": 7129.74,
+   "creators": 81,
    "platforms": [
     "instagram",
     "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
-   "description": "Clip the Warzone Season 1 Trailer and the Developer Briefing.\nDownload both from the official content link below.\nPost to TikTok and/or Instagram Reels.\n",
+   "url": "https://contentrewards.com/c/campaigns/4bb64122-7cce-46a3-960a-e2847754bf1a",
+   "description": "Post clips from the official LTK content folder.\nGoal: show creators that people build real businesses on LTK.\nPost on TikTok and Instagram Reels.",
    "flags": [],
-   "brief": "Clip the Warzone Season 1 Trailer and the Developer Briefing.\\nDownload both from the official content link below.\\nPost to TikTok and/or Instagram Reels.\\n",
+   "brief": "Post clips from the official LTK content folder.\\nGoal: show creators that people build real businesses on LTK.\\nPost on TikTok and Instagram Reels.",
    "hidden_counts": {
-    "rules": 0,
+    "rules": 2,
     "requirements": 0,
-    "references": 1
+    "references": 2
    },
    "tiktok": {
     "rate_per_1k": 2.0,
-    "min_payout": 5.0,
-    "max_payout": 1000.0,
-    "views_to_first_payout": 2500
+    "min_payout": 3.0,
+    "max_payout": 600.0,
+    "views_to_first_payout": 1500
    },
-   "new": true
+   "new": false
   },
   {
    "id": "3f22768b-de32-4123-98f6-b3a6e548ea77",
    "title": "[UK] Blizzard - World of Warcraft Forever",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 45.2,
+   "score": 45.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.5,
    "budget_left": 7972.55,
-   "creators": 48,
+   "creators": 57,
    "platforms": [
     "tiktok",
     "youtube"
@@ -221,7 +221,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8299.31,
+   "budget_left": 8288.16,
    "creators": 26,
    "platforms": [
     "instagram",
@@ -246,17 +246,51 @@
    "new": false
   },
   {
-   "id": "d940fd39-66b6-418f-b804-f489d8eb5883",
-   "title": "Trevor Milton X Distributed",
-   "brand": "Distributed",
+   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "title": "Mini Brands \u2014 Ulta Beauty Clipping",
+   "brand": "Clip Influence",
    "category": "Entertainment",
-   "score": 42.8,
+   "score": 44.2,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2915.33,
-   "creators": 62,
+   "budget_left": 7410.389999999999,
+   "creators": 45,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "description": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "flags": [],
+   "brief": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "d940fd39-66b6-418f-b804-f489d8eb5883",
+   "title": "Trevor Milton X Distributed",
+   "brand": "Distributed",
+   "category": "Entertainment",
+   "score": 42.7,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 2720.99,
+   "creators": 65,
    "platforms": [
     "instagram",
     "tiktok",
@@ -285,14 +319,14 @@
    "title": "F1 ASTON MARTIN x COINBASE ",
    "brand": "ClipHaus",
    "category": "Sports",
-   "score": 42.1,
+   "score": 41.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 13231.58,
-   "creators": 30,
+   "budget_left": 12271.47,
+   "creators": 115,
    "platforms": [
     "instagram",
     "tiktok",
@@ -321,14 +355,14 @@
    "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.2,
+   "score": 40.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 8392.849999999999,
-   "creators": 208,
+   "budget_left": 7404.18,
+   "creators": 214,
    "platforms": [
     "instagram",
     "tiktok"
@@ -356,14 +390,14 @@
    "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.1,
+   "score": 39.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 3128.629999999999,
-   "creators": 239,
+   "budget_left": 2330.8199999999997,
+   "creators": 256,
    "platforms": [
     "instagram",
     "tiktok",
@@ -388,53 +422,17 @@
    "new": false
   },
   {
-   "id": "3fef7535-942c-4aee-b050-ea8fc5be25ab",
-   "title": "LULA GRANJI - The Packed Lunch",
-   "brand": "ClipHaus",
-   "category": "Cartoons & Animation",
-   "score": 39.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 7628.77,
-   "creators": 181,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/3fef7535-942c-4aee-b050-ea8fc5be25ab",
-   "description": "\ud83c\udfac Clip funny, entertaining, and musical moments from The Packed Lunch Animated Series! Create engaging edits featuring hilarious characters, catchy songs, and unexpected moments to drive viewers to the full episodes on YouTube.",
-   "flags": [],
-   "brief": "\ud83c\udfac Clip funny, entertaining, and musical moments from The Packed Lunch Animated Series! Create engaging edits featuring hilarious characters, catchy songs, and unexpected moments to drive viewers to the full episodes on YouTube.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 2.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1333
-   },
-   "new": false
-  },
-  {
    "id": "e36819b7-6b11-4ff3-98f8-43db273d13a3",
    "title": "Extra 300$ | Turkish IRL VLOG in America ",
    "brand": "Outis Clips",
    "category": "Kick",
-   "score": 39.6,
+   "score": 39.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1015.8200000000002,
-   "creators": 44,
+   "budget_left": 981.5300000000002,
+   "creators": 46,
    "platforms": [
     "instagram",
     "tiktok",
@@ -459,37 +457,37 @@
    "new": false
   },
   {
-   "id": "fba5eb2b-624a-41d6-a6c7-4519e2877e2c",
-   "title": "WorldsFirstPodcast Clipping",
-   "brand": "Clip Farm",
+   "id": "705f6e21-38af-408c-9e55-c77e4611bf09",
+   "title": "Let Him Mansplain Podcast Clipping",
+   "brand": "ClipLaunch",
    "category": "Podcasts",
    "score": 39.4,
    "why": [
     "clippable source",
     "new"
    ],
-   "rate_per_1k": 1.5,
-   "budget_left": 2346.1800000000003,
-   "creators": 75,
+   "rate_per_1k": 1.25,
+   "budget_left": 9922.18,
+   "creators": 12,
    "platforms": [
     "instagram",
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/fba5eb2b-624a-41d6-a6c7-4519e2877e2c",
-   "description": "The World's First Podcast is Erin and Sara Foster. Two sisters, talking about real life. Clip the best moments. You earn money for every view.",
+   "url": "https://contentrewards.com/c/campaigns/705f6e21-38af-408c-9e55-c77e4611bf09",
+   "description": "Clip for Let Him Mansplain, the weekly podcast asking where all the good men went! Host Lily Kate gets men to open up about dating and marriage from a Christian point of view. The goal is to help women find good men! Clip content that grows",
    "flags": [],
-   "brief": "The World's First Podcast is Erin and Sara Foster. Two sisters, talking about real life. Clip the best moments. You earn money for every view.",
+   "brief": "Clip for Let Him Mansplain, the weekly podcast asking where all the good men went! Host Lily Kate gets men to open up about dating and marriage from a Christian point of view. The goal is to help women find good men! Clip content that grows awareness and turns viewers into long-term fans!",
    "hidden_counts": {
-    "rules": 3,
-    "requirements": 0,
-    "references": 1
+    "rules": 0,
+    "requirements": 11,
+    "references": 3
    },
    "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 3.0,
-    "max_payout": 250.0,
+    "rate_per_1k": 1.25,
+    "min_payout": 2.5,
+    "max_payout": 300.0,
     "views_to_first_payout": 2000
    },
    "new": true
@@ -504,7 +502,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 6304.57,
+   "budget_left": 6533,
    "creators": 31,
    "platforms": [
     "facebook",
@@ -564,8 +562,8 @@
     "requirements": 1,
     "references": 3
    },
-   "listed": false,
-   "budget_left": null
+   "listed": true,
+   "budget_left": 7410.389999999999
   },
   {
    "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
@@ -595,7 +593,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 4614.53
+   "budget_left": 4462.16
   },
   {
    "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
@@ -605,7 +603,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1440.87
+   "budget_left": 1439.72
   }
  ]
 }
