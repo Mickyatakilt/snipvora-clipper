@@ -1,0 +1,38 @@
+{
+ "id": "d940fd39-66b6-418f-b804-f489d8eb5883",
+ "title": "Trevor Milton X Distributed",
+ "rules_hash": "343b3c7bdb51",
+ "state": "stopped",
+ "msg": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-08T11:26:10.340Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-08 11:26:43 UTC"
+}
