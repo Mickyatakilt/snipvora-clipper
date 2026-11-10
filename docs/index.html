@@ -255,7 +255,9 @@ async function loadCamps(){
     runs=await fetchRuns();
     window._cd={mine,watch,caps,files,sts,runs};
   }
-  const ST=["Needs you","Ready","Not Eligible","Done"],groups={};ST.forEach(k=>groups[k]=[]);let hidden=[];
+  let pst={};try{pst=await (await fetch("posted.json",{cache:"no-store"})).json()}catch(e){}
+  const isLive=c=>Object.values(pst).some(p=>p&&!p.deleted&&String(p.campaignUrl||"").includes(c.id));
+  const ST=["Needs you","Ready","Live","Not Eligible","Done"],groups={};ST.forEach(k=>groups[k]=[]);let hidden=[];
   const cp=(t,b)=>{try{navigator.clipboard.writeText(t);toast("Copied ✓")}catch(x){toast("Copy failed")}};
   for(const c of mine){const rl=c.rules||[],w=watch[c.id]||{},cap=caps[c.id],fl=files[c.id]||[];
     const vid=fl.some(n=>/\.(mp4|mov|webm|m4v)$/i.test(n)),img=fl.some(n=>/\.(png|jpe?g|webp|heic)$/i.test(n));
@@ -263,8 +265,8 @@ async function loadCamps(){
     const an=analyze((cap&&cap.text)||"",rl.join("\n"));
     const ending=w.budget_left!=null&&w.budget_left<200;
     const stop=c.ineligible||(an.stop[0]||"");
-    const wired=c.status==="active";
-    let st;if(stop)st="Not Eligible";else if(ending){hidden.push(c);continue}else if(wired)st="Ready";else st="Needs you";
+    const wired=/^active/.test(c.status||"");
+    let st;if(stop)st="Not Eligible";else if(ending){hidden.push(c);continue}else if(wired)st=isLive(c)?"Live":"Ready";else st="Needs you";
     const links=[...new Set([...(c.links||[]),...an.links])].slice(0,8);
     const steps=[
       {k:"Grab the rules",ok:hasRules,
