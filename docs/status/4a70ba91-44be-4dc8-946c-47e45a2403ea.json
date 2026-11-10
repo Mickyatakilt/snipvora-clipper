@@ -1,0 +1,38 @@
+{
+ "id": "4a70ba91-44be-4dc8-946c-47e45a2403ea",
+ "title": "Jo Koy: Blue in the Face (Variety Interview)",
+ "rules_hash": "2b97b8bdbe84",
+ "state": "stopped",
+ "msg": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia; first payout only after about 1250 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-10T08:24:01.917Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia; first payout only after about 1250 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-10 08:37:46 UTC"
+}

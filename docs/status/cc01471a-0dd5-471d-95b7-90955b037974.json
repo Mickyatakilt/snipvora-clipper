@@ -1,0 +1,38 @@
+{
+ "id": "cc01471a-0dd5-471d-95b7-90955b037974",
+ "title": "$20,000+ Social Media Justice Clipping Campaign",
+ "rules_hash": "d7f12a6472e5",
+ "state": "stopped",
+ "msg": "first payout only after about 5000 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-10T08:23:39.438Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 5000 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-10 08:37:48 UTC"
+}

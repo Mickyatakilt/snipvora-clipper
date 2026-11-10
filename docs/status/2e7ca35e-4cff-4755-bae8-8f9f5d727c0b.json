@@ -1,0 +1,42 @@
+{
+ "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
+ "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
+ "rules_hash": "1872b9978dec",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://drive.google.com/drive/folders/15ENXF4Vvs9PTrgWxCEuf5-YHe7DHH56Y?usp=sharing: Google Drive folder, needs a login",
+ "links": [
+  "https://drive.google.com/drive/folders/15ENXF4Vvs9PTrgWxCEuf5-YHe7DHH56Y?usp=sharing"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid",
+  "mentions a follower minimum"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-10T08:23:22.682Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid; mentions a follower minimum"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "1 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://drive.google.com/drive/folders/15ENXF4Vvs9PTrgWxCEuf5-YHe7DHH56Y?usp=sharing: Google Drive folder, needs a login"
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-10 08:37:45 UTC"
+}

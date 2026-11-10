@@ -1,0 +1,38 @@
+{
+ "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
+ "title": "Call of Duty - Warzone Season 1 Clipping",
+ "rules_hash": "9e5cb83ce4fd",
+ "state": "stopped",
+ "msg": "first payout only after about 2500 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-10T08:23:48.931Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 2500 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-10 08:37:48 UTC"
+}

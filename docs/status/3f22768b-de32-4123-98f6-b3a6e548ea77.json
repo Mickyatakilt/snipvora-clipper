@@ -1,0 +1,42 @@
+{
+ "id": "3f22768b-de32-4123-98f6-b3a6e548ea77",
+ "title": "[UK] Blizzard - World of Warcraft Forever",
+ "rules_hash": "dabd17af2eaa",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://f.io/Qt7AFTMz: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos) | https://f.io/8uBzkEqf: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos)",
+ "links": [
+  "https://f.io/Qt7AFTMz",
+  "https://f.io/8uBzkEqf"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-10T08:24:12.159Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "2 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://f.io/Qt7AFTMz: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos) | https://f.io/8uBzkEqf: Frame.io needs you to download it; attach "
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-10 08:37:47 UTC"
+}
