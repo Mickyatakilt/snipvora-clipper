@@ -1,0 +1,38 @@
+{
+ "id": "c7a8e7c2-6989-4361-914f-f9571578a9b9",
+ "title": "F1 ASTON MARTIN x COINBASE",
+ "rules_hash": "a8c5343175c9",
+ "state": "stopped",
+ "msg": "first payout only after about 1333 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-10T08:23:13.107Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 1333 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-10 08:28:07 UTC"
+}
