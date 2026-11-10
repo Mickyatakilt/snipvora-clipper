@@ -318,6 +318,15 @@ async function loadCamps(){
     for(const t of picks){const v=(t.tiktok||{}).views_to_first_payout;const id="j"+t.id;
       h+=`<div class="card"><b>${esc(t.title)}</b><div class="mut">$${(t.tiktok||{}).rate_per_1k||t.rate_per_1k}/1k · pays after ~${v} views (${v<=1500?"realistic: a few clips":"stretch: about "+Math.ceil(v/300)+" clips at 300 views"}) · $${Math.round(t.budget_left).toLocaleString()} left · ${t.creators} creators</div>
       <div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">1. Join</a><button class="ok" data-j="${t.id}">2. I joined</button></div></div>`}
+    const pickIds=new Set(picks.map(p=>p.id));
+    const maybe=(d.top||[]).filter(t=>!have.has(t.id)&&!pickIds.has(t.id)&&!t.requires_application&&t.budget_left>=800).slice(0,8);
+    if(maybe.length){h+="<h3>Worth a look (the strict filter hides these)</h3><div class='mut'>Not recommended blindly: check the rules after joining, leave if they do not fit.</div>";
+      for(const t of maybe){const tt=t.tiktok||{},v=tt.views_to_first_payout,why=[];
+        if(v==null)why.push("payout threshold not visible");else if(v>1000)why.push("first payout ~"+v+" views");
+        if(t.creators>150)why.push(t.creators+" creators");
+        if(bad.test(t.title+" "+(t.description||"").slice(0,200)))why.push("title/description matches a skip word");
+        if((t.flags||[]).some(f=>HARD.includes(f)))why.push("has a hard flag");
+        h+=`<div class="card"><b>${esc(t.title)}</b><div class="mut">$${tt.rate_per_1k||t.rate_per_1k||"?"}/1k · $${Math.round(t.budget_left).toLocaleString()} left · ${t.creators} creators</div><div class="mut" style="color:#a15c00">Why hidden: ${esc(why.join("; ")||"filtered")}</div><div class="row"><a class="btn" href="${t.url}" target="_blank" rel="noopener">Open campaign page</a></div></div>`}}
     h+=`<div class="mut">Scout last ran: ${esc(d.scanned_at||"?")}</div>`;
   }catch(e){h+="<div class='card mut'>Could not load today's picks.</div>"}
   try{const dl=await (await fetch("captures/_docs.json",{cache:"no-store"})).json();if(dl.length)h+=`<h3>Google Docs grabbed (${dl.length})</h3><ul>`+dl.map(x=>`<li>${esc(x.title)} <span class="mut">· ${x.chars} chars</span></li>`).join("")+"</ul>"}catch(e){}
