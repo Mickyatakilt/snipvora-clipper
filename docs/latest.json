@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-10 15:40",
- "listed": 74,
- "kept": 49,
+ "scanned_at": "2026-11-10 20:57",
+ "listed": 80,
+ "kept": 51,
  "top": [
   {
    "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
@@ -42,7 +42,7 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1907.46,
+   "budget_left": 1822.1599999999999,
    "creators": 1217,
    "platforms": [
     "instagram",
@@ -74,14 +74,14 @@
    "title": "[UK] Blizzard - World of Warcraft Forever",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 59.9,
+   "score": 59.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 4,
-   "budget_left": 7944.78,
-   "creators": 80,
+   "budget_left": 7942.39,
+   "creators": 105,
    "platforms": [
     "tiktok",
     "youtube"
@@ -99,6 +99,42 @@
    "new": false
   },
   {
+   "id": "8663de46-a5c9-4ab8-9368-7c462a78aa4e",
+   "title": "Perplexity Rohith Kolluri x Ecomm Cowboy",
+   "brand": "Clip Farm",
+   "category": "Entertainment",
+   "score": 47.6,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 16000,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/8663de46-a5c9-4ab8-9368-7c462a78aa4e",
+   "description": "Perplexity is an AI app. It answers your questions. Clip the top moments from the Rohith Kolluri x Ecomm Cowboy Podcast Segment. Must tie back to Perplexity and make people want to try it. You earn money for every view.",
+   "flags": [],
+   "brief": "Perplexity is an AI app. It answers your questions. Clip the top moments from the Rohith Kolluri x Ecomm Cowboy Podcast Segment. Must tie back to Perplexity and make people want to try it. You earn money for every view.",
+   "hidden_counts": {
+    "rules": 2,
+    "requirements": 0,
+    "references": 2
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 4.0,
+    "max_payout": 250.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
    "id": "4bb64122-7cce-46a3-960a-e2847754bf1a",
    "title": "LTK - Creator Earnings Clipping",
    "brand": "Clipping Culture",
@@ -109,8 +145,8 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6920.27,
-   "creators": 76,
+   "budget_left": 6978.63,
+   "creators": 73,
    "platforms": [
     "instagram",
     "tiktok"
@@ -127,9 +163,9 @@
    },
    "tiktok": {
     "rate_per_1k": 2.0,
-    "min_payout": 3.0,
+    "min_payout": 2.0,
     "max_payout": 600.0,
-    "views_to_first_payout": 1500
+    "views_to_first_payout": 1000
    },
    "new": false
   },
@@ -144,7 +180,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 17469.48,
+   "budget_left": 17469.44,
    "creators": 4,
    "platforms": [
     "instagram",
@@ -179,7 +215,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 29575.53,
+   "budget_left": 29528.8,
    "creators": 10,
    "platforms": [
     "instagram",
@@ -201,7 +237,7 @@
     "max_payout": 1200.0,
     "views_to_first_payout": 3000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
@@ -214,7 +250,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 19802.78,
+   "budget_left": 19693.25,
    "creators": 11,
    "platforms": [
     "instagram",
@@ -249,7 +285,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8209.3,
+   "budget_left": 8206.54,
    "creators": 26,
    "platforms": [
     "instagram",
@@ -284,7 +320,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 28174.870000000003,
+   "budget_left": 27577.010000000002,
    "creators": 124,
    "platforms": [
     "instagram",
@@ -294,7 +330,7 @@
    "url": "https://contentrewards.com/c/campaigns/db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
    "description": "Clip the Warzone Season 1 Trailer and the Developer Briefing.\nDownload both from the official content link below.\nPost to TikTok and/or Instagram Reels.\n",
    "flags": [],
-   "brief": "\ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual presentation gives these moments an atmosphere that captures the excitement surrounding the new season. \u26a1 From military trucks moving through rain-soaked streets to intense sequences involving multiple vehicles and operators, the trailer showcases the scale and variety of its action scenes. The dynamic camera angles, splashing water, and detailed environmental effects make these moments especially memorable, giving fans a glimpse of the cinematic experience featured in the latest Warzone trailer. \ud83c\udfae Season 1 out now! With new maps including Hajin and Zodiac, additional equipment, and fresh features to discover, Call of Duty: Warzone continues to introduce new content for its community. Whether you\u2019re interested in exploring the latest environments or experiencing the new seasonal additions, there\u2019s plenty waiting for players in this chapter of Warzone. \ud83c\udfb5 Agust D (Suga from BTS) - \u201cHaegeum\u201d @callofduty #Ad75:T44b,\ud83d\udd25 Call of D \ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual prese",
+   "brief": "\ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual presentation gives these moments an atmosphere that captures the excitement surrounding the new season. \u26a1 From military trucks moving through rain-soaked streets to intense sequences involving multiple vehicles and operators, the trailer showcases the scale and variety of its action scenes. The dynamic camera angles, splashing water, and detailed environmental effects make these moments especially memorable, giving fans a glimpse of the cinematic experience featured in the latest Warzone trailer. \ud83c\udfae Season 1 out now! With new maps including Hajin and Zodiac, additional equipment, and fresh features to discover, Call of Duty: Warzone continues to introduce new content for its community. Whether you\u2019re interested in exploring the latest environments or experiencing the new seasonal additions, there\u2019s plenty waiting for players in this chapter of Warzone. \ud83c\udfb5 Agust D (Suga from BTS) - \u201cHaegeum\u201d @callofduty #Ad76:T44b,\ud83d\udd25 Call of D \ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual prese",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -313,13 +349,13 @@
    "title": "Trevor Milton X Distributed",
    "brand": "Distributed",
    "category": "Entertainment",
-   "score": 41.4,
+   "score": 40.8,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 1106.6800000000003,
-   "creators": 74,
+   "budget_left": 764.96,
+   "creators": 88,
    "platforms": [
     "instagram",
     "tiktok",
@@ -329,7 +365,7 @@
    "url": "https://contentrewards.com/c/campaigns/d940fd39-66b6-418f-b804-f489d8eb5883",
    "description": "Post clips of Trevor Milton using our Viral Clipping Guide. $2 CPM + Success Guide & 1-on-1 coaching.",
    "flags": [],
-   "brief": "When Nikola Motor Company pulled the cover off its revolutionary Nikola One semi-truck, investors and tech enthusiasts were mesmerized by a multi-billion dollar vision of zero-emission freight transport. Promoted as a fully functional, hydrogen-powered engineering marvel that would reshape the commercial trucking industry, the vehicle represented a monumental leap forward in sustainable transportation. However, beneath the gleaming exterior and soaring market valuation lay an entirely different reality. Behind-the-scenes accounts and official investigations later revealed that the heavily hyped prototype was essentially an incomplete shell. Far from being road-ready, the truck lacked vital internal components, functioning motors, and the necessary drivetrain systems to propel itself. In a stunning display of corporate illusion, even basic operational elements during the grand unveiling relied on external staging tricks\u2014such as hidden power cords running through the floor just to illuminate the vehicle's lights and electronics. This gripping expos\u00e9 dives into the rise and eventual collapse of a massive corporate fantasy, examining how ambitious storytelling morphed into one of the most high-profile deception scandals in modern corporate history. #Nikola #EVScandal #TechFraud #Documentary #ad16: When Nikola Motor Company pulled the cover off its revolutionary Nikola One semi-truck, investors and tech enthusiasts were mesmerized by a multi-billion dollar vision of zero-emission ",
+   "brief": "When Nikola Motor Company pulled the cover off its revolutionary Nikola One semi-truck, investors and tech enthusiasts were mesmerized by a multi-billion dollar vision of zero-emission freight transport. Promoted as a fully functional, hydrogen-powered engineering marvel that would reshape the commercial trucking industry, the vehicle represented a monumental leap forward in sustainable transportation. However, beneath the gleaming exterior and soaring market valuation lay an entirely different reality. Behind-the-scenes accounts and official investigations later revealed that the heavily hyped prototype was essentially an incomplete shell. Far from being road-ready, the truck lacked vital internal components, functioning motors, and the necessary drivetrain systems to propel itself. In a stunning display of corporate illusion, even basic operational elements during the grand unveiling relied on external staging tricks\u2014such as hidden power cords running through the floor just to illuminate the vehicle's lights and electronics. This gripping expos\u00e9 dives into the rise and eventual collapse of a massive corporate fantasy, examining how ambitious storytelling morphed into one of the most high-profile deception scandals in modern corporate history. #Nikola #EVScandal #TechFraud #Documentary #ad17: When Nikola Motor Company pulled the cover off its revolutionary Nikola One semi-truck, investors and tech enthusiasts were mesmerized by a multi-billion dollar vision of zero-emission ",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -348,14 +384,14 @@
    "title": "F1 ASTON MARTIN x COINBASE ",
    "brand": "ClipHaus",
    "category": "Sports",
-   "score": 40.1,
+   "score": 40.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 10045.58,
-   "creators": 186,
+   "budget_left": 10593.71,
+   "creators": 158,
    "platforms": [
     "instagram",
     "tiktok",
@@ -365,7 +401,7 @@
    "url": "https://contentrewards.com/c/campaigns/c7a8e7c2-6989-4361-914f-f9571578a9b9",
    "description": "Clip the funniest reactions, fan challenges, and behind-the-scenes moments from an F1 superfan's COTA adventure with Dale Brisby. Make entertaining, fast-paced edits that feel like F1 fan content, not ads.",
    "flags": [],
-   "brief": "\ud83e\udd20 Interesting fact: An F1 superfan traveled all the way to Texas expecting an unforgettable racing experience, but ended up getting a crash course in real cowboy culture instead. \ud83d\ude2d\ud83c\udfce\ufe0f As part of the Coinbase \u00d7 Aston Martin Aramco F1 fan experience, Adam stepped outside his usual motorsport world and discovered just how unpredictable life in Texas can get. From bull riding to incredible displays of cowboy skill, the experience brought a completely different kind of horsepower into the spotlight. What makes this crossover so entertaining is the contrast between Formula 1 and the wild world of rodeo. \ud83d\udc02\ud83d\ude02 F1 is all about precision, engineering, and controlling enormous amounts of horsepower, while rodeo demands balance, courage, and the ability to react when an animal suddenly moves in an unexpected direction. Watching an F1 fan experience that environment makes for a hilarious reminder that horsepower means something very different in Texas. Would you rather experience an F1 car at full speed or try your luck at a rodeo? @coinbase #ad #F1 #AstonMartinF1 #Texas #Rodeo75:T448,\ud83e\udd20 Interest \ud83e\udd20 Interesting fact: An F1 superfan traveled all the way to Texas expecting an unforgettable racing experience, but ended up getting a crash course in real cowboy culture instead. \ud83d\ude2d\ud83c\udfce\ufe0f As part of the Coinbase \u00d7 Aston Martin Aramco F1 fan experience, Adam stepped outside his usual motorsport world and discovered just how unpredictable life in Texas can get. From bull riding to incredible displays of cow",
+   "brief": "\ud83e\udd20 Interesting fact: An F1 superfan traveled all the way to Texas expecting an unforgettable racing experience, but ended up getting a crash course in real cowboy culture instead. \ud83d\ude2d\ud83c\udfce\ufe0f As part of the Coinbase \u00d7 Aston Martin Aramco F1 fan experience, Adam stepped outside his usual motorsport world and discovered just how unpredictable life in Texas can get. From bull riding to incredible displays of cowboy skill, the experience brought a completely different kind of horsepower into the spotlight. What makes this crossover so entertaining is the contrast between Formula 1 and the wild world of rodeo. \ud83d\udc02\ud83d\ude02 F1 is all about precision, engineering, and controlling enormous amounts of horsepower, while rodeo demands balance, courage, and the ability to react when an animal suddenly moves in an unexpected direction. Watching an F1 fan experience that environment makes for a hilarious reminder that horsepower means something very different in Texas. Would you rather experience an F1 car at full speed or try your luck at a rodeo? @coinbase #ad #F1 #AstonMartinF1 #Texas #Rodeo76:T448,\ud83e\udd20 Interest \ud83e\udd20 Interesting fact: An F1 superfan traveled all the way to Texas expecting an unforgettable racing experience, but ended up getting a crash course in real cowboy culture instead. \ud83d\ude2d\ud83c\udfce\ufe0f As part of the Coinbase \u00d7 Aston Martin Aramco F1 fan experience, Adam stepped outside his usual motorsport world and discovered just how unpredictable life in Texas can get. From bull riding to incredible displays of cow",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -384,12 +420,12 @@
    "title": "Rolling Stone & Malcolm Todd Interviews Clipping",
    "brand": "creatorXchange",
    "category": "Music",
-   "score": 39.7,
+   "score": 39.6,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 684.4499999999998,
+   "budget_left": 673.9899999999998,
    "creators": 184,
    "platforms": [
     "instagram",
@@ -423,7 +459,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.85,
-   "budget_left": 7983.630000000001,
+   "budget_left": 7919.4000000000015,
    "creators": 221,
    "platforms": [
     "instagram",
@@ -433,7 +469,7 @@
    "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
    "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
    "flags": [],
-   "brief": "\ud83d\ude80 Modern Warfare 4 Season 1 is giving Call of Duty fans another exciting look at the action featured in its official trailer. This sequence stands out with bright sparks, clouds of dust, and a first-person view of a narrow industrial passage. The combination of quick movements and dramatic visual effects makes the entire moment interesting to watch. \ud83d\udd0d One of the most noticeable details is the equipment being used while a scoped weapon remains visible on screen. The surrounding environment adds even more character to the scene, with metal structures, camouflage-painted walls, and particles flying through the air. It\u2019s a great example of the visual variety showcased throughout the MW4 Season 1 trailer. \ud83c\udf1f There\u2019s plenty to appreciate about the presentation of Modern Warfare 4 Season 1, especially the attention given to different environments and cinematic action sequences. Moments like this make the trailer entertaining to revisit and give fans something new to discuss. Are you more interested in the weapons, the maps, or the visual effects shown in Season 1? @callofduty #Ad16:[\"$\",\"$L50 \ud83d\ude80 Modern Warfare 4 Season 1 is giving Call of Duty fans another exciting look at the action featured in its official trailer. This sequence stands out with bright sparks, clouds of dust, and a first-person view of a narrow industrial passage. The combination of quick movements and dramatic visual effects makes the entire moment interesting to watch. \ud83d\udd0d One of the most noticeable details is the eq",
+   "brief": "\ud83d\ude80 Modern Warfare 4 Season 1 is giving Call of Duty fans another exciting look at the action featured in its official trailer. This sequence stands out with bright sparks, clouds of dust, and a first-person view of a narrow industrial passage. The combination of quick movements and dramatic visual effects makes the entire moment interesting to watch. \ud83d\udd0d One of the most noticeable details is the equipment being used while a scoped weapon remains visible on screen. The surrounding environment adds even more character to the scene, with metal structures, camouflage-painted walls, and particles flying through the air. It\u2019s a great example of the visual variety showcased throughout the MW4 Season 1 trailer. \ud83c\udf1f There\u2019s plenty to appreciate about the presentation of Modern Warfare 4 Season 1, especially the attention given to different environments and cinematic action sequences. Moments like this make the trailer entertaining to revisit and give fans something new to discuss. Are you more interested in the weapons, the maps, or the visual effects shown in Season 1? @callofduty #Ad17:[\"$\",\"$L51 \ud83d\ude80 Modern Warfare 4 Season 1 is giving Call of Duty fans another exciting look at the action featured in its official trailer. This sequence stands out with bright sparks, clouds of dust, and a first-person view of a narrow industrial passage. The combination of quick movements and dramatic visual effects makes the entire moment interesting to watch. \ud83d\udd0d One of the most noticeable details is the eq",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -448,52 +484,17 @@
    "new": false
   },
   {
-   "id": "8b79c473-d295-4901-8aee-e43c7ad03663",
-   "title": "SEGA - Virtua Fighter Crossroads Lionel Rafale",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 36.7,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1566.7999999999993,
-   "creators": 289,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/8b79c473-d295-4901-8aee-e43c7ad03663",
-   "description": "Download the Lionel Rafale character trailer from the official content folder.\nPost clips of the new character reveal.\nShow the story cinematics.\nShow his rivalry with Cielo, including their battle.\nPost to TikTok, Instagram Reels, and/or Y",
-   "flags": [],
-   "brief": "Download the Lionel Rafale character trailer from the official content folder.\\nPost clips of the new character reveal.\\nShow the story cinematics.\\nShow his rivalry with Cielo, including their battle.\\nPost to TikTok, Instagram Reels, and/or YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 2,
-    "requirements": 0,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 5.0,
-    "max_payout": 800.0,
-    "views_to_first_payout": 2500
-   },
-   "new": false
-  },
-  {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
    "category": "Personal Brand",
-   "score": 26.1,
+   "score": 26.0,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 6402.540000000001,
-   "creators": 32,
+   "budget_left": 6115.889999999999,
+   "creators": 33,
    "platforms": [
     "facebook",
     "instagram",
@@ -529,7 +530,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 6920.27
+   "budget_left": 6978.63
   },
   {
    "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
@@ -599,7 +600,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1420
+   "budget_left": 1419.66
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
@@ -609,7 +610,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 19802.78
+   "budget_left": 19693.25
   },
   {
    "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
@@ -619,7 +620,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 28174.870000000003
+   "budget_left": 27577.010000000002
   }
  ]
 }
