@@ -1,0 +1,38 @@
+{
+ "id": "8663de46-a5c9-4ab8-9368-7c462a78aa4e",
+ "title": "Perplexity Rohith Kolluri x Ecomm Cowboy",
+ "rules_hash": "31f7ab508d97",
+ "state": "stopped",
+ "msg": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-11T07:35:12.424Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-11 07:35:51 UTC"
+}
