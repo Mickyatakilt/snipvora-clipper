@@ -25,6 +25,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p site/clips; cp -r docs/* site/
+          # static list of marker files so the dashboard never depends on the rate-limited GitHub API
+          python3 -c "import json,os;json.dump({'files':sorted(f for f in os.listdir('docs/captures') if f[:2] in ('x-','j-'))},open('site/captures/_markers.json','w'))"
           echo "[]" > site/clips.json
           python3 - <<'P'
           import json, subprocess, os

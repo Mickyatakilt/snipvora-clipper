@@ -210,8 +210,10 @@ async function cloud(key,payload){ // saves a small marker in the repo through t
     return r.ok}catch(e){return false}}
 async function mergeCloud(mine){
   const have=new Set(mine.map(c=>c.id)),rm=new Set(Object.keys(removedLocal)),stubs={};
-  try{const r=await fetch("https://api.github.com/repos/"+REPO+"/contents/docs/captures",{signal:AbortSignal.timeout(8000)});
-    if(r.ok){const files=(await r.json()).map(f=>f.name);
+  try{let files=null;
+    try{const m=await fetch("captures/_markers.json",{cache:"no-store"});if(m.ok)files=(await m.json()).files}catch(e){}
+    if(!files){const r=await fetch("https://api.github.com/repos/"+REPO+"/contents/docs/captures",{signal:AbortSignal.timeout(8000)});if(r.ok)files=(await r.json()).map(f=>f.name)}
+    if(files){
       const xAt={},jAt={};
       await Promise.all(files.filter(n=>/^x-/.test(n)).map(async n=>{const id=n.slice(2,-5);rm.add(id);try{xAt[id]=Date.parse((await (await fetch("captures/"+n,{cache:"no-store"})).json()).capturedAt)||0}catch(e){xAt[id]=0}}));
       await Promise.all(files.filter(n=>/^j-/.test(n)).map(async n=>{try{const j=await (await fetch("captures/"+n,{cache:"no-store"})).json();const m=JSON.parse(j.text);stubs[m.id]=m;jAt[m.id]=Date.parse(j.capturedAt)||0}catch(e){}}));
