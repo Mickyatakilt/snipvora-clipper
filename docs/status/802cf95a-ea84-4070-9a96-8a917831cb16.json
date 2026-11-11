@@ -1,7 +1,7 @@
 {
  "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
  "title": "Jersey Fusion Clipping [Infinte Budget]",
- "rules_hash": "8cf76ce6e73c",
+ "rules_hash": "c0db358388c9",
  "state": "missing_footage",
  "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | no footage link found in the rules",
  "links": [],
@@ -12,7 +12,7 @@
   {
    "k": "Rules received",
    "s": "ok",
-   "n": "2026-11-10T08:40:58.475Z"
+   "n": "2026-11-11T07:36:01.191Z"
   },
   {
    "k": "Fit check",
@@ -35,5 +35,5 @@
    "n": ""
   }
  ],
- "at": "2026-11-10 08:45:01 UTC"
+ "at": "2026-11-11 07:36:33 UTC"
 }
