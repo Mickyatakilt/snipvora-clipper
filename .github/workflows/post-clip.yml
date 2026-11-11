@@ -87,26 +87,43 @@ jobs:
           print(str(d)[:300] if not (d.get('results') or {}).get('posts') else '')
           "
           [ "$code" -lt 300 ] || exit 1
-          echo "--- waiting for TikTok to publish ---"
-          for i in $(seq 1 18); do
-            curl -s -X POST "${H[@]}" -d '{"type":"all","accounts":"'$ACC'","skip":"0","limit":"5","includeUsers":"false"}' "https://services.leadconnectorhq.com/social-media-posting/$LOC/posts/list" > list.json
-            if python3 - <<PY
+          echo "--- waiting for TikTok to publish (up to 12 min) ---"
+          cat > /tmp/find.py <<'PY'
           import json,os,sys
-          d=json.load(open('list.json')); cap=os.environ['CAPTION']
+          d=json.load(open('list.json')); cap=os.environ['CAPTION']; start=os.environ['START']
           for p in (d.get('results') or {}).get('posts',[]):
-              if p.get('status')=='published' and p.get('previewLink') and p.get('summary')==cap and p.get('createdAt','')>="$START":
-                  m=json.load(open('docs/posted.json')) if os.path.exists('docs/posted.json') else {}
-                  camp=next((c.get('campaignUrl') for c in json.load(open('/tmp/clips.json')) if c['video']=="$VIDEO"),None) or "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d"
-                  m["$VIDEO"]={"url":p['previewLink'],"postedAt":p.get('publishedAt'),"campaignUrl":camp,"submitted":False}
-                  json.dump(m,open('docs/posted.json','w'),indent=1); print("PUBLISHED",p['previewLink']); sys.exit(0)
+              if p.get('status')=='published' and p.get('previewLink') and p.get('summary')==cap and p.get('createdAt','')>=start:
+                  json.dump(p,open('/tmp/found.json','w')); sys.exit(0)
           sys.exit(1)
           PY
-            then break; fi
+          export START CAPTION
+          for i in $(seq 1 72); do
+            curl -s -X POST "${H[@]}" -d '{"type":"all","accounts":"'$ACC'","skip":"0","limit":"5","includeUsers":"false"}' "https://services.leadconnectorhq.com/social-media-posting/$LOC/posts/list" > list.json
+            if python3 /tmp/find.py; then break; fi
             sleep 10
           done
-          git config user.name snipvora-bot; git config user.email bot@users.noreply.github.com
-          git add docs/posted.json && git commit -m "posted: $VIDEO" && git pull --rebase -q && git push
-          gh workflow run deploy.yml
+          cat > /tmp/rec.py <<'PY'
+          import json,os
+          v=os.environ['VIDEO']; p=json.load(open('/tmp/found.json'))
+          m=json.load(open('docs/posted.json')) if os.path.exists('docs/posted.json') else {}
+          camp=next((c.get('campaignUrl') for c in json.load(open('/tmp/clips.json')) if c['video']==v),None) or "https://contentrewards.com/c/campaigns/7a73a53b-2bba-4a5c-8187-05534dd6716d"
+          m[v]={"url":p['previewLink'],"postedAt":p.get('publishedAt'),"campaignUrl":camp,"submitted":False}
+          json.dump(m,open('docs/posted.json','w'),indent=1); print("PUBLISHED",p['previewLink'])
+          PY
+          if [ -f /tmp/found.json ]; then
+            git config user.name snipvora-bot; git config user.email bot@users.noreply.github.com
+            # other commits may touch posted.json at the same time: re-apply the record on top of the newest main, up to 6 tries
+            for i in 1 2 3 4 5 6; do
+              git fetch -q origin main && git reset -q --hard origin/main
+              VIDEO="$VIDEO" python3 /tmp/rec.py
+              git add docs/posted.json && git commit -qm "posted: $VIDEO" && git push -q && { echo "recorded"; break; }
+              sleep $((i*3))
+            done
+            gh workflow run deploy.yml
+          else
+            echo "WARNING: TikTok did not show the post as published within 12 minutes. The post WAS created (HTTP $code). Check the @snipvora profile and record it by hand."
+            echo "UNRECORDED" > /tmp/unrecorded
+          fi
       - name: Phone alert - submit within 30 minutes
         if: success()
         env:
@@ -114,8 +131,9 @@ jobs:
           VIDEO: ${{ inputs.video }}
         run: |
           [ -n "$NTFY_TOPIC" ] || { echo "no NTFY_TOPIC secret"; exit 0; }
-          url=$(python3 -c "import json,os;print(json.load(open('docs/posted.json'))[os.environ['VIDEO']]['url'])")
-          camp=$(python3 -c "import json,os;print(json.load(open('docs/posted.json'))[os.environ['VIDEO']]['campaignUrl'])")
+          git fetch -q origin main && git reset -q --hard origin/main || true
+          url=$(python3 -c "import json,os;print(json.load(open('docs/posted.json')).get(os.environ['VIDEO'],{}).get('url','(link not recorded yet - open @snipvora on TikTok)'))")
+          camp=$(python3 -c "import json,os;print(json.load(open('docs/posted.json')).get(os.environ['VIDEO'],{}).get('campaignUrl','https://contentrewards.com/c/home'))")
           curl -s -H "Title: Posted! Submit within 30 min" -H "Priority: high" -H "Click: $camp" -d "TikTok link: $url - tap to open the campaign and paste it." "https://ntfy.sh/$NTFY_TOPIC" >/dev/null
       - name: Push - submit within 30 minutes
         if: success()
@@ -126,6 +144,6 @@ jobs:
           pip install -q --break-system-packages pywebpush 2>/dev/null || pip install -q pywebpush
           VIDEO="${{ inputs.video }}" python3 - <<'PY'
           import json,os,subprocess
-          v=os.environ["VIDEO"]; m=json.load(open("docs/posted.json"))[v]
-          subprocess.run(["python","push.py","Posted! Submit within 30 min","TikTok link: "+m["url"],m["campaignUrl"]])
+          v=os.environ["VIDEO"]; m=json.load(open("docs/posted.json")).get(v,{})
+          subprocess.run(["python","push.py","Posted! Submit within 30 min","TikTok link: "+m.get("url","not recorded yet - open @snipvora on TikTok"),m.get("campaignUrl","https://contentrewards.com/c/home")])
           PY
