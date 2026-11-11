@@ -212,12 +212,15 @@ async function mergeCloud(mine){
   const have=new Set(mine.map(c=>c.id)),rm=new Set(Object.keys(removedLocal)),stubs={};
   try{const r=await fetch("https://api.github.com/repos/"+REPO+"/contents/docs/captures",{signal:AbortSignal.timeout(8000)});
     if(r.ok){const files=(await r.json()).map(f=>f.name);
-      files.filter(n=>/^x-/.test(n)).forEach(n=>rm.add(n.slice(2,-5)));
-      await Promise.all(files.filter(n=>/^j-/.test(n)).map(async n=>{try{const j=await (await fetch("captures/"+n,{cache:"no-store"})).json();const m=JSON.parse(j.text);stubs[m.id]=m}catch(e){}}))}}catch(e){}
+      const xAt={},jAt={};
+      await Promise.all(files.filter(n=>/^x-/.test(n)).map(async n=>{const id=n.slice(2,-5);rm.add(id);try{xAt[id]=Date.parse((await (await fetch("captures/"+n,{cache:"no-store"})).json()).capturedAt)||0}catch(e){xAt[id]=0}}));
+      await Promise.all(files.filter(n=>/^j-/.test(n)).map(async n=>{try{const j=await (await fetch("captures/"+n,{cache:"no-store"})).json();const m=JSON.parse(j.text);stubs[m.id]=m;jAt[m.id]=Date.parse(j.capturedAt)||0}catch(e){}}));
+      // a later "I joined" beats an earlier "removed": un-hide it
+      Object.keys(jAt).forEach(id=>{if(rm.has(id)&&jAt[id]>(xAt[id]||0)){rm.delete(id);delete removedLocal[id]}})}}catch(e){}
   Object.entries(joined).forEach(([id,m])=>{if(m&&m.id&&!stubs[id])stubs[id]=m});
   const all=[...mine];
   Object.values(stubs).forEach(m=>{if(!have.has(m.id))all.push({id:m.id,title:m.title,url:m.url,rate:m.rate,status:"joined",needs_video:true})});
-  window._mine=all.filter(c=>!rm.has(c.id));
+  window._rm=rm;window._mine=all.filter(c=>!rm.has(c.id));
 }
 function analyze(cap,rules){ // quick read of the rules text: hard stops and warnings (a hint, not a judge)
   const t=(cap+"\n"+rules).replace(/\bno official (tiktok |ig |instagram )?(sound|audio)( needed| required)?/gi,""),stop=[],warn=[];
@@ -308,7 +311,7 @@ async function loadCamps(){
   h+="<h3>Join these next</h3><div class='mut'>Only campaigns that can realistically pay us: open join, first payout within 1,000 views, $800+ left, no dedicated-page / follower / US-UK rule visible. Real rules unlock after you join: read them, and leave if they need followers, a dedicated page or a US/UK audience.</div>";
   try{
     const d=await (await fetch("latest.json",{cache:"no-store"})).json();
-    const have=new Set([...mine.map(m=>m.id),...Object.keys(joined)]);
+    const have=new Set([...mine.map(m=>m.id),...Object.keys(joined),...(window._rm||[])]); // removed campaigns never come back as picks
     const bad=/ugc|slideshow|prop firm|funded|picks|\bbet|casino|crypto|forex|trading|en fran|theme page|\bapp\b|call of duty|mw4|sega|lady a/i;
     const HARD=["tier-1 audience required","dedicated page required","follower minimum","view target inside a deadline"];
     const picks=(d.top||[]).filter(t=>{const tt=t.tiktok||{},v=tt.views_to_first_payout;
