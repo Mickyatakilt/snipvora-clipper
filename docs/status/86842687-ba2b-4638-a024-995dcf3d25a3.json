@@ -1,0 +1,38 @@
+{
+ "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
+ "title": "Michael Sartain's Clipping Army",
+ "rules_hash": "86c517ec1e39",
+ "state": "stopped",
+ "msg": "first payout only after about 10000 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-11T07:34:07.775Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 10000 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-11 07:34:34 UTC"
+}
