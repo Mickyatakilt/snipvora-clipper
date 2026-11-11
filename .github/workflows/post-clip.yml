@@ -113,19 +113,23 @@ jobs:
           if [ -f /tmp/found.json ]; then
             git config user.name snipvora-bot; git config user.email bot@users.noreply.github.com
             # other commits may touch posted.json at the same time: re-apply the record on top of the newest main, up to 6 tries
+            REC=no
             for i in 1 2 3 4 5 6; do
               git fetch -q origin main && git reset -q --hard origin/main
-              VIDEO="$VIDEO" python3 /tmp/rec.py
-              git add docs/posted.json && git commit -qm "posted: $VIDEO" && git push -q && { echo "recorded"; break; }
+              VIDEO="$VIDEO" python3 /tmp/rec.py || true
+              git add docs/posted.json
+              if git diff --cached --quiet; then echo "already recorded"; REC=yes; break; fi
+              git commit -qm "posted: $VIDEO" && git push -q && { echo "recorded"; REC=yes; break; }
               sleep $((i*3))
             done
+            [ "$REC" = yes ] || echo "WARNING: the post is live ($(python3 -c "import json;print(json.load(open('/tmp/found.json'))['previewLink'])")) but recording it in posted.json FAILED after 6 tries. Record it by hand."
             gh workflow run deploy.yml
           else
             echo "WARNING: TikTok did not show the post as published within 12 minutes. The post WAS created (HTTP $code). Check the @snipvora profile and record it by hand."
             echo "UNRECORDED" > /tmp/unrecorded
           fi
       - name: Phone alert - submit within 30 minutes
-        if: success()
+        if: success() && inputs.when == ''
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           VIDEO: ${{ inputs.video }}
@@ -136,7 +140,7 @@ jobs:
           camp=$(python3 -c "import json,os;print(json.load(open('docs/posted.json')).get(os.environ['VIDEO'],{}).get('campaignUrl','https://contentrewards.com/c/home'))")
           curl -s -H "Title: Posted! Submit within 30 min" -H "Priority: high" -H "Click: $camp" -d "TikTok link: $url - tap to open the campaign and paste it." "https://ntfy.sh/$NTFY_TOPIC" >/dev/null
       - name: Push - submit within 30 minutes
-        if: success()
+        if: success() && inputs.when == ''
         env:
           PUSH_SUB: ${{ secrets.PUSH_SUB }}
           VAPID_PRIVATE_KEY: ${{ secrets.VAPID_PRIVATE_KEY }}
