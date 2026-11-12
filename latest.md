@@ -1,5 +1,5 @@
-# Campaign scout - 2026-11-11 21:29
-79 campaigns listed, 51 fit (TikTok, English, open budget, no gambling/crypto/etc).
+# Campaign scout - 2026-11-12 16:04
+81 campaigns listed, 52 fit (TikTok, English, open budget, no gambling/crypto/etc).
 Score favors: low views-to-first-payout, no dedicated-page/Tier-1/deadline traps, a clippable source, healthy budget.
 
 ## 1. Jersey Fusion Clipping [Infinte Budget]  (score 121.4)
@@ -9,19 +9,13 @@ Score favors: low views-to-first-payout, no dedicated-page/Tier-1/deadline traps
 - https://contentrewards.com/c/campaigns/802cf95a-ea84-4070-9a96-8a917831cb16
 
 ## 2. Fundingpips Clipping  (score 75.8)
-- $6.0/1k TikTok | first payout at ~2000 views ($12.0 min) | $1796 left | 1260 creators | open join
+- $6.0/1k TikTok | first payout at ~2000 views ($12.0 min) | $1897 left | 1286 creators | open join
 - flags: application
 - FundingPips was built by traders, for traders. Our core philosophy is simple: Your ideas, our risk. Now, we are giving you full access to our official content vault unlocking raw global trader intervi
 - https://contentrewards.com/c/campaigns/c0c37381-e244-4643-98bd-edbff4bc1465
 
-## 3. Stream House LA Clipping| $4k Budget  (score 60.9)
-- $4.0/1k TikTok | first payout at ~1500 views ($6.0 min) | $3054 left | 52 creators | open join
-- flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
-- Clip for Stream House LA and post viral moments across Tiktok, Instagram and YT shorts and get paid 
-- https://contentrewards.com/c/campaigns/5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91
-
-## 4. [UK] Blizzard - World of Warcraft Forever  (score 59.7)
-- $4/1k TikTok | first payout at ~? views ($? min) | $7926 left | 103 creators | open join
+## 3. [UK] Blizzard - World of Warcraft Forever  (score 59.4)
+- $4/1k TikTok | first payout at ~? views ($? min) | $7879 left | 128 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Post clips of World of Warcraft: Forever.
 Use the trailers, gameplay, panels, and video assets in the content folder.
@@ -29,16 +23,16 @@ Show the visuals, the footage highlights, the gameplay, or the world.
 Some files h
 - https://contentrewards.com/c/campaigns/3f22768b-de32-4123-98f6-b3a6e548ea77
 
-## 5. LTK - Creator Earnings Clipping  (score 50.6)
-- $2.5/1k TikTok | first payout at ~1000 views ($2.5 min) | $6554 left | 83 creators | open join
+## 4. LTK - Creator Earnings Clipping  (score 50.1)
+- $2.5/1k TikTok | first payout at ~1000 views ($2.5 min) | $5836 left | 116 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Post clips from the official LTK content folder.
 Goal: show creators that people build real businesses on LTK.
 Post on TikTok and Instagram Reels and Youtube shorts.
 - https://contentrewards.com/c/campaigns/4bb64122-7cce-46a3-960a-e2847754bf1a
 
-## 6. Ring - Drone Cam Launch Clipping  (score 48.1)
-- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $24674 left | 5 creators | open join
+## 5. Ring - Drone Cam Launch Clipping  (score 48.0)
+- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $23978 left | 10 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Clip videos of the new Ring Drone Cam.
 Make the Ring Drone Cam the main product in every post.
@@ -46,20 +40,20 @@ Post to TikTok, Instagram Reels, and/or YouTube Shorts.
 
 - https://contentrewards.com/c/campaigns/42086467-e927-4418-92e1-b6a5700ccc57
 
-## 7. Perplexity Rohith Kolluri x Ecomm Cowboy  (score 47.5)
-- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $15958 left | 14 creators | open join
+## 6. Perplexity Rohith Kolluri x Ecomm Cowboy  (score 47.4)
+- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $15939 left | 21 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Perplexity is an AI app. It answers your questions. Clip the top moments from the Rohith Kolluri x Ecomm Cowboy Podcast Segment. Must tie back to Perplexity and make people want to try it. You earn mo
 - https://contentrewards.com/c/campaigns/8663de46-a5c9-4ab8-9368-7c462a78aa4e
 
-## 8. Jo Koy: Blue in the Face (Variety Interview)  (score 45.7)
+## 7. Jo Koy: Blue in the Face (Variety Interview)  (score 45.7)
 - $2.0/1k TikTok | first payout at ~1250 views ($2.5 min) | $17464 left | 5 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Clip Jo's Variety interview about making his Netflix special, Blue in the Face. Find the moments that show the work and the heart behind it, turn them into short videos, and earn based on views.
 - https://contentrewards.com/c/campaigns/4a70ba91-44be-4dc8-946c-47e45a2403ea
 
-## 9. Call of Duty - MW4 DMZ Intel Briefing Clipping  (score 45.1)
-- $2.0/1k TikTok | first payout at ~3000 views ($6.0 min) | $28246 left | 21 creators | open join
+## 8. Call of Duty - MW4 DMZ Intel Briefing Clipping  (score 45.1)
+- $2.0/1k TikTok | first payout at ~3000 views ($6.0 min) | $27889 left | 26 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Clip the DMZ Intel Briefing video from the official content folder.
 Show the new DMZ content in Modern Warfare 4 Season 1.
@@ -67,8 +61,19 @@ Post to TikTok and Instagram Reels.
 
 - https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf
 
-## 10. $$20,000+ Social Media Justice Clipping Campaign  (score 44.6)
-- $2.0/1k TikTok | first payout at ~5000 views ($10.0 min) | $18676 left | 18 creators | open join
+## 9. $$5,000 Marlon Clipping Campaign  (score 44.9)  NEW
+- $2.5/1k TikTok | first payout at ~10000 views ($25.0 min) | $4440 left | 6 creators | open join
+- flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
+- Get paid to clip Marlon's content.
+
+READ THE RULES AND REQUIREMENTS:
+https://reachclipping.com/Marlon
+
+Password: Marlon123
+- https://contentrewards.com/c/campaigns/e32128fa-fba4-4b01-bebc-f167ed68d1ea
+
+## 10. $$20,000+ Social Media Justice Clipping Campaign  (score 44.7)
+- $2.0/1k TikTok | first payout at ~5000 views ($10.0 min) | $18509 left | 14 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Get paid to clip/convey the message of social media addiction, sourced from AJ’s Social Media Justice video. Supporting footage (movies, YouTube and similar) is allowed.
 
