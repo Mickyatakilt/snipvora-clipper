@@ -1,0 +1,38 @@
+{
+ "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
+ "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
+ "rules_hash": "9e5cb83ce4fd",
+ "state": "stopped",
+ "msg": "first payout only after about 3000 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-12T08:13:38.871Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 3000 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-12 08:15:37 UTC"
+}

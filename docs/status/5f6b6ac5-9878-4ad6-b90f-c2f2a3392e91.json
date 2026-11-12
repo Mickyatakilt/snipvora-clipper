@@ -1,0 +1,42 @@
+{
+ "id": "5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91",
+ "title": "Stream House LA Clipping| $4k Budget",
+ "rules_hash": "bfef07050add",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://drive.google.com/drive/folders/11J5Ihr6KV-_s25JJCrGEmXhL-mMpq34M?usp=sharing: Google Drive folder, needs a login | https://drive.google.com/file/d/1PWnGLjQwXoLk5fbCWSkB7_9dDq8X9aXA/view?usp=drivesdk: gave a web page, not a file (login or folder)",
+ "links": [
+  "https://drive.google.com/drive/folders/11J5Ihr6KV-_s25JJCrGEmXhL-mMpq34M?usp=sharing",
+  "https://drive.google.com/file/d/1PWnGLjQwXoLk5fbCWSkB7_9dDq8X9aXA/view?usp=drivesdk"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-12T08:14:12.260Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "2 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://drive.google.com/drive/folders/11J5Ihr6KV-_s25JJCrGEmXhL-mMpq34M?usp=sharing: Google Drive folder, needs a login | https://drive.google.com/file/d/1PWnGLjQwXoLk5fbCWSkB"
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-12 08:15:36 UTC"
+}
