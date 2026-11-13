@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-13 15:32",
+ "scanned_at": "2026-11-13 20:57",
  "listed": 81,
- "kept": 53,
+ "kept": 52,
  "top": [
   {
    "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
@@ -37,12 +37,12 @@
    "title": "Fundingpips Clipping",
    "brand": "FundingPips",
    "category": "Technology",
-   "score": 75.8,
+   "score": 75.7,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1825.31,
+   "budget_left": 1758.75,
    "creators": 1325,
    "platforms": [
     "instagram",
@@ -74,13 +74,12 @@
    "title": "[UK] Blizzard - World of Warcraft Forever",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 59.3,
+   "score": 57.3,
    "why": [
-    "clippable source",
-    "new"
+    "clippable source"
    ],
    "rate_per_1k": 4,
-   "budget_left": 7854.66,
+   "budget_left": 7854.11,
    "creators": 140,
    "platforms": [
     "tiktok",
@@ -99,6 +98,36 @@
    "new": false
   },
   {
+   "id": "5ca3ba24-2da7-461c-9856-0956bda257d0",
+   "title": "SEGA - Football Manager 27 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Gaming",
+   "score": 46.8,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.5,
+   "budget_left": 19587.03,
+   "creators": 6,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/5ca3ba24-2da7-461c-9856-0956bda257d0",
+   "description": "Post clips of moments from the official Football Manager 27 trailers.\nUse the FM27 Gameplay Rollout trailers and the FM27 Launch Trailer.\nPost on TikTok, Instagram Reels, and YouTube Shorts.\n",
+   "flags": [],
+   "brief": "Post clips of moments from the official Football Manager 27 trailers.\\nUse the FM27 Gameplay Rollout trailers and the FM27 Launch Trailer.\\nPost on TikTok, Instagram Reels, and YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 0,
+    "references": 2
+   },
+   "new": false
+  },
+  {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
    "title": "$$20,000+ Social Media Justice Clipping Campaign",
    "brand": "Reach",
@@ -109,7 +138,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 19926.36,
+   "budget_left": 19913.2,
    "creators": 7,
    "platforms": [
     "instagram",
@@ -139,14 +168,14 @@
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 44.7,
+   "score": 44.6,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 3835.49,
-   "creators": 8,
+   "budget_left": 3679.26,
+   "creators": 10,
    "platforms": [
     "instagram",
     "tiktok"
@@ -179,7 +208,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8094.6,
+   "budget_left": 8073.4400000000005,
    "creators": 27,
    "platforms": [
     "instagram",
@@ -213,8 +242,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 5249.07,
-   "creators": 109,
+   "budget_left": 5339.47,
+   "creators": 108,
    "platforms": [
     "instagram",
     "tiktok",
@@ -243,7 +272,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 23347.2,
+   "budget_left": 23326.54,
    "creators": 13,
    "platforms": [
     "instagram",
@@ -267,14 +296,14 @@
    "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 41.8,
+   "score": 41.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 26522.59,
-   "creators": 52,
+   "budget_left": 26676.04,
+   "creators": 42,
    "platforms": [
     "instagram",
     "tiktok"
@@ -292,36 +321,6 @@
    "new": false
   },
   {
-   "id": "5ca3ba24-2da7-461c-9856-0956bda257d0",
-   "title": "SEGA - Football Manager 27 Trailer Clipping",
-   "brand": "Clipping Culture",
-   "category": "Gaming",
-   "score": 41.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 19626.98,
-   "creators": 6,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/5ca3ba24-2da7-461c-9856-0956bda257d0",
-   "description": "Post clips of moments from the official Football Manager 27 trailers.\nUse the FM27 Gameplay Rollout trailers and the FM27 Launch Trailer.\nPost on TikTok, Instagram Reels, and YouTube Shorts.\n",
-   "flags": [],
-   "brief": "Post clips of moments from the official Football Manager 27 trailers.\\nUse the FM27 Gameplay Rollout trailers and the FM27 Launch Trailer.\\nPost on TikTok, Instagram Reels, and YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 2
-   },
-   "new": true
-  },
-  {
    "id": "b5ff48d7-ec63-443a-b767-3a430a6f71f4",
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
@@ -332,8 +331,8 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 11996.99,
-   "creators": 2,
+   "budget_left": 11967.42,
+   "creators": 4,
    "platforms": [
     "instagram",
     "tiktok",
@@ -349,21 +348,21 @@
     "requirements": 0,
     "references": 1
    },
-   "new": true
+   "new": false
   },
   {
    "id": "0c887034-ce77-4468-b33c-7592b799847b",
    "title": "FOMO x ClipFarm (Creator Clipping)",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 40.9,
+   "score": 40.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 4686.99,
-   "creators": 111,
+   "budget_left": 4501.11,
+   "creators": 113,
    "platforms": [
     "instagram",
     "tiktok",
@@ -399,7 +398,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2844.58,
+   "budget_left": 2830.42,
    "creators": 60,
    "platforms": [
     "instagram",
@@ -422,7 +421,7 @@
     "max_payout": 700.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
@@ -435,8 +434,8 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 14483.61,
-   "creators": 142,
+   "budget_left": 14276.580000000002,
+   "creators": 141,
    "platforms": [
     "instagram",
     "tiktok"
@@ -463,7 +462,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 5717.07,
+   "budget_left": 5694.379999999999,
    "creators": 33,
    "platforms": [
     "facebook",
@@ -500,7 +499,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 5249.07
+   "budget_left": 5339.47
   },
   {
    "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
@@ -570,7 +569,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1318.44
+   "budget_left": 1289.04
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
@@ -580,7 +579,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 19926.36
+   "budget_left": 19913.2
   },
   {
    "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
@@ -590,7 +589,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 14483.61
+   "budget_left": 14276.580000000002
   }
  ]
 }
