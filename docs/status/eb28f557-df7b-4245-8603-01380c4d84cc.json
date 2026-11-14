@@ -1,0 +1,38 @@
+{
+ "id": "eb28f557-df7b-4245-8603-01380c4d84cc",
+ "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
+ "rules_hash": "8d44a08e1401",
+ "state": "stopped",
+ "msg": "first payout only after about 1333 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-14T15:55:00.601Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 1333 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-14 15:56:03 UTC"
+}

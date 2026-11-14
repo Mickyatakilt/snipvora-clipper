@@ -1,0 +1,38 @@
+{
+ "id": "e32128fa-fba4-4b01-bebc-f167ed68d1ea",
+ "title": "$5,000 Marlon Clipping Campaign",
+ "rules_hash": "5684a7f8bd30",
+ "state": "stopped",
+ "msg": "first payout only after about 10000 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-14T15:55:28.681Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 10000 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-14 15:56:02 UTC"
+}

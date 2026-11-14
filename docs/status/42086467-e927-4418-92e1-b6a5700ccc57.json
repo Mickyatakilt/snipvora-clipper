@@ -1,0 +1,38 @@
+{
+ "id": "42086467-e927-4418-92e1-b6a5700ccc57",
+ "title": "Ring - Drone Cam Launch Clipping",
+ "rules_hash": "91c05fedd270",
+ "state": "stopped",
+ "msg": "first payout only after about 1333 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-14T15:55:07.162Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 1333 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-14 15:56:04 UTC"
+}
