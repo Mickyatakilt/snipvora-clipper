@@ -1,5 +1,5 @@
-# Campaign scout - 2026-11-14 14:21
-81 campaigns listed, 55 fit (TikTok, English, open budget, no gambling/crypto/etc).
+# Campaign scout - 2026-11-14 19:23
+80 campaigns listed, 52 fit (TikTok, English, open budget, no gambling/crypto/etc).
 Score favors: low views-to-first-payout, no dedicated-page/Tier-1/deadline traps, a clippable source, healthy budget.
 
 ## 1. Jersey Fusion Clipping [Infinte Budget]  (score 121.4)
@@ -9,13 +9,13 @@ Score favors: low views-to-first-payout, no dedicated-page/Tier-1/deadline traps
 - https://contentrewards.com/c/campaigns/802cf95a-ea84-4070-9a96-8a917831cb16
 
 ## 2. Fundingpips Clipping  (score 75.5)
-- $6.0/1k TikTok | first payout at ~2000 views ($12.0 min) | $1480 left | 1371 creators | open join
+- $6.0/1k TikTok | first payout at ~2000 views ($12.0 min) | $1427 left | 1371 creators | open join
 - flags: application
 - FundingPips was built by traders, for traders. Our core philosophy is simple: Your ideas, our risk. Now, we are giving you full access to our official content vault unlocking raw global trader intervi
 - https://contentrewards.com/c/campaigns/c0c37381-e244-4643-98bd-edbff4bc1465
 
 ## 3. SEGA - Football Manager 27 Trailer Clipping  (score 46.3)
-- $2.5/1k TikTok | first payout at ~? views ($? min) | $19706 left | 60 creators | open join
+- $2.5/1k TikTok | first payout at ~? views ($? min) | $19702 left | 60 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Post clips of moments from the official Football Manager 27 trailers.
 Use the FM27 Gameplay Rollout trailers and the FM27 Launch Trailer.
@@ -31,8 +31,16 @@ Post on TikTok, Instagram Reels, and YouTube Shorts.
 https://www.youtube.com/watch
 - https://contentrewards.com/c/campaigns/cc01471a-0dd5-471d-95b7-90955b037974
 
-## 5. $$5,000 Marlon Clipping Campaign  (score 44.4)
-- $2.5/1k TikTok | first payout at ~10000 views ($25.0 min) | $3267 left | 10 creators | open join
+## 5. Daise — Dollfaces + Charm Bracelets Clipping  (score 44.4)
+- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $8045 left | 28 creators | open join
+- flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
+- Get Paid $2/thousand views to clip for Daise — Dollfaces + Charm Bracelets! 
+Create viral clips showcasing the Dollfaces + Charm Bracelets and get paid.
+(THEME PAGES).
+- https://contentrewards.com/c/campaigns/2e7ca35e-4cff-4755-bae8-8f9f5d727c0b
+
+## 6. $$5,000 Marlon Clipping Campaign  (score 44.3)
+- $2.5/1k TikTok | first payout at ~10000 views ($25.0 min) | $3055 left | 11 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Get paid to clip Marlon's content.
 
@@ -42,16 +50,8 @@ https://reachclipping.com/Marlon
 Password: Marlon123
 - https://contentrewards.com/c/campaigns/e32128fa-fba4-4b01-bebc-f167ed68d1ea
 
-## 6. Daise — Dollfaces + Charm Bracelets Clipping  (score 44.4)
-- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $8049 left | 28 creators | open join
-- flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
-- Get Paid $2/thousand views to clip for Daise — Dollfaces + Charm Bracelets! 
-Create viral clips showcasing the Dollfaces + Charm Bracelets and get paid.
-(THEME PAGES).
-- https://contentrewards.com/c/campaigns/2e7ca35e-4cff-4755-bae8-8f9f5d727c0b
-
 ## 7. LTK - Creator Earnings Clipping  (score 41.8)
-- $2.5/1k TikTok | first payout at ~? views ($? min) | $4984 left | 127 creators | open join
+- $2.5/1k TikTok | first payout at ~? views ($? min) | $4861 left | 127 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Post clips from the official LTK content folder.
 Goal: show creators that people build real businesses on LTK.
@@ -59,7 +59,7 @@ Post on TikTok and Instagram Reels and Youtube shorts.
 - https://contentrewards.com/c/campaigns/4bb64122-7cce-46a3-960a-e2847754bf1a
 
 ## 8. Call of Duty - MW4 DMZ Intel Briefing Clipping  (score 41.3)
-- $2/1k TikTok | first payout at ~? views ($? min) | $24928 left | 87 creators | open join
+- $2/1k TikTok | first payout at ~? views ($? min) | $24830 left | 86 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Clip the DMZ Intel Briefing video from the official content folder.
 Show the new DMZ content in Modern Warfare 4 Season 1.
@@ -67,8 +67,8 @@ Post to TikTok and Instagram Reels.
 
 - https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf
 
-## 9. SEGA - Metaphor ReFantazio Trailer Clipping  (score 41.2)
-- $2/1k TikTok | first payout at ~? views ($? min) | $11960 left | 4 creators | open join
+## 9. SEGA - Metaphor ReFantazio Trailer Clipping  (score 41.0)
+- $2/1k TikTok | first payout at ~? views ($? min) | $11728 left | 23 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
 - Clip highlight moments from the official Metaphor: ReFantazio trailers.
 Use the Heismay Character Trailer and the Launch Trailer.
@@ -76,8 +76,8 @@ Post to TikTok, Instagram Reels, or YouTube Shorts.
 
 - https://contentrewards.com/c/campaigns/b5ff48d7-ec63-443a-b767-3a430a6f71f4
 
-## 10. Backyard Breaks [Clipping Campaign]  (score 40.9)  NEW
-- $2.0/1k TikTok | first payout at ~1500 views ($3.0 min) | $8130 left | 383 creators | open join
+## 10. Stream House LA Clipping| $4k Budget  (score 40.7)
+- $2.0/1k TikTok | first payout at ~1000 views ($2.0 min) | $2729 left | 63 creators | open join
 - flags: none visible - the written rules are hidden until you join, so CHECK THEM before relying on this
-- Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral mo
-- https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33
+- Clip for Stream House LA and post viral moments across Tiktok, Instagram and YT shorts and get paid 
+- https://contentrewards.com/c/campaigns/5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91

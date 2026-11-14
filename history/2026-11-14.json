@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-14 14:21",
- "listed": 81,
- "kept": 55,
+ "scanned_at": "2026-11-14 19:23",
+ "listed": 80,
+ "kept": 52,
  "top": [
   {
    "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
@@ -42,7 +42,7 @@
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1480.4,
+   "budget_left": 1427.04,
    "creators": 1371,
    "platforms": [
     "instagram",
@@ -80,7 +80,7 @@
     "new"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 19705.74,
+   "budget_left": 19702.39,
    "creators": 60,
    "platforms": [
     "instagram",
@@ -110,7 +110,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 19862.5,
+   "budget_left": 19862.29,
    "creators": 7,
    "platforms": [
     "instagram",
@@ -136,41 +136,6 @@
    "new": false
   },
   {
-   "id": "e32128fa-fba4-4b01-bebc-f167ed68d1ea",
-   "title": "$$5,000 Marlon Clipping Campaign",
-   "brand": "Reach",
-   "category": "Content Creator",
-   "score": 44.4,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.5,
-   "budget_left": 3266.67,
-   "creators": 10,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e32128fa-fba4-4b01-bebc-f167ed68d1ea",
-   "description": "Get paid to clip Marlon's content.\n\nREAD THE RULES AND REQUIREMENTS:\nhttps://reachclipping.com/Marlon\n\nPassword: Marlon123",
-   "flags": [],
-   "brief": "Get paid to clip Marlon's content.\\n\\nREAD THE RULES AND REQUIREMENTS:\\nhttps://reachclipping.com/Marlon\\n\\nPassword: Marlon123",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 2.5,
-    "min_payout": 25.0,
-    "max_payout": 300.0,
-    "views_to_first_payout": 10000
-   },
-   "new": false
-  },
-  {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
@@ -180,7 +145,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8048.99,
+   "budget_left": 8045.11,
    "creators": 28,
    "platforms": [
     "instagram",
@@ -205,6 +170,41 @@
    "new": false
   },
   {
+   "id": "e32128fa-fba4-4b01-bebc-f167ed68d1ea",
+   "title": "$$5,000 Marlon Clipping Campaign",
+   "brand": "Reach",
+   "category": "Content Creator",
+   "score": 44.3,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.5,
+   "budget_left": 3055.13,
+   "creators": 11,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e32128fa-fba4-4b01-bebc-f167ed68d1ea",
+   "description": "Get paid to clip Marlon's content.\n\nREAD THE RULES AND REQUIREMENTS:\nhttps://reachclipping.com/Marlon\n\nPassword: Marlon123",
+   "flags": [],
+   "brief": "Get paid to clip Marlon's content.\\n\\nREAD THE RULES AND REQUIREMENTS:\\nhttps://reachclipping.com/Marlon\\n\\nPassword: Marlon123",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 2.5,
+    "min_payout": 25.0,
+    "max_payout": 300.0,
+    "views_to_first_payout": 10000
+   },
+   "new": false
+  },
+  {
    "id": "4bb64122-7cce-46a3-960a-e2847754bf1a",
    "title": "LTK - Creator Earnings Clipping",
    "brand": "Clipping Culture",
@@ -214,7 +214,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 4983.95,
+   "budget_left": 4861.43,
    "creators": 127,
    "platforms": [
     "instagram",
@@ -244,8 +244,8 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 24927.7,
-   "creators": 87,
+   "budget_left": 24829.93,
+   "creators": 86,
    "platforms": [
     "instagram",
     "tiktok"
@@ -267,14 +267,14 @@
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 41.2,
+   "score": 41.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 11959.7,
-   "creators": 4,
+   "budget_left": 11728.3,
+   "creators": 23,
    "platforms": [
     "instagram",
     "tiktok",
@@ -284,48 +284,13 @@
    "url": "https://contentrewards.com/c/campaigns/b5ff48d7-ec63-443a-b767-3a430a6f71f4",
    "description": "Clip highlight moments from the official Metaphor: ReFantazio trailers.\nUse the Heismay Character Trailer and the Launch Trailer.\nPost to TikTok, Instagram Reels, or YouTube Shorts.\n",
    "flags": [],
-   "brief": "The Thief Archetype animations in Metaphor: ReFantazio deserve way more appreciation. \ud83d\ude2d\ud83d\udd25 There's something satisfying about watching a character's fighting style come to life through carefully designed attack animations, especially when every movement contributes to the identity of the Archetype. Heismay's combat presentation gives the Thief a distinctive personality that feels right at home in ATLUS's imaginative fantasy world. What makes these animations stand out is the combination of movement, visual effects, and dramatic attack presentation. The Thief Archetype doesn't just look like another combat class with a different outfit. Its animations help communicate a particular fighting style, making the battles feel more visually expressive. It's these little presentation details that make exploring different Archetypes in Metaphor: ReFantazio so enjoyable for JRPG fans. \u2694\ufe0f\ud83c\udfae I feel like combat animations are one of those details players sometimes overlook until they stop and actually appreciate the work behind them. A great RPG isn't only about stats, builds, and damage numbers. The way an ability looks when you use it can make a huge difference too. ATLUS really put some personality into these animations. \ud83d\udc80\ud83d\udd25 @atlus_west #Ad18:[\"$\",\"$L2b\",null The Thief Archetype animations in Metaphor: ReFantazio deserve way more appreciation. \ud83d\ude2d\ud83d\udd25 There's something satisfying about watching a character's fighting style come to life through carefully designed attack animations, especially whe",
+   "brief": "Clip highlight moments from the official Metaphor: ReFantazio trailers.\\nUse the Heismay Character Trailer and the Launch Trailer.\\nPost to TikTok, Instagram Reels, or YouTube Shorts.\\n",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
     "references": 1
    },
    "new": false
-  },
-  {
-   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "title": "Backyard Breaks [Clipping Campaign]",
-   "brand": "ClipHouse",
-   "category": "Sports",
-   "score": 40.9,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 8129.779999999999,
-   "creators": 383,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
-   "flags": [],
-   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
-   "hidden_counts": {
-    "rules": 2,
-    "requirements": 0,
-    "references": 4
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 3.0,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1500
-   },
-   "new": true
   },
   {
    "id": "5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91",
@@ -337,8 +302,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2750.83,
-   "creators": 62,
+   "budget_left": 2728.7200000000003,
+   "creators": 63,
    "platforms": [
     "instagram",
     "tiktok",
@@ -367,13 +332,13 @@
    "title": "Ring - Drone Cam Launch Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.0,
+   "score": 39.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 21375.65,
+   "budget_left": 21199.71,
    "creators": 203,
    "platforms": [
     "instagram",
@@ -403,8 +368,8 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 11291.470000000001,
-   "creators": 173,
+   "budget_left": 10964.39,
+   "creators": 172,
    "platforms": [
     "instagram",
     "tiktok"
@@ -413,7 +378,7 @@
    "url": "https://contentrewards.com/c/campaigns/db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
    "description": "Clip the Warzone Season 1 Trailer and the Developer Briefing.\nDownload both from the official content link below.\nPost to TikTok and/or Instagram Reels.\n",
    "flags": [],
-   "brief": "\ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual presentation gives these moments an atmosphere that captures the excitement surrounding the new season. \u26a1 From military trucks moving through rain-soaked streets to intense sequences involving multiple vehicles and operators, the trailer showcases the scale and variety of its action scenes. The dynamic camera angles, splashing water, and detailed environmental effects make these moments especially memorable, giving fans a glimpse of the cinematic experience featured in the latest Warzone trailer. \ud83c\udfae Season 1 out now! With new maps including Hajin and Zodiac, additional equipment, and fresh features to discover, Call of Duty: Warzone continues to introduce new content for its community. Whether you\u2019re interested in exploring the latest environments or experiencing the new seasonal additions, there\u2019s plenty waiting for players in this chapter of Warzone. \ud83c\udfb5 Agust D (Suga from BTS) - \u201cHaegeum\u201d @callofduty #Ad4f:T44b,\ud83d\udd25 Call of D \ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual prese",
+   "brief": "\ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual presentation gives these moments an atmosphere that captures the excitement surrounding the new season. \u26a1 From military trucks moving through rain-soaked streets to intense sequences involving multiple vehicles and operators, the trailer showcases the scale and variety of its action scenes. The dynamic camera angles, splashing water, and detailed environmental effects make these moments especially memorable, giving fans a glimpse of the cinematic experience featured in the latest Warzone trailer. \ud83c\udfae Season 1 out now! With new maps including Hajin and Zodiac, additional equipment, and fresh features to discover, Call of Duty: Warzone continues to introduce new content for its community. Whether you\u2019re interested in exploring the latest environments or experiencing the new seasonal additions, there\u2019s plenty waiting for players in this chapter of Warzone. \ud83c\udfb5 Agust D (Suga from BTS) - \u201cHaegeum\u201d @callofduty #Ad4e:T44b,\ud83d\udd25 Call of D \ud83d\ude99 Call of Duty: Warzone Season 1 brings an exciting display of cinematic action in its official trailer, featuring military vehicles, dramatic encounters, and detailed urban environments. The combination of fast-moving sequences, realistic weather effects, and impressive visual prese",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -426,14 +391,14 @@
    "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 35.9,
+   "score": 35.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 9694.93,
-   "creators": 105,
+   "budget_left": 9460.58,
+   "creators": 139,
    "platforms": [
     "instagram",
     "tiktok",
@@ -451,6 +416,34 @@
     "requirements": 0,
     "references": 1
    },
+   "new": false
+  },
+  {
+   "id": "78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "title": "Call of Duty - MW4 Season 01 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 34.0,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.85,
+   "budget_left": 3452.5099999999984,
+   "creators": 216,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/78b4e379-2aa0-4d20-9fd0-ed02a816e3b1",
+   "description": "Clip moments from the official MW4 Season 01 trailer.\nPost your clips to TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "\ud83d\ude80 Modern Warfare 4 Season 1 is giving Call of Duty fans another exciting look at the action featured in its official trailer. This sequence stands out with bright sparks, clouds of dust, and a first-person view of a narrow industrial passage. The combination of quick movements and dramatic visual effects makes the entire moment interesting to watch. \ud83d\udd0d One of the most noticeable details is the equipment being used while a scoped weapon remains visible on screen. The surrounding environment adds even more character to the scene, with metal structures, camouflage-painted walls, and particles flying through the air. It\u2019s a great example of the visual variety showcased throughout the MW4 Season 1 trailer. \ud83c\udf1f There\u2019s plenty to appreciate about the presentation of Modern Warfare 4 Season 1, especially the attention given to different environments and cinematic action sequences. Moments like this make the trailer entertaining to revisit and give fans something new to discuss. Are you more interested in the weapons, the maps, or the visual effects shown in Season 1? @callofduty #Ad18:[\"$\",\"$L2b \ud83d\ude80 Modern Warfare 4 Season 1 is giving Call of Duty fans another exciting look at the action featured in its official trailer. This sequence stands out with bright sparks, clouds of dust, and a first-person view of a narrow industrial passage. The combination of quick movements and dramatic visual effects makes the entire moment interesting to watch. \ud83d\udd0d One of the most noticeable details is the eq",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
    "new": true
   },
   {
@@ -463,7 +456,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 5673.280000000001,
+   "budget_left": 5648.3099999999995,
    "creators": 33,
    "platforms": [
     "facebook",
@@ -500,7 +493,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 4983.95
+   "budget_left": 4861.43
   },
   {
    "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
@@ -570,7 +563,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1284.46
+   "budget_left": 1283.1100000000001
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
@@ -580,7 +573,7 @@
     "references": 4
    },
    "listed": true,
-   "budget_left": 19862.5
+   "budget_left": 19862.29
   },
   {
    "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
@@ -590,7 +583,7 @@
     "references": 1
    },
    "listed": true,
-   "budget_left": 11291.470000000001
+   "budget_left": 10964.39
   }
  ]
 }
