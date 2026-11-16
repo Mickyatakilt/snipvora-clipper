@@ -1,0 +1,116 @@
+{
+ "scanned_at": "2026-11-16 17:12",
+ "listed": 0,
+ "kept": 0,
+ "top": [],
+ "watch": [
+  {
+   "id": "4bb64122-7cce-46a3-960a-e2847754bf1a",
+   "hidden_counts": {
+    "rules": 2,
+    "requirements": 0,
+    "references": 2
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "7a73a53b-2bba-4a5c-8187-05534dd6716d",
+   "hidden_counts": null,
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
+   "hidden_counts": null,
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "341ea599-d017-4ba2-be61-a29a2e754aaf",
+   "hidden_counts": null,
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "088c2279-ab1d-4434-9ba0-6637ab9311fa",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 1,
+    "references": 4
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 3
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "835da2bd-6a51-4024-8dfd-d603a8f5e761",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 9,
+    "references": 1
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 2
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "cc01471a-0dd5-471d-95b7-90955b037974",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 0,
+    "references": 4
+   },
+   "listed": false,
+   "budget_left": null
+  },
+  {
+   "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "listed": false,
+   "budget_left": null
+  }
+ ]
+}
