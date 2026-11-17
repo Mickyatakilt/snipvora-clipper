@@ -1,5 +1,5 @@
 {
- "scanned_at": "2026-11-16 23:27",
+ "scanned_at": "2026-11-17 16:58",
  "listed": 78,
  "kept": 47,
  "top": [
@@ -8,13 +8,13 @@
    "title": "Fundingpips Clipping",
    "brand": "FundingPips",
    "category": "Technology",
-   "score": 75.8,
+   "score": 75.9,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 6.0,
-   "budget_left": 1827.5900000000001,
-   "creators": 1463,
+   "budget_left": 1979.7,
+   "creators": 1515,
    "platforms": [
     "instagram",
     "tiktok",
@@ -38,73 +38,36 @@
     "max_payout": 100.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
-   "id": "65724060-69de-4dc7-a523-4843b7358871",
-   "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 47.5,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 21948.11,
-   "creators": 55,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/65724060-69de-4dc7-a523-4843b7358871",
-   "description": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\nPost on TikTok, Instagram, or YouTube Shorts.\n",
-   "flags": [],
-   "brief": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\\nPost on TikTok, Instagram, or YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 800.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
-   "id": "42086467-e927-4418-92e1-b6a5700ccc57",
-   "title": "Ring - Drone Cam Launch Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 44.4,
+   "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
+   "title": "Jersey Fusion Clipping [Infinte Budget]",
+   "brand": "ClipUp Official",
+   "category": "Consumer Brand",
+   "score": 46.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 17738.690000000002,
-   "creators": 231,
+   "budget_left": 14000,
+   "creators": 1,
    "platforms": [
     "instagram",
-    "tiktok",
-    "youtube"
+    "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/42086467-e927-4418-92e1-b6a5700ccc57",
-   "description": "Clip videos of the new Ring Drone Cam.\nMake the Ring Drone Cam the main product in every post.\nPost to TikTok, Instagram Reels, and/or YouTube Shorts.\n",
+   "url": "https://contentrewards.com/c/campaigns/802cf95a-ea84-4070-9a96-8a917831cb16",
+   "description": "Jersey Fusion is an online store for cheap football jerseys. We have a proven video template that already works. Your job is to recreate it. Full instructions and examples in the Notion link",
    "flags": [],
-   "brief": "Clip videos of the new Ring Drone Cam.\\nMake the Ring Drone Cam the main product in every post.\\nPost to TikTok, Instagram Reels, and/or YouTube Shorts.\\n",
+   "brief": "Jersey Fusion is an online store for cheap football jerseys. We have a proven video template that already works. Your job is to recreate it. Full instructions and examples in the Notion link",
    "hidden_counts": {
     "rules": 0,
-    "requirements": 0,
-    "references": 1
+    "requirements": 1,
+    "references": 2
    },
-   "new": true
+   "new": false
   },
   {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
@@ -116,7 +79,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7945.63,
+   "budget_left": 7941.2,
    "creators": 29,
    "platforms": [
     "instagram",
@@ -138,20 +101,50 @@
     "max_payout": 300.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
+  },
+  {
+   "id": "42086467-e927-4418-92e1-b6a5700ccc57",
+   "title": "Ring - Drone Cam Launch Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 43.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.5,
+   "budget_left": 12679.21,
+   "creators": 259,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/42086467-e927-4418-92e1-b6a5700ccc57",
+   "description": "Clip videos of the new Ring Drone Cam.\nMake the Ring Drone Cam the main product in every post.\nPost to TikTok, Instagram Reels, and/or YouTube Shorts.\n",
+   "flags": [],
+   "brief": "Clip videos of the new Ring Drone Cam.\\nMake the Ring Drone Cam the main product in every post.\\nPost to TikTok, Instagram Reels, and/or YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": false
   },
   {
    "id": "e32128fa-fba4-4b01-bebc-f167ed68d1ea",
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 43.8,
+   "score": 43.5,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 2073.21,
+   "budget_left": 1680.6100000000001,
    "creators": 13,
    "platforms": [
     "instagram",
@@ -173,7 +166,7 @@
     "max_payout": 300.0,
     "views_to_first_payout": 10000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
@@ -208,21 +201,86 @@
     "max_payout": 750.0,
     "views_to_first_payout": 5000
    },
+   "new": false
+  },
+  {
+   "id": "be2ffe16-9e78-41e6-ab31-27d2076e6929",
+   "title": "The Arena x Camp Flog Gnaw",
+   "brand": "Clip Farm",
+   "category": "Entertainment",
+   "score": 41.2,
+   "why": [
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 16329.41,
+   "creators": 148,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/be2ffe16-9e78-41e6-ab31-27d2076e6929",
+   "description": "The Arena is at Camp Flog Gnaw in LA this weekend. Show fans the space and the fun. You earn money for every view.",
+   "flags": [],
+   "brief": "\ud83d\ude33 Interesting fact: A funny moment from The Arena at Camp Flog Gnaw is catching attention after a seemingly ordinary interaction between fans turned into something viewers are watching twice. \ud83d\ude02\ud83d\udc40 In the clip, two people wearing green shirts are seen interacting near a booth, with one looking down while the other raises an arm and reacts to something happening between them. The unexpected body language and curious reactions make the encounter especially entertaining, leaving viewers wondering whether they noticed the same detail. What makes moments like this so entertaining is how unpredictable fan interactions can be at major music festivals. \ud83c\udfa4\ud83d\udd25 Camp Flog Gnaw brings together music, fashion, and fan culture, creating an atmosphere where even the smallest interactions can turn into memorable clips. The Arena, @thearena captures those spontaneous moments and gives viewers a closer look at the personalities and reactions happening throughout the event. Sometimes the funniest moments aren\u2019t even onstage. They\u2019re the ones happening right in front of everyone. Did you catch what happened here? #TheArena #CampFlogGnaw #FunnyMoments #FestivalVibes #ViralClips4e:T4fb,\ud83c\udfa4 Interesti \ud83d\ude33 Interesting fact: A funny moment from The Arena at Camp Flog Gnaw is catching attention after a seemingly ordinary interaction between fans turned into something viewers are watching twice. \ud83d\ude02\ud83d\udc40 In the clip, two people wearing green shirts are seen interacting near a booth, with one looking down while the other",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 2
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 2.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 1000
+   },
    "new": true
+  },
+  {
+   "id": "65724060-69de-4dc7-a523-4843b7358871",
+   "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 41.1,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2,
+   "budget_left": 21299.77,
+   "creators": 90,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/65724060-69de-4dc7-a523-4843b7358871",
+   "description": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\nPost on TikTok, Instagram, or YouTube Shorts.\n",
+   "flags": [],
+   "brief": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\\nPost on TikTok, Instagram, or YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 0,
+    "references": 2
+   },
+   "new": false
   },
   {
    "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
    "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 41.0,
+   "score": 40.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 22105.97,
-   "creators": 104,
+   "budget_left": 21225.09,
+   "creators": 112,
    "platforms": [
     "instagram",
     "tiktok"
@@ -237,6 +295,43 @@
     "requirements": 0,
     "references": 1
    },
+   "new": false
+  },
+  {
+   "id": "f2c529a0-6777-4e8a-b50b-4c8bd4e4d90f",
+   "title": "SypherPK $7,500 Clipping Campaign",
+   "brand": "Reach",
+   "category": "Streamer",
+   "score": 40.6,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 7500,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/f2c529a0-6777-4e8a-b50b-4c8bd4e4d90f",
+   "description": "Get paid to clip content from Sypher, Replays, or Maddynf's VOD\u2019s from their stream on November 15.",
+   "flags": [],
+   "brief": "Get paid to clip content from Sypher, Replays, or Maddynf's VOD\u2019s from their stream on November 15.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 4
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 20.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 10000
+   },
    "new": true
   },
   {
@@ -244,14 +339,14 @@
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 40.4,
+   "score": 40.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 11272.97,
-   "creators": 72,
+   "budget_left": 11065.02,
+   "creators": 94,
    "platforms": [
     "instagram",
     "tiktok",
@@ -267,20 +362,20 @@
     "requirements": 0,
     "references": 1
    },
-   "new": true
+   "new": false
   },
   {
    "id": "5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91",
    "title": "Stream House LA Clipping| $4k Budget",
    "brand": "Motion Clipping",
    "category": "Entertainment",
-   "score": 40.1,
+   "score": 39.9,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 2495,
-   "creators": 110,
+   "budget_left": 2434.95,
+   "creators": 130,
    "platforms": [
     "instagram",
     "tiktok",
@@ -298,74 +393,11 @@
    },
    "tiktok": {
     "rate_per_1k": 2.0,
-    "min_payout": 2.75,
+    "min_payout": 3.5,
     "max_payout": 700.0,
-    "views_to_first_payout": 1375
+    "views_to_first_payout": 1750
    },
-   "new": true
-  },
-  {
-   "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
-   "title": "The Weeknd - Hong Kong Performance Clipping",
-   "brand": "Artist Influence",
-   "category": "Music",
-   "score": 37.2,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1239.74,
-   "creators": 11,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/4c7d1ede-2fca-406a-971d-f651880168aa",
-   "description": "Get paid per view to clip The Weeknd's Hong Kong performance on TikTok + IG. Cut the best moments from the official performance video, hook in 2s. Must add the official sound (muted) + #TheWeeknd #fayewong. Multiple posts allowed. Read brie",
-   "flags": [],
-   "brief": "Get paid per view to clip The Weeknd's Hong Kong performance on TikTok + IG. Cut the best moments from the official performance video, hook in 2s. Must add the official sound (muted) + #TheWeeknd #fayewong. Multiple posts allowed. Read brief below. Max Pay $200+",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
-   "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
-   "title": "Jersey Fusion Clipping [Infinte Budget]",
-   "brand": "ClipUp Official",
-   "category": "Consumer Brand",
-   "score": 36.4,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 14000,
-   "creators": 1,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/802cf95a-ea84-4070-9a96-8a917831cb16",
-   "description": "Jersey Fusion is an online store for cheap football jerseys. We have a proven video template that already works. Your job is to recreate it. Full instructions and examples in the Notion link",
-   "flags": [],
-   "brief": "Jersey Fusion is an online store for cheap football jerseys. We have a proven video template that already works. Your job is to recreate it. Full instructions and examples in the Notion link",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 2
-   },
-   "new": true
+   "new": false
   },
   {
    "id": "200ea21b-be80-4db8-b552-8e32b148604e",
@@ -379,7 +411,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8414.89,
+   "budget_left": 8407.96,
    "creators": 15,
    "platforms": [
     "instagram",
@@ -400,28 +432,33 @@
     "max_payout": 350.0,
     "views_to_first_payout": 5000
    },
-   "new": true
+   "new": false
   },
   {
-   "id": "1c021217-4308-467a-a5c0-765b97465a70",
-   "title": "French Montana x Max B x Jamie Foxx $2 per 1k",
-   "brand": "Any Given Friday - Clipping",
-   "category": "Music",
-   "score": 31.0,
+   "id": "eb28f557-df7b-4245-8603-01380c4d84cc",
+   "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 35.1,
    "why": [
+    "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 1000,
-   "creators": 0,
+   "budget_left": 8641.05,
+   "creators": 173,
    "platforms": [
-    "tiktok"
+    "instagram",
+    "tiktok",
+    "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/1c021217-4308-467a-a5c0-765b97465a70",
-   "description": "Use one of the videos in the folder as the content:\n\nadd your TOS and your own caption: \n\ntag: @frenchmontana\n\nuse hashtags: #club #fyp #party #showmelove #nightlife",
-   "flags": [],
-   "brief": "Use one of the videos in the folder as the content:\\n\\nadd your TOS and your own caption: \\n\\ntag: @frenchmontana\\n\\nuse hashtags: #club #fyp #party #showmelove #nightlife",
+   "url": "https://contentrewards.com/c/campaigns/eb28f557-df7b-4245-8603-01380c4d84cc",
+   "description": "Download videos from the official Wa-Chaa content folder.\nClip the best moments and post them to your page.\nPost on TikTok, Instagram Reels, or YouTube Shorts.\nThere is no set format. Use your own style and angle.\nUse only footage from the ",
+   "flags": [
+    "dedicated page required"
+   ],
+   "brief": "Download videos from the official Wa-Chaa content folder.\\nClip the best moments and post them to your page.\\nPost on TikTok, Instagram Reels, or YouTube Shorts.\\nThere is no set format. Use your own style and angle.\\nUse only footage from the official content folder.\\n",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -439,7 +476,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 5198.870000000001,
+   "budget_left": 5094.67,
    "creators": 33,
    "platforms": [
     "facebook",
@@ -464,7 +501,7 @@
     "max_payout": 100.0,
     "views_to_first_payout": 10000
    },
-   "new": true
+   "new": false
   }
  ],
  "watch": [
@@ -546,7 +583,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1239.74
+   "budget_left": 1233.82
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
