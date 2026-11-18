@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-18 16:36",
- "listed": 76,
- "kept": 50,
+ "scanned_at": "2026-11-18 22:14",
+ "listed": 77,
+ "kept": 48,
  "top": [
   {
    "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
@@ -42,7 +42,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7897.43,
+   "budget_left": 7870.17,
    "creators": 29,
    "platforms": [
     "instagram",
@@ -71,13 +71,13 @@
    "title": "$$5,000 Marlon Clipping Campaign",
    "brand": "Reach",
    "category": "Content Creator",
-   "score": 43.4,
+   "score": 43.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 1540.63,
+   "budget_left": 1455.3000000000002,
    "creators": 15,
    "platforms": [
     "instagram",
@@ -100,77 +100,6 @@
     "views_to_first_payout": 10000
    },
    "new": false
-  },
-  {
-   "id": "cc01471a-0dd5-471d-95b7-90955b037974",
-   "title": "$$20,000+ Social Media Justice Clipping Campaign",
-   "brand": "Reach",
-   "category": "Podcasts",
-   "score": 42.8,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 19818.33,
-   "creators": 8,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/cc01471a-0dd5-471d-95b7-90955b037974",
-   "description": "Get paid to clip/convey the message of social media addiction, sourced from AJ\u2019s Social Media Justice video. Supporting footage (movies, YouTube and similar) is allowed.\n\nhttps://www.youtube.com/watch?v=6uSskUaDL90\nhttps://socialmediajustic",
-   "flags": [],
-   "brief": "Get paid to clip/convey the message of social media addiction, sourced from AJ\u2019s Social Media Justice video. Supporting footage (movies, YouTube and similar) is allowed.\\n\\nhttps://www.youtube.com/watch?v=6uSskUaDL90\\nhttps://socialmediajusticereview.com/",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 4
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 10.0,
-    "max_payout": 750.0,
-    "views_to_first_payout": 5000
-   },
-   "new": false
-  },
-  {
-   "id": "df6de26f-86ec-4782-b818-1fc8053b99a4",
-   "title": "TOMO GTA VI Clipping",
-   "brand": "Clipping Nation",
-   "category": "Streamer",
-   "score": 41.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 924.38,
-   "creators": 6,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/df6de26f-86ec-4782-b818-1fc8053b99a4",
-   "description": "Clip Tomo's best GTA VI moments and get as many new people as possible to discover and subscribe to his YouTube channel. Tomo streams GTA VI live on YouTube, so his YouTube livestreams are the main source for clips, along with his GTA VI vi",
-   "flags": [],
-   "brief": "Clip Tomo's best GTA VI moments and get as many new people as possible to discover and subscribe to his YouTube channel. Tomo streams GTA VI live on YouTube, so his YouTube livestreams are the main source for clips, along with his GTA VI videos. \u27a1\ufe0f\\nhttps://www.youtube.com/@Tomovids",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 4.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 2000
-   },
-   "new": true
   },
   {
    "id": "7f4b31b0-ed1f-49b8-823a-97d7e18e0952",
@@ -200,7 +129,7 @@
     "requirements": 0,
     "references": 2
    },
-   "new": true
+   "new": false
   },
   {
    "id": "f2c529a0-6777-4e8a-b50b-4c8bd4e4d90f",
@@ -213,7 +142,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7426.69,
+   "budget_left": 7426.18,
    "creators": 2,
    "platforms": [
     "instagram",
@@ -250,7 +179,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 19664.93,
+   "budget_left": 19345.79,
    "creators": 138,
    "platforms": [
     "instagram",
@@ -273,14 +202,14 @@
    "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 40.3,
+   "score": 40.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 17933.14,
-   "creators": 149,
+   "budget_left": 17420.13,
+   "creators": 157,
    "platforms": [
     "instagram",
     "tiktok",
@@ -309,7 +238,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 10921.64,
+   "budget_left": 10916.85,
    "creators": 96,
    "platforms": [
     "instagram",
@@ -333,13 +262,13 @@
    "title": "LANY - 'Stuck' ",
    "brand": "The Clip Ship",
    "category": "Music",
-   "score": 39.1,
+   "score": 39.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1297.38,
+   "budget_left": 1254.2199999999998,
    "creators": 25,
    "platforms": [
     "instagram",
@@ -362,20 +291,20 @@
     "max_payout": 400.0,
     "views_to_first_payout": 2000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
    "title": "The Weeknd - Hong Kong Performance Clipping",
    "brand": "Artist Influence",
    "category": "Music",
-   "score": 37.1,
+   "score": 37.2,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1212.08,
-   "creators": 14,
+   "budget_left": 1262.67,
+   "creators": 15,
    "platforms": [
     "instagram",
     "tiktok"
@@ -396,6 +325,43 @@
     "max_payout": 150.0,
     "views_to_first_payout": 1000
    },
+   "new": false
+  },
+  {
+   "id": "e4a9465f-d415-4e30-bf53-e46014958bc6",
+   "title": "ENERGY DRINKS -  Beverages",
+   "brand": "ClipHaus",
+   "category": "Product",
+   "score": 36.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.0,
+   "budget_left": 9952.55,
+   "creators": 10,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e4a9465f-d415-4e30-bf53-e46014958bc6",
+   "description": "Create short-form videos for the energy drinks, featuring its 170mg fast-acting 750mL elixir. Use approved flavors and provided footage. Keep content funny, creative and engaging. Creators must be 21+ and US-based, with at least 50% US view",
+   "flags": [],
+   "brief": "Create short-form videos for the energy drinks, featuring its 170mg fast-acting 750mL elixir. Use approved flavors and provided footage. Keep content funny, creative and engaging. Creators must be 21+ and US-based, with at least 50% US views per clip.",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 0,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.0,
+    "min_payout": 2.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 2000
+   },
    "new": true
   },
   {
@@ -410,8 +376,8 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8315.18,
-   "creators": 15,
+   "budget_left": 8144.01,
+   "creators": 18,
    "platforms": [
     "instagram",
     "tiktok",
@@ -438,13 +404,13 @@
    "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 34.8,
+   "score": 34.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 8274.01,
+   "budget_left": 8243.92,
    "creators": 200,
    "platforms": [
     "instagram",
@@ -466,16 +432,52 @@
    "new": false
   },
   {
+   "id": "df6de26f-86ec-4782-b818-1fc8053b99a4",
+   "title": "TOMO GTA VI Clipping",
+   "brand": "Clipping Nation",
+   "category": "Streamer",
+   "score": 33.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 870.72,
+   "creators": 11,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/df6de26f-86ec-4782-b818-1fc8053b99a4",
+   "description": "Clip Tomo's best GTA VI moments and get as many new people as possible to discover and subscribe to his YouTube channel. Tomo streams GTA VI live on YouTube, so his YouTube livestreams are the main source for clips, along with his GTA VI vi",
+   "flags": [],
+   "brief": "Clip Tomo's best GTA VI moments and get as many new people as possible to discover and subscribe to his YouTube channel. Tomo streams GTA VI live on YouTube, so his YouTube livestreams are the main source for clips, along with his GTA VI videos. \u27a1\ufe0f\\nhttps://www.youtube.com/@Tomovids",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 2
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 3.5,
+    "max_payout": 150.0,
+    "views_to_first_payout": 2333
+   },
+   "new": false
+  },
+  {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
    "category": "Personal Brand",
-   "score": 25.8,
+   "score": 25.7,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4975.879999999999,
+   "budget_left": 4932.049999999999,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -582,7 +584,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1212.08
+   "budget_left": 1262.67
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
@@ -591,8 +593,8 @@
     "requirements": 0,
     "references": 4
    },
-   "listed": true,
-   "budget_left": 19818.33
+   "listed": false,
+   "budget_left": null
   },
   {
    "id": "db285bc6-9a06-43ff-ae4b-4b5ebf149b8b",
