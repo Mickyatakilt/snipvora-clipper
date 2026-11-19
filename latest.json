@@ -1,17 +1,52 @@
 {
- "scanned_at": "2026-11-19 16:39",
- "listed": 72,
- "kept": 48,
+ "scanned_at": "2026-11-19 22:21",
+ "listed": 75,
+ "kept": 52,
  "top": [
+  {
+   "id": "ab601e43-9404-4375-8e1e-2b49db1aef26",
+   "title": "Mumford & Sons / Chris Stapleton Live Performance",
+   "brand": "The Clip Ship",
+   "category": "Music",
+   "score": 47.3,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 12431,
+   "creators": 0,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/ab601e43-9404-4375-8e1e-2b49db1aef26",
+   "description": "Clip the live performance of Mumford & Sons and Chris Stapleton from the approved folder. Every clip should show that this crossover sounds even better live.",
+   "flags": [],
+   "brief": "Clip the live performance of Mumford & Sons and Chris Stapleton from the approved folder. Every clip should show that this crossover sounds even better live.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 2
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 3.5,
+    "max_payout": 600.0,
+    "views_to_first_payout": 1750
+   },
+   "new": true
+  },
   {
    "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
    "title": "Jersey Fusion Clipping [Infinte Budget]",
    "brand": "ClipUp Official",
    "category": "Consumer Brand",
-   "score": 46.4,
+   "score": 44.4,
    "why": [
-    "clippable source",
-    "new"
+    "clippable source"
    ],
    "rate_per_1k": 2.5,
    "budget_left": 14000,
@@ -42,7 +77,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7843.7,
+   "budget_left": 7822.67,
    "creators": 30,
    "platforms": [
     "instagram",
@@ -67,36 +102,6 @@
    "new": false
   },
   {
-   "id": "7f4b31b0-ed1f-49b8-823a-97d7e18e0952",
-   "title": "SEGA - Football Manager 27 - USA/Canada Influencer",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 41.5,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 14516.05,
-   "creators": 0,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/7f4b31b0-ed1f-49b8-823a-97d7e18e0952",
-   "description": "Clip moments from the Football Manager 27 creator videos. Post to TikTok, Instagram Reels, and YouTube Shorts.\n",
-   "flags": [],
-   "brief": "Clip moments from the Football Manager 27 creator videos. Post to TikTok, Instagram Reels, and YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 2
-   },
-   "new": false
-  },
-  {
    "id": "f2c529a0-6777-4e8a-b50b-4c8bd4e4d90f",
    "title": "SypherPK $7,500 Clipping Campaign",
    "brand": "Reach",
@@ -107,7 +112,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7425.79,
+   "budget_left": 7425.78,
    "creators": 2,
    "platforms": [
     "instagram",
@@ -134,35 +139,6 @@
    "new": false
   },
   {
-   "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
-   "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 40.1,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 17666.05,
-   "creators": 165,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf",
-   "description": "Clip the DMZ Intel Briefing video from the official content folder.\nShow the new DMZ content in Modern Warfare 4 Season 1.\nPost to TikTok and Instagram Reels.\n",
-   "flags": [],
-   "brief": "Clip the DMZ Intel Briefing video from the official content folder.\\nShow the new DMZ content in Modern Warfare 4 Season 1.\\nPost to TikTok and Instagram Reels.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "new": false
-  },
-  {
    "id": "b5ff48d7-ec63-443a-b767-3a430a6f71f4",
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
@@ -173,7 +149,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 10818.05,
+   "budget_left": 10782.01,
    "creators": 101,
    "platforms": [
     "instagram",
@@ -203,7 +179,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 16379.439999999999,
+   "budget_left": 16152.560000000001,
    "creators": 194,
    "platforms": [
     "instagram",
@@ -223,41 +199,6 @@
    "new": false
   },
   {
-   "id": "051002dd-5c46-43d0-a446-43f2957ba3a9",
-   "title": "Dasgasd3m x RUCKUS | GTA 6",
-   "brand": "Ruckus",
-   "category": "Gaming",
-   "score": 39.0,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1000,
-   "creators": 0,
-   "platforms": [
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/051002dd-5c46-43d0-a446-43f2957ba3a9",
-   "description": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only whe",
-   "flags": [],
-   "brief": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only when the campaign opens.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 10.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 5000
-   },
-   "new": true
-  },
-  {
    "id": "0fdc26e3-d379-4a7d-8be3-27b00d36c883",
    "title": "LANY - 'Stuck' ",
    "brand": "The Clip Ship",
@@ -268,7 +209,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1202.46,
+   "budget_left": 1196.4299999999998,
    "creators": 25,
    "platforms": [
     "instagram",
@@ -290,6 +231,41 @@
     "min_payout": 3.0,
     "max_payout": 400.0,
     "views_to_first_payout": 2000
+   },
+   "new": false
+  },
+  {
+   "id": "051002dd-5c46-43d0-a446-43f2957ba3a9",
+   "title": "Dasgasd3m x RUCKUS | GTA 6",
+   "brand": "Ruckus",
+   "category": "Gaming",
+   "score": 38.8,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 1000,
+   "creators": 16,
+   "platforms": [
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/051002dd-5c46-43d0-a446-43f2957ba3a9",
+   "description": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only whe",
+   "flags": [],
+   "brief": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only when the campaign opens.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 10.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 5000
    },
    "new": false
   },
@@ -326,6 +302,72 @@
     "max_payout": 350.0,
     "views_to_first_payout": 1000
    },
+   "new": false
+  },
+  {
+   "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
+   "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 38.1,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2,
+   "budget_left": 17564.260000000002,
+   "creators": 160,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf",
+   "description": "Clip the DMZ Intel Briefing video from the official content folder.\nShow the new DMZ content in Modern Warfare 4 Season 1.\nPost to TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Clip the DMZ Intel Briefing video from the official content folder.\\nShow the new DMZ content in Modern Warfare 4 Season 1.\\nPost to TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": false
+  },
+  {
+   "id": "3d9ef19f-1256-47ca-b630-e33e2c923969",
+   "title": "Clip Pro Pickleball: CNPL Rallies & Highlights",
+   "brand": "Canadian National Pickleball League",
+   "category": "Sports Highlights",
+   "score": 38.0,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 2415.4,
+   "creators": 15,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/3d9ef19f-1256-47ca-b630-e33e2c923969",
+   "description": "Clip official CNPL match footage into 8-60s vertical shorts. Best rallies, dinks, ernes, crowd pops. Paid per 1K views on TikTok, Reels and Shorts. Official match footage, logos and a hook list in the asset pack. First pickleball campaign o",
+   "flags": [
+    "branding rules"
+   ],
+   "brief": "Clip official CNPL match footage into 8-60s vertical shorts. Best rallies, dinks, ernes, crowd pops. Paid per 1K views on TikTok, Reels and Shorts. Official match footage, logos and a hook list in the asset pack. First pickleball campaign on Content Rewards.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 8
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 250.0,
+    "views_to_first_payout": 1000
+   },
    "new": true
   },
   {
@@ -333,13 +375,13 @@
    "title": "The Weeknd - Hong Kong Performance Clipping",
    "brand": "Artist Influence",
    "category": "Music",
-   "score": 37.2,
+   "score": 37.1,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 1259.8,
-   "creators": 15,
+   "budget_left": 1258.69,
+   "creators": 18,
    "platforms": [
     "instagram",
     "tiktok"
@@ -363,43 +405,6 @@
    "new": false
   },
   {
-   "id": "e4a9465f-d415-4e30-bf53-e46014958bc6",
-   "title": "ENERGY DRINKS -  Beverages",
-   "brand": "ClipHaus",
-   "category": "Product",
-   "score": 36.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.0,
-   "budget_left": 9875.24,
-   "creators": 19,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e4a9465f-d415-4e30-bf53-e46014958bc6",
-   "description": "Create short-form videos for the energy drinks, featuring its 170mg fast-acting 750mL elixir. Use approved flavors and provided footage. Keep content funny, creative and engaging. Creators must be 21+ and US-based, with at least 50% US view",
-   "flags": [],
-   "brief": "Create short-form videos for the energy drinks, featuring its 170mg fast-acting 750mL elixir. Use approved flavors and provided footage. Keep content funny, creative and engaging. Creators must be 21+ and US-based, with at least 50% US views per clip.",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 3
-   },
-   "tiktok": {
-    "rate_per_1k": 1.0,
-    "min_payout": 2.0,
-    "max_payout": 200.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
    "id": "200ea21b-be80-4db8-b552-8e32b148604e",
    "title": "$$8,500 FaZe Tournament Clipping Campaign",
    "brand": "ClippedIn",
@@ -411,7 +416,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8132.84,
+   "budget_left": 8131.97,
    "creators": 18,
    "platforms": [
     "instagram",
@@ -445,7 +450,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 8032.3,
+   "budget_left": 7949,
    "creators": 209,
    "platforms": [
     "instagram",
@@ -476,7 +481,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4820.41,
+   "budget_left": 4815.98,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -583,7 +588,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1259.8
+   "budget_left": 1258.69
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
