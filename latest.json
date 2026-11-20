@@ -1,21 +1,21 @@
 {
- "scanned_at": "2026-11-19 22:21",
- "listed": 75,
- "kept": 52,
+ "scanned_at": "2026-11-20 16:15",
+ "listed": 76,
+ "kept": 53,
  "top": [
   {
    "id": "ab601e43-9404-4375-8e1e-2b49db1aef26",
    "title": "Mumford & Sons / Chris Stapleton Live Performance",
    "brand": "The Clip Ship",
    "category": "Music",
-   "score": 47.3,
+   "score": 47.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 12431,
-   "creators": 0,
+   "budget_left": 12310.98,
+   "creators": 4,
    "platforms": [
     "instagram",
     "tiktok",
@@ -25,7 +25,7 @@
    "url": "https://contentrewards.com/c/campaigns/ab601e43-9404-4375-8e1e-2b49db1aef26",
    "description": "Clip the live performance of Mumford & Sons and Chris Stapleton from the approved folder. Every clip should show that this crossover sounds even better live.",
    "flags": [],
-   "brief": "Clip the live performance of Mumford & Sons and Chris Stapleton from the approved folder. Every clip should show that this crossover sounds even better live.",
+   "brief": "\"Here\" is a duet by Mumford & Sons and Chris Stapleton that brings two powerhouse vocal styles together over raw, emotional storytelling. With honest lyrics about life's heavy moments, regrets, and what really matters, the song hits with a quiet strength that stays with you long after it ends. Mumford & Sons became famous worldwide for their banjo-driven folk-rock sound and massive anthems like \"I Will Wait,\" \"Little Lion Man,\" and \"The Cave,\" bringing folk energy to huge stages everywhere. Sharing the spotlight is Chris Stapleton, one of country music's most respected voices and songwriters, known for gritty, soulful hits like \"Tennessee Whiskey,\" \"Starting Over,\" and \"Broken Halos.\" Watching Mumford & Sons and Chris Stapleton perform \"Here\" live at the 60th Annual CMA Awards in Nashville on November 18, 2026 is straight-up goosebumps. Hearing that rough, emotional vocal grit alongside folk-rock heart in front of a packed arena feels special right out of the gate\u2014and it also brings back that warm feeling of why Mumford & Sons' sound has meant so much to fans for years. #mumfordandsons #chrisstapleton #cmas #performance18 \"Here\" is a duet by Mumford & Sons and Chris Stapleton that brings two powerhouse vocal styles together over raw, emotional storytelling. With honest lyrics about life's heavy moments, regrets, and what really matters, the song hits with a quiet strength that stays with you long after it ends. Mumford & Sons became famous worldwide for their banjo-driven fol",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -37,7 +37,7 @@
     "max_payout": 600.0,
     "views_to_first_payout": 1750
    },
-   "new": true
+   "new": false
   },
   {
    "id": "802cf95a-ea84-4070-9a96-8a917831cb16",
@@ -77,8 +77,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7822.67,
-   "creators": 30,
+   "budget_left": 7785.08,
+   "creators": 31,
    "platforms": [
     "instagram",
     "tiktok"
@@ -102,6 +102,77 @@
    "new": false
   },
   {
+   "id": "783abdca-1e2f-489e-a8b4-1c802a571872",
+   "title": "Genius Bimbos Podcast Clipping Campaign",
+   "brand": "Evangelist",
+   "category": "Entertainment",
+   "score": 41.9,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.75,
+   "budget_left": 1679.79,
+   "creators": 28,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/783abdca-1e2f-489e-a8b4-1c802a571872",
+   "description": "Earn 1.75$ for every 1000 views you bring to Genius Bimbos podcast!\n\nTo verify your clips you will need to join our Whop community!",
+   "flags": [],
+   "brief": "Earn 1.75$ for every 1000 views you bring to Genius Bimbos podcast!\\n\\nTo verify your clips you will need to join our Whop community!",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 4
+   },
+   "tiktok": {
+    "rate_per_1k": 1.75,
+    "min_payout": 3.5,
+    "max_payout": 350.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
+   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
+   "title": "Backyard Breaks [Clipping Campaign]",
+   "brand": "ClipHouse",
+   "category": "Sports",
+   "score": 41.1,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 11251.549999999988,
+   "creators": 403,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
+   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
+   "flags": [],
+   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
+   "hidden_counts": {
+    "rules": 2,
+    "requirements": 0,
+    "references": 5
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 3.0,
+    "max_payout": 250.0,
+    "views_to_first_payout": 1500
+   },
+   "new": true
+  },
+  {
    "id": "f2c529a0-6777-4e8a-b50b-4c8bd4e4d90f",
    "title": "SypherPK $7,500 Clipping Campaign",
    "brand": "Reach",
@@ -112,7 +183,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7425.78,
+   "budget_left": 7425.53,
    "creators": 2,
    "platforms": [
     "instagram",
@@ -143,14 +214,14 @@
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 40.1,
+   "score": 40.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 10782.01,
-   "creators": 101,
+   "budget_left": 10705.22,
+   "creators": 110,
    "platforms": [
     "instagram",
     "tiktok",
@@ -173,14 +244,14 @@
    "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 39.7,
+   "score": 39.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 16152.560000000001,
-   "creators": 194,
+   "budget_left": 14342.83,
+   "creators": 219,
    "platforms": [
     "instagram",
     "tiktok",
@@ -199,77 +270,6 @@
    "new": false
   },
   {
-   "id": "0fdc26e3-d379-4a7d-8be3-27b00d36c883",
-   "title": "LANY - 'Stuck' ",
-   "brand": "The Clip Ship",
-   "category": "Music",
-   "score": 39.0,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1196.4299999999998,
-   "creators": 25,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/0fdc26e3-d379-4a7d-8be3-27b00d36c883",
-   "description": "Clip the LANY videos in the approved folder, put one approved line of text on screen, and post. The feeling is heartbreak you can sing along to.",
-   "flags": [],
-   "brief": "Clip the LANY videos in the approved folder, put one approved line of text on screen, and post. The feeling is heartbreak you can sing along to.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 3.0,
-    "max_payout": 400.0,
-    "views_to_first_payout": 2000
-   },
-   "new": false
-  },
-  {
-   "id": "051002dd-5c46-43d0-a446-43f2957ba3a9",
-   "title": "Dasgasd3m x RUCKUS | GTA 6",
-   "brand": "Ruckus",
-   "category": "Gaming",
-   "score": 38.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1000,
-   "creators": 16,
-   "platforms": [
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/051002dd-5c46-43d0-a446-43f2957ba3a9",
-   "description": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only whe",
-   "flags": [],
-   "brief": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only when the campaign opens.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 10.0,
-    "max_payout": 150.0,
-    "views_to_first_payout": 5000
-   },
-   "new": false
-  },
-  {
    "id": "2f4e4a26-0643-449f-80da-db22d0755d21",
    "title": "Kitsch x Nic Vans",
    "brand": "Clip Farm",
@@ -279,8 +279,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 40000,
-   "creators": 0,
+   "budget_left": 39969.3,
+   "creators": 4,
    "platforms": [
     "instagram",
     "tiktok",
@@ -309,12 +309,12 @@
    "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 38.1,
+   "score": 38.0,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 17564.260000000002,
+   "budget_left": 15267.47,
    "creators": 160,
    "platforms": [
     "instagram",
@@ -343,7 +343,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2415.4,
+   "budget_left": 2411.49,
    "creators": 15,
    "platforms": [
     "instagram",
@@ -368,40 +368,6 @@
     "max_payout": 250.0,
     "views_to_first_payout": 1000
    },
-   "new": true
-  },
-  {
-   "id": "4c7d1ede-2fca-406a-971d-f651880168aa",
-   "title": "The Weeknd - Hong Kong Performance Clipping",
-   "brand": "Artist Influence",
-   "category": "Music",
-   "score": 37.1,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 1258.69,
-   "creators": 18,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/4c7d1ede-2fca-406a-971d-f651880168aa",
-   "description": "Get paid per view to clip The Weeknd's Hong Kong performance on TikTok + IG. Cut the best moments from the official performance video, hook in 2s. Must add the official sound (muted) + #TheWeeknd #fayewong. Multiple posts allowed. Read brie",
-   "flags": [],
-   "brief": "Get paid per view to clip The Weeknd's Hong Kong performance on TikTok + IG. Cut the best moments from the official performance video, hook in 2s. Must add the official sound (muted) + #TheWeeknd #fayewong. Multiple posts allowed. Read brief below. Max Pay $200+",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 1,
-    "references": 2
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 150.0,
-    "views_to_first_payout": 1000
-   },
    "new": false
   },
   {
@@ -409,14 +375,14 @@
    "title": "$$8,500 FaZe Tournament Clipping Campaign",
    "brand": "ClippedIn",
    "category": "Gaming",
-   "score": 35.6,
+   "score": 35.5,
    "why": [
     "needs application",
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 8131.97,
+   "budget_left": 8103.24,
    "creators": 18,
    "platforms": [
     "instagram",
@@ -440,18 +406,53 @@
    "new": false
   },
   {
+   "id": "051002dd-5c46-43d0-a446-43f2957ba3a9",
+   "title": "Dasgasd3m x RUCKUS | GTA 6",
+   "brand": "Ruckus",
+   "category": "Gaming",
+   "score": 35.2,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 769.09,
+   "creators": 46,
+   "platforms": [
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/051002dd-5c46-43d0-a446-43f2957ba3a9",
+   "description": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only whe",
+   "flags": [],
+   "brief": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only when the campaign opens.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 20.0,
+    "max_payout": 150.0,
+    "views_to_first_payout": 10000
+   },
+   "new": false
+  },
+  {
    "id": "eb28f557-df7b-4245-8603-01380c4d84cc",
    "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 34.6,
+   "score": 34.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 7949,
-   "creators": 209,
+   "budget_left": 7598.42,
+   "creators": 220,
    "platforms": [
     "instagram",
     "tiktok",
@@ -476,12 +477,12 @@
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
    "category": "Personal Brand",
-   "score": 25.7,
+   "score": 25.6,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4815.98,
+   "budget_left": 4508.1,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -588,7 +589,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1258.69
+   "budget_left": 1251.4
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
