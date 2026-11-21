@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-21 15:28",
- "listed": 76,
- "kept": 55,
+ "scanned_at": "2026-11-21 20:38",
+ "listed": 74,
+ "kept": 53,
  "top": [
   {
    "id": "ab601e43-9404-4375-8e1e-2b49db1aef26",
@@ -14,7 +14,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 12106.75,
+   "budget_left": 12082.55,
    "creators": 8,
    "platforms": [
     "instagram",
@@ -25,7 +25,7 @@
    "url": "https://contentrewards.com/c/campaigns/ab601e43-9404-4375-8e1e-2b49db1aef26",
    "description": "Clip the live performance of Mumford & Sons and Chris Stapleton from the approved folder. Every clip should show that this crossover sounds even better live.",
    "flags": [],
-   "brief": "\"Here\" is a duet by Mumford & Sons and Chris Stapleton that brings two powerhouse vocal styles together over raw, emotional storytelling. With honest lyrics about life's heavy moments, regrets, and what really matters, the song hits with a quiet strength that stays with you long after it ends. Mumford & Sons became famous worldwide for their banjo-driven folk-rock sound and massive anthems like \"I Will Wait,\" \"Little Lion Man,\" and \"The Cave,\" bringing folk energy to huge stages everywhere. Sharing the spotlight is Chris Stapleton, one of country music's most respected voices and songwriters, known for gritty, soulful hits like \"Tennessee Whiskey,\" \"Starting Over,\" and \"Broken Halos.\" Watching Mumford & Sons and Chris Stapleton perform \"Here\" live at the 60th Annual CMA Awards in Nashville on November 18, 2026 is straight-up goosebumps. Hearing that rough, emotional vocal grit alongside folk-rock heart in front of a packed arena feels special right out of the gate\u2014and it also brings back that warm feeling of why Mumford & Sons' sound has meant so much to fans for years. #mumfordandsons #chrisstapleton #cmas #performance18 \"Here\" is a duet by Mumford & Sons and Chris Stapleton that brings two powerhouse vocal styles together over raw, emotional storytelling. With honest lyrics about life's heavy moments, regrets, and what really matters, the song hits with a quiet strength that stays with you long after it ends. Mumford & Sons became famous worldwide for their banjo-driven fol",
+   "brief": "\"Here\" is a moving duet from Mumford & Sons and Chris Stapleton, performed live at The 60th Annual CMA Awards in November 2026. Built around honest lyrics about pride, mistakes, and wanting to belong, the song stands out for its emotional weight and how naturally it brings folk rock and soul-country together. Mumford & Sons is a British folk-rock band from London that broke through globally with banjo-driven anthems like \"Little Lion Man,\" \"I Will Wait,\" and \"The Cave.\" Known for big emotional builds, sing-along choruses, and a GRAMMY-winning album with Babel, they have a knack for turning honest lyrics into huge crowd moments. Chris Stapleton is a Kentucky country and soul singer-songwriter famous for his rich, raspy voice and deep-cut storytelling. Before stepping into the spotlight with hit albums like Traveller and songs like \"Tennessee Whiskey\" and \"Starting Over,\" he built a huge name behind the scenes writing hit songs for other artists. Mumford & Sons made their CMA Awards debut alongside Chris Stapleton at Bridgestone Arena in Nashville on November 18, 2026, bringing a British folk-rock band and one of Nashville's strongest voices onto country music's biggest stage. #mumfordandsons #chrisstapleton #cmas #performance \"Here\" is a moving duet from Mumford & Sons and Chris Stapleton, performed live at The 60th Annual CMA Awards in November 2026. Built around honest lyrics about pride, mistakes, and wanting to belong, the song stands out for its emotional weight and how n",
    "hidden_counts": {
     "rules": 0,
     "requirements": 0,
@@ -49,7 +49,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7738.46,
+   "budget_left": 7736.25,
    "creators": 32,
    "platforms": [
     "instagram",
@@ -84,8 +84,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 11693.83,
-   "creators": 37,
+   "budget_left": 11667.08,
+   "creators": 39,
    "platforms": [
     "instagram",
     "tiktok",
@@ -107,7 +107,7 @@
     "max_payout": 350.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
@@ -119,7 +119,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 10699.099999999991,
+   "budget_left": 10683.799999999988,
    "creators": 403,
    "platforms": [
     "instagram",
@@ -155,7 +155,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6925.32,
+   "budget_left": 6924.03,
    "creators": 11,
    "platforms": [
     "instagram",
@@ -192,7 +192,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 10553.06,
+   "budget_left": 10546.83,
    "creators": 113,
    "platforms": [
     "instagram",
@@ -212,17 +212,47 @@
    "new": false
   },
   {
+   "id": "65724060-69de-4dc7-a523-4843b7358871",
+   "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 39.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2,
+   "budget_left": 16262.36,
+   "creators": 214,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/65724060-69de-4dc7-a523-4843b7358871",
+   "description": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\nPost on TikTok, Instagram, or YouTube Shorts.\n",
+   "flags": [],
+   "brief": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\\nPost on TikTok, Instagram, or YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 1,
+    "requirements": 0,
+    "references": 2
+   },
+   "new": false
+  },
+  {
    "id": "783abdca-1e2f-489e-a8b4-1c802a571872",
    "title": "Genius Bimbos Podcast Clipping Campaign",
    "brand": "Evangelist",
    "category": "Entertainment",
-   "score": 39.7,
+   "score": 39.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 1453.17,
-   "creators": 31,
+   "budget_left": 1292.09,
+   "creators": 32,
    "platforms": [
     "instagram",
     "tiktok",
@@ -247,47 +277,17 @@
    "new": false
   },
   {
-   "id": "65724060-69de-4dc7-a523-4843b7358871",
-   "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 39.2,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 13696.78,
-   "creators": 216,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/65724060-69de-4dc7-a523-4843b7358871",
-   "description": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\nPost on TikTok, Instagram, or YouTube Shorts.\n",
-   "flags": [],
-   "brief": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\\nPost on TikTok, Instagram, or YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 2
-   },
-   "new": false
-  },
-  {
    "id": "2f4e4a26-0643-449f-80da-db22d0755d21",
    "title": "Kitsch x Nic Vans",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 38.6,
+   "score": 38.7,
    "why": [
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 39545.57,
-   "creators": 16,
+   "budget_left": 39695.11,
+   "creators": 14,
    "platforms": [
     "instagram",
     "tiktok",
@@ -312,17 +312,83 @@
    "new": false
   },
   {
+   "id": "3d9ef19f-1256-47ca-b630-e33e2c923969",
+   "title": "Clip Pro Pickleball: CNPL Rallies & Highlights",
+   "brand": "Canadian National Pickleball League",
+   "category": "Sports Highlights",
+   "score": 38.0,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 2409.59,
+   "creators": 15,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/3d9ef19f-1256-47ca-b630-e33e2c923969",
+   "description": "Clip official CNPL match footage into 8-60s vertical shorts. Best rallies, dinks, ernes, crowd pops. Paid per 1K views on TikTok, Reels and Shorts. Official match footage, logos and a hook list in the asset pack. First pickleball campaign o",
+   "flags": [
+    "branding rules"
+   ],
+   "brief": "Clip official CNPL match footage into 8-60s vertical shorts. Best rallies, dinks, ernes, crowd pops. Paid per 1K views on TikTok, Reels and Shorts. Official match footage, logos and a hook list in the asset pack. First pickleball campaign on Content Rewards.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 8
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 250.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
+   "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
+   "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 37.8,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2,
+   "budget_left": 11373.36,
+   "creators": 138,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf",
+   "description": "Clip the DMZ Intel Briefing video from the official content folder.\nShow the new DMZ content in Modern Warfare 4 Season 1.\nPost to TikTok and Instagram Reels.\n",
+   "flags": [],
+   "brief": "Clip the DMZ Intel Briefing video from the official content folder.\\nShow the new DMZ content in Modern Warfare 4 Season 1.\\nPost to TikTok and Instagram Reels.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": false
+  },
+  {
    "id": "168599e4-92fa-4e52-9ef6-2556a30381e7",
    "title": "Lucky Latvian X GTA6",
    "brand": "KLIPZY",
    "category": "Gaming",
-   "score": 37.9,
+   "score": 37.8,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 685.53,
+   "budget_left": 660.5899999999999,
    "creators": 63,
    "platforms": [
     "instagram",
@@ -346,69 +412,6 @@
     "max_payout": 100.0,
     "views_to_first_payout": 5000
    },
-   "new": true
-  },
-  {
-   "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
-   "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 37.8,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 11795.240000000002,
-   "creators": 138,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf",
-   "description": "Clip the DMZ Intel Briefing video from the official content folder.\nShow the new DMZ content in Modern Warfare 4 Season 1.\nPost to TikTok and Instagram Reels.\n",
-   "flags": [],
-   "brief": "Clip the DMZ Intel Briefing video from the official content folder.\\nShow the new DMZ content in Modern Warfare 4 Season 1.\\nPost to TikTok and Instagram Reels.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "new": false
-  },
-  {
-   "id": "200ea21b-be80-4db8-b552-8e32b148604e",
-   "title": "$$8,500 FaZe Tournament Clipping Campaign",
-   "brand": "ClippedIn",
-   "category": "Gaming",
-   "score": 35.5,
-   "why": [
-    "needs application",
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 7764.49,
-   "creators": 20,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": true,
-   "url": "https://contentrewards.com/c/campaigns/200ea21b-be80-4db8-b552-8e32b148604e",
-   "description": "FaZe Flank Invitational (Call of Duty), live on Twitch Nov 10 to 12.\nClip the draft, clutch plays and reactions from the official broadcast only.\nFaZe Flank logo on every clip, required caption tags, 60%+ US audience.\n$2 CPM, up to $350 per",
-   "flags": [
-    "branding rules"
-   ],
-   "brief": "FaZe Flank Invitational (Call of Duty), live on Twitch Nov 10 to 12.\\nClip the draft, clutch plays and reactions from the official broadcast only.\\nFaZe Flank logo on every clip, required caption tags, 60%+ US audience.\\n$2 CPM, up to $350 per clip. \\nTop clippers get invited to our private team.",
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 10.0,
-    "max_payout": 350.0,
-    "views_to_first_payout": 5000
-   },
    "new": false
   },
   {
@@ -422,7 +425,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 905.67,
+   "budget_left": 905.65,
    "creators": 49,
    "platforms": [
     "tiktok",
@@ -456,7 +459,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 6708.02,
+   "budget_left": 6700.27,
    "creators": 224,
    "platforms": [
     "instagram",
@@ -487,7 +490,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4481.620000000001,
+   "budget_left": 4444.889999999999,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -594,7 +597,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1245.6
+   "budget_left": 1245.37
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
