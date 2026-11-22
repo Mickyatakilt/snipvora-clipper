@@ -1,21 +1,50 @@
 {
- "scanned_at": "2026-11-21 20:38",
+ "scanned_at": "2026-11-22 15:28",
  "listed": 74,
  "kept": 53,
  "top": [
+  {
+   "id": "96d61823-0627-4cc5-9f9c-781d3896763a",
+   "title": "[GERMANY] Blizzard - World of Warcraft Forever",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 67.6,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 5,
+   "budget_left": 6688.38,
+   "creators": 88,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/96d61823-0627-4cc5-9f9c-781d3896763a",
+   "description": "Post clips of World of Warcraft: Forever.\nUse the trailers, gameplay, panels, and video assets in the content folder.\nShow the visuals, the footage highlights, the gameplay, or the world.\nSome files have no spoken language. You can use thos",
+   "flags": [],
+   "brief": "Post clips of World of Warcraft: Forever.\\nUse the trailers, gameplay, panels, and video assets in the content folder.\\nShow the visuals, the footage highlights, the gameplay, or the world.\\nSome files have no spoken language. You can use those too.\\nPost on TikTok and YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": true
+  },
   {
    "id": "ab601e43-9404-4375-8e1e-2b49db1aef26",
    "title": "Mumford & Sons / Chris Stapleton Live Performance",
    "brand": "The Clip Ship",
    "category": "Music",
-   "score": 47.2,
+   "score": 47.1,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 12082.55,
-   "creators": 8,
+   "budget_left": 11684.21,
+   "creators": 14,
    "platforms": [
     "instagram",
     "tiktok",
@@ -49,8 +78,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7736.25,
-   "creators": 32,
+   "budget_left": 7684.68,
+   "creators": 33,
    "platforms": [
     "instagram",
     "tiktok"
@@ -74,52 +103,16 @@
    "new": false
   },
   {
-   "id": "71e3d612-5b75-4b30-941b-afb7e0cac36d",
-   "title": "First Press Podcast",
-   "brand": "Clip Farm",
-   "category": "Entertainment",
-   "score": 41.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 11667.08,
-   "creators": 39,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/71e3d612-5b75-4b30-941b-afb7e0cac36d",
-   "description": "First Press is a business podcast by Press On Ventures. It shows how brands get built. Clip the provided episodes and make people want to watch the full episodes. You earn money for every view.",
-   "flags": [],
-   "brief": "First Press is a business podcast by Press On Ventures. It shows how brands get built. Clip the provided episodes and make people want to watch the full episodes. You earn money for every view.",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 350.0,
-    "views_to_first_payout": 1000
-   },
-   "new": false
-  },
-  {
    "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
    "title": "Backyard Breaks [Clipping Campaign]",
    "brand": "ClipHouse",
    "category": "Sports",
-   "score": 41.1,
+   "score": 41.0,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 10683.799999999988,
+   "budget_left": 10121.86,
    "creators": 403,
    "platforms": [
     "instagram",
@@ -155,7 +148,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6924.03,
+   "budget_left": 6922.04,
    "creators": 11,
    "platforms": [
     "instagram",
@@ -186,14 +179,14 @@
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 39.9,
+   "score": 39.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 10546.83,
-   "creators": 113,
+   "budget_left": 10128.79,
+   "creators": 127,
    "platforms": [
     "instagram",
     "tiktok",
@@ -216,13 +209,13 @@
    "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 39.5,
+   "score": 39.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 16262.36,
+   "budget_left": 15566.15,
    "creators": 214,
    "platforms": [
     "instagram",
@@ -246,12 +239,12 @@
    "title": "Genius Bimbos Podcast Clipping Campaign",
    "brand": "Evangelist",
    "category": "Entertainment",
-   "score": 39.5,
+   "score": 39.4,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 1292.09,
+   "budget_left": 1182.22,
    "creators": 32,
    "platforms": [
     "instagram",
@@ -281,13 +274,13 @@
    "title": "Kitsch x Nic Vans",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 38.7,
+   "score": 38.4,
    "why": [
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 39695.11,
-   "creators": 14,
+   "budget_left": 39103.83,
+   "creators": 41,
    "platforms": [
     "instagram",
     "tiktok",
@@ -322,7 +315,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 2409.59,
+   "budget_left": 2409.26,
    "creators": 15,
    "platforms": [
     "instagram",
@@ -347,20 +340,57 @@
     "max_payout": 250.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
+  },
+  {
+   "id": "168599e4-92fa-4e52-9ef6-2556a30381e7",
+   "title": "Lucky Latvian X GTA6",
+   "brand": "KLIPZY",
+   "category": "Gaming",
+   "score": 37.7,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 606.9300000000001,
+   "creators": 63,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "x",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/168599e4-92fa-4e52-9ef6-2556a30381e7",
+   "description": "GTA 6 is out and clips are everywhere. Cut the best GTA 6 gameplay and stream moments into short vertical clips for TikTok, Instagram Reels and YouTube Shorts, work in the provided Lucky Latvian CTA, and get paid for verified views.\nFor mor",
+   "flags": [],
+   "brief": "GTA 6 is out and clips are everywhere. Cut the best GTA 6 gameplay and stream moments into short vertical clips for TikTok, Instagram Reels and YouTube Shorts, work in the provided Lucky Latvian CTA, and get paid for verified views.\\nFor more check - https://t.me/klipzyIO\\nPrimary focus - EU",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 10.0,
+    "max_payout": 100.0,
+    "views_to_first_payout": 5000
+   },
+   "new": false
   },
   {
    "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
    "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 37.8,
+   "score": 36.4,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 11373.36,
-   "creators": 138,
+   "budget_left": 5360.200000000001,
+   "creators": 176,
    "platforms": [
     "instagram",
     "tiktok"
@@ -378,43 +408,6 @@
    "new": false
   },
   {
-   "id": "168599e4-92fa-4e52-9ef6-2556a30381e7",
-   "title": "Lucky Latvian X GTA6",
-   "brand": "KLIPZY",
-   "category": "Gaming",
-   "score": 37.8,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 660.5899999999999,
-   "creators": 63,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/168599e4-92fa-4e52-9ef6-2556a30381e7",
-   "description": "GTA 6 is out and clips are everywhere. Cut the best GTA 6 gameplay and stream moments into short vertical clips for TikTok, Instagram Reels and YouTube Shorts, work in the provided Lucky Latvian CTA, and get paid for verified views.\nFor mor",
-   "flags": [],
-   "brief": "\u00bfSab\u00edas que GTA 6 finalmente est\u00e1 aqu\u00ed despu\u00e9s de m\u00e1s de una d\u00e9cada de espera? Rockstar Games ha llevado a los jugadores de vuelta a Vice City, una versi\u00f3n ficticia y moderna de Miami, dentro del enorme estado de Leonida. El juego sigue a dos personajes principales, Jason Duval y Lucia Caminos, cuyas vidas se entrelazan a trav\u00e9s del crimen, el peligro y situaciones inesperadas. Por primera vez en la serie, los jugadores pueden vivir la historia a trav\u00e9s de una protagonista femenina, con Lucia ocupando un papel central en la aventura. GTA 6 presenta un enorme mundo abierto lleno de playas, calles concurridas, vida nocturna, criminales peligrosos e innumerables actividades. Rockstar tambi\u00e9n se ha centrado en hacer que el mundo parezca m\u00e1s vivo, con entornos detallados, personajes realistas y ese tipo de momentos impredecibles que han hecho tan popular a la franquicia. Despu\u00e9s de a\u00f1os de tr\u00e1ileres, rumores, retrasos y una anticipaci\u00f3n interminable, los jugadores finalmente pueden explorar Vice City por s\u00ed mismos. Lo que comenz\u00f3 como uno de los lanzamientos m\u00e1s esperados de la historia de los videojuegos ahora es una realidad, y un nuevo cap\u00edtulo de la serie Grand Theft Auto ha comenzado oficialmente.18:[\"$\",\"$L2b\",null, \u00bfSab\u00edas que GTA 6 finalmente est\u00e1 aqu\u00ed despu\u00e9s de m\u00e1s de una d\u00e9cada de espera? Rockstar Games ha llevado a los jugadores de vuelta a Vice City, una versi\u00f3n ficticia y moderna de Miami, dentro del enorme estado de Leonida. El juego sigue a dos personajes principal",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 10.0,
-    "max_payout": 100.0,
-    "views_to_first_payout": 5000
-   },
-   "new": false
-  },
-  {
    "id": "051002dd-5c46-43d0-a446-43f2957ba3a9",
    "title": "Dasgasd3m x RUCKUS | GTA 6",
    "brand": "Ruckus",
@@ -425,7 +418,7 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 905.65,
+   "budget_left": 905.41,
    "creators": 49,
    "platforms": [
     "tiktok",
@@ -454,13 +447,13 @@
    "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 32.2,
+   "score": 32.1,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 6700.27,
-   "creators": 224,
+   "budget_left": 6453.49,
+   "creators": 237,
    "platforms": [
     "instagram",
     "tiktok",
@@ -490,7 +483,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4444.889999999999,
+   "budget_left": 4409.719999999999,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -597,7 +590,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1245.37
+   "budget_left": 1242.49
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
