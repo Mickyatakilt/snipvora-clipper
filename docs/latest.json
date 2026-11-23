@@ -1,20 +1,49 @@
 {
- "scanned_at": "2026-11-22 20:47",
- "listed": 74,
- "kept": 52,
+ "scanned_at": "2026-11-23 19:22",
+ "listed": 70,
+ "kept": 47,
  "top": [
+  {
+   "id": "319cc15a-bf2d-477f-bb04-c64a243aa681",
+   "title": "[FRANCE] Blizzard - World of Warcraft Forever",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 67.8,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 5,
+   "budget_left": 6155.08,
+   "creators": 57,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/319cc15a-bf2d-477f-bb04-c64a243aa681",
+   "description": "Post clips of World of Warcraft: Forever.\nUse the trailers, gameplay, panels, and video assets in the content folder.\nShow the visuals, the footage highlights, the gameplay, or the world.\nSome files have no spoken language. You can use thos",
+   "flags": [],
+   "brief": "Post clips of World of Warcraft: Forever.\\nUse the trailers, gameplay, panels, and video assets in the content folder.\\nShow the visuals, the footage highlights, the gameplay, or the world.\\nSome files have no spoken language. You can use those too.\\nPost on TikTok and YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": true
+  },
   {
    "id": "96d61823-0627-4cc5-9f9c-781d3896763a",
    "title": "[GERMANY] Blizzard - World of Warcraft Forever",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 67.6,
+   "score": 67.5,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 5,
-   "budget_left": 6680.68,
-   "creators": 88,
+   "budget_left": 6369.43,
+   "creators": 90,
    "platforms": [
     "instagram",
     "tiktok",
@@ -37,14 +66,14 @@
    "title": "Mumford & Sons / Chris Stapleton Live Performance",
    "brand": "The Clip Ship",
    "category": "Music",
-   "score": 47.0,
+   "score": 46.9,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 11541.22,
-   "creators": 17,
+   "budget_left": 11219.45,
+   "creators": 21,
    "platforms": [
     "instagram",
     "tiktok",
@@ -73,14 +102,14 @@
    "title": "3rd-i",
    "brand": "Acrune",
    "category": "Technology",
-   "score": 45.1,
+   "score": 45.0,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 7136.6,
-   "creators": 42,
+   "budget_left": 6858.99,
+   "creators": 46,
    "platforms": [
     "tiktok"
    ],
@@ -96,7 +125,7 @@
     "requirements": 9,
     "references": 2
    },
-   "new": true
+   "new": false
   },
   {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
@@ -108,8 +137,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7672.1900000000005,
-   "creators": 34,
+   "budget_left": 7623.1,
+   "creators": 35,
    "platforms": [
     "instagram",
     "tiktok"
@@ -142,8 +171,8 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 9741.209999999992,
-   "creators": 404,
+   "budget_left": 9372.299999999988,
+   "creators": 406,
    "platforms": [
     "instagram",
     "tiktok",
@@ -172,13 +201,13 @@
    "title": "SypherPK $7,500 Clipping Campaign",
    "brand": "Reach",
    "category": "Streamer",
-   "score": 40.3,
+   "score": 40.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6563.92,
+   "budget_left": 6797.68,
    "creators": 13,
    "platforms": [
     "instagram",
@@ -205,46 +234,51 @@
    "new": false
   },
   {
-   "id": "65724060-69de-4dc7-a523-4843b7358871",
-   "title": "SEGA - STRANGER THAN HEAVEN Act 2 Trailer Clipping",
-   "brand": "Clipping Culture",
+   "id": "71e3d612-5b75-4b30-941b-afb7e0cac36d",
+   "title": "First Press Podcast",
+   "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 39.3,
+   "score": 39.5,
    "why": [
-    "clippable source",
-    "new"
+    "clippable source"
    ],
-   "rate_per_1k": 2,
-   "budget_left": 14818.34,
-   "creators": 217,
+   "rate_per_1k": 1.5,
+   "budget_left": 11448.02,
+   "creators": 71,
    "platforms": [
     "instagram",
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/65724060-69de-4dc7-a523-4843b7358871",
-   "description": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\nPost on TikTok, Instagram, or YouTube Shorts.\n",
+   "url": "https://contentrewards.com/c/campaigns/71e3d612-5b75-4b30-941b-afb7e0cac36d",
+   "description": "First Press is a business podcast by Press On Ventures. It shows how brands get built. Clip the provided episodes and make people want to watch the full episodes. You earn money for every view.",
    "flags": [],
-   "brief": "Post clips of the STRANGER THAN HEAVEN Act 2 Story Trailer.\\nPost on TikTok, Instagram, or YouTube Shorts.\\n",
+   "brief": "First Press is a business podcast by Press On Ventures. It shows how brands get built. Clip the provided episodes and make people want to watch the full episodes. You earn money for every view.",
    "hidden_counts": {
     "rules": 1,
     "requirements": 0,
-    "references": 2
+    "references": 1
    },
-   "new": false
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 350.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
   },
   {
    "id": "783abdca-1e2f-489e-a8b4-1c802a571872",
    "title": "Genius Bimbos Podcast Clipping Campaign",
    "brand": "Evangelist",
    "category": "Entertainment",
-   "score": 39.3,
+   "score": 39.1,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.75,
-   "budget_left": 1125.27,
+   "budget_left": 920.19,
    "creators": 31,
    "platforms": [
     "instagram",
@@ -270,17 +304,51 @@
    "new": false
   },
   {
+   "id": "6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "title": "Mini Brands \u2014 Ulta Beauty Clipping",
+   "brand": "Clip Influence",
+   "category": "Entertainment",
+   "score": 38.7,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 5827.91,
+   "creators": 64,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/6d11ea9e-b814-494a-a135-30dcbcc39645",
+   "description": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "flags": [],
+   "brief": "Get paid $2/thousand views to clip for the Mini Brands \u2014 Ulta Beauty. Goal is to bring awareness to the Mini Brands x Ulta Series 2 Launch. Create viral clips and get paid!",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 300.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "2f4e4a26-0643-449f-80da-db22d0755d21",
    "title": "Kitsch x Nic Vans",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 38.3,
+   "score": 38.1,
    "why": [
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 39050.96,
-   "creators": 43,
+   "budget_left": 38493.1,
+   "creators": 62,
    "platforms": [
     "instagram",
     "tiktok",
@@ -309,13 +377,13 @@
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 37.7,
+   "score": 37.6,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 10103.119999999999,
-   "creators": 127,
+   "budget_left": 9867.84,
+   "creators": 137,
    "platforms": [
     "instagram",
     "tiktok",
@@ -334,92 +402,27 @@
    "new": false
   },
   {
-   "id": "168599e4-92fa-4e52-9ef6-2556a30381e7",
-   "title": "Lucky Latvian X GTA6",
-   "brand": "KLIPZY",
-   "category": "Gaming",
-   "score": 37.6,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 573.4,
-   "creators": 63,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "x",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/168599e4-92fa-4e52-9ef6-2556a30381e7",
-   "description": "GTA 6 is out and clips are everywhere. Cut the best GTA 6 gameplay and stream moments into short vertical clips for TikTok, Instagram Reels and YouTube Shorts, work in the provided Lucky Latvian CTA, and get paid for verified views.\nFor mor",
-   "flags": [],
-   "brief": "GTA 6 is out and clips are everywhere. Cut the best GTA 6 gameplay and stream moments into short vertical clips for TikTok, Instagram Reels and YouTube Shorts, work in the provided Lucky Latvian CTA, and get paid for verified views.\\nFor more check - https://t.me/klipzyIO\\nPrimary focus - EU",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 10.0,
-    "max_payout": 100.0,
-    "views_to_first_payout": 5000
-   },
-   "new": false
-  },
-  {
-   "id": "a1cefc3b-4533-438f-8e70-a7299550f1cf",
-   "title": "Call of Duty - MW4 DMZ Intel Briefing Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 35.7,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 3090.3899999999994,
-   "creators": 176,
-   "platforms": [
-    "instagram",
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/a1cefc3b-4533-438f-8e70-a7299550f1cf",
-   "description": "Clip the DMZ Intel Briefing video from the official content folder.\nShow the new DMZ content in Modern Warfare 4 Season 1.\nPost to TikTok and Instagram Reels.\n",
-   "flags": [],
-   "brief": "Clip the DMZ Intel Briefing video from the official content folder.\\nShow the new DMZ content in Modern Warfare 4 Season 1.\\nPost to TikTok and Instagram Reels.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "new": false
-  },
-  {
    "id": "051002dd-5c46-43d0-a446-43f2957ba3a9",
    "title": "Dasgasd3m x RUCKUS | GTA 6",
    "brand": "Ruckus",
    "category": "Gaming",
-   "score": 35.4,
+   "score": 35.2,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 905.34,
-   "creators": 49,
+   "budget_left": 897.56,
+   "creators": 65,
    "platforms": [
     "tiktok",
     "youtube"
    ],
    "requires_application": false,
    "url": "https://contentrewards.com/c/campaigns/051002dd-5c46-43d0-a446-43f2957ba3a9",
-   "description": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only whe",
+   "description": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required. All of Dom's GTA 6 streams are included, live or VOD. Read the full brief before posting.",
    "flags": [],
-   "brief": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required; streamer-clips accounts recommended. Scheduled for Nov 18, 2026. Read the full brief before posting; submissions begin only when the campaign opens.",
+   "brief": "Clip Dom's funny and entertaining GTA 6 moments for TikTok and YouTube Shorts. GTA 6-specific accounts required. All of Dom's GTA 6 streams are included, live or VOD. Read the full brief before posting.",
    "hidden_counts": {
     "rules": 0,
     "requirements": 1,
@@ -438,13 +441,13 @@
    "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 32.0,
+   "score": 31.6,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 6412.87,
-   "creators": 238,
+   "budget_left": 4586.49,
+   "creators": 237,
    "platforms": [
     "instagram",
     "tiktok",
@@ -474,7 +477,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4401.110000000001,
+   "budget_left": 4278.299999999999,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -544,8 +547,8 @@
     "requirements": 1,
     "references": 3
    },
-   "listed": false,
-   "budget_left": null
+   "listed": true,
+   "budget_left": 5827.91
   },
   {
    "id": "4c64eea7-0338-4003-aee2-ce53a9ae2765",
@@ -581,7 +584,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1234.76
+   "budget_left": 1221.71
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
