@@ -1,20 +1,50 @@
 {
- "scanned_at": "2026-11-24 01:48",
- "listed": 70,
- "kept": 47,
+ "scanned_at": "2026-11-24 18:58",
+ "listed": 71,
+ "kept": 45,
  "top": [
+  {
+   "id": "1391fb95-e8a3-4f0b-b146-d0d786e6aee0",
+   "title": "SEGA - Steam Black Friday Sale Clipping",
+   "brand": "Clipping Culture",
+   "category": "Entertainment",
+   "score": 70.5,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 5,
+   "budget_left": 8549.8,
+   "creators": 29,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/1391fb95-e8a3-4f0b-b146-d0d786e6aee0",
+   "description": "Clip the official SEGA Black Friday Sale video. Show the priority games.\nMake it clear the sale is on Steam for a limited time.\nPost to TikTok, Instagram Reels, and YouTube Shorts.\n",
+   "flags": [],
+   "brief": "Clip the official SEGA Black Friday Sale video. Show the priority games.\\nMake it clear the sale is on Steam for a limited time.\\nPost to TikTok, Instagram Reels, and YouTube Shorts.\\n",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "new": false
+  },
   {
    "id": "319cc15a-bf2d-477f-bb04-c64a243aa681",
    "title": "[FRANCE] Blizzard - World of Warcraft Forever",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 67.8,
+   "score": 67.7,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 5,
-   "budget_left": 6055.7,
-   "creators": 57,
+   "budget_left": 5873.16,
+   "creators": 64,
    "platforms": [
     "instagram",
     "tiktok",
@@ -37,13 +67,13 @@
    "title": "[GERMANY] Blizzard - World of Warcraft Forever",
    "brand": "Clipping Culture",
    "category": "Entertainment",
-   "score": 67.5,
+   "score": 67.3,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 5,
-   "budget_left": 6208.57,
-   "creators": 90,
+   "budget_left": 5752.34,
+   "creators": 96,
    "platforms": [
     "instagram",
     "tiktok",
@@ -95,7 +125,7 @@
     "max_payout": 400.0,
     "views_to_first_payout": 1000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "c3e0abdc-c0d9-46bf-ad79-c6800cd7d4e3",
@@ -131,37 +161,7 @@
     "max_payout": 400.0,
     "views_to_first_payout": 1000
    },
-   "new": true
-  },
-  {
-   "id": "1391fb95-e8a3-4f0b-b146-d0d786e6aee0",
-   "title": "SEGA - Steam Black Friday Sale Clipping",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 55.9,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 3.5,
-   "budget_left": 11120.77,
-   "creators": 20,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/1391fb95-e8a3-4f0b-b146-d0d786e6aee0",
-   "description": "Clip the official SEGA Black Friday Sale video. Show the priority games.\nMake it clear the sale is on Steam for a limited time.\nPost to TikTok, Instagram Reels, and YouTube Shorts.\n",
-   "flags": [],
-   "brief": "Clip the official SEGA Black Friday Sale video. Show the priority games.\\nMake it clear the sale is on Steam for a limited time.\\nPost to TikTok, Instagram Reels, and YouTube Shorts.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "new": true
+   "new": false
   },
   {
    "id": "ab601e43-9404-4375-8e1e-2b49db1aef26",
@@ -174,8 +174,8 @@
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 11180.79,
-   "creators": 21,
+   "budget_left": 10922.08,
+   "creators": 24,
    "platforms": [
     "instagram",
     "tiktok",
@@ -200,36 +200,6 @@
    "new": false
   },
   {
-   "id": "8700b527-9026-4364-a857-7ee8944843a2",
-   "title": "3rd-i",
-   "brand": "Acrune",
-   "category": "Technology",
-   "score": 45.0,
-   "why": [
-    "clippable source",
-    "new"
-   ],
-   "rate_per_1k": 2.5,
-   "budget_left": 6829.87,
-   "creators": 47,
-   "platforms": [
-    "tiktok"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/8700b527-9026-4364-a857-7ee8944843a2",
-   "description": "The 3rd-i safety app is a real-time personal and workplace safety application designed to stream live video, audio, and GPS location data to trusted contacts (\"squads\") or trained safety agents",
-   "flags": [
-    "application"
-   ],
-   "brief": "The 3rd-i safety app is a real-time personal and workplace safety application designed to stream live video, audio, and GPS location data to trusted contacts (\\\"squads\\\") or trained safety agents",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 9,
-    "references": 2
-   },
-   "new": false
-  },
-  {
    "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
    "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
    "brand": "Clip Influence",
@@ -239,7 +209,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 7603.610000000001,
+   "budget_left": 7590.77,
    "creators": 35,
    "platforms": [
     "instagram",
@@ -264,37 +234,31 @@
    "new": false
   },
   {
-   "id": "e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "title": "Backyard Breaks [Clipping Campaign]",
-   "brand": "ClipHouse",
-   "category": "Sports",
-   "score": 40.8,
+   "id": "8700b527-9026-4364-a857-7ee8944843a2",
+   "title": "3rd-i",
+   "brand": "Acrune",
+   "category": "Technology",
+   "score": 42.8,
    "why": [
     "clippable source"
    ],
-   "rate_per_1k": 2.0,
-   "budget_left": 9327.919999999998,
-   "creators": 406,
+   "rate_per_1k": 2.5,
+   "budget_left": 5987.38,
+   "creators": 53,
    "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
+    "tiktok"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/e509f6d0-13bf-42bc-8450-09e12c216c33",
-   "description": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and",
-   "flags": [],
-   "brief": "Download Clips from the official Clip Context Tracker sheet and post them across dedicated Backyard Breaks pages on TikTok, Instagram Reels, and/or Youtube Shorts. Focus on posting their most viral moments \u2014 big pulls, insane reactions, and the kind of hits that stop people mid-scroll. Post must be exciting, engaging, and upbeat. ",
+   "url": "https://contentrewards.com/c/campaigns/8700b527-9026-4364-a857-7ee8944843a2",
+   "description": "The 3rd-i safety app is a real-time personal and workplace safety application designed to stream live video, audio, and GPS location data to trusted contacts (\"squads\") or trained safety agents",
+   "flags": [
+    "application"
+   ],
+   "brief": "The 3rd-i safety app is a real-time personal and workplace safety application designed to stream live video, audio, and GPS location data to trusted contacts (\\\"squads\\\") or trained safety agents",
    "hidden_counts": {
     "rules": 2,
-    "requirements": 0,
-    "references": 5
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 3.0,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1500
+    "requirements": 9,
+    "references": 2
    },
    "new": false
   },
@@ -303,14 +267,14 @@
    "title": "SypherPK $7,500 Clipping Campaign",
    "brand": "Reach",
    "category": "Streamer",
-   "score": 40.4,
+   "score": 40.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 6797.05,
-   "creators": 13,
+   "budget_left": 6527.14,
+   "creators": 18,
    "platforms": [
     "instagram",
     "tiktok",
@@ -336,17 +300,54 @@
    "new": false
   },
   {
+   "id": "a9d82ae7-18f4-4895-bb60-71c0f4c0a9e1",
+   "title": "Stitch | Launch Video",
+   "brand": "The Clip Ship",
+   "category": "App Launch",
+   "score": 39.6,
+   "why": [
+    "needs application",
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 3754.459999999999,
+   "creators": 8,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": true,
+   "url": "https://contentrewards.com/c/campaigns/a9d82ae7-18f4-4895-bb60-71c0f4c0a9e1",
+   "description": "Clip the \u201cAnyone can be a hero\u201d campaign film starring Patrick J. Adams (Mike Ross from Suits). Lead with Patrick and the Suits angle, and make sure every clip links back to Stitch and Stitch AI.",
+   "flags": [],
+   "brief": "Clip the \u201cAnyone can be a hero\u201d campaign film starring Patrick J. Adams (Mike Ross from Suits). Lead with Patrick and the Suits angle, and make sure every clip links back to Stitch and Stitch AI.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 4.0,
+    "max_payout": 500.0,
+    "views_to_first_payout": 2000
+   },
+   "new": true
+  },
+  {
    "id": "71e3d612-5b75-4b30-941b-afb7e0cac36d",
    "title": "First Press Podcast",
    "brand": "Clip Farm",
    "category": "Entertainment",
-   "score": 39.4,
+   "score": 39.1,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 11437.01,
-   "creators": 74,
+   "budget_left": 11205.55,
+   "creators": 103,
    "platforms": [
     "instagram",
     "tiktok",
@@ -371,17 +372,52 @@
    "new": false
   },
   {
+   "id": "2f4e4a26-0643-449f-80da-db22d0755d21",
+   "title": "Kitsch x Nic Vans",
+   "brand": "Clip Farm",
+   "category": "Entertainment",
+   "score": 37.3,
+   "why": [
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 36657.73,
+   "creators": 141,
+   "platforms": [
+    "instagram",
+    "tiktok",
+    "youtube"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/2f4e4a26-0643-449f-80da-db22d0755d21",
+   "description": "Kitsch makes hair care and hair gifts. Nic from Love Island USA dresses as Santa. He gives Kitsch gifts to his mom and sister.",
+   "flags": [],
+   "brief": "Kitsch makes hair care and hair gifts. Nic from Love Island USA dresses as Santa. He gives Kitsch gifts to his mom and sister.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 1
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 350.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "b5ff48d7-ec63-443a-b767-3a430a6f71f4",
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 37.6,
+   "score": 36.7,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 9856.34,
-   "creators": 137,
+   "budget_left": 5634.28,
+   "creators": 151,
    "platforms": [
     "instagram",
     "tiktok",
@@ -404,14 +440,14 @@
    "title": "Dasgasd3m x RUCKUS | GTA 6",
    "brand": "Ruckus",
    "category": "Gaming",
-   "score": 35.1,
+   "score": 34.4,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 812.77,
-   "creators": 67,
+   "budget_left": 699.65,
+   "creators": 110,
    "platforms": [
     "tiktok",
     "youtube"
@@ -435,37 +471,6 @@
    "new": false
   },
   {
-   "id": "eb28f557-df7b-4245-8603-01380c4d84cc",
-   "title": "Wa-Chaa x The RZA - Grandmaster Collection Clip",
-   "brand": "Clipping Culture",
-   "category": "Entertainment",
-   "score": 31.6,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2,
-   "budget_left": 4470.91,
-   "creators": 237,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/eb28f557-df7b-4245-8603-01380c4d84cc",
-   "description": "Download videos from the official Wa-Chaa content folder.\nClip the best moments and post them to your page.\nPost on TikTok, Instagram Reels, or YouTube Shorts.\nThere is no set format. Use your own style and angle.\nUse only footage from the ",
-   "flags": [
-    "dedicated page required"
-   ],
-   "brief": "Download videos from the official Wa-Chaa content folder.\\nClip the best moments and post them to your page.\\nPost on TikTok, Instagram Reels, or YouTube Shorts.\\nThere is no set format. Use your own style and angle.\\nUse only footage from the official content folder.\\n",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "new": false
-  },
-  {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
    "title": "Michael Sartain's Clipping Army",
    "brand": "Michael Sartain's Clipper Army",
@@ -475,7 +480,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 4257.48,
+   "budget_left": 4104.719999999999,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -506,11 +511,7 @@
  "watch": [
   {
    "id": "4bb64122-7cce-46a3-960a-e2847754bf1a",
-   "hidden_counts": {
-    "rules": 2,
-    "requirements": 0,
-    "references": 2
-   },
+   "hidden_counts": null,
    "listed": false,
    "budget_left": null
   },
@@ -582,7 +583,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1221.48
+   "budget_left": 1220.5
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
