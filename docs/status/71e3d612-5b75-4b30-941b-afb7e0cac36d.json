@@ -1,0 +1,41 @@
+{
+ "id": "71e3d612-5b75-4b30-941b-afb7e0cac36d",
+ "title": "First Press Podcast",
+ "rules_hash": "f480b2ca792c",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://www.dropbox.com/scl/fo/1g0993z4mi4iroytwkns9/AKRjvp944E_qGbxUAfRdxlY?rlkey=u89u6s8z00l4zcsq3874kyf3i&st=360g1536&dl=0: RuntimeError file bigger than 600 MB",
+ "links": [
+  "https://www.dropbox.com/scl/fo/1g0993z4mi4iroytwkns9/AKRjvp944E_qGbxUAfRdxlY?rlkey=u89u6s8z00l4zcsq3874kyf3i&st=360g1536&dl=0"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:11:15.910Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "1 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://www.dropbox.com/scl/fo/1g0993z4mi4iroytwkns9/AKRjvp944E_qGbxUAfRdxlY?rlkey=u89u6s8z00l4zcsq3874kyf3i&st=360g1536&dl=0: RuntimeError file bigger than 600 MB"
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-25 07:12:28 UTC"
+}

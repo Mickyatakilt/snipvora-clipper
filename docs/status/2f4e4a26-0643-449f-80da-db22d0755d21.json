@@ -1,0 +1,38 @@
+{
+ "id": "2f4e4a26-0643-449f-80da-db22d0755d21",
+ "title": "Kitsch x Nic Vans",
+ "rules_hash": "c157227e3ffd",
+ "state": "error",
+ "msg": "clip builder failed: NO FOOTAGE in /home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/2f4e4a26\n",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:11:06.457Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "1 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "ok",
+   "n": "attached videos: none | https://www.dropbox.com/scl/fo/cc9cai8o70khdf1xqdfn3/AJHRaBZzak80kGN6GMEa7lM?rlkey=cnxwywtw8jnp3becd6joslgng&st=za6lz3h7&dl=0: downloaded 3 file(s)"
+  },
+  {
+   "k": "Clip built",
+   "s": "fail",
+   "n": "NO FOOTAGE in /home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/2f4e4a26\n"
+  }
+ ],
+ "at": "2026-11-25 07:12:33 UTC"
+}

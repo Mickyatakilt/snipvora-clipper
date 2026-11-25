@@ -1,0 +1,41 @@
+{
+ "id": "8700b527-9026-4364-a857-7ee8944843a2",
+ "title": "3rd-i",
+ "rules_hash": "76f479d9db17",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://drive.google.com/drive/folders/1kTRDQpEVTTDum7Eo0o0FFJL6DSLhtsSR: Google Drive folder, needs a login",
+ "links": [
+  "https://drive.google.com/drive/folders/1kTRDQpEVTTDum7Eo0o0FFJL6DSLhtsSR"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:10:17.735Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "1 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://drive.google.com/drive/folders/1kTRDQpEVTTDum7Eo0o0FFJL6DSLhtsSR: Google Drive folder, needs a login"
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-25 07:12:29 UTC"
+}

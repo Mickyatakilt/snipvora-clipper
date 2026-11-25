@@ -1,0 +1,38 @@
+{
+ "id": "1391fb95-e8a3-4f0b-b146-d0d786e6aee0",
+ "title": "SEGA - Steam Black Friday Sale Clipping",
+ "rules_hash": "cae007e3a76f",
+ "state": "stopped",
+ "msg": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia; first payout only after about 1111 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:10:55.772Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia; first payout only after about 1111 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-25 07:12:17 UTC"
+}

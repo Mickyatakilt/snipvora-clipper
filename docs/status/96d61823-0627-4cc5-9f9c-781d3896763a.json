@@ -1,0 +1,43 @@
+{
+ "id": "96d61823-0627-4cc5-9f9c-781d3896763a",
+ "title": "[GERMANY] Blizzard - World of Warcraft Forever",
+ "rules_hash": "9fb9f7c33c89",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://f.io/dXkFXJME: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos) | https://f.io/8uBzkEqf: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos)",
+ "links": [
+  "https://f.io/dXkFXJME",
+  "https://f.io/8uBzkEqf"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid",
+  "mentions a follower minimum"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:10:40.944Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid; mentions a follower minimum"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "2 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://f.io/dXkFXJME: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos) | https://f.io/8uBzkEqf: Frame.io needs you to download it; attach "
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-25 07:12:29 UTC"
+}

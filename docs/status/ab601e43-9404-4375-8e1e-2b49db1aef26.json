@@ -1,0 +1,38 @@
+{
+ "id": "ab601e43-9404-4375-8e1e-2b49db1aef26",
+ "title": "Mumford & Sons / Chris Stapleton Live Performance",
+ "rules_hash": "84f01ec6dc60",
+ "state": "stopped",
+ "msg": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia; first payout only after about 1750 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:10:34.075Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "needs a mostly US/UK (Tier 1) audience; account region is Ethiopia; first payout only after about 1750 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-25 07:12:16 UTC"
+}
