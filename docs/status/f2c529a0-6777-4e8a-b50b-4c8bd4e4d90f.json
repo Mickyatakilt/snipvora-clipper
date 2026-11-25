@@ -1,0 +1,38 @@
+{
+ "id": "f2c529a0-6777-4e8a-b50b-4c8bd4e4d90f",
+ "title": "SypherPK $7,500 Clipping Campaign",
+ "rules_hash": "7896908bdcca",
+ "state": "stopped",
+ "msg": "first payout only after about 10000 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:10:05.342Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 10000 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-25 07:10:43 UTC"
+}
