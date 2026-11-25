@@ -1,7 +1,7 @@
 {
  "id": "91c5082d-7c89-4359-8653-db87a4ca01d5",
  "title": "eBay Live: Ovechkin, Bam Margera & Evan Mobley",
- "rules_hash": "c7fc11ae83e8",
+ "rules_hash": "9e8a5050cfca",
  "state": "error",
  "msg": "clip builder failed: gs,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', '/home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/91c5082d/view.mp4']' returned non-zero exit status 1.\n",
  "warnings": [
@@ -11,7 +11,7 @@
   {
    "k": "Rules received",
    "s": "ok",
-   "n": "2026-11-25T07:11:37.608Z"
+   "n": "2026-11-25T07:41:42.210Z"
   },
   {
    "k": "Fit check",
@@ -34,5 +34,5 @@
    "n": "rmat=duration', '-of', 'csv=p=0', '/home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/91c5082d/view.mp4']' returned non-zero exit status 1.\n"
   }
  ],
- "at": "2026-11-25 07:29:03 UTC"
+ "at": "2026-11-25 07:42:23 UTC"
 }
