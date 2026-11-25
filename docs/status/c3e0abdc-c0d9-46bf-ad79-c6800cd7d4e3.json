@@ -1,0 +1,38 @@
+{
+ "id": "c3e0abdc-c0d9-46bf-ad79-c6800cd7d4e3",
+ "title": "Card Breaks with Emma Roberts | Fanatics Live",
+ "rules_hash": "2b67fe4cabd7",
+ "state": "error",
+ "msg": "clip builder failed: gs,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', '/home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/c3e0abdc/view.mp4']' returned non-zero exit status 1.\n",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-25T07:28:25.694Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "1 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "ok",
+   "n": "attached videos: none | https://drive.google.com/file/d/1SaD7P1XqacWw8gAIYIsFhPouQNEhz192/view?usp=sharing: downloaded 1 file(s)"
+  },
+  {
+   "k": "Clip built",
+   "s": "fail",
+   "n": "rmat=duration', '-of', 'csv=p=0', '/home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/c3e0abdc/view.mp4']' returned non-zero exit status 1.\n"
+  }
+ ],
+ "at": "2026-11-25 07:29:01 UTC"
+}

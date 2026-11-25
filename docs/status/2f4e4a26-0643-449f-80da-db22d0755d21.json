@@ -5,7 +5,8 @@
  "state": "error",
  "msg": "clip builder failed: NO FOOTAGE in /home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/2f4e4a26\n",
  "warnings": [
-  "needs joining a Discord to get paid"
+  "needs joining a Discord to get paid",
+  "mentions a follower minimum"
  ],
  "steps": [
   {
@@ -16,7 +17,7 @@
   {
    "k": "Fit check",
    "s": "warn",
-   "n": "needs joining a Discord to get paid"
+   "n": "needs joining a Discord to get paid; mentions a follower minimum"
   },
   {
    "k": "Footage link found",
@@ -34,5 +35,5 @@
    "n": "NO FOOTAGE in /home/runner/work/snipvora-clipper/snipvora-clipper/out/_src/2f4e4a26\n"
   }
  ],
- "at": "2026-11-25 07:12:33 UTC"
+ "at": "2026-11-25 07:28:58 UTC"
 }
