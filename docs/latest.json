@@ -1,7 +1,7 @@
 {
- "scanned_at": "2026-11-27 17:33",
- "listed": 93,
- "kept": 59,
+ "scanned_at": "2026-11-27 22:51",
+ "listed": 97,
+ "kept": 63,
  "top": [
   {
    "id": "c3e0abdc-c0d9-46bf-ad79-c6800cd7d4e3",
@@ -14,7 +14,7 @@
     "new"
    ],
    "rate_per_1k": 4.0,
-   "budget_left": 3922.54,
+   "budget_left": 3919.72,
    "creators": 1,
    "platforms": [
     "instagram",
@@ -44,14 +44,14 @@
    "title": "eBay Live: Ovechkin, Bam Margera & Evan Mobley",
    "brand": "TopDRWR Distribution",
    "category": "Sports",
-   "score": 65.6,
+   "score": 65.3,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 4.0,
-   "budget_left": 3536.7,
-   "creators": 4,
+   "budget_left": 2956.49,
+   "creators": 14,
    "platforms": [
     "instagram",
     "tiktok",
@@ -80,14 +80,14 @@
    "title": "Mumford & Sons / Chris Stapleton Live Performance",
    "brand": "The Clip Ship",
    "category": "Music",
-   "score": 46.8,
+   "score": 46.7,
    "why": [
     "clippable source",
     "new"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 10677.869999999999,
-   "creators": 33,
+   "budget_left": 10630.43,
+   "creators": 34,
    "platforms": [
     "instagram",
     "tiktok",
@@ -112,38 +112,39 @@
    "new": false
   },
   {
-   "id": "2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
-   "title": "Daise \u2014 Dollfaces + Charm Bracelets Clipping",
-   "brand": "Clip Influence",
-   "category": "Entertainment",
-   "score": 44.2,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 7264.58,
-   "creators": 40,
+   "id": "27373fdf-e0f4-436e-a420-1102914639f4",
+   "title": "Stylit AI Outfit App | Up to $1,000 per Video",
+   "brand": "Gorka Studio",
+   "category": "Fashion",
+   "score": 46.3,
+   "why": [],
+   "rate_per_1k": 3.0,
+   "budget_left": 3407.88,
+   "creators": 25,
    "platforms": [
     "instagram",
-    "tiktok"
+    "tiktok",
+    "youtube"
    ],
    "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/2e7ca35e-4cff-4755-bae8-8f9f5d727c0b",
-   "description": "Get Paid $2/thousand views to clip for Daise \u2014 Dollfaces + Charm Bracelets! \nCreate viral clips showcasing the Dollfaces + Charm Bracelets and get paid.\n(THEME PAGES).",
-   "flags": [],
-   "brief": "Get Paid $2/thousand views to clip for Daise \u2014 Dollfaces + Charm Bracelets! \\nCreate viral clips showcasing the Dollfaces + Charm Bracelets and get paid.\\n(THEME PAGES).",
+   "url": "https://contentrewards.com/c/campaigns/27373fdf-e0f4-436e-a420-1102914639f4",
+   "description": "Make short videos showing Stylit, the app that puts outfits on you with AI. Built for AI and faceless creators, real faces welcome too. Proven formats, scripts, AI video generator, and personal coaching in our creator Discord. No follower m",
+   "flags": [
+    "footage/rules via Discord"
+   ],
+   "brief": "Make short videos showing Stylit, the app that puts outfits on you with AI. Built for AI and faceless creators, real faces welcome too. Proven formats, scripts, AI video generator, and personal coaching in our creator Discord. No follower minimum. $3 per 1,000 views, up to $1,000 per video.",
    "hidden_counts": {
     "rules": 0,
     "requirements": 1,
     "references": 3
    },
    "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 2.0,
-    "max_payout": 300.0,
+    "rate_per_1k": 3.0,
+    "min_payout": 3.0,
+    "max_payout": 1000.0,
     "views_to_first_payout": 1000
    },
-   "new": false
+   "new": true
   },
   {
    "id": "8700b527-9026-4364-a857-7ee8944843a2",
@@ -155,7 +156,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.5,
-   "budget_left": 4842.01,
+   "budget_left": 4833.68,
    "creators": 68,
    "platforms": [
     "tiktok"
@@ -175,6 +176,41 @@
    "new": false
   },
   {
+   "id": "207e5f31-b800-4b65-a9ba-c63609ac26c0",
+   "title": "[VIRAL] Slime Mart V3 Clipping ",
+   "brand": "Clip Influence",
+   "category": "Entertainment",
+   "score": 42.2,
+   "why": [
+    "clippable source",
+    "new"
+   ],
+   "rate_per_1k": 1.5,
+   "budget_left": 17915.37,
+   "creators": 51,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/207e5f31-b800-4b65-a9ba-c63609ac26c0",
+   "description": "Get paid $1.50/thousand views to clip for the [VIRAL] Slime Mart Clipping! Slime Mart is a super viral brand line, the goal behind this campaign is to get the most exposure possible. Create Viral clips and get paid for your views.",
+   "flags": [],
+   "brief": "Get paid $1.50/thousand views to clip for the [VIRAL] Slime Mart Clipping! Slime Mart is a super viral brand line, the goal behind this campaign is to get the most exposure possible. Create Viral clips and get paid for your views.",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 1,
+    "references": 3
+   },
+   "tiktok": {
+    "rate_per_1k": 1.5,
+    "min_payout": 1.5,
+    "max_payout": 300.0,
+    "views_to_first_payout": 1000
+   },
+   "new": true
+  },
+  {
    "id": "749b47da-47bb-4122-8bb3-1b4a60d8f0d5",
    "title": "GTA VI Lucia vs Fanvue AI Lucia",
    "brand": "Bounty",
@@ -185,8 +221,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 12583.99,
-   "creators": 6,
+   "budget_left": 12587.49,
+   "creators": 5,
    "platforms": [
     "instagram",
     "tiktok"
@@ -219,7 +255,7 @@
     "clippable source"
    ],
    "rate_per_1k": 2.0,
-   "budget_left": 780.41,
+   "budget_left": 780.38,
    "creators": 55,
    "platforms": [
     "instagram",
@@ -255,7 +291,7 @@
     "new"
    ],
    "rate_per_1k": 2,
-   "budget_left": 8079.57,
+   "budget_left": 7845.469999999999,
    "creators": 180,
    "platforms": [
     "instagram",
@@ -275,87 +311,17 @@
    "new": false
   },
   {
-   "id": "5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91",
-   "title": "Stream House LA Clipping| $4k Budget",
-   "brand": "Motion Clipping",
-   "category": "Entertainment",
-   "score": 37.7,
-   "why": [
-    "clippable source"
-   ],
-   "rate_per_1k": 2.0,
-   "budget_left": 1655.8000000000002,
-   "creators": 292,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/5f6b6ac5-9878-4ad6-b90f-c2f2a3392e91",
-   "description": "Clip for Stream House LA and post viral moments across Tiktok, Instagram and YT shorts and get paid ",
-   "flags": [],
-   "brief": "Clip for Stream House LA and post viral moments across Tiktok, Instagram and YT shorts and get paid ",
-   "hidden_counts": {
-    "rules": 1,
-    "requirements": 0,
-    "references": 4
-   },
-   "tiktok": {
-    "rate_per_1k": 2.0,
-    "min_payout": 3.5,
-    "max_payout": 250.0,
-    "views_to_first_payout": 1750
-   },
-   "new": true
-  },
-  {
-   "id": "2f4e4a26-0643-449f-80da-db22d0755d21",
-   "title": "Kitsch x Nic Vans",
-   "brand": "Clip Farm",
-   "category": "Entertainment",
-   "score": 37.3,
-   "why": [
-    "new"
-   ],
-   "rate_per_1k": 1.5,
-   "budget_left": 37146.62,
-   "creators": 138,
-   "platforms": [
-    "instagram",
-    "tiktok",
-    "youtube"
-   ],
-   "requires_application": false,
-   "url": "https://contentrewards.com/c/campaigns/2f4e4a26-0643-449f-80da-db22d0755d21",
-   "description": "Kitsch makes hair care and hair gifts. Nic from Love Island USA dresses as Santa. He gives Kitsch gifts to his mom and sister.",
-   "flags": [],
-   "brief": "Kitsch makes hair care and hair gifts. Nic from Love Island USA dresses as Santa. He gives Kitsch gifts to his mom and sister.",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 0,
-    "references": 1
-   },
-   "tiktok": {
-    "rate_per_1k": 1.5,
-    "min_payout": 1.5,
-    "max_payout": 350.0,
-    "views_to_first_payout": 1000
-   },
-   "new": true
-  },
-  {
    "id": "b5ff48d7-ec63-443a-b767-3a430a6f71f4",
    "title": "SEGA - Metaphor ReFantazio Trailer Clipping",
    "brand": "Clipping Culture",
    "category": "Gaming",
-   "score": 35.4,
+   "score": 34.9,
    "why": [
     "clippable source"
    ],
    "rate_per_1k": 2,
-   "budget_left": 2724.24,
-   "creators": 190,
+   "budget_left": 2352.5699999999997,
+   "creators": 218,
    "platforms": [
     "instagram",
     "tiktok",
@@ -374,6 +340,40 @@
    "new": false
   },
   {
+   "id": "6a83676b-e4eb-412e-9a09-a1ff5c391228",
+   "title": "German Captions",
+   "brand": "STRATFORGE",
+   "category": "",
+   "score": 34.0,
+   "why": [
+    "clippable source"
+   ],
+   "rate_per_1k": 2.0,
+   "budget_left": 1087.0700000000002,
+   "creators": 11,
+   "platforms": [
+    "instagram",
+    "tiktok"
+   ],
+   "requires_application": false,
+   "url": "https://contentrewards.com/c/campaigns/6a83676b-e4eb-412e-9a09-a1ff5c391228",
+   "description": "Use our clips with german captions",
+   "flags": [],
+   "brief": "Use our clips with german captions",
+   "hidden_counts": {
+    "rules": 0,
+    "requirements": 0,
+    "references": 4
+   },
+   "tiktok": {
+    "rate_per_1k": 2.0,
+    "min_payout": 20.0,
+    "max_payout": 200.0,
+    "views_to_first_payout": 10000
+   },
+   "new": true
+  },
+  {
    "id": "ec9a0d02-4ff0-4d0d-a85f-9b5bcf699388",
    "title": "GTA 6 x Foltyn",
    "brand": "Clipping Hall of Fame",
@@ -384,7 +384,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 4890.71,
+   "budget_left": 4888.92,
    "creators": 4,
    "platforms": [
     "tiktok",
@@ -413,7 +413,7 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 4552.26,
+   "budget_left": 4551.94,
    "creators": 1,
    "platforms": [
     "tiktok"
@@ -434,7 +434,7 @@
     "max_payout": 300.0,
     "views_to_first_payout": 10000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "b72e2f31-eaff-4240-915a-e5f9847a4fe3",
@@ -447,8 +447,8 @@
     "new"
    ],
    "rate_per_1k": 1.5,
-   "budget_left": 3440.7200000000003,
-   "creators": 1421,
+   "budget_left": 3427.59,
+   "creators": 1202,
    "platforms": [
     "instagram",
     "tiktok",
@@ -471,7 +471,7 @@
     "max_payout": 250.0,
     "views_to_first_payout": 5000
    },
-   "new": true
+   "new": false
   },
   {
    "id": "86842687-ba2b-4638-a024-995dcf3d25a3",
@@ -483,7 +483,7 @@
     "clippable source"
    ],
    "rate_per_1k": 1.0,
-   "budget_left": 3331.84,
+   "budget_left": 3289.029999999999,
    "creators": 34,
    "platforms": [
     "facebook",
@@ -570,11 +570,7 @@
   },
   {
    "id": "1eb7b942-eeaf-4c83-b238-c9d6bd02829f",
-   "hidden_counts": {
-    "rules": 0,
-    "requirements": 9,
-    "references": 1
-   },
+   "hidden_counts": null,
    "listed": false,
    "budget_left": null
   },
@@ -586,7 +582,7 @@
     "references": 2
    },
    "listed": true,
-   "budget_left": 1080.17
+   "budget_left": 1079.51
   },
   {
    "id": "cc01471a-0dd5-471d-95b7-90955b037974",
