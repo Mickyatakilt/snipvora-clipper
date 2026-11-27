@@ -1,0 +1,42 @@
+{
+ "id": "463491d6-3df2-4dd2-ae32-1d1d5d8b1735",
+ "title": "Dr. Guillaume Dulude - Psychology Clipping",
+ "rules_hash": "eaaea29cd1b1",
+ "state": "missing_footage",
+ "msg": "rules are in, but the footage can't be fetched by the cloud: attached videos: none | https://f.io/3JvrlVwb: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos)",
+ "links": [
+  "https://f.io/3JvrlVwb"
+ ],
+ "warnings": [
+  "needs joining a Discord to get paid",
+  "mentions a follower minimum"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-27T08:22:01.257Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "warn",
+   "n": "needs joining a Discord to get paid; mentions a follower minimum"
+  },
+  {
+   "k": "Footage link found",
+   "s": "ok",
+   "n": "1 link(s)"
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "fail",
+   "n": "attached videos: none | https://f.io/3JvrlVwb: Frame.io needs you to download it; attach the videos on the dashboard (Attach videos)"
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-27 08:29:58 UTC"
+}
