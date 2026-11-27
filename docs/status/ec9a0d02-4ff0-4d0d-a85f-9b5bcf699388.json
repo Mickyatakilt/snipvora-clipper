@@ -1,0 +1,38 @@
+{
+ "id": "ec9a0d02-4ff0-4d0d-a85f-9b5bcf699388",
+ "title": "GTA 6 x Foltyn",
+ "rules_hash": "d1f5caa21477",
+ "state": "stopped",
+ "msg": "first payout only after about 4000 views (your rule is 1,000)",
+ "warnings": [
+  "needs joining a Discord to get paid"
+ ],
+ "steps": [
+  {
+   "k": "Rules received",
+   "s": "ok",
+   "n": "2026-11-27T08:21:44.713Z"
+  },
+  {
+   "k": "Fit check",
+   "s": "fail",
+   "n": "first payout only after about 4000 views (your rule is 1,000)"
+  },
+  {
+   "k": "Footage link found",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Footage downloaded",
+   "s": "wait",
+   "n": ""
+  },
+  {
+   "k": "Clip built",
+   "s": "wait",
+   "n": ""
+  }
+ ],
+ "at": "2026-11-27 08:22:20 UTC"
+}
